@@ -32,6 +32,11 @@ begin
 KvantovyExp([1,2,3,4]);
 Wait(0$05);
 Say(Kvantovy,'3Kvantovy-Sikret');
+TeleportUnit(Kvantovy,120,237,300,True);
+Wait(0$05);
+RemoveUnit(Kvantovy);
+SaveVariable(Kvantovy,'KvantovySaved');
+SaveCharacters(Kvantovy,'Kvantovy');
 End;
 
 Export Function KvantovyExp(q);
@@ -84,7 +89,7 @@ end;
 
 // Funkcje dla tej misi
 
-Every 1 Trigger Cutscene_ended = False Do
+Every 1 Trigger start_ended = False Do
 Begin
 
 SetLives([Gary,Bobby,Cyrus,Lynch,Walker,McCreery,Jilian,Turner], 1000);
@@ -97,7 +102,7 @@ enable;
 
 end;
 
-{// Czas do przybycia buraka
+// Czas do przybycia buraka
 Every 0$1 Trigger ovsyenko_captured = True do
 begin
 
@@ -118,16 +123,16 @@ enable;
 End;
 
 // Blokuje pójœcie na pó³noc
-every 1 trigger kurin_attack_started = false AND FilterUnitsInArea(DontEnterNorth, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) > 0 do
+every 1 trigger ovsyenko_captured = false AND FilterUnitsInArea(DontEnterArea, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) > 0 do
 var unit;
 begin
     enable;
 
-    for unit in FilterUnitsInArea(DontEnterNorth, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
+    for unit in FilterUnitsInArea(DontEnterArea, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
     begin
         //InGameOn;
 
-    ComMoveXY(unit, GetX(unit) + 5, GetY(unit) + 5);
+    ComMoveXY(unit,101,116);
 end;
 
-end; }
+end; 

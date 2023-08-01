@@ -89,7 +89,12 @@ Begin
     BurlakCrewVeh5 = CreateVehicle;
     BurlakCrewVeh6 = CreateVehicle;
 
-    PlaceUnitArea([BurlakCrewVeh1,BurlakCrewVeh2,BurlakCrewVeh3,BurlakCrewVeh4,BurlakCrewVeh5,BurlakCrewVeh6],BurlakArea,False);
+    PlaceUnitArea(BurlakCrewVeh1,BurlakArea,False);
+    PlaceUnitArea(BurlakCrewVeh2,BurlakArea,False);
+    PlaceUnitArea(BurlakCrewVeh3,BurlakArea,False);
+    PlaceUnitArea(BurlakCrewVeh4,BurlakArea,False);
+    PlaceUnitArea(BurlakCrewVeh5,BurlakArea,False);
+    PlaceUnitArea(BurlakCrewVeh6,BurlakArea,False);
 
     PlaceHumanInUnit(Titov,BurlakCrewVeh1);
     PlaceHumanInUnit(Petrovova,BurlakCrewVeh2);

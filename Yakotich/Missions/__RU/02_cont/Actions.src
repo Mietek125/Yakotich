@@ -234,8 +234,8 @@ SaveCharacters(Aleksiej, '02_Aleksiej');
 SaveCharacters(Pavel, '02_Pavel');
 SaveCharacters(Zakhar, '02_Zakhar');
 SaveCharacters(Aleksandr, '02_Aleksandr');
-SaveCharacters(Zakhar, '02_Stanislav');
-SaveCharacters(Aleksandr, '02_Josif');
+SaveCharacters(Stanislav, '02_Stanislav');
+SaveCharacters(Josif, '02_Josif');
 
 YouWin;
 

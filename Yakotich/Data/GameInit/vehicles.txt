@@ -1023,7 +1023,7 @@ GAMEINIT
         WEIGHT  2  3 
         ATTACK
           MINMAX_RANGE  3  11 
-          FREQUENCY  2  70 
+          FREQUENCY  2  55 
           DAMAGE 250 222 150
           EFF 15 50 35
           ANIM  2  2  3 
@@ -1051,7 +1051,7 @@ GAMEINIT
           DAMAGE 383 115 184
           EFF 30 5 60
           ANIM  1  4  3 
-          ACCURACY  6 5 5
+          ACCURACY  6 3 4
           ATTACKGROUND
         END_OF_ATTACK
         PRODUCED_IN 18 

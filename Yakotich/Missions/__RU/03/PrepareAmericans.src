@@ -15,6 +15,7 @@ Begin
      Hc_Gallery := 'us';
      Hc_Face_Number := 19;
      Sikorski := CreateHuman;
+     SikorskiMeat := CreateHuman;
 
      Hc_Name := 'Kpt. Jack Truman';
      Hc_Skills := [8,5,3,1];
@@ -82,13 +83,11 @@ Begin
      PlaceUnitArea(Walker,SikorskiArea,False);
      PlaceUnitArea(McCreery,SikorskiArea,False);
 
-     PrepareSoldier(rand(0,1),10);
-     NorthSold := CreateHuman;
-     PlaceHumanInUnit(NorthSold,AmB4);
+
 
 end;
 
-Every 0$1 Trigger IsInUnit(Gary) and start_ended = True Do
+Every 0$1 Trigger start_ended = True Do
 Begin
 
     AddResourceType(GetBase(Ovsyenko), mat_cans, 70);
@@ -108,36 +107,39 @@ Begin
 
  uc_side := 1;
  uc_nation := 1;
+ PrepareSoldier(rand(0,1),10);
+ NorthSold := CreateHuman;
+ PlaceHumanInUnit(NorthSold,AmB4);
 
  For i = 1 to [8,9,10][Difficulty] do
   Begin
    PrepareSoldier(rand(0,1),[2,3,6][Difficulty]);
-   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+   MainTerminalCrew := MainTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 1 do
   Begin
    PrepareEngineer(rand(0,1),[2,3,6][Difficulty]);
-   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+   MainTerminalCrew := MainTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 2 do
   Begin
    PrepareScientist(rand(0,1),[2,3,6][Difficulty]);
-   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+   MainTerminalCrew := MainTerminalCrew ^ CreateHuman;
   End;
 
- turrety := FilterUnitsInArea(WestTerminalArea, [f_or, [f_btype, b_breastwork], [f_btype, b_bunker]]);
- lab := FilterUnitsInArea(WestTerminalArea, [[f_btype, b_lab_full]]);
- zbrojka := FilterUnitsInArea(WestTerminalArea, [[f_btype, b_barracks]]);
+ turrety := FilterUnitsInArea(MainTerminalArea, [f_or, [f_btype, b_breastwork], [f_btype, b_bunker]]);
+ lab := FilterUnitsInArea(MainTerminalArea, [[f_btype, b_lab_full]]);
+ zbrojka := FilterUnitsInArea(MainTerminalArea, [[f_btype, b_barracks]]);
 
  y := 1;
 
-  For i in WestTerminalCrew do
+  For i in MainTerminalCrew do
   Begin
   PlaceUnitArea(i, TerminalPersonel, false);
    Case GetClass(i) of
    1:Begin
-      if y > 6 then ComEnterUnit(i, turrety[y])
-      else ComEnterUnit(i, zbrojka[1]);
+      if y > 7 then ComEnterUnit(i, zbrojka[1])
+      else ComEnterUnit(i, turrety[y]);
       y = y + 1;
      End;
    2:ComEnterUnit(i, MainTerminal);
@@ -194,13 +196,13 @@ Begin
   PlaceUnitArea(i, TerminalPersonel, false);
    Case GetClass(i) of
    1:Begin
-      if y > 8 then ComEnterUnit(i, turrety[y])
-      else ComEnterUnit(i, zbrojka[1]);
+      if y > 9 then ComEnterUnit(i, zbrojka[1])
+      else ComEnterUnit(i, turrety[y]);
       y = y + 1;
      End;
    2:ComEnterUnit(i, WestTerminal);
    3:Begin
-     if z > 3 then ComEnterUnit(i, fabryka)
+     if z > 3 then ComEnterUnit(i, fabryka[1])
      else  ComEnterUnit(i, wieza[1]);
      z = z + 1;
     end;

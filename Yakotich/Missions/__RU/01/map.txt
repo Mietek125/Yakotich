@@ -1126,25 +1126,25 @@ RANDOMS
   MICROLOGIC 2 0 1
   RANDOM_SEED 1 2027201962
   RANDOM_SEED 2 -951730111
-  RANDOM_SEED 3 -1293000389
+  RANDOM_SEED 3 -969018765
   RANDOM_SEED 4 1027502989
   RANDOM_SEED 5 1916631493
   RANDOM_SEED 6 1882307296
-  RANDOM_SEED 7 -864694413
+  RANDOM_SEED 7 -474059144
   RANDOM_SEED 8 1289202171
   RANDOM_SEED 9 1673282027
-  RANDOM_SEED 10 -70477884
+  RANDOM_SEED 10 12067898
   RANDOM_SEED 11 134358555
   RANDOM_SEED 12 1351412873
-  RANDOM_SEED 13 432363487
+  RANDOM_SEED 13 2079068171
   RANDOM_SEED 14 19852156
-  RANDOM_SEED 15 1367883347
+  RANDOM_SEED 15 141750591
   RANDOM_SEED 16 1656080695
   RANDOM_SEED 17 856542744
   RANDOM_SEED 18 1380821114
   RANDOM_SEED 19 1111209574
   RANDOM_SEED 20 74706437
-  RANDOM_SEED 21 9571593
+  RANDOM_SEED 21 -1859423127
   RANDOM_SEED 22 1894084760
   WIND_TIME -1 -1 0
   WIND_STRENGTH 36.7606167791381 52.0 53.3803083895691
@@ -1544,7 +1544,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED 211724694
     END_OF_DEFINITION
     GAME_STATE
@@ -1585,7 +1585,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED -2010933612
     END_OF_DEFINITION
     GAME_STATE
@@ -1667,7 +1667,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 486458304
     END_OF_DEFINITION
     GAME_STATE
@@ -1708,7 +1708,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 1301698286
     END_OF_DEFINITION
     GAME_STATE
@@ -1749,7 +1749,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED -1035437268
     END_OF_DEFINITION
     GAME_STATE
@@ -1790,7 +1790,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED 2052928506
     END_OF_DEFINITION
     GAME_STATE
@@ -1872,7 +1872,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 1849227460
     END_OF_DEFINITION
     GAME_STATE
@@ -1913,7 +1913,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 2145359570
     END_OF_DEFINITION
     GAME_STATE
@@ -1954,7 +1954,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 832378608
     END_OF_DEFINITION
     GAME_STATE
@@ -1995,7 +1995,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED -1508920162
     END_OF_DEFINITION
     GAME_STATE
@@ -2036,7 +2036,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 1912762204
     END_OF_DEFINITION
     GAME_STATE
@@ -2077,7 +2077,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 915008170
     END_OF_DEFINITION
     GAME_STATE
@@ -2159,7 +2159,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED 189146358
     END_OF_DEFINITION
     GAME_STATE
@@ -2200,7 +2200,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED -1405731084
     END_OF_DEFINITION
     GAME_STATE
@@ -2364,7 +2364,7 @@ NEW_UNITS
         FACE 0
         AGGRESSIVITY 25
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED 1969866636
     END_OF_DEFINITION
     GAME_STATE
@@ -2397,10 +2397,11 @@ NEW_UNITS
       HUMAN
         NAME Arturc20
         SEX 1
-        ATTR 100 25
+        ATTR 15 15
         CLASS 12
         IMPORTANCE 100
-        GALERY pok 3 BSKILLS 10 10 10 10
+        GALERY pok 3 LAST_MISSION 1
+        BSKILLS 10 10 10 10
         EXPERIENCES 0 0 0 0
         COLORS 4749738 4028331
         COLOR_CODE 8BM
@@ -2822,7 +2823,7 @@ LASER_EFECTS
 END_OF_LASER_EFECTS
 
 USER_INTERFACE
-  VIEW 542 -96 1542 854 1
+  VIEW -56 -96 1540 852 1
   MASHA_FLAG 2 F F
 END_OF_USER_INTERFACE
 
@@ -3145,6 +3146,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      1
 
   255
   1
@@ -3158,6 +3161,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      1
 
   255
   1
@@ -3171,6 +3176,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      1
 
   255
   1
@@ -3184,6 +3191,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3197,6 +3206,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3210,6 +3221,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3223,6 +3236,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3236,6 +3251,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3249,6 +3266,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3262,6 +3281,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3275,6 +3296,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3288,6 +3311,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3301,6 +3326,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3314,6 +3341,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3327,6 +3356,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3340,6 +3371,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3353,6 +3386,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3366,6 +3401,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3379,6 +3416,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3392,6 +3431,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3405,6 +3446,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3418,6 +3461,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3431,6 +3476,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3444,6 +3491,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3457,6 +3506,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3470,6 +3521,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3483,6 +3536,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3496,6 +3551,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3509,6 +3566,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3522,6 +3581,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3535,6 +3596,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3548,6 +3611,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3561,6 +3626,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      1
 
   255
   1
@@ -3574,6 +3641,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      1
 
   255
   1
@@ -3587,6 +3656,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      1
 
   255
   1
@@ -3600,6 +3671,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3613,6 +3686,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3626,6 +3701,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3639,6 +3716,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3652,6 +3731,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3665,6 +3746,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
   1
@@ -3678,6 +3761,8 @@ SEXTRA
       F
     5
       0 0
+    6
+      0
 
   255
 END_OF_SEXTRA

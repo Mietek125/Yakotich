@@ -1,0 +1,15 @@
+Every 6$0 do
+var i,j;
+begin
+
+For i = 1 to 4 do
+begin
+CreateCratesArea(rand(3,5),CratesArea,True);
+
+end;
+
+CreateCratesArea(rand(1,3),AmCratesArea,True);
+
+enable;
+
+end;

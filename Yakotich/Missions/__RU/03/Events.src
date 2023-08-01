@@ -84,7 +84,7 @@ lab_captured = True;
 end;
 
 
-Every 0$1 Trigger Researched(3,69) do
+Every 0$1 Trigger Researched(3,86) do
 begin
 
 DialogueOn;
@@ -149,7 +149,29 @@ end;
 Every 0$1 Trigger IsInArea(Boris,SouthOfBase) and start_ended = True do
 begin
 
-AddComBuild(Boris,b_depot,140,204,3);
+AddComBuild([Boris,Anton],b_depot,140,204,3);
 
 end;
 
+{Every 0$1 Trigger sikorski_dead = True do
+begin
+
+Wait(0$30);
+
+Create_ColdMeat(SikorskiMeat,101,116,True);
+
+end;}
+
+Every 0$1 Trigger start_ended = True and GetSide(Ovsyenko) = 3 do
+begin
+
+ovsyenko_captured = True;
+
+end;
+
+Every 0$1 Trigger Researched(3,54) and Researched(3,21) and Researched(3,30) do
+begin
+
+everything_researched = True;
+
+end;

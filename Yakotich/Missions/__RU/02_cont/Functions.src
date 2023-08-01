@@ -76,6 +76,11 @@ begin
 SerpentExp([1,2,3,4]);
 Wait(0$05);
 Say(Serpent,'2Langu-Sikret');
+TeleportUnit(Serpent,5,4,100,True);
+Wait(0$05);
+RemoveUnit(Serpent);
+SaveVariable(Serpent,'SerpentSaved');
+SaveCharacters(Serpent,'Langu');
 End;
 
 Export Function SerpentExp(q);

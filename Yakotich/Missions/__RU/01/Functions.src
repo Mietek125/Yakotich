@@ -46,6 +46,11 @@ begin
 PezetExp([1,2,3,4]);
 Wait(0$05);
 Say(Artur,'1Pezet-Sikret');
+TeleportUnit(Artur,139,74,120,True);
+Wait(0$05);
+RemoveUnit(Artur);
+SaveVariable(Artur,'PezetSaved');
+SaveCharacters(Artur,'Pezet');
 End;
 
 Export Function PezetExp(q);

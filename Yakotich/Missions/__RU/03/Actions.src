@@ -81,17 +81,19 @@ wait(0$2);
 
 SayEffect('3smrtsikora');
 KillUnit(Sikorski);
+sikorski_dead = True;
 
 wait(0$1);
 
-engs := FilterAllUnits([f_class, 2]);
+engs := FilterAllUnits([[f_class, 2],[f_side,3]]);
 
 ComExitBuilding(engs);
 
 for i = 1 to engs do
     AddComEnterUnit(engs[i], FilterAllUnits([f_weapon, ru_cargo_bay])[i]);
-    AddComTransport(Boris,Ovsyenko,mat_siberit);
-    AddComTransport(Anton,Ovsyenko,mat_cans);
+    AddComTransport(Anton,Ovsyenko,mat_siberit);
+    AddComWait(Boris,0$1);
+    AddComTransport(Boris,Ovsyenko,mat_cans);
 
 AddComMoveXY(engs, 147, 220);
 AddComExitVehicle(engs);
@@ -273,7 +275,7 @@ SayRadio(Yakotich,'3Yak-Flame-01');
 SayRadio(Burlak,'3Bur-Flame-02');
 SayRadio(Vasilij,'3Vas-Flame-02');
 
-ChangeMissionObjectives('flametank');
+ChangeMissionObjectives('o3');
 
 DialogueOff;
 
@@ -305,7 +307,7 @@ Say(Petrosyan,'3Pty-Comp-03');
 
 SetRestrict(12,3,1);
 
-ChangeMissionObjectives('05');
+ChangeMissionObjectives('o5');
 
 DialogueOff;
 

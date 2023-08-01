@@ -2,7 +2,7 @@ MAIN_DEFINITIONS
   SIZE 84 240
   TICK 0
   PLAYER_NUMBER 3
-  FOG_TYPE 2
+  FOG_TYPE 0
   FOGSIDES 1 2 3 4 5 3 7 8
   MAP_GBI 03.gbi
   MUCHY_RECT 0 0 0 0
@@ -87,13 +87,13 @@ HEXES
   LINE 36 18 101
     t4vbsI t2vbsI vd vd vdsH vfsH vh vh vh vhs8 r6vesa r6vYsq r6vSsq vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS r6vMsq r6vGsq r6vBsi vAsD vAsD vAs8 vAs8 vBsA vBsA vC vAsJ vAsD vAsD vA vA vA vA vA vA vA vA vA t2vA t4vA
   LINE 37 19 102
-    t4vd t2vd vd vdsH vfsH vh vh vh vh r6vgsC r6vasq r6vUsq r6vSsK vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS r6vMsq r6vGsq r6vAsr vAsD vA vA vA vAsH vC vC vAsK vA vA vA vA vA vA vA vA vA vA vA vA t2vA t4vA
+    t4vd t2vd vd vdsH vfsH vh vh vh vh r6vgsC r6vasq r6vUsq r6vSsK vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vSf2 vS vS vSf2 vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS r6vMsq r6vGsq r6vAsr vAsD vA vA vA vAsH vC vC vAsK vA vA vA vA vA vA vA vA vA vA vA vA t2vA t4vA
   LINE 38 19 102
     t4vdsI t2vdsI vdsI vdsI vf vfsH vh vh vh vh r6vdsa r6vYsi r6vSsq vS vS vSf2 vS vS vS vS vS vS vS vS vS vS vS vS vS vSfG vSf2 vS vS vSf2 vS vS vSf2 vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS r6vMsq r6vGsq r6vAsq vA vA vA vAsA vAsG vC vC vC vAsK vA vA vA vA vA vA vA vA vA vA vA t2vA t4vA
   LINE 39 20 103
     t4vfsI t2vfsI vfsI vfsI vfsI vh vh vh vh r6vdsa r6vYsi r6vWsK r7vSsa vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS r6vMsq r6vGsq r6vBsi vAsB vAsB vAsB vAsA vB vBs8 vBs8 vBsD r6v8sb r6v8sG r6vA vA vA vA vA vA vA vA vA vA vA t2vA t4vA
   LINE 40 20 103
-    t4vfsI t2vh vh vh vh vh vh vh vh r7vdsa r7vbsK r6vWsi vW r7vSsa vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vSf2 vS vS vS r6vPsS r6vJsq r6vDsq vBsK vB vB vB vAsD vAsD vAs8 vAsD r6v8sT r6v8 r6v8sG r6vA r6vA r6vA vA vA vA vA vA vA vA t2vA t4vA
+    t4vfsI t2vh vh vh vh vh vh vh vh r7vdsa r7vbsK r6vWsi vW r7vSsa vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vSf2 vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vSf2 vS vS vS r6vPsS r6vJsq r6vDsq vBsK vB vB vB vAsD vAsD vAs8 vAsD r6v8sT r6v8 r6v8sG r6vA r6vA r6vA vA vA vA vA vA vA vA t2vA t4vA
   LINE 41 21 104
     t4vh t2vh vh vh vh vh vh vh vdsa r6vbsK r6vWsi vW vW r7vSsZ r7vSsZ vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vSf2 vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vS vSsA vSsA vSsB r6vPsS r6vJsq r6vDsq r6vAsT vAs8 vAs8 vAs8 vAsD v8sL v8sL r6v6sb r6v6sb r6v6sL v6sG v8sG r6vA r6vA r6vA r6vA vA vA vA vA vA vA t2vA t4vA
   LINE 42 21 104
@@ -157,7 +157,7 @@ HEXES
   LINE 71 36 119
     t4vW t2vW vW vW vW vW vW vWsH r6vYsX vcsG vasb vYsT vWsL vWsG vWsW vWsW r6vYsm r6vYsr r6vYsr r6vYsr r6vSsr r6vMsr r6vKsr r6vEsq vAsa vA v9sC v7sK v5sK v2sS v2 v2sX v6s9 v7sP vA vA vAsO vAsO vCsO vCsO vCsO vCsO vCsO vEs8 vEs8 r7vEs8 r7vEsD r7vE r7vCsL r7vAsK r7vA r6vA r6vA r6v9sC v5sZ v5sZ v5sZ v4sZ v4sJ r6v5 r6v5sn r6vBsf r7vG vGs9 vHs9 vI r7vIsP vL vKsC vJsC vIsC vHsC vFsK vF vDsK vD vCsC vAsK vA vA vA vA t2vA t4vA
   LINE 72 36 119
-    t4vW t2vW vW vW vW vW vW vW r6vWsX vasH vasL vYsK vWsK vWf2 vW vW r6vWsG r6vVsT r6vSsr r6vSsr r6vSsr r6vMsr r6vGsr r6vEsr vAsa vA vAsA v9sJ v6sS v4sK v2sK v2s9 v3sPS v6s8 v7sO v7sO vA vA vAsG vAsG vAsG vAsG vAsG vCsG vCsG r7vE r7vE r7vE r7vCsL r7vC r7vAsK r7v9sD r6v9sD r6v9sD v9 r7v9 v9 v8sZ r6v6sp r6v5sh r6v5so r6vBsf r7vG vGs9 vHs9 vI vIsP r7vL vL vJsK vIsC vHsC vFsK vF vDsK vD vD vCsC vAsK vA vA vA t2vA t4vA
+    t4vW t2vW vW vW vW vW vW vW r6vWsX vasH vasL vYsK vWsK vWf2 vW vW r6vWsG r6vVsT r6vSsr r6vSsr r6vSsr r6vMsr r6vGsr r6vEsr vAsa vA vAsA v9sJ v6sS v4sK v2sK v2s9 v3sP v6s8 v7sO v7sO vA vA vAsG vAsG vAsG vAsG vAsG vCsG vCsG r7vE r7vE r7vE r7vCsL r7vC r7vAsK r7v9sD r6v9sD r6v9sD v9 r7v9 v9 v8sZ r6v6sp r6v5sh r6v5so r6vBsf r7vG vGs9 vHs9 vI vIsP r7vL vL vJsK vIsC vHsC vFsK vF vDsK vD vD vCsC vAsK vA vA vA t2vA t4vA
   LINE 73 37 120
     t4vW t2vW vWf2 vW vW vW vW vWsX r6vasI vasH r6va vWsa vW vW vVsD r6vVsD r6vQsr r6vPsr r6vMsr r6vMsr r6vMsr r6vGsr r6vEsL vAsa vA vAsA vB v9sJ v6sR v2sq v2 v2s8 v3sO v5sG v5sG v7sO v8sG v7sT v7sO v8sG v8sG v8sG v9sO vC r7vCsG r7vAsb r7vAsb r7vAsb r7vAsL r6v7sj r6v7sT r6v9 r6v9 v9 r7v9sQ r7v9sQ r7v9sQ r7vCsY r6vAsp r6vAso r6vBsg r6vG vG vGsH vI vI r7vIsP vL vJsK vJ vIsC vHsC vFsK vF vDsK vD vCsC vAsK vA vA vA vA t2vA t4vA
   LINE 74 37 120
@@ -3142,19 +3142,19 @@ TECHS
   F T F T T F T T F T T F F T T T T F T T F T T F T T F
   F T F T T F T T F T T F F T T T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F F T T T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F F T T F T T T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
@@ -3163,16 +3163,16 @@ TECHS
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F F T T T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F F T T T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
+  F T F F T T T T F T T F F T T T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
@@ -3180,21 +3180,21 @@ TECHS
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F T T F T T T T F T T F T T F T T F
-  F T F T T F T T F F T T F T T T T F T T F T T F T T F
+  F T F F T T T T F F T T F T T T T F T T F T T F T T F
+  F T F F T T T T F T T F F T T T T F T T F T T F T T F
+  F T F F T T T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F F T T T T F T T F T T F T T F
+  F T F F T T T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F F T T T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
@@ -3202,7 +3202,7 @@ TECHS
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F T T F T T T T F T T F T T F T T F
+  F T F F T T T T F F T T F T T T T F T T F T T F T T F
   F T F T T F T T F T T F F T T T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
@@ -3217,9 +3217,9 @@ TECHS
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
   F T F T T F T T F T T F T T F T T F T T F T T F T T F
@@ -3239,12 +3239,12 @@ RESTRICTS
   F F F T F F F F F
   F F F T F F F F F
   F F F T F F F F F
+  F F F F F F F F F
+  F F F F F F F F F
+  F F F F F F F F F
+  F F F F F F F F F
+  F F F F F F F F F
   F F F T F F F F F
-  F F F T F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
   F F F T T F F F F
   F F F T F F F F F
   F F F T F F F F F
@@ -3258,7 +3258,7 @@ RESTRICTS
   F F F F F F F F F
   F F F F F F F F F
   F F F T F F F F F
-  F F F F F F F F F
+  F F F T F F F F F
   F F F T F F F F F
   F F F T F F F F F
   F F F F F F F F F
@@ -3297,11 +3297,10 @@ BASES
     CANS 100
     SIBERIUM 10
   POOL 2
-  POOL 3
     CANS 3000
     OIL 1000
     SIBERIUM 10
-  POOL 4
+  POOL 3
     CANS 500
     OIL 500
     SIBERIUM 50
@@ -3313,15 +3312,11 @@ BASES
   BASE 2
     POOL_NUM 2
     SIDE 1
-    UNIT 249
+    UNIT 123
   BASE 3
     POOL_NUM 3
     SIDE 1
-    UNIT 123
-  BASE 4
-    POOL_NUM 4
-    SIDE 1
-    UNIT 88
+    UNIT 257
 END_OF_BASES
 
 
@@ -3329,26 +3324,26 @@ END_OF_BASES
 RANDOMS
   MICROLOGIC 2 0 1
   RANDOM_SEED 1 300895564
-  RANDOM_SEED 2 1751500106
-  RANDOM_SEED 3 -1758294117
+  RANDOM_SEED 2 -42788049
+  RANDOM_SEED 3 352151071
   RANDOM_SEED 4 857944668
   RANDOM_SEED 5 -361675186
   RANDOM_SEED 6 1283126848
-  RANDOM_SEED 7 2020029801
+  RANDOM_SEED 7 1422128169
   RANDOM_SEED 8 1751026996
   RANDOM_SEED 9 -722287904
-  RANDOM_SEED 10 1135414240
+  RANDOM_SEED 10 -1330282290
   RANDOM_SEED 11 1243301773
   RANDOM_SEED 12 911650
   RANDOM_SEED 13 2004086437
   RANDOM_SEED 14 378023
-  RANDOM_SEED 15 -914198294
+  RANDOM_SEED 15 -653969844
   RANDOM_SEED 16 907772
   RANDOM_SEED 17 1931189875
   RANDOM_SEED 18 353399119
   RANDOM_SEED 19 -423323973
   RANDOM_SEED 20 758098213
-  RANDOM_SEED 21 -1712357808
+  RANDOM_SEED 21 -426388060
   RANDOM_SEED 22 2016646415
   WIND_TIME 811490 811553 811576
   WIND_STRENGTH 36.7606167791381 52.0 53.3803083895691
@@ -3673,42 +3668,15 @@ NEW_UNITS
       LAST_ACTION 0
       BUILDING
     END_OF_GAME_STATE
-  UNIT 88 BUILDING
-    DEFINITION
-      IDENT MainTerminal
-      POS 52 38 2
-      SIDE 1
-      NATION 1
-      HP 1000
-      BUILDING
-        TYPE 2 LEVEL 10 BASE 4
-    END_OF_DEFINITION
-    GAME_STATE
-      ACTION 0 T 1 1
-      MOVE 52 38 2 6 F
-      UNITMODE F 52 38
-      STATE 4 24
-      WEAPON_LOADING 0 0
-      ATTACK 0 30 F 0
-      PLAN 0 T
-      ANIM_STATES 0 0 0 0
-      MASHA_FLAG 0 DYING 0
-      SELECTION 0 0 0 0
-      DRAW 924 628 0
-      FROM_TO_POS 52 38 0 52 38 0
-      FROM_TO_XY 0 0 0 0
-      LAST_ACTION 0
-      BUILDING
-    END_OF_GAME_STATE
   UNIT 92 BUILDING
     DEFINITION
-      IDENT AmA1
+      IDENT AmBarracks2
       POS 74 40 5
       SIDE 1
       NATION 1
       HP 1000
       BUILDING
-        TYPE 4 LEVEL 10 BASE 4
+        TYPE 4 LEVEL 10 BASE 3
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -3734,10 +3702,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 28 LEVEL 10 BASE 4
+        TYPE 28 LEVEL 10 BASE 3
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 0 T 111 1
+      ACTION 0 T 83 1
       MOVE 68 43 5 6 F
       UNITMODE F 68 43
       STATE 4 24
@@ -3761,7 +3729,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 19 LEVEL 10 BASE 4 PARAMS 21 24
+        TYPE 19 LEVEL 10 BASE 3 PARAMS 21 24
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -3789,7 +3757,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 30 LEVEL 10 BASE 3
+        TYPE 30 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -3816,7 +3784,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 4
+        TYPE 31 LEVEL 10 BASE 3
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -3871,10 +3839,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 25 LEVEL 10 BASE 3
+        TYPE 25 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 49 38 2 6 F
       UNITMODE F 49 38
       STATE 4 24
@@ -3897,10 +3865,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 25 LEVEL 10 BASE 3
+        TYPE 25 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 52 41 2 6 F
       UNITMODE F 52 41
       STATE 4 24
@@ -3916,58 +3884,6 @@ NEW_UNITS
       LAST_ACTION 0
       BUILDING
     END_OF_GAME_STATE
-  UNIT 107 BUILDING
-    DEFINITION
-      POS 52 35 5
-      SIDE 1
-      NATION 1
-      HP 1000
-      BUILDING
-        TYPE 25 LEVEL 10 BASE 3
-    END_OF_DEFINITION
-    GAME_STATE
-      ACTION 31 T 125 1
-      MOVE 52 35 5 6 F
-      UNITMODE F 52 35
-      STATE 4 24
-      WEAPON_LOADING 0 0
-      ATTACK 0 12 F 0
-      PLAN 0 T
-      ANIM_STATES 0 0 0 0
-      MASHA_FLAG 0 DYING 0
-      SELECTION 0 0 0 0
-      DRAW 966 574 0
-      FROM_TO_POS 52 35 0 52 35 0
-      FROM_TO_XY 0 0 0 0
-      LAST_ACTION 0
-      BUILDING
-    END_OF_GAME_STATE
-  UNIT 108 BUILDING
-    DEFINITION
-      POS 55 38 5
-      SIDE 1
-      NATION 1
-      HP 1000
-      BUILDING
-        TYPE 25 LEVEL 10 BASE 3
-    END_OF_DEFINITION
-    GAME_STATE
-      ACTION 31 T 125 1
-      MOVE 55 38 5 6 F
-      UNITMODE F 55 38
-      STATE 4 24
-      WEAPON_LOADING 0 0
-      ATTACK 0 12 F 0
-      PLAN 0 T
-      ANIM_STATES 0 0 0 0
-      MASHA_FLAG 0 DYING 0
-      SELECTION 0 0 0 0
-      DRAW 1008 628 0
-      FROM_TO_POS 55 38 0 55 38 0
-      FROM_TO_XY 0 0 0 0
-      LAST_ACTION 0
-      BUILDING
-    END_OF_GAME_STATE
   UNIT 111 BUILDING
     DEFINITION
       POS 35 32 1
@@ -3975,10 +3891,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 35 32 1 6 F
       UNITMODE F 35 32
       STATE 4 24
@@ -4001,10 +3917,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 34 34 4 6 F
       UNITMODE F 34 34
       STATE 4 24
@@ -4028,7 +3944,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 2 LEVEL 10 BASE 3
+        TYPE 2 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4057,7 +3973,7 @@ NEW_UNITS
         TYPE 28 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 0 T 111 1
+      ACTION 0 T 83 1
       MOVE 55 67 4 6 F
       UNITMODE F 55 67
       STATE 4 24
@@ -4081,7 +3997,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 3
+        TYPE 31 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4110,7 +4026,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 3
+        TYPE 31 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4139,7 +4055,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 3
+        TYPE 31 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4168,7 +4084,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 3
+        TYPE 31 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4197,7 +4113,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 3
+        TYPE 31 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4226,7 +4142,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 30 LEVEL 10 BASE 4
+        TYPE 30 LEVEL 10 BASE 3
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4252,7 +4168,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 31 LEVEL 10 BASE 4
+        TYPE 31 LEVEL 10 BASE 3
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4280,10 +4196,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 37 35 1 6 F
       UNITMODE F 37 35
       STATE 4 24
@@ -4306,10 +4222,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 38 33 1 6 F
       UNITMODE F 38 33
       STATE 4 24
@@ -4336,7 +4252,7 @@ NEW_UNITS
         NAME Kvantovy
         SEX 1
         ATTR 25 12
-        CLASS 1
+        CLASS 2
         IMPORTANCE 100
         GALERY LozaSzydercow 10 BSKILLS 8 10 9 9
         EXPERIENCES 4680 0 9990 9990
@@ -4344,7 +4260,7 @@ NEW_UNITS
         COLOR_CODE 1BM
         FACE 10
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED 0
     END_OF_DEFINITION
     GAME_STATE
@@ -4375,7 +4291,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 19 LEVEL 10 BASE 3 PARAMS 21 24
+        TYPE 19 LEVEL 10 BASE 2 PARAMS 21 24
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4402,10 +4318,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 25 LEVEL 10 BASE 3
+        TYPE 25 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 44 60 4 6 F
       UNITMODE F 44 60
       STATE 4 24
@@ -4428,10 +4344,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 25 LEVEL 10 BASE 3
+        TYPE 25 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 33 62 4 6 F
       UNITMODE F 33 62
       STATE 4 24
@@ -4454,10 +4370,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 25 LEVEL 10 BASE 3
+        TYPE 25 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 36 62 2 6 F
       UNITMODE F 36 62
       STATE 4 24
@@ -4680,7 +4596,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 94 LEVEL 10 BASE 3
+        TYPE 94 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4706,10 +4622,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 28 51 3 6 F
       UNITMODE F 28 51
       STATE 4 24
@@ -4732,10 +4648,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 30 50 1 6 F
       UNITMODE F 30 50
       STATE 4 24
@@ -4758,10 +4674,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 33 51 2 6 F
       UNITMODE F 33 51
       STATE 4 24
@@ -4784,10 +4700,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 10 BASE 3
+        TYPE 26 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 31 53 1 6 F
       UNITMODE F 31 53
       STATE 4 24
@@ -4811,7 +4727,7 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 6 LEVEL 10 BASE 3
+        TYPE 6 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -4963,12 +4879,13 @@ NEW_UNITS
     END_OF_GAME_STATE
   UNIT 249 BUILDING
     DEFINITION
+      IDENT AmBarracks1
       POS 74 95 5
       SIDE 1
       NATION 1
       HP 1000
       BUILDING
-        TYPE 33 LEVEL 10 BASE 2
+        TYPE 4 LEVEL 10 BASE 2
     END_OF_DEFINITION
     GAME_STATE
       ACTION 0 T 1 1
@@ -5025,7 +4942,7 @@ NEW_UNITS
         TYPE 25 LEVEL 1 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 68 93 5 6 F
       UNITMODE F 68 93
       STATE 4 24
@@ -5048,10 +4965,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 25 LEVEL 1 BASE 3
+        TYPE 25 LEVEL 1 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 39 73 5 6 F
       UNITMODE F 39 73
       STATE 4 24
@@ -5074,10 +4991,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 1 BASE 3
+        TYPE 26 LEVEL 1 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 42 57 3 6 F
       UNITMODE F 42 57
       STATE 4 24
@@ -5100,10 +5017,10 @@ NEW_UNITS
       NATION 1
       HP 1000
       BUILDING
-        TYPE 26 LEVEL 1 BASE 3
+        TYPE 26 LEVEL 1 BASE 2
     END_OF_DEFINITION
     GAME_STATE
-      ACTION 31 T 125 1
+      ACTION 31 T 179 1
       MOVE 39 56 2 6 F
       UNITMODE F 39 56
       STATE 4 24
@@ -5119,89 +5036,96 @@ NEW_UNITS
       LAST_ACTION 0
       BUILDING
     END_OF_GAME_STATE
-  UNIT -1 CRATE
+  UNIT 257 BUILDING
     DEFINITION
-      POS 130 205 3
-      SIDE 0
-      NATION 94
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
+      IDENT MainTerminal
+      POS 54 37 2
+      SIDE 1
+      NATION 1
+      HP 1000
+      BUILDING
+        TYPE 2 LEVEL 10 BASE 3
     END_OF_DEFINITION
     GAME_STATE
-    CRATERS 2 -6 -3
+      ACTION 0 T 1 1
+      MOVE 54 37 2 6 F
+      UNITMODE F 54 37
+      STATE 4 24
+      WEAPON_LOADING 0 0
+      ATTACK 0 30 F 0
+      PLAN 0 T
+      ANIM_STATES 0 0 0 0
+      MASHA_FLAG 0 DYING 0
+      SELECTION 0 0 0 0
+      DRAW 994 610 0
+      FROM_TO_POS 54 37 0 54 37 0
+      FROM_TO_XY 0 0 0 0
+      LAST_ACTION 0
+      BUILDING
+    END_OF_GAME_STATE
+  UNIT 259 BUILDING
+    DEFINITION
+      POS 54 40 5
+      SIDE 1
+      NATION 1
+      HP 1000
+      BUILDING
+        TYPE 25 LEVEL 10 BASE 2
+    END_OF_DEFINITION
+    GAME_STATE
+      ACTION 31 T 179 1
+      MOVE 54 40 5 6 F
+      UNITMODE F 54 40
+      STATE 4 24
+      WEAPON_LOADING 0 0
+      ATTACK 0 12 F 0
+      PLAN 0 T
+      ANIM_STATES 0 0 0 0
+      MASHA_FLAG 0 DYING 0
+      SELECTION 0 0 0 0
+      DRAW 952 664 0
+      FROM_TO_POS 54 40 0 54 40 0
+      FROM_TO_XY 0 0 0 0
+      LAST_ACTION 0
+      BUILDING
+    END_OF_GAME_STATE
+  UNIT 263 BUILDING
+    DEFINITION
+      POS 51 37 5
+      SIDE 1
+      NATION 1
+      HP 1000
+      BUILDING
+        TYPE 25 LEVEL 10 BASE 2
+    END_OF_DEFINITION
+    GAME_STATE
+      ACTION 31 T 179 1
+      MOVE 51 37 5 6 F
+      UNITMODE F 51 37
+      STATE 4 24
+      WEAPON_LOADING 0 0
+      ATTACK 0 12 F 0
+      PLAN 0 T
+      ANIM_STATES 0 0 0 0
+      MASHA_FLAG 0 DYING 0
+      SELECTION 0 0 0 0
+      DRAW 910 610 0
+      FROM_TO_POS 51 37 0 51 37 0
+      FROM_TO_XY 0 0 0 0
+      LAST_ACTION 0
+      BUILDING
     END_OF_GAME_STATE
   UNIT -1 CRATE
     DEFINITION
-      POS 123 213 3
+      POS 145 227 4
       SIDE 0
       NATION 94
       HP 200
       CRATE
-        SIZE 5 -1 CRATE_TYPE 1
+        SIZE 4 -1 CRATE_TYPE 1
     END_OF_DEFINITION
     GAME_STATE
-    CRATERS 2 -7 -2
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 122 205 2
-      SIDE 0
-      NATION 94
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 0 -2
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 171 205 4
-      SIDE 0
-      NATION 94
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -1 -4
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 177 217 3
-      SIDE 0
-      NATION 94
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -1 0
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 160 206 2
-      SIDE 0
-      NATION 94
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -4 -3
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 168 211 1
-      SIDE 0
-      NATION 94
-      HP 200
-      CRATE
-        SIZE 3 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -2 0
+    CRATERS 2 -1 -3
     END_OF_GAME_STATE
   UNIT -1 CRATE
     DEFINITION
@@ -5217,15 +5141,87 @@ NEW_UNITS
     END_OF_GAME_STATE
   UNIT -1 CRATE
     DEFINITION
-      POS 145 227 4
+      POS 168 211 1
       SIDE 0
       NATION 94
       HP 200
       CRATE
-        SIZE 4 -1 CRATE_TYPE 1
+        SIZE 3 -1 CRATE_TYPE 1
     END_OF_DEFINITION
     GAME_STATE
-    CRATERS 2 -1 -3
+    CRATERS 2 -2 0
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 160 206 2
+      SIDE 0
+      NATION 94
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -4 -3
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 177 217 3
+      SIDE 0
+      NATION 94
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -1 0
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 171 205 4
+      SIDE 0
+      NATION 94
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -1 -4
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 122 205 2
+      SIDE 0
+      NATION 94
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 0 -2
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 123 213 3
+      SIDE 0
+      NATION 94
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -7 -2
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 130 205 3
+      SIDE 0
+      NATION 94
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -6 -3
     END_OF_GAME_STATE
 END_OF_NEW_UNITS
 
@@ -5251,7 +5247,7 @@ LASER_EFECTS
 END_OF_LASER_EFECTS
 
 USER_INTERFACE
-  VIEW 292 3544 1540 852 1
+  VIEW -56 -96 1540 852 1
   MASHA_FLAG 2 F F
 END_OF_USER_INTERFACE
 
@@ -5280,8 +5276,8 @@ SIDE 8 10
 END_OF_DEBRIEFING
 
 AREAS
-  ACTIVE 17
-  LAST 70
+  ACTIVE 18
+  LAST 71
   AREA 1
     NAME EnterArea
     COLOR FF93A2
@@ -5624,7 +5620,6 @@ AREAS
   AREA 7
     NAME AmCratesArea
     COLOR 0980FF
-    VISIBLE
     SHORTCUT 2
     LINES 49 96 36 26
     +++---------------------------------
@@ -5995,6 +5990,39 @@ AREAS
     -----------------------------------------++++++++++++++----
     -------------------------------------------+++++++++++++---
     -----------------------------------------------+++++++-----
+  AREA 18
+    NAME DontEnterArea
+    COLOR 1332FF
+    SHORTCUT 1
+    LINES 47 89 85 28
+    --------------------------------+++++++++++++++++++++------+++++++++++++++++++++-----
+    +-+++++++----------------+++++++++++++++++++++++++++++++++++++++++++++++++++++++++---
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
+    -+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+    -+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+    --++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+    --+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ---++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ---++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ----+++++++++++++++++++++++++++++++++++++++++++-------+++++++++--------+++++++++++++-
+    ----+++++++++++++++++++++++++++++++++++++++++++--------++++++++----------------------
+    -----++++++++++++++++++++++++++++++++++++++++++---------+++++++----------------------
+    -----+++++++++++++++++++++++++++++++++++++++++++---------++++++----------------------
+    ------++++++++++++++++++++++++++++++++++++++++++----------+++++----------------------
+    ------++++++++++++++++++++++++++++++++++++++++++-----------++++----------------------
+    -------++++++++++++++++++++++++++++++++++++++++++-----------+++----------------------
+    -------++++++++++++++++++++++++++++++++++++++++++------------++----------------------
+    --------+++++++++++++++++++++++++++++++++++++++++-------------+----------------------
+    --------+++++++++++++++++++++++++++++++++++++++++------------------------------------
+    ---------+++++++++++++++++++++++++++++++++++++++-------------------------------------
+    ---------+++++++++++++++++++++++++++++++++++++++-------------------------------------
+    ----------+++++++++++++++++++++++++++++++++++++--------------------------------------
+    ----------+++++++++++++++++++++++++++--++++++++--------------------------------------
+    ------------+++++++++++++++++++++---------+++++--------------------------------------
+    --------------+++++++++++++++--------------------------------------------------------
+    ------------------++-++--+++---------------------------------------------------------
 END_OF_AREAS
 
 SEXTRA
@@ -6164,21 +6192,6 @@ SEXTRA
 
   255
   1
-    88
-    2
-      20
-      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-    3
-      F
-    4
-      F
-    5
-      0 0
-    6
-      1
-
-  255
-  1
     92
     2
       20
@@ -6285,36 +6298,6 @@ SEXTRA
   255
   1
     106
-    2
-      20
-      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-    3
-      F
-    4
-      F
-    5
-      0 0
-    6
-      1
-
-  255
-  1
-    107
-    2
-      20
-      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-    3
-      F
-    4
-      F
-    5
-      0 0
-    6
-      1
-
-  255
-  1
-    108
     2
       20
       0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -6945,6 +6928,51 @@ SEXTRA
   255
   1
     255
+    2
+      20
+      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    3
+      F
+    4
+      F
+    5
+      0 0
+    6
+      1
+
+  255
+  1
+    257
+    2
+      20
+      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    3
+      F
+    4
+      F
+    5
+      0 0
+    6
+      1
+
+  255
+  1
+    259
+    2
+      20
+      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    3
+      F
+    4
+      F
+    5
+      0 0
+    6
+      1
+
+  255
+  1
+    263
     2
       20
       0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
