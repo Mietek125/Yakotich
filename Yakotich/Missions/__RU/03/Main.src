@@ -1,0 +1,78 @@
+// Misja 03 / 28.06.2023
+// Jest godzina 3:16 a pisze jebane dialogi do tej misji... nie pojeba³o mnie? ~Mietek
+// Misja 03 / 09.07.2023
+// Wracam do tego moda, musze skoñczyæ t¹ jeban¹ misjê w i w koñcu go wypuœciæ
+
+Starting
+begin
+
+ResetFog;
+Init;
+
+SetBname(Ovsyenko,'Ovsyenko');
+
+AnimateTrees(true);
+
+Randomize;
+RandomizeAll;
+
+InitGlobalVariables;
+InitRussian;
+Action;
+InitAmerican;
+
+
+DebugMode;
+
+game_speed = 7;
+
+end;
+
+Export DimitriCrew, YakotichCrew, BurlakCrew, SikorskiTeam,WestTerminalCrew,MainTerminalCrew, newAttackers, Attackers;
+Export Yakotich,Mietek,Boris,Vasilij,Michail,Constantin,Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav;
+Export Dimitri,Ivan,Jegor,Grigori,Anton, RusSol;
+Export Sevi,SeviGuy1,SeviGuy2,SeviGuy3;
+Export Burlak, Karamazov, Petrovova, Lipshchin, Gleb, Titov, Petrosyan, Dolgov;
+Export BurlakVeh,KaramazovVeh,BurlakCrewVeh1,BurlakCrewVeh2,BurlakCrewVeh3,BurlakCrewVeh4,BurlakCrewVeh5,BurlakCrewVeh6;
+Export Sikorski, Truman, Bobby, Cyrus, Gary, Lynch, McCreery, Walker, Jilian, Turner, Houten, NorthSold;
+Export Morozov,Platonov;
+
+Export BurlakTime;
+
+export debug; //tests only!
+
+Export mission_prefix;
+Export cutscene_ended,ovsyenko_captured, start_ended, lab_seen, lab_captured,
+rocket_researched, prediction_researched, buldozer_researched, flametank_saved;
+
+
+Function Init;
+begin
+
+mission_prefix := '03_';
+//debug := True;
+cutscene_ended = False;
+ovsyenko_captured = False;
+start_ended = False;
+rocket_researched = False;
+buldozer_researched = False;
+prediction_researched = False;
+flametank_saved = False;
+lab_seen = False;
+lab_captured = False;
+
+
+BurlakTime := [10$0,12$30,15$0][Difficulty];
+
+end;
+
+Export Function DebugMode;
+Begin
+
+If Debug = True then
+Begin
+Difficulty := 3;
+TurnFogOff();
+FogOff(3);
+end;
+end;

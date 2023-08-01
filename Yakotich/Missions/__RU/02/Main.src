@@ -1,0 +1,55 @@
+//Misja 2 / 22.03.2023
+//Nie mam pomys³u na t¹ misjê, chuj w dupe ownetowi ~Mietek
+
+Starting
+begin
+
+ResetFog;
+Init;
+
+AnimateTrees(true);
+
+Randomize;
+RandomizeAll;
+
+InitRussian;
+Action;
+
+DebugMode;
+
+end;
+
+Export Yakotich, Mietek, Boris, Vasilij, Michail, Constantin;
+Export Maksim, Fiodor, Pavel, Zakhar, Aleksiej, Aleksandr;
+Export Morozov;
+Export MietekCrew;
+Export YakotichCrew;
+
+Export SelectedPeople;
+
+export debug; //tests only!
+
+Export mission_prefix;
+Export exit_ready;
+
+Export MyPeople;
+
+Function Init;
+begin
+
+mission_prefix := '02_';
+debug := False;
+
+
+end;
+
+Function DebugMode;
+var i;
+begin
+if not debug then
+exit;
+
+Difficulty := 3;
+TurnFogOff();
+FogOff(3);
+end;

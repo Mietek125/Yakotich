@@ -1,0 +1,313 @@
+Export Function Action;
+Begin
+
+     ingame_video := true;
+     interface_hidden := true;
+
+     ComMoveToArea([Mietek,Boris,Vasilij,Michail,Constantin,Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav],PeopleStartArea);
+     ComMoveToArea(Yakotich,YakotichStartArea);
+
+end;
+
+Every 0$1 Trigger IsInArea(Yakotich,YakotichStartArea) do
+begin
+
+     ComTurnUnit(Yakotich,Mietek);
+     Say(Yakotich,'3Yak-01');
+
+     ComEnterUnit(Yakotich,Ovsyenko);
+     ComEnterUnit(Mietek,Ovsyenko);
+     ComEnterUnit(Boris,Ovsyenko);
+
+end;
+Export engs;
+Export Function SikorskiAction;
+var x, y, i, tmp, t, engs, un, speaker;
+begin
+
+x := 101;
+y := 116;
+
+PlaceSeeing(x, y, 1, -30);
+CenterNowOnXY(x, y);
+
+tmp := FilterAllUnits([[f_side, 4], [f_type, unit_human]]) diff Sikorski;
+
+AddComTurnXY(tmp, 111, 125);
+
+wait(0$02);
+AddComMoveXY(Sikorski, 105, 111);
+
+ComAgressiveMove(tmp, 108, 117);
+
+Say(Sikorski, '3Sik-01');
+Say(Yakotich, '3Yak-08');
+
+repeat
+ wait(0$01);
+until See(3, Sikorski);
+
+un := UnitsInside(NearestUnitToUnit(FilterAllUnits([f_btype, b_breastwork]), Sikorski))[1];
+
+AddComAttackUnit(un, Sikorski);
+
+wait(0$3);
+
+MineExplosion(111, 116, 1);
+
+repeat
+ wait(0$01);
+until IsDying(un);
+
+DoNotAttack(3, Sikorski);
+
+AddComMoveXY(Sikorski, 110, 120);
+AddComAttackUnit(Sikorski, Ovsyenko);
+
+Say(Yakotich, '3Yak-09');
+
+ComExitBuilding([f_side , 3]);
+AddComAgressiveMove([f_side, 3], 106, 114);
+
+ComMoveXY(tmp, 109, 119);
+AddComTurnXY(tmp, 111, 125);
+
+ComExitBuilding(Yakotich);
+AddComAttackUnit(Yakotich, Sikorski);
+
+Say(Sikorski, '3Sik-02');
+
+wait(0$2);
+
+SayEffect('3smrtsikora');
+KillUnit(Sikorski);
+
+wait(0$1);
+
+engs := FilterAllUnits([f_class, 2]);
+
+ComExitBuilding(engs);
+
+for i = 1 to engs do
+    AddComEnterUnit(engs[i], FilterAllUnits([f_weapon, ru_cargo_bay])[i]);
+    AddComTransport(Boris,Ovsyenko,mat_siberit);
+    AddComTransport(Anton,Ovsyenko,mat_cans);
+
+AddComMoveXY(engs, 147, 220);
+AddComExitVehicle(engs);
+
+
+AddComMoveXY(Yakotich, 148, 208);
+
+un := FilterAllUnits([[f_side, 3], [f_class, 1]]);
+
+ComExitBuilding(un);
+ComExitBuilding(Grigori);
+AddComMoveXY(un, 148, 208);
+AddComMoveXY(Grigori, 148, 208);
+
+wait(5);
+
+Say(Jilian,'3Rand-01');
+
+ComMoveToArea(SikorskiTeam,OvsyenkoArea);
+
+wait(0$7);
+
+t := [   [104,117],
+         [115,123],
+         [114,126],
+         [111,122],
+         [112,126],
+         [117,130],
+         [106,127],
+         [111,117],
+         [98, 119],
+         [116,131],
+         [109,129],
+         [100,113]
+     ];
+
+for i in t do
+    begin
+    wait(0$0.3);
+    MineExplosion(i[1], i[2], 1);
+    end;
+
+//MineExplosion(GetX(Sikorski), GetY(Sikorski), 4);
+//KillUnit(Sikorski);
+
+wait(0$4);
+
+Say(Turner, '3Rand-02');
+
+wait(0$5);
+
+//CenterOnUnits(Yakotich);
+
+wait(0$2);
+
+SayRadio(Yakotich, '3Yak-10');
+
+SetLives(Ovsyenko,400);
+
+Cutscene_ended = True;
+
+CenterOnXY(148, 208);
+
+
+
+SayRadio(Platonov, '3Plat-03');
+SayRadio(Platonov, '3Plat-04');
+SayRadio(Platonov, '3Plat-05');
+SayRadio(Platonov, '3Plat-06');
+SayRadio(Platonov, '3Plat-07');
+
+SayRadio(Yakotich, '3Yak-11');
+
+repeat Wait(0$1) until not IsInUnit(Boris) and not IsInUnit(Anton);
+
+tmp := [];
+
+start_ended = True;
+
+End;
+
+
+Every 0$1 Trigger IsInUnit(Yakotich) do
+begin
+
+     Say(Yakotich,'3Yak-02');
+     Say(Dimitri,'3Dim-01');
+     Say(Yakotich,'3Yak-03');
+     Say(Dimitri,'3Dim-02');
+     SayRadio(Yakotich,'3Yak-04');
+     SayRadio(Platonov,'3Plat-01');
+     SayRadio(Yakotich,'3Yak-05');
+     SayRadio(Platonov,'3Plat-02');
+     Say(Dimitri,'3Dim-03');
+     Say(Dimitri,'3Dim-04');
+     Say(Yakotich,'3Yak-06');
+     Say(Dimitri,'3Dim-05');
+     Say(Yakotich,'3Yak-07');
+
+     Wait(0$03);
+
+     InitSikorskiTeam;
+     SikorskiAction;
+
+     ChangeMissionObjectives('o1');
+
+     SetSide([Ovsyenko,OB2,OB3,oil,eoil1,eoil2],4);
+     ComEnterUnit(Cyrus,OB3);
+     ComEnterUnit(Bobby,OB2);
+     SetClass([Jilian,Turner],2);
+     ComWalk([Jilian,Turner,McCreery,Lynch,Walker,Truman,Gary]);
+
+end;
+
+Every 0$1 Trigger start_ended = True do
+begin
+
+     Say(Yakotich,'3Yak-12');
+     Say(Vasilij,'3Vas-01');
+     Say(Dimitri,'3Dim-06');
+     Say(Dimitri,'3Dim-07');
+     Say(Vasilij,'3Vas-02');
+
+     ChangeMissionObjectives('rocket');
+
+end;
+
+Every 0$1 Trigger GetSide(Ovsyenko) = 3 and start_ended = True do
+begin
+
+DialogueOn;
+InGameOn;
+
+SayRadio(Yakotich,'3Yak-13');
+SayRadio(Platonov,'3Plat-06');
+SayRadio(Platonov,'3Plat-07');
+Say(Mietek,'3Ryn-01');
+
+CenterNowOnXY(109,72);
+RevealFogArea(3,EastPassage);
+
+Say(Mietek,'3Ryn-02');
+
+CenterNowOnXY(78,17);
+RevealFogArea(3,NorthPassage);
+
+Say(Mietek,'3Ryn-03');
+Say(Yakotich,'3Yak-14');
+
+ChangeMissionObjectives(['o2a','o2b','o2c'][Difficulty]);
+
+SetTech(86,3,1);
+
+DialogueOff;
+InGameOff;
+
+end;
+
+Every 0$1 Trigger ovsyenko_captured = True do
+begin
+
+Wait(15$0);
+
+InitBurlak;
+
+DialogueOn;
+
+CenterNowOnXY(155,235);
+
+SayRadio(Burlak,'3Bur-01');
+SayRadio(Yakotich,'3Yak-15');
+SayRadio(Burlak,'3Bur-02');
+
+CenterNowOnUnits(BurlakVeh);
+
+SayRadio(Vasilij,'3Vas-Flame-01');
+SayRadio(Burlak,'3Bur-Flame-01');
+SayRadio(Yakotich,'3Yak-Flame-01');
+SayRadio(Burlak,'3Bur-Flame-02');
+SayRadio(Vasilij,'3Vas-Flame-02');
+
+ChangeMissionObjectives('flametank');
+
+DialogueOff;
+
+Wait(0$15);
+
+DialogueOn;
+
+Say(Petrosyan,'3Pty-01');
+Say(Yakotich,'3Yak-16');
+Say(Platonov,'3Plat-08');
+
+ChangeMissionObjectives('o4');
+
+SetRestrict(11,3,1);
+SetRestrict(14,3,1);
+SetRestrict(28,3,1);
+
+DialogueOff;
+
+Wait(1$0);
+
+DialogueOn;
+
+Say(Petrosyan,'3Pty-Comp-01');
+Say(Burlak,'3Bur-Comp-01');
+Say(Petrosyan,'3Pty-Comp-02');
+Say(Burlak,'3Bur-Comp-02');
+Say(Petrosyan,'3Pty-Comp-03');
+
+SetRestrict(12,3,1);
+
+ChangeMissionObjectives('05');
+
+DialogueOff;
+
+end;
+

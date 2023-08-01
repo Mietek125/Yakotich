@@ -1,0 +1,361 @@
+{ Export NorthDefense,SouthDefense;
+Export AmSoldNorth,AmScienNorth,AmMechNorth,AmEngNorth,
+AmSoldSouth, AmScienSouth, AmMechSouth, AmEngSouth;
+Export AmSoldConvoy, AmScienConvoy, AmMechConvoy, AmEngConvoy }
+
+Export Function InitAmerican;
+Var i, y, turrety, lab, fabryka, zbrojka, turrety2, lab2, fabryka2, zbrojka2;
+Begin
+
+ AmNorthPersonel := [];
+
+ uc_side := 1;
+ uc_nation := 1;
+
+ For i = 1 to [7,8,9][Difficulty] do
+  Begin
+   PrepareSoldier(rand(0,1),[1,3,5][Difficulty]);
+   AmNorthPersonel := AmNorthPersonel ^ CreateHuman;
+  End;
+ For i = 1 to 2 do
+  Begin
+   PrepareEngineer(rand(0,1),[1,3,5][Difficulty]);
+   AmNorthPersonel := AmNorthPersonel ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin
+   PrepareMechanic(rand(0,1),[1,3,5][Difficulty]);
+   AmNorthPersonel := AmNorthPersonel ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin                            
+   PrepareScientist(rand(0,1),[1,3,5][Difficulty]);
+   AmNorthPersonel := AmNorthPersonel ^ CreateHuman;
+  End;
+
+ turrety := FilterUnitsInArea(AmNorthBaseArea, [f_or, [f_btype, b_breastwork], [f_btype, b_bunker]]);
+ lab := FilterUnitsInArea(AmNorthBaseArea, [[f_btype, b_lab_half]]);
+ fabryka := FilterUnitsInArea(AmNorthBaseArea, [[f_btype, b_factory]]);
+ zbrojka := FilterUnitsInArea(AmNorthBaseArea, [[f_btype, b_armoury]]);
+
+ y := 1;
+   
+  For i in AmNorthPersonel do
+  Begin
+  PlaceUnitArea(i, AmNorthArea, false);
+   Case GetClass(i) of
+   1:Begin
+      if y > 6 then ComEnterUnit(i, zbrojka[1])
+      else ComEnterUnit(i, turrety[y]);
+      y = y + 1;
+     End;
+   2:ComEnterUnit(i, AmDep1);
+   3:ComEnterUnit(i, fabryka[1]);
+   4:ComEnterUnit(i, lab[1]);
+
+  End;
+ End;
+
+AmSouthPersonel := [];
+
+ For i = 1 to [4,5,6][Difficulty] do
+  Begin
+   PrepareSoldier(rand(0,1),[1,3,5][Difficulty]);
+   AmSouthPersonel := AmSouthPersonel ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin
+   PrepareEngineer(rand(0,1),[1,3,5][Difficulty]);
+   AmSouthPersonel := AmSouthPersonel ^ CreateHuman;
+  End;
+ For i = 1 to 2 do
+  Begin
+   PrepareMechanic(rand(0,1),[1,3,5][Difficulty]);
+   AmSouthPersonel := AmSouthPersonel ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin
+   PrepareScientist(rand(0,1),[1,3,5][Difficulty]);
+   AmSouthPersonel := AmSouthPersonel ^ CreateHuman;
+  End;
+
+ turrety := FilterUnitsInArea(AmSouthBaseArea, [f_or, [f_btype, b_breastwork], [f_btype, b_bunker]]);
+ lab := FilterUnitsInArea(AmSouthBaseArea, [[f_btype, b_lab]]);
+ fabryka := FilterUnitsInArea(AmSouthBaseArea, [f_or, [f_btype, b_factory], [f_btype, b_workshop]]);
+ zbrojka := FilterUnitsInArea(AmSouthBaseArea, [[f_btype, b_armoury]]);
+
+ y := 1;
+
+  For i in AmSouthPersonel do
+  Begin
+  PlaceUnitArea(i, AmSouthArea, false);
+   Case GetClass(i) of
+   1:Begin
+      if y > 2 then ComEnterUnit(i, zbrojka[1])
+      else ComEnterUnit(i, turrety[y]);
+      y = y + 1;
+     End;
+   2:ComEnterUnit(i, AmDep2);
+   3:ComEnterUnit(i, fabryka[1]);
+   4:ComEnterUnit(i, lab[1]);
+
+  End;
+ End;
+End;
+
+  every 0$1 do
+  var enemy,attacker;
+  begin
+  enable;
+  enemy = Filterallunits([f_side, 3]);
+  for attacker in AmConvoysVehicles do
+  ComAttackUnit(attacker,NearestUnitToUnit(enemy,attacker));
+  end;
+
+Every 0$1 do
+begin
+enable;
+
+ComAgressiveMove(AmConvoys,157,97);
+
+end; 
+
+Export Function AmAttacks;
+var i;
+begin                     
+
+Uc_Side = 4;
+Uc_Nation = 1;
+
+// FALA PIERWSZA
+
+Wait(4$30);
+
+first_attack_spawned = True;
+
+For i = 1 to [2,2,3][Difficulty] do
+Begin
+PrepareSoldier(rand(0,1),[1,2,3][Difficulty]);
+AmSoldConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSoldConvoy;
+PlaceUnitArea(AmSoldConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [0,1,1][Difficulty] do
+Begin
+PrepareScientist(rand(0,1),[1,2,3][Difficulty]);
+AmSciConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSciConvoy;
+PlaceUnitArea(AmSciConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,1,1][Difficulty] do
+Begin
+PrepareEngineer(rand(0,1),[1,2,3][Difficulty]);
+AmEngConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmEngConvoy;
+PlaceUnitArea(AmEngConvoy,AmSoldSpawn,False);
+End;
+
+ for i = 1 to [1,1,1][Difficulty] do
+  begin
+   uc_side:=4;
+   uc_nation:=1;
+   vc_control = control_manual;
+   vc_engine = engine_combustion;
+   vc_chassis = rand(2,4);
+   vc_weapon = rand(3,5);
+   AmVehicleConvoy=CreateVehicle;
+   PrepareMechanic(rand(0,1),[1,2,3][Difficulty]);
+   AmMechConvoy := CreateHuman;
+   PlaceHumanInUnit(AmMechConvoy, AmVehicleConvoy);
+   PlaceUnitArea(AmVehicleConvoy, AmVehicleArea, false);
+   AmConvoysVehicles := AmConvoysVehicles ^ AmMechConvoy ^ AmVehicleConvoy;
+
+  end;
+
+// FALA DRUGA
+
+Wait(5$45);
+
+For i = 1 to [2,3,4][Difficulty] do
+Begin
+PrepareSoldier(rand(0,1),[1,2,4][Difficulty]);
+AmSoldConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSoldConvoy;
+PlaceUnitArea(AmSoldConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,2,2][Difficulty] do
+Begin
+PrepareScientist(rand(0,1),[1,2,4][Difficulty]);
+AmSciConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSciConvoy;
+PlaceUnitArea(AmSciConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,1,1][Difficulty] do
+Begin
+PrepareEngineer(rand(0,1),[1,2,4][Difficulty]);
+AmEngConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmEngConvoy;
+PlaceUnitArea(AmEngConvoy,AmSoldSpawn,False);
+End;
+
+ for i = 1 to [1,2,2][Difficulty] do
+  begin
+   uc_side:=4;
+   uc_nation:=1;
+   vc_control = control_manual;
+   vc_engine = engine_combustion;
+   vc_chassis = rand(2,4);
+   vc_weapon = rand(3,5);
+   AmVehicleConvoy=CreateVehicle;
+   PrepareMechanic(rand(0,1),[1,2,4][Difficulty]);
+   AmMechConvoy := CreateHuman;
+   PlaceHumanInUnit(AmMechConvoy, AmVehicleConvoy);
+   PlaceUnitArea(AmVehicleConvoy, AmVehicleArea, false);
+   AmConvoysVehicles := AmConvoysVehicles ^ AmMechConvoy ^ AmVehicleConvoy;
+  end;
+
+ComAgressiveMove(AmConvoys,157,97);
+
+// FALA TRZECIA
+
+Wait(5$0);
+
+For i = 1 to [3,4,6][Difficulty] do
+Begin
+PrepareSoldier(rand(0,1),[1,2,4][Difficulty]);
+AmSoldConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSoldConvoy;
+PlaceUnitArea(AmSoldConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,2,2][Difficulty] do
+Begin
+PrepareScientist(rand(0,1),[1,2,4][Difficulty]);
+AmSciConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSciConvoy;
+PlaceUnitArea(AmSciConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,1,2][Difficulty] do
+Begin
+PrepareEngineer(rand(0,1),[1,2,4][Difficulty]);
+AmEngConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmEngConvoy;
+PlaceUnitArea(AmEngConvoy,AmSoldSpawn,False);
+End;
+
+ for i = 1 to [1,2,3][Difficulty] do
+  begin
+   uc_side:=4;
+   uc_nation:=1;
+   vc_control = control_manual;
+   vc_engine = engine_combustion;
+   vc_chassis = rand(2,4);
+   vc_weapon = rand(3,5);
+   AmVehicleConvoy=CreateVehicle;
+   PrepareMechanic(rand(0,1),[1,2,4][Difficulty]);
+   AmMechConvoy := CreateHuman;
+   PlaceHumanInUnit(AmMechConvoy, AmVehicleConvoy);
+   PlaceUnitArea(AmVehicleConvoy, AmVehicleArea, false);
+   AmConvoysVehicles := AmConvoysVehicles ^ AmMechConvoy ^ AmVehicleConvoy;
+  end;
+
+ComAgressiveMove(AmConvoys,157,97);
+
+// FALA CZWARTA
+
+Wait(5$0);
+
+For i = 1 to [3,5,7][Difficulty] do
+Begin
+PrepareSoldier(rand(0,1),[1,2,4][Difficulty]);
+AmSoldConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSoldConvoy;
+PlaceUnitArea(AmSoldConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,2,3][Difficulty] do
+Begin
+PrepareScientist(rand(0,1),[1,2,4][Difficulty]);
+AmSciConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSciConvoy;
+PlaceUnitArea(AmSciConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,1,2][Difficulty] do
+Begin
+PrepareEngineer(rand(0,1),[1,2,4][Difficulty]);
+AmEngConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmEngConvoy;
+PlaceUnitArea(AmEngConvoy,AmSoldSpawn,False);
+End;
+
+ for i = 1 to [1,2,3][Difficulty] do
+  begin
+   uc_side:=4;
+   uc_nation:= 1;
+   vc_control = control_manual;
+   vc_engine = engine_combustion;
+   vc_chassis = rand(2,4);
+   vc_weapon = rand(3,5);
+   AmVehicleConvoy=CreateVehicle;
+   PrepareMechanic(rand(0,1),[1,2,4][Difficulty]);
+   AmMechConvoy := CreateHuman;
+   PlaceHumanInUnit(AmMechConvoy, AmVehicleConvoy);
+   PlaceUnitArea(AmVehicleConvoy, AmVehicleArea, false);
+   AmConvoysVehicles := AmConvoysVehicles ^ AmMechConvoy ^ AmVehicleConvoy;
+  end;
+
+ComAgressiveMove(AmConvoys,157,97);
+
+// FALA PI¥TA (OSTATNIA)
+
+Wait(5$0);
+
+For i = 1 to [4,6,10][Difficulty] do
+Begin
+PrepareSoldier(rand(0,1),[1,2,4][Difficulty]);
+AmSoldConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSoldConvoy;
+PlaceUnitArea(AmSoldConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,2,3][Difficulty] do
+Begin
+PrepareScientist(rand(0,1),[1,2,4][Difficulty]);
+AmSciConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmSciConvoy;
+PlaceUnitArea(AmSciConvoy,AmSoldSpawn,False);
+End;
+
+For i = 1 to [1,1,3][Difficulty] do
+Begin
+PrepareEngineer(rand(0,1),[1,2,4][Difficulty]);
+AmEngConvoy = CreateHuman;
+AmConvoys := AmConvoys ^ AmEngConvoy;
+PlaceUnitArea(AmEngConvoy,AmSoldSpawn,False);
+End;
+
+ for i = 1 to [1,2,4][Difficulty] do
+  begin
+   uc_side:=4;
+   uc_nation:= 1;
+   vc_control = control_manual;
+   vc_engine = engine_combustion;
+   vc_chassis = rand(2,4);
+   vc_weapon = rand(3,5);
+   AmVehicleConvoy=CreateVehicle;
+   PrepareMechanic(rand(0,1),[1,2,4][Difficulty]);
+   AmMechConvoy := CreateHuman;
+   PlaceHumanInUnit(AmMechConvoy, AmVehicleConvoy);
+   PlaceUnitArea(AmVehicleConvoy, AmVehicleArea, false);
+   AmConvoysVehicles := AmConvoysVehicles ^ AmMechConvoy ^ AmVehicleConvoy;
+  end;
+
+ComAgressiveMove(AmConvoys,157,97);
+
+end;

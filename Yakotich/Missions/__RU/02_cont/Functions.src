@@ -1,0 +1,216 @@
+Export Function PrepareSolBun(skill, b);
+var un, dir;
+begin
+uc_side := GetSide(b);
+uc_nation := GetNation(b);
+
+dir := GetDir(b) - 3;
+
+if dir < 0 then
+   dir := 6 + dir;
+
+un := CreateHuman;
+SetDir(un, dir);
+PlaceHumanInUnit(un, b);
+End;
+
+Export Function PrepareUnit(ident, exist_mode, prefix);
+var unit;
+begin
+
+if exist_mode then
+   unit := CreateCharacter(prefix&ident)
+else
+   unit := NewCharacter(ident);
+
+result := unit;
+End;
+
+Export Function GetCountOfBuildingsInBase(base, btype);
+var i, tmp;
+begin
+result := 0;
+tmp := FilterAllUnits([f_btype, btype]);
+
+if not base or not tmp then
+   exit;
+
+for i in tmp do
+    if GetBase(i) = base then
+       result := result + 1;
+
+End;
+
+// Blokuje pójscie na œrodek
+every 1 trigger kurin_attack_started = false AND FilterUnitsInArea(DontEnterMiddle, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) > 0 do
+var unit;
+begin
+    enable;
+
+    for unit in FilterUnitsInArea(DontEnterMiddle, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
+    begin
+        //InGameOn;
+    ComMoveXY(unit, GetX(unit) + 5, GetY(unit) + 5);
+end;
+
+end;
+
+// Blokuje pójscie na pó³noc
+every 1 trigger kurin_attack_started = false AND FilterUnitsInArea(DontEnterNorth, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) > 0 do
+var unit;
+begin
+    enable;
+
+    for unit in FilterUnitsInArea(DontEnterNorth, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
+    begin
+        //InGameOn;
+
+    ComMoveXY(unit, GetX(unit) + 5, GetY(unit) + 5);
+end;
+
+end;
+
+
+Every 1 trigger IsSelected(Serpent) do
+begin
+SerpentExp([1,2,3,4]);
+Wait(0$05);
+Say(Serpent,'2Langu-Sikret');
+End;
+
+Export Function SerpentExp(q);
+var dec, q1;
+begin
+  dec = SelectiveQuery('SerpentQuery', q);
+  case dec of
+   1:begin
+     AddExperience_NoLimit(Yakotich,1,1000);
+     end;
+   2:begin
+     AddExperience_NoLimit(Yakotich,2,1000);
+     end;
+   3:begin
+     AddExperience_NoLimit(Yakotich,3,1000);
+     end;
+    4:begin
+     AddExperience_NoLimit(Yakotich,4,1000);
+     end;
+
+  end;
+end;
+
+Every 0$1 Trigger IsDead(Yakotich) do
+begin
+
+YouLost('YakotichDead');
+
+end;
+
+Every 0$1 Trigger IsDead(Mietek) do
+begin
+
+YouLost('MietekDead');
+
+end;
+
+On UnitDestroyed(un) do
+begin
+if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
+   YouLost('PeopleDead');
+End;
+
+Every 0$1 Trigger FilterUnitsInArea(OmikronArea,[f_or, [f_side, 1], [f_side, 4]]) do
+begin
+
+YouLost('ConvoysMadeIt');
+
+end;
+
+//Funkcje dla tej misi
+Every 0$1 Trigger maksim_back = True do
+begin
+
+AmAttacks;
+
+end;
+
+Export Function MaksimScout;
+begin
+
+SetSide(Maksim,6);
+
+ComMoveToArea(Maksim,MaksimStop1);
+
+end;
+
+Every 1 Trigger IsInArea(Maksim,MaksimStop1) do
+begin
+
+ComHold(Maksim);
+
+Wait(0$10);
+
+ComMoveToArea(Maksim,MaksimStop2);
+
+end;
+
+Every 1 Trigger IsInArea(Maksim,MaksimStop2) do
+begin
+
+Wait(0$10);
+
+ComMoveToArea(Maksim,MaksimStop3);
+
+end;
+
+Every 1 Trigger IsInArea(Maksim,MaksimStop3) do
+begin
+
+Wait(0$10);
+
+maksim_scout_ended = True;
+
+ComMoveUnit(Maksim,Yakotich);
+
+end;
+
+// Czas do rozpoczêcia ataku ruskich na omikron
+Every 0$1 Trigger maksim_back do
+begin
+enable;
+
+if KurinTime then
+   begin
+   KurinTime := KurinTime - 0$1;
+   display_strings := ['#KurinAttack', KurinTime];
+   end
+else
+   begin
+   display_strings := '';
+   disable;
+   end;
+End;
+
+// Czas do przybycia posi³ków
+Every 0$1 Trigger first_attack_clear do
+begin
+enable;
+
+if MietekTime then
+   begin
+   MietekTime := MietekTime - 0$1;
+   display_strings := display_strings ^ ['#MietekForces', MietekTime];
+   end
+else
+   begin
+   display_strings := '';
+   disable;
+   end;
+End;
+
+
+
+
+
+
+

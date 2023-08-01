@@ -1,0 +1,10 @@
+SOURCE_CODES
+  ENABLED Main
+  ENABLED GlobalVars
+  ENABLED Functions
+  ENABLED Events
+  ENABLED Crates
+  ENABLED PrepareAmericans
+  ENABLED PreparePeople
+  ENABLED Actions
+END_OF_SOURCE_CODES

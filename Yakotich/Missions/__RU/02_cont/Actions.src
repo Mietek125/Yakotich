@@ -1,0 +1,242 @@
+//Start ca³ej misi
+Export Function Action;
+var i;
+begin
+
+PlaceUnitArea(Yakotich,RussianSpawn,False);
+PlaceUnitArea(Maksim,RussianSpawn,False);
+PlaceUnitArea(Vasilij,RussianSpawn,False);
+PlaceUnitArea(Michail,RussianSpawn,False);
+PlaceUnitArea(Fiodor,RussianSpawn,False);
+PlaceUnitArea(Constantin,RussianSpawn,False);
+PlaceUnitArea(Boris,RussianSpawn,False);
+
+InGameOn;
+DialogueOn;
+
+CenterNowOnXY(152,28);
+
+Wait(0$3);
+
+Say(Yakotich,'2Yak-13');
+
+ChangeMissionObjectives('o1');
+
+MaksimScout;
+
+InGameOff;
+DialogueOff;
+
+Say(Michail,'2Mich-02');
+Say(Michail,'2Mich-03');
+Say(Yakotich,'2Yak-15');
+
+ChangeMissionObjectives('turret');
+
+SaveForQuickRestart;
+
+end;
+
+Every 0$1 Trigger maksim_scout_ended = True and See(3,Maksim) do
+begin
+
+CenterNowOnUnits(Maksim);
+
+DialogueOn;
+
+RevealFogArea(3,ScoutedTerrains);
+
+Say(Maksim,'2Mak-06');
+Say(Yakotich,'2Yak-16');
+
+CenterNowOnXY(40,10);
+
+Wait(0$03);
+
+CenterOnXY(55,40);
+
+Wait(0$03);
+
+CenterOnXY(70,72);
+
+Say(Maksim,'2Mak-07');
+Say(Maksim,'2Mak-08');
+
+CenterNowOnUnits(Yakotich);
+
+Say(Yakotich,'2Yak-17');
+Say(Yakotich,'2Yak-18');
+Say(Maksim,'2Mak-09');
+Say(Maksim,'2Mak-10');
+Say(Maksim,'2Mak-11');
+Say(Yakotich,'2Yak-19');
+SayRadio(Yakotich,'2Yak-20');
+SayRadio(Morozov,'2Moro-05');
+SayRadio(Yakotich,'2Yak-21');
+SayRadio(Morozov,'2Moro-06');
+SayRadio(Morozov,'2Moro-07');
+SayRadio(Morozov,'2Moro-08');
+SayRadio(Morozov,'2Moro-09');
+SayRadio(Yakotich,'2Yak-22');
+
+ChangeMissionObjectives('o2');
+
+DialogueOff;
+
+maksim_back = True;
+
+SetSide(Maksim,3);
+
+end;
+
+Every 0$1 Trigger Researched(3,90) do
+begin
+
+Say(Michail,'2Mich-04');
+Say(Michail,'2Mich-05');
+
+end;
+
+Every 0$1 Trigger Researched(3,83) do
+begin
+
+Say(Vasilij,'2Vas-07');
+
+
+
+end;
+
+Every 0$1 Trigger first_attack_clear do
+begin
+
+Wait(5$0);
+
+PlaceUnitArea(Mietek,RussianSpawn,False);
+PlaceUnitArea(Aleksiej,RussianSpawn,False);
+PlaceUnitArea(Aleksandr,RussianSpawn,False);
+PlaceUnitArea(Josif,RussianSpawn,False);
+PlaceUnitArea(Zakhar,RussianSpawn,False);
+PlaceUnitArea(Stanislav,RussianSpawn,False);
+PlaceUnitArea(Pavel,RussianSpawn,False);
+
+DialogueOn;
+
+CenterNowOnUnits(Mietek);
+
+SayRadio(Mietek,'2Ryn-06');
+SayRadio(Yakotich,'2Yak-25');
+
+SayRadio(Stanislav,'2Stan-01');
+SayRadio(Stanislav,'2Stan-02');
+SayRadio(Stanislav,'2Stan-03');
+SayRadio(Yakotich,'2Yak-Stan-01');
+
+ChangeMissionObjectives('gun');
+
+DialogueOff;
+
+end;
+
+Every 0$1 Trigger maksim_back = True do
+begin
+
+Wait(30$0);
+
+DialogueOn;
+InGameOn;
+
+SayRadio(Kurin,'2Kurin-01');
+SayRadio(Kurin,'2Kurin-02');
+SayRadio(Yakotich,'2Yak-26');
+
+ChangeMissionObjectives('o3');
+
+Say(Maksim,'2Mak-12');
+
+CenterNowOnXY(57,2);
+RevealFogArea(3,NorthPassage);
+
+Say(Maksim,'2Mak-13');
+
+DialogueOff;
+InGameOff;
+
+kurin_attack_started = True;
+
+end;
+
+every 1 trigger kurin_attack_started = true and FilterAllUnits([[f_side, 1],[f_type, unit_human]]) = 0 do
+var unit;
+begin
+
+InGameOn;
+
+SayRadio(Yakotich,'2Yak-27');
+SayRadio(Kurin,'2Kurin-03');
+SayRadio(AmSold,'2AmSold-01');
+SayRadio(Kurin,'2Kurin-04');
+
+Wait(0$02);
+
+SayRadio(Grishko,'2Gri-01');
+SayRadio(Kurin,'2Kurin-05');
+SayRadio(Grishko,'2Gri-02');
+SayRadio(Kurin,'2Kurin-06');
+SayRadio(Grishko,'2Gri-03');
+SayRadio(Kurin,'2Kurin-07');
+SayRadio(Yakotich,'2Yak-28');
+
+Wait(0$03);
+
+SayRadio(Kurin,'2Kurin-08');
+SayRadio(Burlak,'2Burlak-01');
+SayRadio(Kurin,'2Kurin-09');
+SayEffect('2GunSound');
+
+SayRadio(Morozov,'2Moro-10');
+SayRadio(Morozov,'2Moro-11');
+SayRadio(Morozov,'2Moro-12');
+SayRadio(Morozov,'2Moro-13');
+SayRadio(Morozov,'2Moro-14');
+SayRadio(Yakotich,'2Yak-29');
+
+end_of_the_mission = True;
+
+InGameOff;
+
+AddMedal('PeopleConvoys',1);
+
+If gun_researched = True then
+
+AddMedal('GunMedal',1)
+else
+AddMedal('GunMedal',-1);
+
+If gattling_researched = True and gun_researched = True and transport_builded = True and turrets_researched = True then
+
+AddMedal('Secondary',1)
+else
+AddMedal('Secondary',-1);
+
+GiveMedals('Medals');
+
+RewardPeople(FilterAllUnits([[f_side, 3], [f_nation, 3], [f_type, unit_human]]));
+
+SaveCharacters(Yakotich, '02_Yakotich');
+SaveCharacters(Mietek, '02_Mietek');
+SaveCharacters(Maksim, '02_Maksim');
+SaveCharacters(Vasilij, '02_Vasilij');
+SaveCharacters(Michail, '02_Michail');
+SaveCharacters(Boris, '02_Boris');
+SaveCharacters(Constantin, '02_Constantin');
+SaveCharacters(Fiodor, '02_Fiodor');
+SaveCharacters(Aleksiej, '02_Aleksiej');
+SaveCharacters(Pavel, '02_Pavel');
+SaveCharacters(Zakhar, '02_Zakhar');
+SaveCharacters(Aleksandr, '02_Aleksandr');
+SaveCharacters(Zakhar, '02_Stanislav');
+SaveCharacters(Aleksandr, '02_Josif');
+
+YouWin;
+
+end;

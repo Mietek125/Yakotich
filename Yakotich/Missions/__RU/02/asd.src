@@ -1,0 +1,290 @@
+//Start ca³ej misi
+Export Function Action;
+var i;
+begin
+
+InGameOn;
+
+CenterOnXY(100,48);
+
+Wait(0$1);
+
+
+PlaceUnitArea(Yakotich, YakotichSpawn , true);
+
+Wait(0$3);
+
+Say(Yakotich,'1Yak-01');
+
+Wait(0$2);
+
+Say(Yakotich,'1Yak-02');
+SayRadio(Yakotich,'1Yak-03');
+
+Wait(0$2);
+
+Say(Yakotich,'1Yak-04');
+
+ChangeMissionObjectives('o1');
+InGameOff;
+
+end;
+
+Every 0$1 Trigger FilterUnitsInArea(ForestOut,[[f_side, 3]]) do
+begin
+
+Say(Yakotich,'1Yak-Random1');
+
+end;
+
+
+
+Every 0$1 Trigger See(6,Yakotich) Or See(3,RuA1) Or See(3,RuB1) Or See(3,RuB2) do
+begin
+
+CenterOnXY(24,17);
+DialogueOn;
+
+Say(Constantin,'1M-01');
+Say(Yakotich,'1Yak-05');
+Say(Constantin,'1M-02');
+
+ChangeSideFog(6,3);
+
+DialogueOff;
+InGameOn;
+
+ComMoveToArea(Yakotich,Checkpoint);
+
+end;
+
+Every 0$1 Trigger FilterUnitsInArea(Checkpoint,[[f_side, 3]]) do
+begin
+
+ComTurnUnit(Yakotich,Mietek);
+Say(Yakotich,'1Yak-06');
+
+ComTurnUnit(Mietek,Yakotich);
+
+Wait(0$1);
+
+Say(Mietek,'1Ryn-01');
+Say(Mietek,'1Ryn-02');
+Say(Mietek,'1Ryn-03');
+Say(Yakotich,'1Yak-07');
+Say(Mietek,'1Ryn-04');
+Say(Mietek,'1Ryn-05');
+
+ComMoveXY(Vasilij,20,15);
+AddComTurnUnit(Vasilij,Yakotich);
+
+Say(Vasilij,'1Vas-01');
+Say(Vasilij,'1Vas-02');
+Say(Vasilij,'1Vas-03');
+Say(Vasilij,'1Vas-04');
+Say(Vasilij,'1Vas-05');
+Say(Yakotich,'1Yak-08');
+Say(Mietek,'1Ryn-06');
+Say(Mietek,'1Ryn-07');
+Say(Yakotich,'1Yak-09');
+
+InGameOff;
+
+yakotich_in_base = True;
+
+ChangeMissionObjectives('o4');
+
+SetSide([Mietek,Vasilij,Constantin,Michail,Boris,RuDep,RuB1,RuB2,RuA1,RuOil],3);
+
+Say(Michail,'1Mich-01');
+Say(Michail,'1Mich-02');
+Say(Yakotich,'1Yak-10');
+
+Wait(7$30);
+
+PlaceUnitArea(Aleksandr,AleksandrSpawn,True);
+
+InGameOn;
+DialogueOn;
+
+SayRadio(Aleksandr,'1Alek-Alek1');
+SayRadio(Yakotich,'1Yak-Alek1');
+SayRadio(Aleksandr,'1Alek-Alek2');
+SayRadio(Yakotich,'1Yak-Alek2');
+
+InGameOff;
+DialogueOff;
+
+Wait(2$30);
+
+InGameOn;
+DialogueOn;
+
+SayRadio(Maksim,'1Maks-Attack-01');
+SayRadio(Mietek,'1Ryn-Attack-01');
+SayRadio(Maksim,'1Maks-Attack-02');
+SayRadio(Maksim,'1Maks-Attack-03');
+Say(Mietek,'1Ryn-Attack-02');
+
+ChangeMissionObjectives('o10');
+
+Wait(2$0);
+
+PlaceUnitArea(Maksim,AmAttacks,False);
+PlaceUnitArea(Fiodor,AmAttacks,False);
+PlaceUnitArea(Zakhar,AmAttacks,False);
+PlaceUnitArea(Pavel,AmAttacks,False);
+PlaceUnitArea(Aleksiej,AmAttacks,False);
+
+ComMoveToArea([Maksim,Fiodor,Zakhar,Pavel,Aleksiej],CheckPoint);
+
+Wait(0$15);
+
+PlaceUnitArea(AmS,AmAttacks,False);
+PlaceUnitArea(AmSc,AmAttacks,False);
+PlaceUnitArea(AmCommander,AmAttacks,False);
+
+Say(AmCommander,'1Andrew-Attack');
+
+ComAgressiveMove([AmS,AmSc,AmCommander],26,16);
+
+american_attack = True;
+
+end;
+
+Every 0$1 Trigger See(3,Aleksandr) do
+begin
+
+DialogueOn;
+
+Say(Aleksandr,'1Alek-Alek3');
+Say(Yakotich,'1Yak-Alek3');
+Say(Aleksandr,'1Alek-Alek4');
+Say(Mietek,'1Ryn-Alek1');
+
+SetSide(Aleksandr,3);
+
+end;
+
+Every 0$1 Trigger Researched(3, 46) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'1Vas-Power-1');
+Say(Yakotich,'1Yak-Power-1');
+
+DialogueOff;
+
+oil_power_researched := True;
+
+end;
+
+Every 0$1 Trigger Researched(3, 47) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'1Vas-Engine-1');
+
+DialogueOff;
+
+oil_engine_researched := True;
+
+end;
+
+Every 0$1 Trigger Researched(3, 48) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'1Vas-Research-1');
+Say(Yakotich,'1Yak-Research-1');
+Say(Vasilij,'1Vas-Research-2');
+
+DialogueOff;
+
+technology1_researched := True;
+
+end;
+
+Every 0$1 Trigger technology1_researched = True and oil_engine_researched = True and oil_power_researched = True do
+begin
+
+ChangeMissionObjectives('o5');
+
+end;
+
+On BuildingComplete(building) do
+var i;
+begin
+if GetBType(building) = b_workshop and GetSide(building) = 3 then
+begin
+
+Say(Michail,'1Mich-Workshop');
+
+end;
+
+if GetBType(building) = b_workshop and GetSide(building) = 3 then
+begin
+
+Say(Vasilij,'1Vas-06');
+
+end;
+
+end;
+
+Every 0$1 trigger FilterAllUnits([[f_type, unit_vehicle], [f_side, 3]]) do
+begin
+
+InGameOn;
+
+Say(Michail,'1Mich-Tank-1');
+Say(Yakotich,'1Yak-Tank-1');
+Say(Michail,'1Mich-Tank-2');
+Say(Yakotich,'1Yak-Tank-2');
+
+ChangeMissionObjectives('o6');
+
+InGameOff;
+
+end;
+
+Every 0$1 Trigger FilterAllUnits([[f_alive, 0], [f_side, 1], [f_type, unit_human]]) and american_attack = True do
+begin
+
+InGameOn;
+
+Say(Yakotich,'Yak-Attack-01');
+Say(Yakotich,'Yak-Attack-02');
+
+end_of_the_mission = True;
+
+InGameOff;
+
+end;
+
+Every 0$1 Trigger end_of_the_mission = True do
+begin
+
+AddMedal('People',1);
+
+If IsOk(Aleksandr) then
+AddMedal('Aleksandr',1)
+else
+AddMedal('Aleksandr',-1);
+
+If Researched(3, 48) and Researched(3, 47) and Researched(3, 46) then
+
+AddMedal('Secondary',1)
+else
+AddMedal('Seconadry',-1);
+
+GiveMedals('Medals');
+
+MyPeople := FilterAllUnits([[f_side, 3],[f_type, unit_human]]);
+RewardPeople(MyPeople);
+
+YouWin;
+
+end;

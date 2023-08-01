@@ -1,0 +1,6 @@
+Every 2$0 do
+begin
+
+CreateCratesArea(rand(2,5),BaseArea,True);
+
+end;

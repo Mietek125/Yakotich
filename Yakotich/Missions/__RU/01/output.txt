@@ -1,0 +1,2200 @@
+// starting begin ResetFog ;
+   0: CALL_OW 335
+// Init ;
+   4: CALL 36 0 0
+// AnimateTrees ( true ) ;
+   8: LD_INT 1
+  10: PPUSH
+  11: CALL_OW 573
+// Randomize ;
+  15: CALL_OW 10
+// RandomizeAll ;
+  19: CALL_OW 11
+// InitRussian ;
+  23: CALL 779 0 0
+// Action ;
+  27: CALL 1677 0 0
+// DebugMode ;
+  31: CALL 156 0 0
+// end ;
+  35: END
+// export Yakotich , Mietek , Boris , Vasilij , Michail , Constantin ; export Maksim , Fiodor , Pavel , Zakhar , Aleksiej , Aleksandr , Josif ; export MaksimCrew ; export OtherSurvivors ; export AmS , AmSc , AMSS ; export AmCommander ; export Americans ; export debug ; export mission_prefix ; export hill_north_trigger , hill_south_trigger , yakotich_in_base , quests_finished , aleksandr_found , attacks_are_finished , american_attack , oil_power_researched , oil_engine_researched , technology1_researched , end_of_the_mission , losses , vehicle_constructed , josif_landed , josif_saved ; function Init ; begin
+  36: LD_INT 0
+  38: PPUSH
+// mission_prefix := 01_ ;
+  39: LD_ADDR_EXP 22
+  43: PUSH
+  44: LD_STRING 01_
+  46: ST_TO_ADDR
+// yakotich_in_base := false ;
+  47: LD_ADDR_EXP 25
+  51: PUSH
+  52: LD_INT 0
+  54: ST_TO_ADDR
+// quests_finished := false ;
+  55: LD_ADDR_EXP 26
+  59: PUSH
+  60: LD_INT 0
+  62: ST_TO_ADDR
+// aleksandr_found := false ;
+  63: LD_ADDR_EXP 27
+  67: PUSH
+  68: LD_INT 0
+  70: ST_TO_ADDR
+// attacks_are_finished := false ;
+  71: LD_ADDR_EXP 28
+  75: PUSH
+  76: LD_INT 0
+  78: ST_TO_ADDR
+// oil_power_researched := false ;
+  79: LD_ADDR_EXP 30
+  83: PUSH
+  84: LD_INT 0
+  86: ST_TO_ADDR
+// oil_engine_researched := false ;
+  87: LD_ADDR_EXP 31
+  91: PUSH
+  92: LD_INT 0
+  94: ST_TO_ADDR
+// technology1_researched := false ;
+  95: LD_ADDR_EXP 32
+  99: PUSH
+ 100: LD_INT 0
+ 102: ST_TO_ADDR
+// american_attack := false ;
+ 103: LD_ADDR_EXP 29
+ 107: PUSH
+ 108: LD_INT 0
+ 110: ST_TO_ADDR
+// end_of_the_mission := false ;
+ 111: LD_ADDR_EXP 33
+ 115: PUSH
+ 116: LD_INT 0
+ 118: ST_TO_ADDR
+// losses := false ;
+ 119: LD_ADDR_EXP 34
+ 123: PUSH
+ 124: LD_INT 0
+ 126: ST_TO_ADDR
+// vehicle_constructed := false ;
+ 127: LD_ADDR_EXP 35
+ 131: PUSH
+ 132: LD_INT 0
+ 134: ST_TO_ADDR
+// josif_landed := false ;
+ 135: LD_ADDR_EXP 36
+ 139: PUSH
+ 140: LD_INT 0
+ 142: ST_TO_ADDR
+// josif_saved := false ;
+ 143: LD_ADDR_EXP 37
+ 147: PUSH
+ 148: LD_INT 0
+ 150: ST_TO_ADDR
+// end ;
+ 151: LD_VAR 0 1
+ 155: RET
+// function DebugMode ; var i ; begin
+ 156: LD_INT 0
+ 158: PPUSH
+ 159: PPUSH
+// if not debug then
+ 160: LD_EXP 21
+ 164: NOT
+ 165: IFFALSE 169
+// exit ;
+ 167: GO 188
+// Difficulty := 3 ;
+ 169: LD_ADDR_OWVAR 67
+ 173: PUSH
+ 174: LD_INT 3
+ 176: ST_TO_ADDR
+// TurnFogOff ( ) ;
+ 177: CALL_OW 537
+// FogOff ( 3 ) ;
+ 181: LD_INT 3
+ 183: PPUSH
+ 184: CALL_OW 344
+// end ; end_of_file
+ 188: LD_VAR 0 1
+ 192: RET
+// export function PrepareSolBun ( skill , b ) ; var un , dir ; begin
+ 193: LD_INT 0
+ 195: PPUSH
+ 196: PPUSH
+ 197: PPUSH
+// uc_side := GetSide ( b ) ;
+ 198: LD_ADDR_OWVAR 20
+ 202: PUSH
+ 203: LD_VAR 0 2
+ 207: PPUSH
+ 208: CALL_OW 255
+ 212: ST_TO_ADDR
+// uc_nation := GetNation ( b ) ;
+ 213: LD_ADDR_OWVAR 21
+ 217: PUSH
+ 218: LD_VAR 0 2
+ 222: PPUSH
+ 223: CALL_OW 248
+ 227: ST_TO_ADDR
+// dir := GetDir ( b ) - 3 ;
+ 228: LD_ADDR_VAR 0 5
+ 232: PUSH
+ 233: LD_VAR 0 2
+ 237: PPUSH
+ 238: CALL_OW 254
+ 242: PUSH
+ 243: LD_INT 3
+ 245: MINUS
+ 246: ST_TO_ADDR
+// if dir < 0 then
+ 247: LD_VAR 0 5
+ 251: PUSH
+ 252: LD_INT 0
+ 254: LESS
+ 255: IFFALSE 271
+// dir := 6 + dir ;
+ 257: LD_ADDR_VAR 0 5
+ 261: PUSH
+ 262: LD_INT 6
+ 264: PUSH
+ 265: LD_VAR 0 5
+ 269: PLUS
+ 270: ST_TO_ADDR
+// un := CreateHuman ;
+ 271: LD_ADDR_VAR 0 4
+ 275: PUSH
+ 276: CALL_OW 44
+ 280: ST_TO_ADDR
+// SetDir ( un , dir ) ;
+ 281: LD_VAR 0 4
+ 285: PPUSH
+ 286: LD_VAR 0 5
+ 290: PPUSH
+ 291: CALL_OW 233
+// PlaceHumanInUnit ( un , b ) ;
+ 295: LD_VAR 0 4
+ 299: PPUSH
+ 300: LD_VAR 0 2
+ 304: PPUSH
+ 305: CALL_OW 52
+// end ;
+ 309: LD_VAR 0 3
+ 313: RET
+// export function PrepareUnit ( ident , exist_mode , prefix ) ; var unit ; begin
+ 314: LD_INT 0
+ 316: PPUSH
+ 317: PPUSH
+// if exist_mode then
+ 318: LD_VAR 0 2
+ 322: IFFALSE 347
+// unit := CreateCharacter ( prefix & ident ) else
+ 324: LD_ADDR_VAR 0 5
+ 328: PUSH
+ 329: LD_VAR 0 3
+ 333: PUSH
+ 334: LD_VAR 0 1
+ 338: STR
+ 339: PPUSH
+ 340: CALL_OW 34
+ 344: ST_TO_ADDR
+ 345: GO 362
+// unit := NewCharacter ( ident ) ;
+ 347: LD_ADDR_VAR 0 5
+ 351: PUSH
+ 352: LD_VAR 0 1
+ 356: PPUSH
+ 357: CALL_OW 25
+ 361: ST_TO_ADDR
+// result := unit ;
+ 362: LD_ADDR_VAR 0 4
+ 366: PUSH
+ 367: LD_VAR 0 5
+ 371: ST_TO_ADDR
+// end ;
+ 372: LD_VAR 0 4
+ 376: RET
+// export function GetCountOfBuildingsInBase ( base , btype ) ; var i , tmp ; begin
+ 377: LD_INT 0
+ 379: PPUSH
+ 380: PPUSH
+ 381: PPUSH
+// result := 0 ;
+ 382: LD_ADDR_VAR 0 3
+ 386: PUSH
+ 387: LD_INT 0
+ 389: ST_TO_ADDR
+// tmp := FilterAllUnits ( [ f_btype , btype ] ) ;
+ 390: LD_ADDR_VAR 0 5
+ 394: PUSH
+ 395: LD_INT 30
+ 397: PUSH
+ 398: LD_VAR 0 2
+ 402: PUSH
+ 403: EMPTY
+ 404: LIST
+ 405: LIST
+ 406: PPUSH
+ 407: CALL_OW 69
+ 411: ST_TO_ADDR
+// if not base or not tmp then
+ 412: LD_VAR 0 1
+ 416: NOT
+ 417: PUSH
+ 418: LD_VAR 0 5
+ 422: NOT
+ 423: OR
+ 424: IFFALSE 428
+// exit ;
+ 426: GO 476
+// for i in tmp do
+ 428: LD_ADDR_VAR 0 4
+ 432: PUSH
+ 433: LD_VAR 0 5
+ 437: PUSH
+ 438: FOR_IN
+ 439: IFFALSE 474
+// if GetBase ( i ) = base then
+ 441: LD_VAR 0 4
+ 445: PPUSH
+ 446: CALL_OW 274
+ 450: PUSH
+ 451: LD_VAR 0 1
+ 455: EQUAL
+ 456: IFFALSE 472
+// result := result + 1 ;
+ 458: LD_ADDR_VAR 0 3
+ 462: PUSH
+ 463: LD_VAR 0 3
+ 467: PUSH
+ 468: LD_INT 1
+ 470: PLUS
+ 471: ST_TO_ADDR
+ 472: GO 438
+ 474: POP
+ 475: POP
+// end ;
+ 476: LD_VAR 0 3
+ 480: RET
+// every 1 trigger IsSelected ( Artur ) do
+ 481: LD_INT 74
+ 483: PPUSH
+ 484: CALL_OW 306
+ 488: IFFALSE 532
+ 490: GO 492
+ 492: DISABLE
+// begin PezetExp ( [ 1 , 2 , 3 , 4 ] ) ;
+ 493: LD_INT 1
+ 495: PUSH
+ 496: LD_INT 2
+ 498: PUSH
+ 499: LD_INT 3
+ 501: PUSH
+ 502: LD_INT 4
+ 504: PUSH
+ 505: EMPTY
+ 506: LIST
+ 507: LIST
+ 508: LIST
+ 509: LIST
+ 510: PPUSH
+ 511: CALL 533 0 1
+// Wait ( 0 0$05 ) ;
+ 515: LD_INT 175
+ 517: PPUSH
+ 518: CALL_OW 67
+// Say ( Artur , 1Pezet-Sikret ) ;
+ 522: LD_INT 74
+ 524: PPUSH
+ 525: LD_STRING 1Pezet-Sikret
+ 527: PPUSH
+ 528: CALL_OW 88
+// end ;
+ 532: END
+// export function PezetExp ( q ) ; var dec , q1 ; begin
+ 533: LD_INT 0
+ 535: PPUSH
+ 536: PPUSH
+ 537: PPUSH
+// dec = SelectiveQuery ( PezetQuery , q ) ;
+ 538: LD_ADDR_VAR 0 3
+ 542: PUSH
+ 543: LD_STRING PezetQuery
+ 545: PPUSH
+ 546: LD_VAR 0 1
+ 550: PPUSH
+ 551: CALL_OW 98
+ 555: ST_TO_ADDR
+// case dec of 1 :
+ 556: LD_VAR 0 3
+ 560: PUSH
+ 561: LD_INT 1
+ 563: DOUBLE
+ 564: EQUAL
+ 565: IFTRUE 569
+ 567: GO 587
+ 569: POP
+// begin AddExperience_NoLimit ( Yakotich , 1 , 500 ) ;
+ 570: LD_EXP 1
+ 574: PPUSH
+ 575: LD_INT 1
+ 577: PPUSH
+ 578: LD_INT 500
+ 580: PPUSH
+ 581: CALL_OW 591
+// end ; 2 :
+ 585: GO 666
+ 587: LD_INT 2
+ 589: DOUBLE
+ 590: EQUAL
+ 591: IFTRUE 595
+ 593: GO 613
+ 595: POP
+// begin AddExperience_NoLimit ( Yakotich , 2 , 500 ) ;
+ 596: LD_EXP 1
+ 600: PPUSH
+ 601: LD_INT 2
+ 603: PPUSH
+ 604: LD_INT 500
+ 606: PPUSH
+ 607: CALL_OW 591
+// end ; 3 :
+ 611: GO 666
+ 613: LD_INT 3
+ 615: DOUBLE
+ 616: EQUAL
+ 617: IFTRUE 621
+ 619: GO 639
+ 621: POP
+// begin AddExperience_NoLimit ( Yakotich , 3 , 500 ) ;
+ 622: LD_EXP 1
+ 626: PPUSH
+ 627: LD_INT 3
+ 629: PPUSH
+ 630: LD_INT 500
+ 632: PPUSH
+ 633: CALL_OW 591
+// end ; 4 :
+ 637: GO 666
+ 639: LD_INT 4
+ 641: DOUBLE
+ 642: EQUAL
+ 643: IFTRUE 647
+ 645: GO 665
+ 647: POP
+// begin AddExperience_NoLimit ( Yakotich , 4 , 500 ) ;
+ 648: LD_EXP 1
+ 652: PPUSH
+ 653: LD_INT 4
+ 655: PPUSH
+ 656: LD_INT 500
+ 658: PPUSH
+ 659: CALL_OW 591
+// end ; end ;
+ 663: GO 666
+ 665: POP
+// end ;
+ 666: LD_VAR 0 2
+ 670: RET
+// every 0 0$1 trigger IsDead ( Yakotich ) do
+ 671: LD_EXP 1
+ 675: PPUSH
+ 676: CALL_OW 301
+ 680: IFFALSE 692
+ 682: GO 684
+ 684: DISABLE
+// begin YouLost ( YakotichDead ) ;
+ 685: LD_STRING YakotichDead
+ 687: PPUSH
+ 688: CALL_OW 104
+// end ;
+ 692: END
+// every 0 0$1 trigger IsDead ( Mietek ) do
+ 693: LD_EXP 2
+ 697: PPUSH
+ 698: CALL_OW 301
+ 702: IFFALSE 714
+ 704: GO 706
+ 706: DISABLE
+// begin YouLost ( MietekDead ) ;
+ 707: LD_STRING MietekDead
+ 709: PPUSH
+ 710: CALL_OW 104
+// end ;
+ 714: END
+// on UnitDestroyed ( un ) do begin if un in FilterAllUnits ( [ [ f_side , 3 ] , [ f_not , [ f_nation , 0 ] ] , [ f_type , unit_human ] ] ) then
+ 715: LD_VAR 0 1
+ 719: PUSH
+ 720: LD_INT 22
+ 722: PUSH
+ 723: LD_INT 3
+ 725: PUSH
+ 726: EMPTY
+ 727: LIST
+ 728: LIST
+ 729: PUSH
+ 730: LD_INT 3
+ 732: PUSH
+ 733: LD_INT 23
+ 735: PUSH
+ 736: LD_INT 0
+ 738: PUSH
+ 739: EMPTY
+ 740: LIST
+ 741: LIST
+ 742: PUSH
+ 743: EMPTY
+ 744: LIST
+ 745: LIST
+ 746: PUSH
+ 747: LD_INT 21
+ 749: PUSH
+ 750: LD_INT 1
+ 752: PUSH
+ 753: EMPTY
+ 754: LIST
+ 755: LIST
+ 756: PUSH
+ 757: EMPTY
+ 758: LIST
+ 759: LIST
+ 760: LIST
+ 761: PPUSH
+ 762: CALL_OW 69
+ 766: IN
+ 767: IFFALSE 776
+// YouLost ( PeopleDead ) ;
+ 769: LD_STRING PeopleDead
+ 771: PPUSH
+ 772: CALL_OW 104
+// end ; end_of_file
+ 776: PPOPN 1
+ 778: END
+// export function InitRussian ; begin
+ 779: LD_INT 0
+ 781: PPUSH
+// Uc_Nation := 3 ;
+ 782: LD_ADDR_OWVAR 21
+ 786: PUSH
+ 787: LD_INT 3
+ 789: ST_TO_ADDR
+// Uc_Side := 3 ;
+ 790: LD_ADDR_OWVAR 20
+ 794: PUSH
+ 795: LD_INT 3
+ 797: ST_TO_ADDR
+// Yakotich := PrepareUnit ( Yakotich , false ,  ) ;
+ 798: LD_ADDR_EXP 1
+ 802: PUSH
+ 803: LD_STRING Yakotich
+ 805: PPUSH
+ 806: LD_INT 0
+ 808: PPUSH
+ 809: LD_STRING 
+ 811: PPUSH
+ 812: CALL 314 0 3
+ 816: ST_TO_ADDR
+// Uc_Side := 6 ;
+ 817: LD_ADDR_OWVAR 20
+ 821: PUSH
+ 822: LD_INT 6
+ 824: ST_TO_ADDR
+// Mietek := PrepareUnit ( Mietek , false ,  ) ;
+ 825: LD_ADDR_EXP 2
+ 829: PUSH
+ 830: LD_STRING Mietek
+ 832: PPUSH
+ 833: LD_INT 0
+ 835: PPUSH
+ 836: LD_STRING 
+ 838: PPUSH
+ 839: CALL 314 0 3
+ 843: ST_TO_ADDR
+// Boris := PrepareUnit ( Boris , false ,  ) ;
+ 844: LD_ADDR_EXP 3
+ 848: PUSH
+ 849: LD_STRING Boris
+ 851: PPUSH
+ 852: LD_INT 0
+ 854: PPUSH
+ 855: LD_STRING 
+ 857: PPUSH
+ 858: CALL 314 0 3
+ 862: ST_TO_ADDR
+// Michail := PrepareUnit ( Michail , false ,  ) ;
+ 863: LD_ADDR_EXP 5
+ 867: PUSH
+ 868: LD_STRING Michail
+ 870: PPUSH
+ 871: LD_INT 0
+ 873: PPUSH
+ 874: LD_STRING 
+ 876: PPUSH
+ 877: CALL 314 0 3
+ 881: ST_TO_ADDR
+// Vasilij := PrepareUnit ( Vasilij , false ,  ) ;
+ 882: LD_ADDR_EXP 4
+ 886: PUSH
+ 887: LD_STRING Vasilij
+ 889: PPUSH
+ 890: LD_INT 0
+ 892: PPUSH
+ 893: LD_STRING 
+ 895: PPUSH
+ 896: CALL 314 0 3
+ 900: ST_TO_ADDR
+// Constantin := PrepareUnit ( Constantin , false ,  ) ;
+ 901: LD_ADDR_EXP 6
+ 905: PUSH
+ 906: LD_STRING Constantin
+ 908: PPUSH
+ 909: LD_INT 0
+ 911: PPUSH
+ 912: LD_STRING 
+ 914: PPUSH
+ 915: CALL 314 0 3
+ 919: ST_TO_ADDR
+// Maksim := PrepareUnit ( Maksim , false ,  ) ;
+ 920: LD_ADDR_EXP 7
+ 924: PUSH
+ 925: LD_STRING Maksim
+ 927: PPUSH
+ 928: LD_INT 0
+ 930: PPUSH
+ 931: LD_STRING 
+ 933: PPUSH
+ 934: CALL 314 0 3
+ 938: ST_TO_ADDR
+// Fiodor := PrepareUnit ( Fiodor , false ,  ) ;
+ 939: LD_ADDR_EXP 8
+ 943: PUSH
+ 944: LD_STRING Fiodor
+ 946: PPUSH
+ 947: LD_INT 0
+ 949: PPUSH
+ 950: LD_STRING 
+ 952: PPUSH
+ 953: CALL 314 0 3
+ 957: ST_TO_ADDR
+// Aleksiej := PrepareUnit ( Aleksiej , false ,  ) ;
+ 958: LD_ADDR_EXP 11
+ 962: PUSH
+ 963: LD_STRING Aleksiej
+ 965: PPUSH
+ 966: LD_INT 0
+ 968: PPUSH
+ 969: LD_STRING 
+ 971: PPUSH
+ 972: CALL 314 0 3
+ 976: ST_TO_ADDR
+// Pavel := PrepareUnit ( Pavel , false ,  ) ;
+ 977: LD_ADDR_EXP 9
+ 981: PUSH
+ 982: LD_STRING Pavel
+ 984: PPUSH
+ 985: LD_INT 0
+ 987: PPUSH
+ 988: LD_STRING 
+ 990: PPUSH
+ 991: CALL 314 0 3
+ 995: ST_TO_ADDR
+// Zakhar := PrepareUnit ( Zakhar , false ,  ) ;
+ 996: LD_ADDR_EXP 10
+1000: PUSH
+1001: LD_STRING Zakhar
+1003: PPUSH
+1004: LD_INT 0
+1006: PPUSH
+1007: LD_STRING 
+1009: PPUSH
+1010: CALL 314 0 3
+1014: ST_TO_ADDR
+// MaksimCrew := MaksimCrew ^ Maksim ;
+1015: LD_ADDR_EXP 14
+1019: PUSH
+1020: LD_EXP 14
+1024: PUSH
+1025: LD_EXP 7
+1029: ADD
+1030: ST_TO_ADDR
+// MaksimCrew := MaksimCrew ^ Fiodor ;
+1031: LD_ADDR_EXP 14
+1035: PUSH
+1036: LD_EXP 14
+1040: PUSH
+1041: LD_EXP 8
+1045: ADD
+1046: ST_TO_ADDR
+// MaksimCrew := MaksimCrew ^ Aleksiej ;
+1047: LD_ADDR_EXP 14
+1051: PUSH
+1052: LD_EXP 14
+1056: PUSH
+1057: LD_EXP 11
+1061: ADD
+1062: ST_TO_ADDR
+// MaksimCrew := MaksimCrew ^ Pavel ;
+1063: LD_ADDR_EXP 14
+1067: PUSH
+1068: LD_EXP 14
+1072: PUSH
+1073: LD_EXP 9
+1077: ADD
+1078: ST_TO_ADDR
+// MaksimCrew := MaksimCrew ^ Zakhar ;
+1079: LD_ADDR_EXP 14
+1083: PUSH
+1084: LD_EXP 14
+1088: PUSH
+1089: LD_EXP 10
+1093: ADD
+1094: ST_TO_ADDR
+// Uc_Side := 5 ;
+1095: LD_ADDR_OWVAR 20
+1099: PUSH
+1100: LD_INT 5
+1102: ST_TO_ADDR
+// Aleksandr := PrepareUnit ( Aleksandr , false ,  ) ;
+1103: LD_ADDR_EXP 12
+1107: PUSH
+1108: LD_STRING Aleksandr
+1110: PPUSH
+1111: LD_INT 0
+1113: PPUSH
+1114: LD_STRING 
+1116: PPUSH
+1117: CALL 314 0 3
+1121: ST_TO_ADDR
+// Josif := PrepareUnit ( Josif , false ,  ) ;
+1122: LD_ADDR_EXP 13
+1126: PUSH
+1127: LD_STRING Josif
+1129: PPUSH
+1130: LD_INT 0
+1132: PPUSH
+1133: LD_STRING 
+1135: PPUSH
+1136: CALL 314 0 3
+1140: ST_TO_ADDR
+// PlaceHumanInUnit ( Constantin , RuB3 ) ;
+1141: LD_EXP 6
+1145: PPUSH
+1146: LD_INT 90
+1148: PPUSH
+1149: CALL_OW 52
+// PlaceHumanInUnit ( Boris , RuDep ) ;
+1153: LD_EXP 3
+1157: PPUSH
+1158: LD_INT 15
+1160: PPUSH
+1161: CALL_OW 52
+// PlaceUnitArea ( Vasilij , Civilians , false ) ;
+1165: LD_EXP 4
+1169: PPUSH
+1170: LD_INT 1
+1172: PPUSH
+1173: LD_INT 0
+1175: PPUSH
+1176: CALL_OW 49
+// PlaceUnitArea ( Michail , Civilians , false ) ;
+1180: LD_EXP 5
+1184: PPUSH
+1185: LD_INT 1
+1187: PPUSH
+1188: LD_INT 0
+1190: PPUSH
+1191: CALL_OW 49
+// PlaceUnitArea ( Mietek , RyniakovSpawn , false ) ;
+1195: LD_EXP 2
+1199: PPUSH
+1200: LD_INT 2
+1202: PPUSH
+1203: LD_INT 0
+1205: PPUSH
+1206: CALL_OW 49
+// ComTurnUnit ( [ MIchail , Vasilij ] , Mietek ) ;
+1210: LD_EXP 5
+1214: PUSH
+1215: LD_EXP 4
+1219: PUSH
+1220: EMPTY
+1221: LIST
+1222: LIST
+1223: PPUSH
+1224: LD_EXP 2
+1228: PPUSH
+1229: CALL_OW 119
+// ComTurnUnit ( Mietek , Vasilij ) ;
+1233: LD_EXP 2
+1237: PPUSH
+1238: LD_EXP 4
+1242: PPUSH
+1243: CALL_OW 119
+// end ; end_of_file
+1247: LD_VAR 0 1
+1251: RET
+// export function InitAmerican ; var i , j , k ; begin
+1252: LD_INT 0
+1254: PPUSH
+1255: PPUSH
+1256: PPUSH
+1257: PPUSH
+// Uc_Side = 4 ;
+1258: LD_ADDR_OWVAR 20
+1262: PUSH
+1263: LD_INT 4
+1265: ST_TO_ADDR
+// Uc_Nation = 1 ;
+1266: LD_ADDR_OWVAR 21
+1270: PUSH
+1271: LD_INT 1
+1273: ST_TO_ADDR
+// AmCommander := PrepareUnit ( AmCommander , false ,  ) ;
+1274: LD_ADDR_EXP 19
+1278: PUSH
+1279: LD_STRING AmCommander
+1281: PPUSH
+1282: LD_INT 0
+1284: PPUSH
+1285: LD_STRING 
+1287: PPUSH
+1288: CALL 314 0 3
+1292: ST_TO_ADDR
+// Americans := Americans ^ AmCommander ;
+1293: LD_ADDR_EXP 20
+1297: PUSH
+1298: LD_EXP 20
+1302: PUSH
+1303: LD_EXP 19
+1307: ADD
+1308: ST_TO_ADDR
+// PlaceUnitArea ( AmCommander , AmAttacks , false ) ;
+1309: LD_EXP 19
+1313: PPUSH
+1314: LD_INT 6
+1316: PPUSH
+1317: LD_INT 0
+1319: PPUSH
+1320: CALL_OW 49
+// for i = 1 to [ 4 , 7 , 11 ] [ Difficulty ] do
+1324: LD_ADDR_VAR 0 2
+1328: PUSH
+1329: DOUBLE
+1330: LD_INT 1
+1332: DEC
+1333: ST_TO_ADDR
+1334: LD_INT 4
+1336: PUSH
+1337: LD_INT 7
+1339: PUSH
+1340: LD_INT 11
+1342: PUSH
+1343: EMPTY
+1344: LIST
+1345: LIST
+1346: LIST
+1347: PUSH
+1348: LD_OWVAR 67
+1352: ARRAY
+1353: PUSH
+1354: FOR_TO
+1355: IFFALSE 1435
+// begin PrepareSoldier ( rand ( 1 , 2 ) , [ 0 , 2 , 4 ] [ Difficulty ] ) ;
+1357: LD_INT 1
+1359: PPUSH
+1360: LD_INT 2
+1362: PPUSH
+1363: CALL_OW 12
+1367: PPUSH
+1368: LD_INT 0
+1370: PUSH
+1371: LD_INT 2
+1373: PUSH
+1374: LD_INT 4
+1376: PUSH
+1377: EMPTY
+1378: LIST
+1379: LIST
+1380: LIST
+1381: PUSH
+1382: LD_OWVAR 67
+1386: ARRAY
+1387: PPUSH
+1388: CALL_OW 381
+// AmS = CreateHuman ;
+1392: LD_ADDR_EXP 16
+1396: PUSH
+1397: CALL_OW 44
+1401: ST_TO_ADDR
+// Americans := Americans ^ AmS ;
+1402: LD_ADDR_EXP 20
+1406: PUSH
+1407: LD_EXP 20
+1411: PUSH
+1412: LD_EXP 16
+1416: ADD
+1417: ST_TO_ADDR
+// PlaceUnitArea ( AmS , AmAttacks , false ) ;
+1418: LD_EXP 16
+1422: PPUSH
+1423: LD_INT 6
+1425: PPUSH
+1426: LD_INT 0
+1428: PPUSH
+1429: CALL_OW 49
+// end ;
+1433: GO 1354
+1435: POP
+1436: POP
+// for j = 1 to [ 0 , 1 , 3 ] [ Difficulty ] do
+1437: LD_ADDR_VAR 0 3
+1441: PUSH
+1442: DOUBLE
+1443: LD_INT 1
+1445: DEC
+1446: ST_TO_ADDR
+1447: LD_INT 0
+1449: PUSH
+1450: LD_INT 1
+1452: PUSH
+1453: LD_INT 3
+1455: PUSH
+1456: EMPTY
+1457: LIST
+1458: LIST
+1459: LIST
+1460: PUSH
+1461: LD_OWVAR 67
+1465: ARRAY
+1466: PUSH
+1467: FOR_TO
+1468: IFFALSE 1548
+// begin PrepareScientist ( rand ( 1 , 2 ) , [ 0 , 2 , 4 ] [ Difficulty ] ) ;
+1470: LD_INT 1
+1472: PPUSH
+1473: LD_INT 2
+1475: PPUSH
+1476: CALL_OW 12
+1480: PPUSH
+1481: LD_INT 0
+1483: PUSH
+1484: LD_INT 2
+1486: PUSH
+1487: LD_INT 4
+1489: PUSH
+1490: EMPTY
+1491: LIST
+1492: LIST
+1493: LIST
+1494: PUSH
+1495: LD_OWVAR 67
+1499: ARRAY
+1500: PPUSH
+1501: CALL_OW 384
+// AmSc = CreateHuman ;
+1505: LD_ADDR_EXP 17
+1509: PUSH
+1510: CALL_OW 44
+1514: ST_TO_ADDR
+// Americans := Americans ^ AmSc ;
+1515: LD_ADDR_EXP 20
+1519: PUSH
+1520: LD_EXP 20
+1524: PUSH
+1525: LD_EXP 17
+1529: ADD
+1530: ST_TO_ADDR
+// PlaceUnitArea ( AmSc , AmAttacks , false ) ;
+1531: LD_EXP 17
+1535: PPUSH
+1536: LD_INT 6
+1538: PPUSH
+1539: LD_INT 0
+1541: PPUSH
+1542: CALL_OW 49
+// end ;
+1546: GO 1467
+1548: POP
+1549: POP
+// end ;
+1550: LD_VAR 0 1
+1554: RET
+// every 2 2$30 trigger yakotich_in_base = true do
+1555: LD_EXP 25
+1559: PUSH
+1560: LD_INT 1
+1562: EQUAL
+1563: IFFALSE 1676
+1565: GO 1567
+1567: DISABLE
+// begin Uc_Side = 4 ;
+1568: LD_ADDR_OWVAR 20
+1572: PUSH
+1573: LD_INT 4
+1575: ST_TO_ADDR
+// Uc_Nation = 1 ;
+1576: LD_ADDR_OWVAR 21
+1580: PUSH
+1581: LD_INT 1
+1583: ST_TO_ADDR
+// PrepareSoldier ( rand ( 0 , 1 ) , [ 0 , 1 , 2 ] [ Difficulty ] ) ;
+1584: LD_INT 0
+1586: PPUSH
+1587: LD_INT 1
+1589: PPUSH
+1590: CALL_OW 12
+1594: PPUSH
+1595: LD_INT 0
+1597: PUSH
+1598: LD_INT 1
+1600: PUSH
+1601: LD_INT 2
+1603: PUSH
+1604: EMPTY
+1605: LIST
+1606: LIST
+1607: LIST
+1608: PUSH
+1609: LD_OWVAR 67
+1613: ARRAY
+1614: PPUSH
+1615: CALL_OW 381
+// AMSS = CreateHuman ;
+1619: LD_ADDR_EXP 18
+1623: PUSH
+1624: CALL_OW 44
+1628: ST_TO_ADDR
+// Americans := Americans ^ AMSS ;
+1629: LD_ADDR_EXP 20
+1633: PUSH
+1634: LD_EXP 20
+1638: PUSH
+1639: LD_EXP 18
+1643: ADD
+1644: ST_TO_ADDR
+// PlaceUnitArea ( AMSS , AmSpawners , true ) ;
+1645: LD_EXP 18
+1649: PPUSH
+1650: LD_INT 11
+1652: PPUSH
+1653: LD_INT 1
+1655: PPUSH
+1656: CALL_OW 49
+// ComAgressiveMove ( AMSS , 92 , 69 ) ;
+1660: LD_EXP 18
+1664: PPUSH
+1665: LD_INT 92
+1667: PPUSH
+1668: LD_INT 69
+1670: PPUSH
+1671: CALL_OW 114
+// enable ;
+1675: ENABLE
+// end ; end_of_file
+1676: END
+// export function Action ; var i ; begin
+1677: LD_INT 0
+1679: PPUSH
+1680: PPUSH
+// InGameOn ;
+1681: CALL_OW 8
+// CenterOnXY ( 100 , 48 ) ;
+1685: LD_INT 100
+1687: PPUSH
+1688: LD_INT 48
+1690: PPUSH
+1691: CALL_OW 84
+// Wait ( 0 0$1 ) ;
+1695: LD_INT 35
+1697: PPUSH
+1698: CALL_OW 67
+// PlaceUnitArea ( Yakotich , YakotichSpawn , true ) ;
+1702: LD_EXP 1
+1706: PPUSH
+1707: LD_INT 5
+1709: PPUSH
+1710: LD_INT 1
+1712: PPUSH
+1713: CALL_OW 49
+// Wait ( 0 0$3 ) ;
+1717: LD_INT 105
+1719: PPUSH
+1720: CALL_OW 67
+// Say ( Yakotich , 1Yak-01 ) ;
+1724: LD_EXP 1
+1728: PPUSH
+1729: LD_STRING 1Yak-01
+1731: PPUSH
+1732: CALL_OW 88
+// Wait ( 0 0$2 ) ;
+1736: LD_INT 70
+1738: PPUSH
+1739: CALL_OW 67
+// Say ( Yakotich , 1Yak-02 ) ;
+1743: LD_EXP 1
+1747: PPUSH
+1748: LD_STRING 1Yak-02
+1750: PPUSH
+1751: CALL_OW 88
+// SayRadio ( Yakotich , 1Yak-03 ) ;
+1755: LD_EXP 1
+1759: PPUSH
+1760: LD_STRING 1Yak-03
+1762: PPUSH
+1763: CALL_OW 94
+// Wait ( 0 0$2 ) ;
+1767: LD_INT 70
+1769: PPUSH
+1770: CALL_OW 67
+// Say ( Yakotich , 1Yak-04 ) ;
+1774: LD_EXP 1
+1778: PPUSH
+1779: LD_STRING 1Yak-04
+1781: PPUSH
+1782: CALL_OW 88
+// ChangeMissionObjectives ( o1 ) ;
+1786: LD_STRING o1
+1788: PPUSH
+1789: CALL_OW 337
+// InGameOff ;
+1793: CALL_OW 9
+// end ;
+1797: LD_VAR 0 1
+1801: RET
+// every 0 0$1 trigger FilterUnitsInArea ( ForestOut , [ [ f_side , 3 ] ] ) do
+1802: LD_INT 7
+1804: PPUSH
+1805: LD_INT 22
+1807: PUSH
+1808: LD_INT 3
+1810: PUSH
+1811: EMPTY
+1812: LIST
+1813: LIST
+1814: PUSH
+1815: EMPTY
+1816: LIST
+1817: PPUSH
+1818: CALL_OW 70
+1822: IFFALSE 1839
+1824: GO 1826
+1826: DISABLE
+// begin Say ( Yakotich , 1Yak-Random1 ) ;
+1827: LD_EXP 1
+1831: PPUSH
+1832: LD_STRING 1Yak-Random1
+1834: PPUSH
+1835: CALL_OW 88
+// end ;
+1839: END
+// every 0 0$1 trigger See ( 3 , RuA1 ) or See ( 3 , RuB1 ) or See ( 3 , RuB2 ) or See ( 3 , RuB3 ) do
+1840: LD_INT 3
+1842: PPUSH
+1843: LD_INT 77
+1845: PPUSH
+1846: CALL_OW 292
+1850: PUSH
+1851: LD_INT 3
+1853: PPUSH
+1854: LD_INT 18
+1856: PPUSH
+1857: CALL_OW 292
+1861: OR
+1862: PUSH
+1863: LD_INT 3
+1865: PPUSH
+1866: LD_INT 85
+1868: PPUSH
+1869: CALL_OW 292
+1873: OR
+1874: PUSH
+1875: LD_INT 3
+1877: PPUSH
+1878: LD_INT 90
+1880: PPUSH
+1881: CALL_OW 292
+1885: OR
+1886: IFFALSE 1971
+1888: GO 1890
+1890: DISABLE
+// begin CenterOnXY ( 24 , 17 ) ;
+1891: LD_INT 24
+1893: PPUSH
+1894: LD_INT 17
+1896: PPUSH
+1897: CALL_OW 84
+// DialogueOn ;
+1901: CALL_OW 6
+// Say ( Constantin , 1M-01 ) ;
+1905: LD_EXP 6
+1909: PPUSH
+1910: LD_STRING 1M-01
+1912: PPUSH
+1913: CALL_OW 88
+// Say ( Yakotich , 1Yak-05 ) ;
+1917: LD_EXP 1
+1921: PPUSH
+1922: LD_STRING 1Yak-05
+1924: PPUSH
+1925: CALL_OW 88
+// Say ( Constantin , 1M-02 ) ;
+1929: LD_EXP 6
+1933: PPUSH
+1934: LD_STRING 1M-02
+1936: PPUSH
+1937: CALL_OW 88
+// ChangeSideFog ( 6 , 3 ) ;
+1941: LD_INT 6
+1943: PPUSH
+1944: LD_INT 3
+1946: PPUSH
+1947: CALL_OW 343
+// DialogueOff ;
+1951: CALL_OW 7
+// InGameOn ;
+1955: CALL_OW 8
+// ComMoveToArea ( Yakotich , Checkpoint ) ;
+1959: LD_EXP 1
+1963: PPUSH
+1964: LD_INT 3
+1966: PPUSH
+1967: CALL_OW 113
+// end ;
+1971: END
+// every 0 0$1 trigger FilterUnitsInArea ( Checkpoint , [ [ f_side , 3 ] ] ) do
+1972: LD_INT 3
+1974: PPUSH
+1975: LD_INT 22
+1977: PUSH
+1978: LD_INT 3
+1980: PUSH
+1981: EMPTY
+1982: LIST
+1983: LIST
+1984: PUSH
+1985: EMPTY
+1986: LIST
+1987: PPUSH
+1988: CALL_OW 70
+1992: IFFALSE 2375
+1994: GO 1996
+1996: DISABLE
+// begin ComTurnUnit ( Yakotich , Mietek ) ;
+1997: LD_EXP 1
+2001: PPUSH
+2002: LD_EXP 2
+2006: PPUSH
+2007: CALL_OW 119
+// Say ( Yakotich , 1Yak-06 ) ;
+2011: LD_EXP 1
+2015: PPUSH
+2016: LD_STRING 1Yak-06
+2018: PPUSH
+2019: CALL_OW 88
+// ComTurnUnit ( Mietek , Yakotich ) ;
+2023: LD_EXP 2
+2027: PPUSH
+2028: LD_EXP 1
+2032: PPUSH
+2033: CALL_OW 119
+// Wait ( 0 0$1 ) ;
+2037: LD_INT 35
+2039: PPUSH
+2040: CALL_OW 67
+// Say ( Mietek , 1Ryn-01 ) ;
+2044: LD_EXP 2
+2048: PPUSH
+2049: LD_STRING 1Ryn-01
+2051: PPUSH
+2052: CALL_OW 88
+// Say ( Mietek , 1Ryn-02 ) ;
+2056: LD_EXP 2
+2060: PPUSH
+2061: LD_STRING 1Ryn-02
+2063: PPUSH
+2064: CALL_OW 88
+// Say ( Mietek , 1Ryn-03 ) ;
+2068: LD_EXP 2
+2072: PPUSH
+2073: LD_STRING 1Ryn-03
+2075: PPUSH
+2076: CALL_OW 88
+// Say ( Yakotich , 1Yak-07 ) ;
+2080: LD_EXP 1
+2084: PPUSH
+2085: LD_STRING 1Yak-07
+2087: PPUSH
+2088: CALL_OW 88
+// Say ( Mietek , 1Ryn-04 ) ;
+2092: LD_EXP 2
+2096: PPUSH
+2097: LD_STRING 1Ryn-04
+2099: PPUSH
+2100: CALL_OW 88
+// Say ( Mietek , 1Ryn-05 ) ;
+2104: LD_EXP 2
+2108: PPUSH
+2109: LD_STRING 1Ryn-05
+2111: PPUSH
+2112: CALL_OW 88
+// ComMoveXY ( Vasilij , 20 , 15 ) ;
+2116: LD_EXP 4
+2120: PPUSH
+2121: LD_INT 20
+2123: PPUSH
+2124: LD_INT 15
+2126: PPUSH
+2127: CALL_OW 111
+// AddComTurnUnit ( Vasilij , Yakotich ) ;
+2131: LD_EXP 4
+2135: PPUSH
+2136: LD_EXP 1
+2140: PPUSH
+2141: CALL_OW 179
+// Say ( Vasilij , 1Vas-01 ) ;
+2145: LD_EXP 4
+2149: PPUSH
+2150: LD_STRING 1Vas-01
+2152: PPUSH
+2153: CALL_OW 88
+// Say ( Vasilij , 1Vas-02 ) ;
+2157: LD_EXP 4
+2161: PPUSH
+2162: LD_STRING 1Vas-02
+2164: PPUSH
+2165: CALL_OW 88
+// Say ( Vasilij , 1Vas-03 ) ;
+2169: LD_EXP 4
+2173: PPUSH
+2174: LD_STRING 1Vas-03
+2176: PPUSH
+2177: CALL_OW 88
+// Say ( Vasilij , 1Vas-04 ) ;
+2181: LD_EXP 4
+2185: PPUSH
+2186: LD_STRING 1Vas-04
+2188: PPUSH
+2189: CALL_OW 88
+// Say ( Vasilij , 1Vas-05 ) ;
+2193: LD_EXP 4
+2197: PPUSH
+2198: LD_STRING 1Vas-05
+2200: PPUSH
+2201: CALL_OW 88
+// Say ( Yakotich , 1Yak-08 ) ;
+2205: LD_EXP 1
+2209: PPUSH
+2210: LD_STRING 1Yak-08
+2212: PPUSH
+2213: CALL_OW 88
+// Say ( Mietek , 1Ryn-06 ) ;
+2217: LD_EXP 2
+2221: PPUSH
+2222: LD_STRING 1Ryn-06
+2224: PPUSH
+2225: CALL_OW 88
+// Say ( Mietek , 1Ryn-07 ) ;
+2229: LD_EXP 2
+2233: PPUSH
+2234: LD_STRING 1Ryn-07
+2236: PPUSH
+2237: CALL_OW 88
+// Say ( Yakotich , 1Yak-09 ) ;
+2241: LD_EXP 1
+2245: PPUSH
+2246: LD_STRING 1Yak-09
+2248: PPUSH
+2249: CALL_OW 88
+// InGameOff ;
+2253: CALL_OW 9
+// yakotich_in_base = true ;
+2257: LD_ADDR_EXP 25
+2261: PUSH
+2262: LD_INT 1
+2264: ST_TO_ADDR
+// ChangeMissionObjectives ( o4 ) ;
+2265: LD_STRING o4
+2267: PPUSH
+2268: CALL_OW 337
+// SetSide ( [ Mietek , Vasilij , Constantin , Michail , Boris , RuDep , RuB1 , RuB2 , RuB3 , RuA1 , RuOil ] , 3 ) ;
+2272: LD_EXP 2
+2276: PUSH
+2277: LD_EXP 4
+2281: PUSH
+2282: LD_EXP 6
+2286: PUSH
+2287: LD_EXP 5
+2291: PUSH
+2292: LD_EXP 3
+2296: PUSH
+2297: LD_INT 15
+2299: PUSH
+2300: LD_INT 18
+2302: PUSH
+2303: LD_INT 85
+2305: PUSH
+2306: LD_INT 90
+2308: PUSH
+2309: LD_INT 77
+2311: PUSH
+2312: LD_INT 16
+2314: PUSH
+2315: EMPTY
+2316: LIST
+2317: LIST
+2318: LIST
+2319: LIST
+2320: LIST
+2321: LIST
+2322: LIST
+2323: LIST
+2324: LIST
+2325: LIST
+2326: LIST
+2327: PPUSH
+2328: LD_INT 3
+2330: PPUSH
+2331: CALL_OW 235
+// SaveForQuickRestart ;
+2335: CALL_OW 22
+// Say ( Michail , 1Mich-01 ) ;
+2339: LD_EXP 5
+2343: PPUSH
+2344: LD_STRING 1Mich-01
+2346: PPUSH
+2347: CALL_OW 88
+// Say ( Michail , 1Mich-02 ) ;
+2351: LD_EXP 5
+2355: PPUSH
+2356: LD_STRING 1Mich-02
+2358: PPUSH
+2359: CALL_OW 88
+// Say ( Yakotich , 1Yak-10 ) ;
+2363: LD_EXP 1
+2367: PPUSH
+2368: LD_STRING 1Yak-10
+2370: PPUSH
+2371: CALL_OW 88
+// end ;
+2375: END
+// every 0 0$1 trigger yakotich_in_base = true do
+2376: LD_EXP 25
+2380: PUSH
+2381: LD_INT 1
+2383: EQUAL
+2384: IFFALSE 2754
+2386: GO 2388
+2388: DISABLE
+// begin Wait ( 5 5$0 ) ;
+2389: LD_INT 10500
+2391: PPUSH
+2392: CALL_OW 67
+// PlaceUnitArea ( Aleksandr , AleksandrSpawn , true ) ;
+2396: LD_EXP 12
+2400: PPUSH
+2401: LD_INT 8
+2403: PPUSH
+2404: LD_INT 1
+2406: PPUSH
+2407: CALL_OW 49
+// InGameOn ;
+2411: CALL_OW 8
+// DialogueOn ;
+2415: CALL_OW 6
+// SayRadio ( Aleksandr , 1Alek-Alek1 ) ;
+2419: LD_EXP 12
+2423: PPUSH
+2424: LD_STRING 1Alek-Alek1
+2426: PPUSH
+2427: CALL_OW 94
+// SayRadio ( Yakotich , 1Yak-Alek1 ) ;
+2431: LD_EXP 1
+2435: PPUSH
+2436: LD_STRING 1Yak-Alek1
+2438: PPUSH
+2439: CALL_OW 94
+// SayRadio ( Aleksandr , 1Alek-Alek2 ) ;
+2443: LD_EXP 12
+2447: PPUSH
+2448: LD_STRING 1Alek-Alek2
+2450: PPUSH
+2451: CALL_OW 94
+// SayRadio ( Mietek , 1Ryn-Alek1 ) ;
+2455: LD_EXP 2
+2459: PPUSH
+2460: LD_STRING 1Ryn-Alek1
+2462: PPUSH
+2463: CALL_OW 94
+// Say ( Mietek , 1Ryn-Alek2 ) ;
+2467: LD_EXP 2
+2471: PPUSH
+2472: LD_STRING 1Ryn-Alek2
+2474: PPUSH
+2475: CALL_OW 88
+// RevealFogArea ( 3 , River ) ;
+2479: LD_INT 3
+2481: PPUSH
+2482: LD_INT 10
+2484: PPUSH
+2485: CALL_OW 332
+// InGameOff ;
+2489: CALL_OW 9
+// DialogueOff ;
+2493: CALL_OW 7
+// Wait ( 2 2$0 ) ;
+2497: LD_INT 4200
+2499: PPUSH
+2500: CALL_OW 67
+// InGameOn ;
+2504: CALL_OW 8
+// DialogueOn ;
+2508: CALL_OW 6
+// SayRadio ( Maksim , 1Maks-Attack-01 ) ;
+2512: LD_EXP 7
+2516: PPUSH
+2517: LD_STRING 1Maks-Attack-01
+2519: PPUSH
+2520: CALL_OW 94
+// SayRadio ( Mietek , 1Ryn-Attack-01 ) ;
+2524: LD_EXP 2
+2528: PPUSH
+2529: LD_STRING 1Ryn-Attack-01
+2531: PPUSH
+2532: CALL_OW 94
+// SayRadio ( Maksim , 1Maks-Attack-02 ) ;
+2536: LD_EXP 7
+2540: PPUSH
+2541: LD_STRING 1Maks-Attack-02
+2543: PPUSH
+2544: CALL_OW 94
+// SayRadio ( Maksim , 1Maks-Attack-03 ) ;
+2548: LD_EXP 7
+2552: PPUSH
+2553: LD_STRING 1Maks-Attack-03
+2555: PPUSH
+2556: CALL_OW 94
+// Say ( Mietek , 1Ryn-Attack-02 ) ;
+2560: LD_EXP 2
+2564: PPUSH
+2565: LD_STRING 1Ryn-Attack-02
+2567: PPUSH
+2568: CALL_OW 88
+// ChangeMissionObjectives ( o10 ) ;
+2572: LD_STRING o10
+2574: PPUSH
+2575: CALL_OW 337
+// InGameOff ;
+2579: CALL_OW 9
+// DialogueOff ;
+2583: CALL_OW 7
+// Wait ( 2 2$0 ) ;
+2587: LD_INT 4200
+2589: PPUSH
+2590: CALL_OW 67
+// PlaceUnitArea ( Maksim , AmAttacks , false ) ;
+2594: LD_EXP 7
+2598: PPUSH
+2599: LD_INT 6
+2601: PPUSH
+2602: LD_INT 0
+2604: PPUSH
+2605: CALL_OW 49
+// PlaceUnitArea ( Fiodor , AmAttacks , false ) ;
+2609: LD_EXP 8
+2613: PPUSH
+2614: LD_INT 6
+2616: PPUSH
+2617: LD_INT 0
+2619: PPUSH
+2620: CALL_OW 49
+// PlaceUnitArea ( Aleksiej , AmAttacks , false ) ;
+2624: LD_EXP 11
+2628: PPUSH
+2629: LD_INT 6
+2631: PPUSH
+2632: LD_INT 0
+2634: PPUSH
+2635: CALL_OW 49
+// PlaceUnitArea ( Pavel , AmAttacks , false ) ;
+2639: LD_EXP 9
+2643: PPUSH
+2644: LD_INT 6
+2646: PPUSH
+2647: LD_INT 0
+2649: PPUSH
+2650: CALL_OW 49
+// PlaceUnitArea ( Zakhar , AmAttacks , false ) ;
+2654: LD_EXP 10
+2658: PPUSH
+2659: LD_INT 6
+2661: PPUSH
+2662: LD_INT 0
+2664: PPUSH
+2665: CALL_OW 49
+// ComMoveToArea ( MaksimCrew , CheckPoint ) ;
+2669: LD_EXP 14
+2673: PPUSH
+2674: LD_INT 3
+2676: PPUSH
+2677: CALL_OW 113
+// Say ( Maksim , 1Maks-Attack-04 ) ;
+2681: LD_EXP 7
+2685: PPUSH
+2686: LD_STRING 1Maks-Attack-04
+2688: PPUSH
+2689: CALL_OW 88
+// Wait ( 0 0$8 ) ;
+2693: LD_INT 280
+2695: PPUSH
+2696: CALL_OW 67
+// InitAmerican ;
+2700: CALL 1252 0 0
+// Say ( AmCommander , 1Andrew-Attack ) ;
+2704: LD_EXP 19
+2708: PPUSH
+2709: LD_STRING 1Andrew-Attack
+2711: PPUSH
+2712: CALL_OW 88
+// ComMoveXY ( Americans , 48 , 42 ) ;
+2716: LD_EXP 20
+2720: PPUSH
+2721: LD_INT 48
+2723: PPUSH
+2724: LD_INT 42
+2726: PPUSH
+2727: CALL_OW 111
+// AddComAgressiveMove ( Americans , 26 , 16 ) ;
+2731: LD_EXP 20
+2735: PPUSH
+2736: LD_INT 26
+2738: PPUSH
+2739: LD_INT 16
+2741: PPUSH
+2742: CALL_OW 174
+// american_attack = true ;
+2746: LD_ADDR_EXP 29
+2750: PUSH
+2751: LD_INT 1
+2753: ST_TO_ADDR
+// end ;
+2754: END
+// every 0 0$1 trigger american_attack = true and IsDead ( AmCommander ) do
+2755: LD_EXP 29
+2759: PUSH
+2760: LD_INT 1
+2762: EQUAL
+2763: PUSH
+2764: LD_EXP 19
+2768: PPUSH
+2769: CALL_OW 301
+2773: AND
+2774: IFFALSE 2819
+2776: GO 2778
+2778: DISABLE
+// begin InGameOn ;
+2779: CALL_OW 8
+// Say ( Yakotich , 1Yak-Attack-01 ) ;
+2783: LD_EXP 1
+2787: PPUSH
+2788: LD_STRING 1Yak-Attack-01
+2790: PPUSH
+2791: CALL_OW 88
+// Say ( Yakotich , 1Yak-Attack-02 ) ;
+2795: LD_EXP 1
+2799: PPUSH
+2800: LD_STRING 1Yak-Attack-02
+2802: PPUSH
+2803: CALL_OW 88
+// end_of_the_mission = true ;
+2807: LD_ADDR_EXP 33
+2811: PUSH
+2812: LD_INT 1
+2814: ST_TO_ADDR
+// InGameOff ;
+2815: CALL_OW 9
+// end ;
+2819: END
+// every 0 0$1 trigger See ( 3 , Aleksandr ) do
+2820: LD_INT 3
+2822: PPUSH
+2823: LD_EXP 12
+2827: PPUSH
+2828: CALL_OW 292
+2832: IFFALSE 2905
+2834: GO 2836
+2836: DISABLE
+// begin DialogueOn ;
+2837: CALL_OW 6
+// Say ( Aleksandr , 1Alek-Alek3 ) ;
+2841: LD_EXP 12
+2845: PPUSH
+2846: LD_STRING 1Alek-Alek3
+2848: PPUSH
+2849: CALL_OW 88
+// Say ( Yakotich , 1Yak-Alek2 ) ;
+2853: LD_EXP 1
+2857: PPUSH
+2858: LD_STRING 1Yak-Alek2
+2860: PPUSH
+2861: CALL_OW 88
+// Say ( Aleksandr , 1Alek-Alek4 ) ;
+2865: LD_EXP 12
+2869: PPUSH
+2870: LD_STRING 1Alek-Alek4
+2872: PPUSH
+2873: CALL_OW 88
+// Say ( Mietek , 1Ryn-Alek3 ) ;
+2877: LD_EXP 2
+2881: PPUSH
+2882: LD_STRING 1Ryn-Alek3
+2884: PPUSH
+2885: CALL_OW 88
+// SetSide ( Aleksandr , 3 ) ;
+2889: LD_EXP 12
+2893: PPUSH
+2894: LD_INT 3
+2896: PPUSH
+2897: CALL_OW 235
+// DialogueOff ;
+2901: CALL_OW 7
+// end ;
+2905: END
+// every 0 0$1 trigger Researched ( 3 , 46 ) do
+2906: LD_INT 3
+2908: PPUSH
+2909: LD_INT 46
+2911: PPUSH
+2912: CALL_OW 325
+2916: IFFALSE 2961
+2918: GO 2920
+2920: DISABLE
+// begin DialogueOn ;
+2921: CALL_OW 6
+// Say ( Vasilij , 1Vas-Power-1 ) ;
+2925: LD_EXP 4
+2929: PPUSH
+2930: LD_STRING 1Vas-Power-1
+2932: PPUSH
+2933: CALL_OW 88
+// Say ( Yakotich , 1Yak-Power-1 ) ;
+2937: LD_EXP 1
+2941: PPUSH
+2942: LD_STRING 1Yak-Power-1
+2944: PPUSH
+2945: CALL_OW 88
+// DialogueOff ;
+2949: CALL_OW 7
+// oil_power_researched := true ;
+2953: LD_ADDR_EXP 30
+2957: PUSH
+2958: LD_INT 1
+2960: ST_TO_ADDR
+// end ;
+2961: END
+// every 0 0$1 trigger Researched ( 3 , 47 ) do
+2962: LD_INT 3
+2964: PPUSH
+2965: LD_INT 47
+2967: PPUSH
+2968: CALL_OW 325
+2972: IFFALSE 3005
+2974: GO 2976
+2976: DISABLE
+// begin DialogueOn ;
+2977: CALL_OW 6
+// Say ( Vasilij , 1Vas-Engine-1 ) ;
+2981: LD_EXP 4
+2985: PPUSH
+2986: LD_STRING 1Vas-Engine-1
+2988: PPUSH
+2989: CALL_OW 88
+// DialogueOff ;
+2993: CALL_OW 7
+// oil_engine_researched := true ;
+2997: LD_ADDR_EXP 31
+3001: PUSH
+3002: LD_INT 1
+3004: ST_TO_ADDR
+// end ;
+3005: END
+// every 0 0$1 trigger Researched ( 3 , 48 ) do
+3006: LD_INT 3
+3008: PPUSH
+3009: LD_INT 48
+3011: PPUSH
+3012: CALL_OW 325
+3016: IFFALSE 3073
+3018: GO 3020
+3020: DISABLE
+// begin DialogueOn ;
+3021: CALL_OW 6
+// Say ( Vasilij , 1Vas-Research-1 ) ;
+3025: LD_EXP 4
+3029: PPUSH
+3030: LD_STRING 1Vas-Research-1
+3032: PPUSH
+3033: CALL_OW 88
+// Say ( Yakotich , 1Yak-Research-1 ) ;
+3037: LD_EXP 1
+3041: PPUSH
+3042: LD_STRING 1Yak-Research-1
+3044: PPUSH
+3045: CALL_OW 88
+// Say ( Vasilij , 1Vas-Research-2 ) ;
+3049: LD_EXP 4
+3053: PPUSH
+3054: LD_STRING 1Vas-Research-2
+3056: PPUSH
+3057: CALL_OW 88
+// DialogueOff ;
+3061: CALL_OW 7
+// technology1_researched := true ;
+3065: LD_ADDR_EXP 32
+3069: PUSH
+3070: LD_INT 1
+3072: ST_TO_ADDR
+// end ;
+3073: END
+// on BuildingComplete ( building ) do var i ;
+3074: LD_INT 0
+3076: PPUSH
+// begin if GetBType ( building ) = b_workshop and GetSide ( building ) = 3 then
+3077: LD_VAR 0 1
+3081: PPUSH
+3082: CALL_OW 266
+3086: PUSH
+3087: LD_INT 2
+3089: EQUAL
+3090: PUSH
+3091: LD_VAR 0 1
+3095: PPUSH
+3096: CALL_OW 255
+3100: PUSH
+3101: LD_INT 3
+3103: EQUAL
+3104: AND
+3105: IFFALSE 3119
+// begin Say ( Michail , 1Mich-Workshop ) ;
+3107: LD_EXP 5
+3111: PPUSH
+3112: LD_STRING 1Mich-Workshop
+3114: PPUSH
+3115: CALL_OW 88
+// end ; if GetBType ( building ) = b_lab and GetSide ( building ) = 3 then
+3119: LD_VAR 0 1
+3123: PPUSH
+3124: CALL_OW 266
+3128: PUSH
+3129: LD_INT 6
+3131: EQUAL
+3132: PUSH
+3133: LD_VAR 0 1
+3137: PPUSH
+3138: CALL_OW 255
+3142: PUSH
+3143: LD_INT 3
+3145: EQUAL
+3146: AND
+3147: IFFALSE 3161
+// begin Say ( Vasilij , 1Vas-06 ) ;
+3149: LD_EXP 4
+3153: PPUSH
+3154: LD_STRING 1Vas-06
+3156: PPUSH
+3157: CALL_OW 88
+// end ; end ;
+3161: PPOPN 2
+3163: END
+// every 0 0$1 trigger FilterAllUnits ( [ [ f_type , unit_vehicle ] , [ f_side , 3 ] ] ) do
+3164: LD_INT 21
+3166: PUSH
+3167: LD_INT 2
+3169: PUSH
+3170: EMPTY
+3171: LIST
+3172: LIST
+3173: PUSH
+3174: LD_INT 22
+3176: PUSH
+3177: LD_INT 3
+3179: PUSH
+3180: EMPTY
+3181: LIST
+3182: LIST
+3183: PUSH
+3184: EMPTY
+3185: LIST
+3186: LIST
+3187: PPUSH
+3188: CALL_OW 69
+3192: IFFALSE 3290
+3194: GO 3196
+3196: DISABLE
+// begin InGameOn ;
+3197: CALL_OW 8
+// CenterOnUnits ( RuDep ) ;
+3201: LD_INT 15
+3203: PPUSH
+3204: CALL_OW 85
+// Wait ( 0 0$3 ) ;
+3208: LD_INT 105
+3210: PPUSH
+3211: CALL_OW 67
+// DialogueOn ;
+3215: CALL_OW 6
+// Say ( Michail , 1Mich-Tank-1 ) ;
+3219: LD_EXP 5
+3223: PPUSH
+3224: LD_STRING 1Mich-Tank-1
+3226: PPUSH
+3227: CALL_OW 88
+// Say ( Yakotich , 1Yak-Tank-1 ) ;
+3231: LD_EXP 1
+3235: PPUSH
+3236: LD_STRING 1Yak-Tank-1
+3238: PPUSH
+3239: CALL_OW 88
+// Say ( Michail , 1Mich-Tank-2 ) ;
+3243: LD_EXP 5
+3247: PPUSH
+3248: LD_STRING 1Mich-Tank-2
+3250: PPUSH
+3251: CALL_OW 88
+// Say ( Yakotich , 1Yak-Tank-2 ) ;
+3255: LD_EXP 1
+3259: PPUSH
+3260: LD_STRING 1Yak-Tank-2
+3262: PPUSH
+3263: CALL_OW 88
+// ChangeMissionObjectives ( o6 ) ;
+3267: LD_STRING o6
+3269: PPUSH
+3270: CALL_OW 337
+// DialogueOff ;
+3274: CALL_OW 7
+// InGameOff ;
+3278: CALL_OW 9
+// vehicle_constructed = true ;
+3282: LD_ADDR_EXP 35
+3286: PUSH
+3287: LD_INT 1
+3289: ST_TO_ADDR
+// end ;
+3290: END
+// every 0 0$1 trigger technology1_researched = true and oil_engine_researched = true and oil_power_researched = true and vehicle_constructed = true do
+3291: LD_EXP 32
+3295: PUSH
+3296: LD_INT 1
+3298: EQUAL
+3299: PUSH
+3300: LD_EXP 31
+3304: PUSH
+3305: LD_INT 1
+3307: EQUAL
+3308: AND
+3309: PUSH
+3310: LD_EXP 30
+3314: PUSH
+3315: LD_INT 1
+3317: EQUAL
+3318: AND
+3319: PUSH
+3320: LD_EXP 35
+3324: PUSH
+3325: LD_INT 1
+3327: EQUAL
+3328: AND
+3329: IFFALSE 3341
+3331: GO 3333
+3333: DISABLE
+// begin ChangeMissionObjectives ( o5 ) ;
+3334: LD_STRING o5
+3336: PPUSH
+3337: CALL_OW 337
+// end ;
+3341: END
+// every 0 0$1 trigger IsInArea ( Maksim , BaseArea ) do
+3342: LD_EXP 7
+3346: PPUSH
+3347: LD_INT 9
+3349: PPUSH
+3350: CALL_OW 308
+3354: IFFALSE 3371
+3356: GO 3358
+3358: DISABLE
+// begin SetSide ( MaksimCrew , 3 ) ;
+3359: LD_EXP 14
+3363: PPUSH
+3364: LD_INT 3
+3366: PPUSH
+3367: CALL_OW 235
+// end ;
+3371: END
+// every 0 0$1 trigger end_of_the_mission = true and yakotich_in_base = true and IsDead ( AmCommander ) do
+3372: LD_EXP 33
+3376: PUSH
+3377: LD_INT 1
+3379: EQUAL
+3380: PUSH
+3381: LD_EXP 25
+3385: PUSH
+3386: LD_INT 1
+3388: EQUAL
+3389: AND
+3390: PUSH
+3391: LD_EXP 19
+3395: PPUSH
+3396: CALL_OW 301
+3400: AND
+3401: IFFALSE 3832
+3403: GO 3405
+3405: DISABLE
+// begin AddMedal ( People , 1 ) ;
+3406: LD_STRING People
+3408: PPUSH
+3409: LD_INT 1
+3411: PPUSH
+3412: CALL_OW 101
+// if IsOk ( Aleksandr ) then
+3416: LD_EXP 12
+3420: PPUSH
+3421: CALL_OW 302
+3425: IFFALSE 3439
+// AddMedal ( Aleksandr , 1 ) else
+3427: LD_STRING Aleksandr
+3429: PPUSH
+3430: LD_INT 1
+3432: PPUSH
+3433: CALL_OW 101
+3437: GO 3450
+// AddMedal ( Aleksandr , - 1 ) ;
+3439: LD_STRING Aleksandr
+3441: PPUSH
+3442: LD_INT 1
+3444: NEG
+3445: PPUSH
+3446: CALL_OW 101
+// if Researched ( 3 , 48 ) and Researched ( 3 , 47 ) and Researched ( 3 , 46 ) and vehicle_constructed = true then
+3450: LD_INT 3
+3452: PPUSH
+3453: LD_INT 48
+3455: PPUSH
+3456: CALL_OW 325
+3460: PUSH
+3461: LD_INT 3
+3463: PPUSH
+3464: LD_INT 47
+3466: PPUSH
+3467: CALL_OW 325
+3471: AND
+3472: PUSH
+3473: LD_INT 3
+3475: PPUSH
+3476: LD_INT 46
+3478: PPUSH
+3479: CALL_OW 325
+3483: AND
+3484: PUSH
+3485: LD_EXP 35
+3489: PUSH
+3490: LD_INT 1
+3492: EQUAL
+3493: AND
+3494: IFFALSE 3508
+// AddMedal ( Secondary , 1 ) else
+3496: LD_STRING Secondary
+3498: PPUSH
+3499: LD_INT 1
+3501: PPUSH
+3502: CALL_OW 101
+3506: GO 3519
+// AddMedal ( Secondary , - 1 ) ;
+3508: LD_STRING Secondary
+3510: PPUSH
+3511: LD_INT 1
+3513: NEG
+3514: PPUSH
+3515: CALL_OW 101
+// GiveMedals ( Medals ) ;
+3519: LD_STRING Medals
+3521: PPUSH
+3522: CALL_OW 102
+// RewardPeople ( FilterAllUnits ( [ [ f_side , 3 ] , [ f_nation , 3 ] , [ f_type , unit_human ] ] ) ) ;
+3526: LD_INT 22
+3528: PUSH
+3529: LD_INT 3
+3531: PUSH
+3532: EMPTY
+3533: LIST
+3534: LIST
+3535: PUSH
+3536: LD_INT 23
+3538: PUSH
+3539: LD_INT 3
+3541: PUSH
+3542: EMPTY
+3543: LIST
+3544: LIST
+3545: PUSH
+3546: LD_INT 21
+3548: PUSH
+3549: LD_INT 1
+3551: PUSH
+3552: EMPTY
+3553: LIST
+3554: LIST
+3555: PUSH
+3556: EMPTY
+3557: LIST
+3558: LIST
+3559: LIST
+3560: PPUSH
+3561: CALL_OW 69
+3565: PPUSH
+3566: CALL_OW 43
+// SaveCharacters ( Yakotich , 01_Yakotich ) ;
+3570: LD_EXP 1
+3574: PPUSH
+3575: LD_STRING 01_Yakotich
+3577: PPUSH
+3578: CALL_OW 38
+// SaveCharacters ( Mietek , 01_Mietek ) ;
+3582: LD_EXP 2
+3586: PPUSH
+3587: LD_STRING 01_Mietek
+3589: PPUSH
+3590: CALL_OW 38
+// SaveCharacters ( Maksim , 01_Maksim ) ;
+3594: LD_EXP 7
+3598: PPUSH
+3599: LD_STRING 01_Maksim
+3601: PPUSH
+3602: CALL_OW 38
+// if IsOk ( Vasilij ) then
+3606: LD_EXP 4
+3610: PPUSH
+3611: CALL_OW 302
+3615: IFFALSE 3629
+// SaveCharacters ( Vasilij , 01_Vasilij ) ;
+3617: LD_EXP 4
+3621: PPUSH
+3622: LD_STRING 01_Vasilij
+3624: PPUSH
+3625: CALL_OW 38
+// if IsOk ( Michail ) then
+3629: LD_EXP 5
+3633: PPUSH
+3634: CALL_OW 302
+3638: IFFALSE 3652
+// SaveCharacters ( Michail , 01_Michail ) ;
+3640: LD_EXP 5
+3644: PPUSH
+3645: LD_STRING 01_Michail
+3647: PPUSH
+3648: CALL_OW 38
+// if IsOk ( Boris ) then
+3652: LD_EXP 3
+3656: PPUSH
+3657: CALL_OW 302
+3661: IFFALSE 3675
+// SaveCharacters ( Boris , 01_Boris ) ;
+3663: LD_EXP 3
+3667: PPUSH
+3668: LD_STRING 01_Boris
+3670: PPUSH
+3671: CALL_OW 38
+// if IsOk ( Constantin ) then
+3675: LD_EXP 6
+3679: PPUSH
+3680: CALL_OW 302
+3684: IFFALSE 3698
+// SaveCharacters ( Constantin , 01_Constantin ) ;
+3686: LD_EXP 6
+3690: PPUSH
+3691: LD_STRING 01_Constantin
+3693: PPUSH
+3694: CALL_OW 38
+// if IsOk ( Fiodor ) then
+3698: LD_EXP 8
+3702: PPUSH
+3703: CALL_OW 302
+3707: IFFALSE 3721
+// SaveCharacters ( Fiodor , 01_Fiodor ) ;
+3709: LD_EXP 8
+3713: PPUSH
+3714: LD_STRING 01_Fiodor
+3716: PPUSH
+3717: CALL_OW 38
+// if IsOk ( Aleksiej ) then
+3721: LD_EXP 11
+3725: PPUSH
+3726: CALL_OW 302
+3730: IFFALSE 3744
+// SaveCharacters ( Aleksiej , 01_Aleksiej ) ;
+3732: LD_EXP 11
+3736: PPUSH
+3737: LD_STRING 01_Aleksiej
+3739: PPUSH
+3740: CALL_OW 38
+// if IsOk ( Pavel ) then
+3744: LD_EXP 9
+3748: PPUSH
+3749: CALL_OW 302
+3753: IFFALSE 3767
+// SaveCharacters ( Pavel , 01_Pavel ) ;
+3755: LD_EXP 9
+3759: PPUSH
+3760: LD_STRING 01_Pavel
+3762: PPUSH
+3763: CALL_OW 38
+// if IsOk ( Zakhar ) then
+3767: LD_EXP 10
+3771: PPUSH
+3772: CALL_OW 302
+3776: IFFALSE 3790
+// SaveCharacters ( Zakhar , 01_Zakhar ) ;
+3778: LD_EXP 10
+3782: PPUSH
+3783: LD_STRING 01_Zakhar
+3785: PPUSH
+3786: CALL_OW 38
+// if IsOk ( Aleksandr ) and GetSide ( Aleksandr ) = 3 then
+3790: LD_EXP 12
+3794: PPUSH
+3795: CALL_OW 302
+3799: PUSH
+3800: LD_EXP 12
+3804: PPUSH
+3805: CALL_OW 255
+3809: PUSH
+3810: LD_INT 3
+3812: EQUAL
+3813: AND
+3814: IFFALSE 3828
+// SaveCharacters ( Aleksandr , 01_Aleksandr ) ;
+3816: LD_EXP 12
+3820: PPUSH
+3821: LD_STRING 01_Aleksandr
+3823: PPUSH
+3824: CALL_OW 38
+// YouWin ;
+3828: CALL_OW 103
+// end ; end_of_file
+3832: END
+// every 2 2$0 do
+3833: GO 3835
+3835: DISABLE
+// begin CreateCratesArea ( rand ( 2 , 5 ) , BaseArea , true ) ;
+3836: LD_INT 2
+3838: PPUSH
+3839: LD_INT 5
+3841: PPUSH
+3842: CALL_OW 12
+3846: PPUSH
+3847: LD_INT 9
+3849: PPUSH
+3850: LD_INT 1
+3852: PPUSH
+3853: CALL_OW 55
+// end ;
+3857: END

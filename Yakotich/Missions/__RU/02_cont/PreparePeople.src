@@ -1,0 +1,50 @@
+Export Function InitRussian;
+Begin
+
+Uc_Nation:= 3;
+Uc_Side := 3;
+
+YakotichCrew := YakotichCrew ^ Yakotich ^ Mietek ^ Boris ^ Michail ^ Vasilij ^ Maksim ^ Fiodor ^ Aleksandr ^ Aleksiej ^ Pavel ^ Zakhar ^ Constantin ^ Stanislav ^ Josif;
+
+Yakotich := PrepareUnit('Yakotich', True, '01_');
+Mietek := PrepareUnit('Mietek', True, '01_');
+Boris := PrepareUnit('Boris', True, '01_');
+Michail := PrepareUnit('Michail', True, '01_');
+Vasilij := PrepareUnit('Vasilij', True, '01_');
+Maksim := PrepareUnit('Maksim', True, '01_');
+Fiodor := PrepareUnit('Fiodor', True, '01_');
+Aleksandr := PrepareUnit('Aleksandr', True, '01_');
+Aleksiej := PrepareUnit('Aleksiej', True, '01_');
+Pavel := PrepareUnit('Pavel', True, '01_');
+Zakhar := PrepareUnit('Zakhar', True, '01_');
+Constantin := PrepareUnit('Constantin', True, '01_');
+Stanislav := PrepareUnit('Stanislav', False, '');
+Josif := PrepareUnit('Josif', False, '');
+
+SetClass(Boris,2);
+SetClass(Vasilij,4);
+
+Uc_Side := 6;
+
+Morozov := PrepareUnit('Morozov', false, '');
+Kurin := PrepareUnit('Kurin', false, '');
+Grishko := PrepareUnit('Grishko', false, '');
+Burlak := PrepareUnit('Burlak', false, '');
+Platonov := PrepareUnit('Platonov', false, '');
+
+Uc_Side := 1;
+
+AmSold := PrepareUnit('AmSold', false, '');
+
+end;
+
+
+
+
+
+
+
+
+
+
+

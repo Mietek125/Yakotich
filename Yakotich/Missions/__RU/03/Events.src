@@ -1,0 +1,155 @@
+Export RuDep;
+On BuildingStarted(building,builder) do
+begin
+
+     if GetSide(building) = 3 and GetBType(building) = b_depot and start_ended then
+     begin
+
+     RuDep := building;
+
+     SetBName(building,'voroshilov');
+
+     SetRestrict(b_depot, 3, false);
+
+     ingame_video := false;
+     interface_hidden := false;
+
+end;
+
+end;
+
+//On BuildingComplete(b) do
+//begin
+
+On VehicleConstructed(vehicle, factory) do
+begin
+
+if GetControl(vehicle) = control_remote and GetSide(vehicle) = 1 then
+   begin
+
+   Wait(0$3);
+
+   Connect(vehicle);
+
+   newAttackers := Replace(newAttackers, newAttackers + 1, vehicle);
+
+   if newAttackers >= [4,5,6][Difficulty] then
+      begin
+      attackers := attackers union newAttackers;
+      newAttackers := [];
+      end;
+end;
+
+end;
+
+Every 0$1 Trigger See(3,AmLab1) and lab_seen = false do
+begin
+
+lab_seen = true;
+
+CenterNowOnUnits(AmLab1);
+
+DialogueOn;
+
+Say(Vasilij,'3Vas-Lab-01');
+
+ChangeMissionObjectives('o6');
+
+DialogueOff;
+
+end;
+
+Every 0$1 Trigger See(3,AmLab2) and lab_seen = false do
+begin
+
+CenterNowOnUnits(AmLab2);
+
+DialogueOn;
+
+Say(Vasilij,'3Vas-Lab-01');
+
+ChangeMissionObjectives('o6');
+
+DialogueOff;
+
+end;
+
+Every 0$1 Trigger GetSide(AmLab1) = 3 or GetSide(AmLab2) = 3 do
+begin
+
+ChangeMissionObjectives('labik2');
+
+lab_captured = True;
+
+end;
+
+
+Every 0$1 Trigger Researched(3,69) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'3Vas-Buldozer-01');
+Say(Vasilij,'3Vas-Buldozer-02');
+
+ChangeMissionObjectives('buld2');
+
+buldozer_researched = True;
+
+DialogueOff;
+
+end;
+
+Every 0$1 Trigger Researched(3,40) do
+begin
+
+Say(Vasilij,'3Vas-Rocket');
+Say(Stanislav,'3Stan-Rocket');
+
+ChangeMissionObjectives('rocket2');
+
+rocket_researched = True;
+
+end;
+
+
+Every 0$1 Trigger Researched(3,9) do
+begin
+
+DialogueOn;
+
+Say(Petrosyan,'3Pty-Comp-04');
+Say(Yakotich,'3Yak-Comp-01');
+Say(Petrosyan,'3Pty-Comp-05');
+Say(Burlak,'3Bur-Comp-03');
+
+ChangeMissionObjectives('pred2');
+
+prediction_researched = True;
+
+DialogueOff;
+
+end;
+
+Every 0$1 Trigger Researched(3,30) do
+begin
+
+DialogueOn;
+
+Say(Dolgov,'3Dol-Stasis-01');
+Say(Burlak,'3Bur-Stasis-01');
+Say(Dolgov,'3Dol-Stasis-02');
+Say(Burlak,'3Bur-Stasis-02');
+
+DialogueOff;
+
+end;
+
+
+Every 0$1 Trigger IsInArea(Boris,SouthOfBase) and start_ended = True do
+begin
+
+AddComBuild(Boris,b_depot,140,204,3);
+
+end;
+

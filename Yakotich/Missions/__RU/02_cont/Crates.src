@@ -1,0 +1,12 @@
+Every 5$0 do
+var i;
+begin
+
+For i = 1 To 4 do
+begin
+CreateCratesArea(rand(2,5),CratesArea,True);
+
+enable;
+end;
+
+end;

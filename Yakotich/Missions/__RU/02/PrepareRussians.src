@@ -1,0 +1,31 @@
+Export Function InitRussian;
+Begin
+
+Uc_Nation:= 3;
+Uc_Side := 3;
+
+Yakotich := NewCharacter('Yakotich');
+
+Uc_Side := 6;
+
+Mietek := PrepareUnit('Mietek ', false, '');
+Boris := PrepareUnit('Boris', false, '');
+Michail := PrepareUnit('Michail', false, '');
+Vasilij := PrepareUnit('Vasilij', false, '');
+Maksim := PrepareUnit('Maksim', false, '');
+Fiodor := PrepareUnit('Fiodor', false, '');
+
+Uc_Side := 5;
+
+Aleksandr := PrepareUnit('Aleksandr', false, '');
+
+end;
+
+
+
+
+
+
+
+
+

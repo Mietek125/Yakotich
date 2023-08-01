@@ -1,0 +1,73 @@
+// Misja 01 / 21.06.2023
+// Znowu w tym kurwiskowym Sailu ~Mietek
+
+Starting
+begin
+
+ResetFog;
+Init;
+
+AnimateTrees(true);
+
+Randomize;
+RandomizeAll;
+
+InitRussian;
+Action;
+
+DebugMode;
+
+end;
+
+Export Yakotich, Mietek, Boris, Vasilij, Michail, Constantin;
+Export Maksim, Fiodor, Pavel, Zakhar, Aleksiej, Aleksandr, Josif;
+Export MaksimCrew;
+Export OtherSurvivors;
+
+Export AmS,AmSc,AMSS;
+Export AmCommander;
+Export Americans;
+
+export debug; //tests only!
+
+Export mission_prefix;
+Export hill_north_trigger,hill_south_trigger,yakotich_in_base,
+quests_finished,aleksandr_found,attacks_are_finished,american_attack,
+oil_power_researched,oil_engine_researched,technology1_researched,
+end_of_the_mission,losses,vehicle_constructed,josif_landed,josif_saved;
+
+Function Init;
+begin
+
+mission_prefix := '01_';
+//Debug := True;
+yakotich_in_base := False;
+quests_finished := False;
+aleksandr_found := False;
+attacks_are_finished := False;
+oil_power_researched := False;
+oil_engine_researched := False;
+technology1_researched := False;
+american_attack := False;
+end_of_the_mission := False;
+losses := False;
+vehicle_constructed := False;
+josif_landed := False;
+josif_saved := False;
+
+
+end;
+
+Function DebugMode;
+var i;
+begin
+if not debug then
+exit;
+
+Difficulty := 3;
+TurnFogOff();
+FogOff(3);
+end;
+
+
+

@@ -1,0 +1,46 @@
+Every 0$1 Do
+Begin
+
+InGameOn;
+
+PlaceUnitArea([Yakotich,Mietek,Boris,Vasilij,Michail,Constantin,Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav],EnterArea,False);
+ComMoveToArea([Mietek,Boris,Vasilij,Michail,Constantin,Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav],PeopleStartArea);
+ComMoveToArea(Yakotich,YakotichStartArea);
+
+end;
+
+Every 0$1 Trigger IsInArea(Yakotich,YakotichStartArea) do
+begin
+
+ComTurnXY(Yakotich,153,219);
+Say(Yakotich,'3Yak-01');
+
+ComEnterUnit(Yakotich,Ovsyenko);
+
+end;
+
+Every 0$1 Trigger IsInUnit(Yakotich) do
+begin
+
+Say(Yakotich,'3Yak-02');
+Say(Dimitri,'3Dim-01');
+Say(Yakotich,'3Yak-03');
+Say(Dimitri,'3Dim-02');
+SayRadio(Yakotich,'3Yak-04');
+SayRadio(Platonov,'3Plat-01');
+SayRadio(Yakotich,'3Yak-05');
+SayRadio(Platonov,'3Plat-02');
+Say(Dimitri,'3Dim-03');
+Say(Dimitri,'3Dim-04');
+Say(Yakotich,'3Yak-06');
+Say(Dimitri,'3Dim-05');
+Say(Yakotich,'3Yak-07');
+
+Wait(0$03);
+
+InitSikorskiTeam;
+
+Say(Sikorski,'3Sik-01');
+Say(Yakotich,'3Yak-08');
+
+end;

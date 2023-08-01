@@ -1,0 +1,55 @@
+Export Function InitRussian;
+Begin
+
+Uc_Nation:= 3;
+Uc_Side := 3;
+
+Yakotich := PrepareUnit('Yakotich', True, '01_');
+
+Uc_Side := 6;
+
+Mietek := PrepareUnit('Mietek', True, '01_');
+Boris := PrepareUnit('Boris', True, '01_');
+Michail := PrepareUnit('Michail', True, '01_');
+Vasilij := PrepareUnit('Vasilij', True, '01_');
+Constantin := PrepareUnit('Constantin', True, '01_');
+Maksim := PrepareUnit('Maksim', True, '01_');
+Fiodor := PrepareUnit('Fiodor', True, '01_');
+Aleksiej := PrepareUnit('Aleksiej', True, '01_');
+Pavel := PrepareUnit('Pavel', True, '01_');
+Zakhar := PrepareUnit('Zakhar', True, '01_');
+Aleksandr := PrepareUnit('Aleksandr', True, '01_');
+
+Morozov := PrepareUnit('Morozov', false, '');
+
+YakotichCrew := YakotichCrew ^ Yakotich;
+YakotichCrew := YakotichCrew ^ Maksim;
+YakotichCrew := YakotichCrew ^ Michail;
+YakotichCrew := YakotichCrew ^ Fiodor;
+YakotichCrew := YakotichCrew ^ Vasilij;
+YakotichCrew := YakotichCrew ^ Constantin;
+YakotichCrew := YakotichCrew ^ Boris;
+
+
+PrepareSolBun(Zakhar,RuB1);
+PrepareSolBun(Aleksandr,RuB2);
+PrepareSolBun(Aleksiej,RuB4);
+
+PlaceHumanInUnit(Fiodor,RuA1);
+PlaceHumanInUnit(Constantin,RuA1);
+PlaceHumanInUnit(Boris,RuDep);
+PlaceHumanInUnit(Pavel,RuWorkshop);
+PlaceHumanInUnit(Vasilij,RuLab);
+PlaceHumanInUnit(Michail,RuLab);
+
+PlaceUnitArea(Mietek,MietekSpawn,False);
+PlaceUnitArea(Yakotich,YakotichSpawn,False);
+PlaceUnitArea(Maksim,MaksimSpawn,False);
+
+ComTurnUnit(Yakotich,Mietek);
+ComTurnUnit(Mietek,Yakotich);
+ComTurnUnit(Maksim,Yakotich);
+
+end;
+
+

@@ -1,0 +1,55 @@
+//Start ca³ej misi
+Export Function Action;
+var i;
+begin
+
+InGameOn;
+
+Wait(0$03);
+
+Say(Yakotich,'2Yak-01');
+Say(Maksim,'2Mak-01');
+Say(Maksim,'2Mak-02');
+Say(Maksim,'2Mak-03');
+Say(Maksim,'2Mak-04');
+Say(Maksim,'2Mak-05');
+Say(Mietek,'2Ryn-01');
+Say(Mietek,'2Ryn-02');
+Say(Yakotich,'2Yak-02');
+Say(Yakotich,'2Yak-03');
+
+Wait(0$03);
+
+SayRadio(Yakotich,'2Yak-04');
+SayRadio(Morozov,'2Moro-01');
+SayRadio(Yakotich,'2Yak-05');
+SayRadio(Yakotich,'2Yak-06');
+SayRadio(Morozov,'2Moro-02');
+SayRadio(Morozov,'2Moro-03');
+SayRadio(Yakotich,'2Yak-07');
+SayRadio(Morozov,'2Moro-04');
+SayRadio(Yakotich,'1Yak-08');
+Say(Yakotich,'2Yak-09');
+Say(Mietek,'2Ryn-03');
+Say(Yakotich,'2Yak-10');
+Say(Yakotich,'2Yak-11');
+
+
+
+ComExitBuilding([Michail,Vasilij,Fiodor,Constantin,Boris]);
+AddComMoveXY([Michail,Vasilij,Constantin,Fiodor,Boris],34,16);
+
+Wait(0$03);
+
+Say(Michail,'2Mich-01');
+Say(Yakotich,'2Yak-12');
+
+AddComMoveXY(YakotichCrew,65,75);
+
+ComEnterUnit(Mietek,RuA1);
+
+Wait(0$5);
+
+ChangeMap(1, '%_cont');
+
+end;

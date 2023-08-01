@@ -1,0 +1,81 @@
+// Misja 02-cont / 24.06.2023
+// Dzwonili do mnie jak na kiblu siedzia³em... Wieprz! ~Konon
+
+Starting
+begin
+
+ResetFog;
+Init;
+
+AnimateTrees(true);
+
+Randomize;
+RandomizeAll;                                                                
+
+InitRussian;
+Action;
+InitAmerican;
+
+DebugMode;
+
+end;
+
+Export YakotichCrew, MietekCrew;
+Export Yakotich, Mietek,Boris,Vasilij,Michail,Constantin;
+Export Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav;
+Export Morozov,Kurin,Grishko,Burlak,Platonov,AmSold;
+
+Export KurinTime, MietekTime;
+
+Export AmConvoys,AmConvoysVehicles,AmNorthPersonel,AmSouthPersonel;
+Export AmSoldNorth,AmSciNorth,AmMechNorth,AmEngNorth,
+AmSoldSouth, AmSciSouth, AmMechSouth, AmEngSouth;
+Export AmSoldConvoy, AmSciConvoy, AmMechConvoy, AmEngConvoy,
+AmVehicleConvoy;
+
+export debug; //tests only!
+
+Export mission_prefix;
+Export maksim_scout_ended, maksim_back, turrets_researched,
+gattling_researched, gun_researched, gun_recycled, second_wave_clear, transport_builded,
+first_attack_spawned, first_attack_clear, reiforcements_called, kurin_attack_started,
+end_of_the_mission;
+
+Export livid;
+
+Function Init;
+begin
+
+mission_prefix := '02_';
+//debug := True;
+maksim_scout_ended := False;
+maksim_back := False;
+turrets_researched := False;
+gattling_researched := False;
+gun_recycled := False;
+gun_researched := False;
+transport_builded := False;
+first_attack_spawned := False;
+first_attack_clear := False;
+reiforcements_called := False;
+kurin_attack_started := False;
+end_of_the_mission := False;
+
+MietekTime := 5$0;
+KurinTime := 30$0;
+
+end;
+
+Function DebugMode;
+var i;
+begin
+if not debug then
+exit;
+
+Difficulty := 3;
+TurnFogOff();
+FogOff(3);
+end;
+
+
+

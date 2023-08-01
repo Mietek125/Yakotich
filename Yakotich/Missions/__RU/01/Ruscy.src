@@ -1,0 +1,6 @@
+Export Function InitRussian;
+Begin
+
+Uc_Nation := 1;
+
+Yakotich := PrepareUnit('Yakotich', false, '');

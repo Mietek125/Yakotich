@@ -1,0 +1,46 @@
+Export Function InitAmerican;
+var i,j,k;
+begin
+
+Uc_Side = 4;
+Uc_Nation = 1;
+
+AmCommander := PrepareUnit('AmCommander', false, '');
+Americans := Americans ^ AmCommander;
+PlaceUnitArea(AmCommander,AmAttacks,False);
+
+for i = 1 to [4,7,11][Difficulty] do
+begin
+PrepareSoldier(rand(1,2),[0,2,4][Difficulty]);
+AmS = CreateHuman;
+Americans := Americans ^ AmS;
+PlaceUnitArea(AmS,AmAttacks,False);
+end;
+
+for j = 1 to [0,1,3][Difficulty] do
+begin
+PrepareScientist(rand(1,2),[0,2,4][Difficulty]);
+AmSc = CreateHuman;
+Americans := Americans ^ AmSc;
+PlaceUnitArea(AmSc,AmAttacks,False);
+
+end;
+
+end;
+
+Every 2$30 Trigger yakotich_in_base = True do
+begin
+
+Uc_Side = 4;
+Uc_Nation = 1;
+
+PrepareSoldier(rand(0,1),[0,1,2][Difficulty]);
+AMSS = CreateHuman;
+Americans := Americans ^ AMSS;
+PlaceUnitArea(AMSS,AmSpawners,True);
+ComAgressiveMove(AMSS,92,69);
+enable;
+end;
+
+
+

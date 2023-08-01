@@ -1,0 +1,136 @@
+Export RuDep;
+On BuildingStarted(building,builder) do
+begin
+if GetSide(building) = 3 and GetBType(building) = b_depot then
+begin
+
+RuDep := building;
+
+SetRestrict(b_depot, 3, false);
+
+end;
+
+end;
+
+On BuildingComplete(b) do
+begin
+
+if GetSide(b) = 3 and GetBType(b) = b_depot then
+begin
+
+DialogueOn;
+
+Say(Boris,'2Bor-01');
+Say(Vasilij,'2Vas-05');
+
+ChangeMissionObjectives('transport');
+
+SetTech(83,3,1);
+
+DialogueOff;
+
+end;
+
+if GetSide(b) = 3 and GetBType(b) = b_lab then
+begin
+
+Say(Vasilij,'2Vas-01');
+Say(Vasilij,'2Vas-02');
+Say(Yakotich,'2Yak-14');
+
+ChangeMissionObjectives('gattling');
+
+SetTech(69,3,1);
+
+end;
+
+End;
+
+On VehicleRecycled(BuildingID, VehicleID, Side, Nation, X,Y, Direction, Chassis, Controller, Engine, Weapon) do
+begin
+if Side = 3 and Nation = 1 and Weapon in [3,5] and gun_recycled = False then
+begin
+
+gun_recycled = True;
+
+Say(Stanislav,'2Stan-04');
+
+SetTech(39,3,1);
+SetRestrict(17,3,1);
+
+end;
+
+end;
+
+On Contact(side1,side2) do
+begin
+    if ((side1 = 4 and side2 = 3) or (side1 = 3 and side2 = 4)) and reiforcements_called  = false then
+    begin
+    reiforcements_called  := True;
+
+    Say(Yakotich,'2Yak-23');
+
+    Wait(0$10);
+
+    SayRadio(Yakotich,'2Yak-Reinforcements');
+    SayRadio(Morozov,'2Moro-Reinforcements');
+
+    Wait(0$10);
+
+    SayRadio(Mietek,'2Ryn-04');
+    SayRadio(Mietek,'2Ryn-05');
+    SayRadio(Yakotich,'2Yak-24');
+
+    first_attack_clear = True;
+
+    end;
+
+end;
+
+Every 0$1 Trigger Researched(3,69) do
+begin
+
+Say(Vasilij,'2Vas-03');
+Say(Vasilij,'2Vas-04');
+
+gattling_researched = True;
+
+ChangeMissionObjectives('gattling-2');
+
+end;
+
+Every 0$1 Trigger Researched(3,90) do
+begin
+
+turrets_researched = True;
+
+ChangeMissionObjectives('turret-2');
+
+end;
+
+Every 0$1 Trigger FilterAllUnits([[f_side, 3], [f_type, unit_vehicle], [f_or, [f_weapon, 89], [f_weapon, 51]]]) do
+begin
+
+ChangeMissionObjectives('transport-2');
+
+transport_builded = True;
+
+end;
+
+Every 0$1 Trigger Researched(3,39) do
+begin
+
+Say(Stanislav,'2Stan-05');
+Say(Stanislav,'2Stan-06');
+Say(Yakotich,'2Yak-Stan-02');
+
+gun_researched = True;
+
+ChangeMissionObjectives('gun-2');
+
+end;
+
+
+
+
+

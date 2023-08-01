@@ -1,0 +1,90 @@
+Export Function PrepareSolBun(skill, b);
+var un, dir;
+begin
+uc_side := GetSide(b);
+uc_nation := GetNation(b);
+
+dir := GetDir(b) - 3;
+
+if dir < 0 then
+   dir := 6 + dir;
+
+un := CreateHuman;
+SetDir(un, dir);
+PlaceHumanInUnit(un, b);
+End;
+
+Export Function PrepareUnit(ident, exist_mode, prefix);
+var unit;
+begin
+
+if exist_mode then
+   unit := CreateCharacter(prefix&ident)
+else
+   unit := NewCharacter(ident);
+
+result := unit;
+End;
+
+Export Function GetCountOfBuildingsInBase(base, btype);
+var i, tmp;
+begin
+result := 0;
+tmp := FilterAllUnits([f_btype, btype]);
+
+if not base or not tmp then
+   exit;
+
+for i in tmp do
+    if GetBase(i) = base then
+       result := result + 1;
+
+End;
+
+Every 1 trigger IsSelected(Artur) do
+begin
+PezetExp([1,2,3,4]);
+Wait(0$05);
+Say(Artur,'1Pezet-Sikret');
+End;
+
+Export Function PezetExp(q);
+var dec, q1;
+begin
+  dec = SelectiveQuery('PezetQuery', q);
+  case dec of
+   1:begin
+     AddExperience_NoLimit(Yakotich,1,500);
+     end;
+   2:begin
+     AddExperience_NoLimit(Yakotich,2,500);
+     end;
+   3:begin
+     AddExperience_NoLimit(Yakotich,3,500);
+     end;
+    4:begin
+     AddExperience_NoLimit(Yakotich,4,500);
+     end;
+
+  end;
+end;
+
+Every 0$1 Trigger IsDead(Yakotich) do
+begin
+
+YouLost('YakotichDead');
+
+end;
+
+Every 0$1 Trigger IsDead(Mietek) do
+begin
+
+YouLost('MietekDead');
+
+end;
+
+On UnitDestroyed(un) do
+begin
+if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
+   YouLost('PeopleDead');
+End;

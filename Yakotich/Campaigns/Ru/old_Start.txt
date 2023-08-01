@@ -1,0 +1,322 @@
+VARIABLES 0
+CHARACTERS 29
+  Kurin 1
+    DEFINE
+      NAME Kurin
+      HUMAN 1 1 3
+      ATTR 10 10
+      SKILLS 4 31860 3 145320 2 74550 1 11070
+      LAST_MISSION 2
+      CHAR @ 20 0
+      RANDSEED 0
+      VOICE 11 GALLERY ru 8
+    END_OF_DEFINE
+  Morozov 1
+    DEFINE
+      NAME Morozov
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 10 0 1 772980 5 463080 1 1631010
+      LAST_MISSION 2
+      CHAR @ 20 0
+      RANDSEED 0
+      VOICE 11 GALLERY RusGalAD 8
+    END_OF_DEFINE
+  Popov 1
+    DEFINE
+      NAME Popov
+      HUMAN 1 1 3
+      ATTR 10 10
+      SKILLS 4 41340 1 19380 2 95910 2 10080
+      LAST_MISSION 3
+      CHAR @ 100 0
+      RANDSEED 0
+      VOICE 13 GALLERY ru 10
+    END_OF_DEFINE
+  Natasza 1
+    DEFINE
+      NAME Natasza
+      HUMAN 2 1 3
+      ATTR 10 10
+      SKILLS 4 3000 1 360 0 300 1 330
+      LAST_MISSION 2
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 209 GALLERY RuGalRemake 1
+    END_OF_DEFINE
+  Yakotich 1
+    DEFINE
+      NAME Yakotich
+      HUMAN 1 1 3
+      ATTR 13 12
+      SKILLS 3 196290 1 22620 2 28380 1 13500
+      LAST_MISSION 1
+      CHAR @ 110 0
+      RANDSEED 0
+      VOICE 3 GALLERY YakotichMod 22
+    END_OF_DEFINE
+  Schulz 1
+    DEFINE
+      NAME Schulz
+      HUMAN 1 1 2
+      ATTR 11 10
+      SKILLS 1 24000 0 8460 1 9150 0 1470
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 5 GALLERY sandar 1
+    END_OF_DEFINE
+  Boris 1
+    DEFINE
+      NAME Boris
+      HUMAN 1 2 3
+      ATTR 11 11
+      SKILLS 1 73710 2 89610 0 39720 0 9720
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 2 GALLERY YakotichMod 3
+    END_OF_DEFINE
+  Vasilij 1
+    DEFINE
+      NAME Vasilij
+      HUMAN 1 4 3
+      ATTR 11 10
+      SKILLS 0 42960 1 34020 0 10320 3 79620
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 3 GALLERY YakotichMod 1
+    END_OF_DEFINE
+  Michail 1
+    DEFINE
+      NAME Michail
+      HUMAN 1 3 3
+      ATTR 11 9
+      SKILLS 1 85350 0 40620 3 85260 0 16410
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 5
+    END_OF_DEFINE
+  Maksim 1
+    DEFINE
+      NAME Maksim
+      HUMAN 1 1 3
+      ATTR 11 9
+      SKILLS 2 74550 1 52950 0 0 0 29820
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 2 GALLERY YakotichMod 4
+    END_OF_DEFINE
+  Fiodor 1
+    DEFINE
+      NAME Fiodor
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 1 85350 0 29340 0 42960 1 70950
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 9
+    END_OF_DEFINE
+  Mietek 1
+    DEFINE
+      NAME Mietek
+      HUMAN 1 1 3
+      ATTR 12 12
+      SKILLS 3 55950 1 25350 1 54690 0 6420
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 18
+    END_OF_DEFINE
+  Aleksandr 1
+    DEFINE
+      NAME Aleksandr
+      HUMAN 1 1 3
+      ATTR 11 12
+      SKILLS 2 25590 0 19410 0 81960 0 50490
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 13
+    END_OF_DEFINE
+  Aleksiej 1
+    DEFINE
+      NAME Aleksiej
+      HUMAN 1 1 3
+      ATTR 11 9
+      SKILLS 2 79020 0 52290 0 22290 1 29280
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 14
+    END_OF_DEFINE
+  Pavel 1
+    DEFINE
+      NAME Pavel
+      HUMAN 1 3 3
+      ATTR 10 11
+      SKILLS 0 19140 1 52290 2 79890 0 2250
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 15
+    END_OF_DEFINE
+  Zakhar 1
+    DEFINE
+      NAME Zakhar
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 2 95250 2 22260 0 80220 0 15690
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 10
+    END_OF_DEFINE
+  Constantin 1
+    DEFINE
+      NAME Constantin
+      HUMAN 1 1 3
+      ATTR 11 8
+      SKILLS 2 23490 0 25920 0 16140 1 29010
+      LAST_MISSION 1
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 17
+    END_OF_DEFINE
+  AmCommander 1
+    DEFINE
+      NAME AmCommander
+      HUMAN 1 1 1
+      ATTR 15 7
+      SKILLS 7 22380 3 19080 3 22590 3 25950
+      LAST_MISSION 1
+      CHAR @ 100 0
+      RANDSEED 0
+      VOICE 1 GALLERY us 23
+    END_OF_DEFINE
+  Stanislav 1
+    DEFINE
+      NAME Stanislav
+      HUMAN 1 4 3
+      ATTR 11 11
+      SKILLS 0 29250 0 19620 1 137340 3 145950
+      LAST_MISSION 0
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 6
+    END_OF_DEFINE
+  Josif 1
+    DEFINE
+      NAME Josif
+      HUMAN 1 1 3
+      ATTR 11 8
+      SKILLS 2 142950 1 56190 1 16110 0 15960
+      LAST_MISSION 0
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 7
+    END_OF_DEFINE
+  Burlak 1
+    DEFINE
+      NAME Burlak
+      HUMAN 1 3 3
+      ATTR 10 10
+      SKILLS 1 79350 1 70110 3 196290 0 37590
+      LAST_MISSION 0
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 1
+    END_OF_DEFINE
+  Grishko 1
+    DEFINE
+      NAME Grishko
+      HUMAN 1 1 3
+      ATTR 10 10
+      SKILLS 3 0 2 0 2 0 2 0
+      LAST_MISSION 2
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 11
+    END_OF_DEFINE
+  Platonov 1
+    DEFINE
+      NAME Platonov
+      HUMAN 1 1 3
+      ATTR 12 10
+      SKILLS 5 504960 2 269010 3 172230 0 110550
+      LAST_MISSION 2
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 60
+    END_OF_DEFINE
+  AmSold 1
+    DEFINE
+      NAME AmSold
+      HUMAN 1 1 1
+      ATTR 10 10
+      SKILLS 0 0 0 0 0 0 0 0
+      LAST_MISSION 2
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY multi 3
+    END_OF_DEFINE
+  Dimitri 1
+    DEFINE
+      NAME Dimitri
+      HUMAN 1 1 3
+      ATTR 11 11
+      SKILLS 4 202680 0 29580 3 37020 1 131010
+      LAST_MISSION 0
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 19
+    END_OF_DEFINE
+  Ivan 1
+    DEFINE
+      NAME Ivan
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 1 259680 1 106440 1 74040 1 112620
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 11
+    END_OF_DEFINE
+  Grigori 1
+    DEFINE
+      NAME Grigori
+      HUMAN 1 4 3
+      ATTR 11 12
+      SKILLS 1 12960 2 137400 0 16290 5 56010
+      LAST_MISSION 0
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 20
+    END_OF_DEFINE
+  Anton 1
+    DEFINE
+      NAME Anton
+      HUMAN 1 2 3
+      ATTR 11 10
+      SKILLS 1 164610 3 103770 0 162900 1 3690
+      LAST_MISSION 0
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 21
+    END_OF_DEFINE
+  Jegor 1
+    DEFINE
+      NAME Jegor
+      HUMAN 1 1 3
+      ATTR 10 10
+      SKILLS 2 22770 1 56220 4 161580 1 29250
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY YakotichMod 8
+    END_OF_DEFINE
+END

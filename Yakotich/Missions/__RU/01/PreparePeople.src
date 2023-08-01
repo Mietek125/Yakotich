@@ -1,0 +1,52 @@
+Export Function InitRussian;
+Begin
+
+Uc_Nation:= 3;
+Uc_Side := 3;
+
+Yakotich := PrepareUnit('Yakotich', false, '');
+
+Uc_Side := 6;
+
+Mietek := PrepareUnit('Mietek', false, '');
+Boris := PrepareUnit('Boris', false, '');
+Michail := PrepareUnit('Michail', false, '');
+Vasilij := PrepareUnit('Vasilij', false, '');
+Constantin := PrepareUnit('Constantin', false, '');
+
+Maksim := PrepareUnit('Maksim', false, '');
+Fiodor := PrepareUnit('Fiodor', false, '');
+Aleksiej := PrepareUnit('Aleksiej', false, '');
+Pavel := PrepareUnit('Pavel', false, '');
+Zakhar := PrepareUnit('Zakhar', false, '');
+
+MaksimCrew := MaksimCrew ^ Maksim;
+MaksimCrew := MaksimCrew ^ Fiodor;
+MaksimCrew := MaksimCrew ^ Aleksiej;
+MaksimCrew := MaksimCrew ^ Pavel;
+MaksimCrew := MaksimCrew ^ Zakhar;
+
+Uc_Side := 5;
+
+Aleksandr := PrepareUnit('Aleksandr', false, '');
+Josif := PrepareUnit('Josif', false, '');
+
+PlaceHumanInUnit(Constantin,RuB3);
+PlaceHumanInUnit(Boris,RuDep);
+PlaceUnitArea(Vasilij,Civilians,false);
+PlaceUnitArea(Michail,Civilians,false);
+PlaceUnitArea(Mietek,RyniakovSpawn,false);
+
+ComTurnUnit([MIchail,Vasilij],Mietek);
+ComTurnUnit(Mietek,Vasilij);
+
+end;
+
+
+
+
+
+
+
+
+

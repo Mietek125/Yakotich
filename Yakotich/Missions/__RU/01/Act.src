@@ -1,0 +1,72 @@
+//Start ca³ej misi
+Export Function Action;
+var i;
+begin
+
+InGameOn;
+CenterOnXY(139, 42);
+
+Wait(0$1);
+
+PlaceUnitArea(Yakotich, YakotichSpawn , true);
+
+Wait(0$3);
+
+Say(Yakotich,'1Yak-01');
+
+Wait(0$2);
+
+Say(Yakotich,'1Yak-02');
+SayRadio(Yakotich,'1Yak-03');
+
+Wait(0$2);
+
+Say(Yakotich,'1Yak-04');
+
+ChangeMissionObjectives('o1');
+InGameOff;
+
+end;
+
+//Kiedy zbi¿ysz siê do pagórka
+
+Every 1 Trigger FilterUnitsInArea([[f_side, 3], [f_type, unit_human]],HillDetect) do
+begin
+
+Say(Yakotich, '1Yak-Hill');
+
+end;
+
+// pó³nocny pagórek
+
+Every 1 Trigger hill_south_trigger = False and FilterUnitsInArea([[f_side, 3], [f_type, unit_human]],HillNorth) do
+begin
+
+SayRadio(Yakotich,'1Yak-03');
+
+Wait(0$2);
+
+SayRadio(Maksim,'1Someone-01');
+
+ChangeMissionObjectives('o2');
+
+hill_north_trigger = True;
+
+end;
+
+// po³udniowy pagórek
+
+Every 1 Trigger hill_north_trigger = False and FilterUnitsInArea([[f_side, 3], [f_type, unit_human]],HillSouth) do
+begin
+
+SayRadio(Yakotich,'1Yak-03');
+
+Wait(0$2);
+
+SayRadio(Maksim,'1Someone-02');
+
+ChangeMissionObjectives('o3');
+
+hill_south_trigger = True;
+
+end;

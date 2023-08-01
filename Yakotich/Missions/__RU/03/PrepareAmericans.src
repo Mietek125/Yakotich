@@ -1,0 +1,242 @@
+Export Function InitSikorskiTeam;
+var i,j;
+Begin
+
+     SikorskiTeam := SikorskiTeam ^ Sikorski ^ Gary ^ Bobby ^ Cyrus ^ Walker ^ Lynch ^ Turner ^ Jilian ^ McCreery;
+
+     Uc_side := 4;
+     Uc_Nation := 1;
+
+     Hc_Name := 'Jeremy Sikorski';
+     Hc_Class := 1;
+     Hc_Sex := 1;
+     Hc_Basic_Skills := [0,0,0,0];
+     Hc_Skills := [6,3,4,1];
+     Hc_Gallery := 'us';
+     Hc_Face_Number := 19;
+     Sikorski := CreateHuman;
+
+     Hc_Name := 'Kpt. Jack Truman';
+     Hc_Skills := [8,5,3,1];
+     Hc_Face_Number := 26;
+     Truman := CreateHuman;
+
+     Hc_Name := 'Cyrus Parker';
+     Hc_Skills := [6,3,2,2];
+     Hc_Face_Number := 8;
+     Cyrus := CreateHuman;
+
+     Hc_Name := 'Bobby Brandon';
+     Hc_Skills := [3,5,8,3];
+     Hc_Face_Number := 9;
+     Bobby := CreateHuman;
+
+     Hc_Name := 'Gary Grant';
+     Hc_Skills := [7,3,1,1];
+     Hc_Face_Number := 20;
+     Gary := CreateHuman;
+
+     Hc_Name := 'Gary Grant';
+     Hc_Skills := [7,3,1,1];
+     Hc_Face_Number := 20;
+     Gary := CreateHuman;
+
+     Hc_Name := 'Henry Lynch';
+     Hc_Skills := [6,2,2,3];
+     Hc_Gallery := 'SecondCharsGal';
+     Hc_Face_Number := 49;
+     Lynch := CreateHuman;
+
+     Hc_Name := 'Mike Turner';
+     Hc_Skills := [3,6,3,2];
+     Hc_Face_Number := 62;
+     Turner := CreateHuman;
+
+     Hc_Name := 'Hallie Jilian';
+     Hc_Skills := [2,5,2,2];
+     Hc_Sex := 2;
+     Hc_Face_Number := 39;
+     Jilian := CreateHuman;
+
+     Hc_Name := 'Michael Walker';
+     Hc_Skills := [2,2,3,5];
+     Hc_Sex := 1;
+     Hc_Class := 4;
+     Hc_Face_Number := 48;
+     Walker := CreateHuman;
+
+     Hc_Name := 'Peter McCreery';
+     Hc_Skills := [1,0,3,6];
+     Hc_Face_Number := 58;
+     McCreery := CreateHuman;
+
+     SikorskiTeam := SikorskiTeam ^ Sikorski ^ Gary ^ Bobby ^ Cyrus ^ Walker ^ Lynch ^ Turner ^ Jilian ^ McCreery;
+
+     PlaceUnitArea(Sikorski,SikorskiArea,False);
+     PlaceUnitArea(Cyrus,SikorskiArea,False);
+     PlaceUnitArea(Bobby,SikorskiArea,False);
+     PlaceUnitArea(Gary,SikorskiArea,False);
+     PlaceUnitArea(Lynch,SikorskiArea,False);
+     PlaceUnitArea(Turner,SikorskiArea,False);
+     PlaceUnitArea(Jilian,SikorskiArea,False);
+     PlaceUnitArea(Walker,SikorskiArea,False);
+     PlaceUnitArea(McCreery,SikorskiArea,False);
+
+     PrepareSoldier(rand(0,1),10);
+     NorthSold := CreateHuman;
+     PlaceHumanInUnit(NorthSold,AmB4);
+
+end;
+
+Every 0$1 Trigger IsInUnit(Gary) and start_ended = True Do
+Begin
+
+    AddResourceType(GetBase(Ovsyenko), mat_cans, 70);
+
+    ComUpgrade(Ovsyenko);
+
+end;
+
+Export Function InitTerminal;
+Var i, y, turrety, lab, zbrojka;
+Begin
+
+ Hc_Gallery := '';
+ Hc_Name := '';
+
+ MainTerminalCrew := [];
+
+ uc_side := 1;
+ uc_nation := 1;
+
+ For i = 1 to [8,9,10][Difficulty] do
+  Begin
+   PrepareSoldier(rand(0,1),[2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin
+   PrepareEngineer(rand(0,1),[2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+ For i = 1 to 2 do
+  Begin
+   PrepareScientist(rand(0,1),[2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+
+ turrety := FilterUnitsInArea(WestTerminalArea, [f_or, [f_btype, b_breastwork], [f_btype, b_bunker]]);
+ lab := FilterUnitsInArea(WestTerminalArea, [[f_btype, b_lab_full]]);
+ zbrojka := FilterUnitsInArea(WestTerminalArea, [[f_btype, b_barracks]]);
+
+ y := 1;
+
+  For i in WestTerminalCrew do
+  Begin
+  PlaceUnitArea(i, TerminalPersonel, false);
+   Case GetClass(i) of
+   1:Begin
+      if y > 6 then ComEnterUnit(i, turrety[y])
+      else ComEnterUnit(i, zbrojka[1]);
+      y = y + 1;
+     End;
+   2:ComEnterUnit(i, MainTerminal);
+   4:ComEnterUnit(i, lab[1]);
+
+  end;
+ end;
+End;
+
+Export Function InitAmerican;
+Var i, z, y, turrety, fabryka, Wieza, lab, zbrojka;
+Begin
+
+ Hc_Gallery := '';
+ Hc_Name := '';
+
+ WestTerminalCrew := [];
+
+ uc_side := 1;
+ uc_nation := 1;
+
+ For i = 1 to [10,11,12][Difficulty] do
+  Begin
+   PrepareSoldier(rand(0,1),[2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+ For i = 1 to 2 do
+  Begin
+   PrepareEngineer(rand(0,1),[2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+ For i = 1 to 6 do
+  Begin
+   PrepareMechanic(rand(0,1), [2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+ For i = 1 to 2 do
+  Begin
+   PrepareScientist(rand(0,1),[2,3,6][Difficulty]);
+   WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
+  End;
+
+ turrety := FilterUnitsInArea(WestTerminalArea, [f_or, [f_btype, b_breastwork], [f_btype, b_bunker]]);
+ lab := FilterUnitsInArea(WestTerminalArea, [[f_btype, b_lab_full]]);
+ fabryka := FilterUnitsInArea(WestTerminalArea,[[f_btype, b_factory]]);
+ wieza := FilterUnitsInArea(WestTerminalArea,[[f_btype, b_control_tower]]);
+ zbrojka := FilterUnitsInArea(WestTerminalArea, [[f_btype, b_barracks]]);
+
+ y := 1;
+ z := 1;
+
+  For i in WestTerminalCrew do
+  Begin
+  PlaceUnitArea(i, TerminalPersonel, false);
+   Case GetClass(i) of
+   1:Begin
+      if y > 8 then ComEnterUnit(i, turrety[y])
+      else ComEnterUnit(i, zbrojka[1]);
+      y = y + 1;
+     End;
+   2:ComEnterUnit(i, WestTerminal);
+   3:Begin
+     if z > 3 then ComEnterUnit(i, fabryka)
+     else  ComEnterUnit(i, wieza[1]);
+     z = z + 1;
+    end;
+   4:ComEnterUnit(i, lab[1]);
+
+  end;
+ end;
+
+     Uc_Side  := 1;
+     Uc_Nation := 1;
+
+     Houten := PrepareUnit('Houten',False,'');
+     PlaceHumanInUnit(Houten,WestTerminal);
+
+End;
+
+Every 10$0 Trigger start_ended = True do
+var i;
+begin
+
+     Uc_Nation = 1;
+     Uc_Side = 1;
+     For i = 1 to [4,5,6][Difficulty] do
+     AddComConstruct(AmFactory,4,1,2,rand(4,6));
+
+enable;
+
+end;
+
+Every 0$1 trigger attackers >= [4,5,6][Difficulty] do
+var enemy, attacker;
+begin
+enable;
+enemy := Filterallunits([f_side, 3]);
+
+for attacker in UnitFilter(attackers, [[f_ok], [f_linked]]) do
+    ComAttackUnit(attacker, NearestUnitToUnit(enemy, attacker));
+
+End;

@@ -1,0 +1,130 @@
+Export Function InitRussian;
+Begin
+
+     Uc_Nation:= 3;
+     Uc_Side := 3;
+
+     Yakotich := PrepareUnit('Yakotich', True, '02_');
+     Mietek := PrepareUnit('Mietek', True, '02_');
+     Boris := PrepareUnit('Boris', True, '02_');
+     Michail := PrepareUnit('Michail', True, '02_');
+     Vasilij := PrepareUnit('Vasilij', True, '02_');
+     Constantin := PrepareUnit('Constantin', True, '02_');
+     Maksim := PrepareUnit('Maksim', True, '02_');
+     Fiodor := PrepareUnit('Fiodor', True, '02_');
+     Aleksiej := PrepareUnit('Aleksiej', True, '02_');
+     Pavel := PrepareUnit('Pavel', True, '02_');
+     Zakhar := PrepareUnit('Zakhar', True, '02_');
+     Aleksandr := PrepareUnit('Aleksandr', True, '02_');
+     Stanislav := PrepareUnit('Stanislav', True, '02_');
+     Josif := PrepareUnit('Josif', True, '02_');
+
+     SetClass([Yakotich,Mietek,Constantin,Maksim,Fiodor,Aleksiej,Zakhar,Aleksandr,Josif],1);
+     SetClass(Boris,2);
+     SetClass([Michail,Pavel],3);
+     SetClass([Stanislav,Vasilij],4);
+
+     PlaceUnitArea(Yakotich,EnterArea,False);
+     PlaceUnitArea(Mietek,EnterArea,False);
+     PlaceUnitArea(Boris,EnterArea,False);
+     PlaceUnitArea(Michail,EnterArea,False);
+     PlaceUnitArea(Vasilij,EnterArea,False);
+     PlaceUnitArea(Constantin,EnterArea,False);
+     PlaceUnitArea(Maksim,EnterArea,False);
+     PlaceUnitArea(Fiodor,EnterArea,False);
+     PlaceUnitArea(Pavel,EnterArea,False);
+     PlaceUnitArea(Zakhar,EnterArea,False);
+     PlaceUnitArea(Aleksandr,EnterArea,False);
+     PlaceUnitArea(Stanislav,EnterArea,False);
+     PlaceUnitArea(Josif,EnterArea,False);
+
+     Dimitri := PrepareUnit('Dimitri', False, '');
+     Ivan := PrepareUnit('Ivan', False, '');
+     Jegor := PrepareUnit('Jegor', False, '');
+     Grigori := PrepareUnit('Grigori', False, '');
+     Anton := PrepareUnit('Anton', False, '');
+
+     PlaceHumanInUnit(Dimitri,Ovsyenko);
+     PlaceHumanInUnit(Anton,Ovsyenko);
+     PlaceHumanInUnit(Grigori,Ovsyenko);
+     PlaceHumanInUnit(Jegor,OB2);
+     PlaceHumanInUnit(Ivan,OB3);
+
+     Uc_Side := 6;
+
+     PrepareSoldier(0,3);
+     RusSol = CreateHuman;
+     PlaceHumanInUnit(RusSol,OB1);
+
+     Morozov := PrepareUnit('Morozov', false, '');
+     Platonov := PrepareUnit('Platonov', false, '');
+
+end;
+
+Export Function InitBurlak;
+Begin
+
+     Uc_side := 3;
+     Uc_nation := 3;
+     Uc_Direction := 0;
+
+     Burlak := PrepareUnit('Burlak', false, '');
+     Titov := PrepareUnit('Titov', false, '');
+     Petrovova := PrepareUnit('Petrovova', false, '');
+     Lipshchin := PrepareUnit('Lipshchin', false, '');
+     Gleb := PrepareUnit('Gleb', false, '');
+     Karamazov := PrepareUnit('Karamazov', false, '');
+     Petrosyan := PrepareUnit('Petrosyan', false, '');
+     Dolgov := PrepareUnit('Dolgov', false, '');
+
+    vc_chassis = 22;
+    vc_control = 1;
+    vc_engine = 1;
+    vc_fuel_battery = rand(15,30);
+    vc_weapon = rand(42,44);
+    BurlakCrewVeh1 = CreateVehicle;
+    BurlakCrewVeh2 = CreateVehicle;
+    BurlakCrewVeh3 = CreateVehicle;
+    BurlakCrewVeh4 = CreateVehicle;
+    BurlakCrewVeh5 = CreateVehicle;
+    BurlakCrewVeh6 = CreateVehicle;
+
+    PlaceUnitArea([BurlakCrewVeh1,BurlakCrewVeh2,BurlakCrewVeh3,BurlakCrewVeh4,BurlakCrewVeh5,BurlakCrewVeh6],BurlakArea,False);
+
+    PlaceHumanInUnit(Titov,BurlakCrewVeh1);
+    PlaceHumanInUnit(Petrovova,BurlakCrewVeh2);
+    PlaceHumanInUnit(Lipshchin,BurlakCrewVeh3);
+    PlaceHumanInUnit(Gleb,BurlakCrewVeh4);
+    PlaceHumanInUnit(Dolgov,BurlakCrewVeh5);
+    PlaceHumanInUnit(Petrosyan,BurlakCrewVeh6);
+
+    vc_chassis = 24;
+    vc_weapon = 89;
+    KaramazovVeh = CreateVehicle;
+    AddCargo(KaramazovVeh,mat_cans,200);
+
+    PlaceUnitArea(KaramazovVeh,BurlakArea,False);
+    PlaceHumanInUnit(Karamazov,KaramazovVeh);
+
+    Uc_Nation = 2;
+
+    vc_chassis = 14;
+    vc_weapon = 26;
+    BurlakVeh = CreateVehicle;
+
+    PlaceUnitArea(BurlakVeh,BurlakArea,False);
+    PlaceHumanInUnit(Burlak,BurlakVeh);
+
+end;
+
+
+
+
+
+
+
+
+
+
+
+

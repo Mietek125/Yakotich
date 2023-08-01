@@ -1,0 +1,133 @@
+Export Function PrepareSolBun(skill, b);
+var un, dir;
+begin
+uc_side := GetSide(b);
+uc_nation := GetNation(b);
+
+dir := GetDir(b) - 3;
+
+if dir < 0 then
+   dir := 6 + dir;
+
+un := CreateHuman;
+SetDir(un, dir);
+PlaceHumanInUnit(un, b);
+End;
+
+Export Function GetClassFromStart(ident);
+var un;
+begin
+un := NewCharacter(ident);
+
+if not un then
+   exit;
+
+result := GetClass(un);
+DestroyUnit(un);
+End;
+
+
+Every 1 trigger IsSelected(Kvantovy) do
+begin
+KvantovyExp([1,2,3,4]);
+Wait(0$05);
+Say(Kvantovy,'3Kvantovy-Sikret');
+End;
+
+Export Function KvantovyExp(q);
+var dec, q1;
+begin
+  dec = SelectiveQuery('KvantovyQuery', q);
+  case dec of
+   1:begin
+     AddExperience_NoLimit(Yakotich,1,2000);
+     end;
+   2:begin
+     AddExperience_NoLimit(Yakotich,2,2000);
+     end;
+   3:begin
+     AddExperience_NoLimit(Yakotich,3,2000);
+     end;
+    4:begin
+     AddExperience_NoLimit(Yakotich,4,2000);
+     end;
+
+  end;
+end;
+
+Every 0$1 Trigger IsDead(Yakotich) do
+begin
+
+YouLost('YakotichDead');
+
+end;
+
+Every 0$1 Trigger IsDead(Mietek) do
+begin
+
+YouLost('MietekDead');
+
+end;
+
+On UnitDestroyed(un) do
+begin
+if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
+   YouLost('PeopleDead');
+End;
+
+Every 0$1 Trigger IsDead(Ovsyenko) do
+begin
+
+YouLost('OvsyenkoDead');
+
+end;
+
+// Funkcje dla tej misi
+
+Every 1 Trigger Cutscene_ended = False Do
+Begin
+
+SetLives([Gary,Bobby,Cyrus,Lynch,Walker,McCreery,Jilian,Turner], 1000);
+SetLives(FilterAllUnits([[f_side, 3], [f_type, unit_human]]),1000);
+SetLives(FilterAllUnits([[f_side, 3], [f_type, unit_vehicle]]),1000);
+
+CenterOnUnits(Yakotich);
+
+enable;
+
+end;
+
+{// Czas do przybycia buraka
+Every 0$1 Trigger ovsyenko_captured = True do
+begin
+
+//enable;
+
+if BurlakTime then
+   begin
+   BurlakTime := BurlakTime - 0$1;
+   display_strings := display_strings ^ ['#BurlakForces', BurlakTime];
+   end
+else
+   begin
+   display_strings := '';
+   disable;
+   end;
+
+enable;
+End;
+
+// Blokuje pójœcie na pó³noc
+every 1 trigger kurin_attack_started = false AND FilterUnitsInArea(DontEnterNorth, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) > 0 do
+var unit;
+begin
+    enable;
+
+    for unit in FilterUnitsInArea(DontEnterNorth, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
+    begin
+        //InGameOn;
+
+    ComMoveXY(unit, GetX(unit) + 5, GetY(unit) + 5);
+end;
+
+end; }
