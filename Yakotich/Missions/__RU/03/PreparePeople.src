@@ -81,7 +81,7 @@ Begin
     vc_control = 1;
     vc_engine = 1;
     vc_fuel_battery = rand(15,30);
-    vc_weapon = rand(42,44);
+    vc_weapon = [44,43,42][Difficulty];
     BurlakCrewVeh1 = CreateVehicle;
     BurlakCrewVeh2 = CreateVehicle;
     BurlakCrewVeh3 = CreateVehicle;

@@ -162,8 +162,6 @@ CenterOnXY(148, 208);
 SayRadio(Platonov, '3Plat-03');
 SayRadio(Platonov, '3Plat-04');
 SayRadio(Platonov, '3Plat-05');
-SayRadio(Platonov, '3Plat-06');
-SayRadio(Platonov, '3Plat-07');
 
 SayRadio(Yakotich, '3Yak-11');
 
@@ -313,3 +311,86 @@ DialogueOff;
 
 end;
 
+Every 0$1 Trigger everything_researched = True and FilterAllUnits([[f_side, 1],[f_type, unit_human]]) <= 0 and siberit_excavated = True do
+begin
+
+end_of_the_mission = True;
+
+Ending;
+
+end;
+
+Export Function Ending;
+Begin
+
+CenterOnUnits(Yakotich);
+
+InGameOn;
+
+SayRadio(Platonov,'3Plat-09');
+SayRadio(Platonov,'3Plat-10');
+SayRadio(Burlak,'3Bur-03');
+
+SetSide([Burlak,Petrosyan,Dolgov,Karamazov,Titov,Gleb,Petrovova,Lipshchin],6);
+
+ComMoveToArea([Burlak,Petrosyan,Dolgov,Karamazov,Titov,Gleb,Petrovova,Lipshchin],ExitArea);
+
+SayRadio(Platonov,'3Plat-11');
+SayRadio(Platonov,'3Plat-12');
+SayRadio(Yakotich,'3Yak-17');
+Say(Yakotich,'3Yak-18');
+Say(Dimitri,'3Dim-08');
+
+InGameOff;
+
+AddMedal('SibExcavated',1);
+
+If IsOk(BurlakVeh) then
+
+AddMedal('FlameSaved',1)
+else
+AddMedal('FlameSaved',-1);
+
+If crane_researched = True and buldozer_researched = True and lab_captured = True and prediction_researched = True and rocket_researched = True then
+
+AddMedal('Secondary',1)
+else
+AddMedal('Secondary',-1);
+
+GiveMedals('Medals');
+
+RewardPeople(FilterAllUnits([[f_side, 3], [f_nation, 3], [f_type, unit_human]]) and FilterAllUnits([[f_side,6],[f_nation,3],[f_type, unit_human]]));
+
+SaveCharacters(Yakotich, '03_Yakotich');
+SaveCharacters(Mietek, '03_Mietek');
+SaveCharacters(Maksim, '03_Maksim');
+SaveCharacters(Vasilij, '03_Vasilij');
+SaveCharacters(Michail, '03_Michail');
+SaveCharacters(Boris, '03_Boris');
+SaveCharacters(Constantin, '03_Constantin');
+SaveCharacters(Fiodor, '03_Fiodor');
+SaveCharacters(Aleksiej, '03_Aleksiej');
+SaveCharacters(Pavel, '03_Pavel');
+SaveCharacters(Zakhar, '03_Zakhar');
+SaveCharacters(Aleksandr, '03_Aleksandr');
+SaveCharacters(Stanislav, '03_Stanislav');
+SaveCharacters(Josif, '03_Josif');
+SaveCharacters(Grigori, '03_Grigori');
+SaveCharacters(Jegor, '03_Jegor');
+SaveCharacters(Anton, '03_Anton');
+
+SaveCharacters(Dimitri, '03_Dimitri');
+SaveCharacters(Ivan, '03_Ivan');
+
+SaveCharacters(Burlak, '03_Burlak');
+SaveCharacters(Karamazov, '03_Karamazov');
+SaveCharacters(Titov, '03_Titov');
+SaveCharacters(Petrovova, '03_Petrovova');
+SaveCharacters(Gleb, '03_Gleb');
+SaveCharacters(Lipshchin, '03_Lipshchin');
+SaveCharacters(Dolgov, '03_Dolgov');
+SaveCharacters(Petrosyan, '03_Petrosyan');
+
+YouWin;
+
+end;

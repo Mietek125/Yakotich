@@ -27,9 +27,9 @@ HEXES
   LINE 6 3 86
     t4r6vOsn t2r6vU r6vOsq r6vJsi r6vEsi r6vE r7vAsa vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAsH vC vCsH vEsn vKsn r6vQsn r6vWsn r6vcsn r6vise r6visj r6vcsq r6vWsq t2r6vRsi t4r6vR
   LINE 7 4 87
-    t4r6vOsm t2r6vOsr r6vJsi r6vEsi r6vE vAsa vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAsH vCsH vE vEsn r6vKsn r6vQsn r6vWsn r6vcsm r6vcsm r6vcsr r6vWsq r6vRsi t2r6vR t4vR
+    t4r6vOsm t2r6vOsr r6vJsi r6vEsi r6vE vAsa vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAS vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAsH vCsH vE vEsn r6vKsn r6vQsn r6vWsn r6vcsm r6vcsm r6vcsr r6vWsq r6vRsi t2r6vR t4vR
   LINE 8 4 87
-    t4r6vJse t2r6vJse r6vJsj r6vIsC r6vEsa vE vAsa vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAsH vCsH vEs9 r6vFsn r6vLsn r6vRsf r6vWsm r6vWsm r6vWsr r6vWsr r6vRsi t2r6vR t4vR
+    t4r6vJse t2r6vJse r6vJsj r6vIsC r6vEsa vE vAsa vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAS vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAsH vCsH vEs9 r6vFsn r6vLsn r6vRsf r6vWsm r6vWsm r6vWsr r6vWsr r6vRsi t2r6vR t4vR
   LINE 9 5 88
     t4r6vIs8 t2r6vIs8 r6vIsD r6vI r6vEsa vAsa vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vA vAsH vCsH vEs9 r6vFsn r6vLsn r6vRse r6vVs8 r6vVs8 r6vRsj r6vRsj r6vR t2vR t4vR
   LINE 10 5 88
@@ -3324,26 +3324,26 @@ END_OF_BASES
 RANDOMS
   MICROLOGIC 2 0 1
   RANDOM_SEED 1 300895564
-  RANDOM_SEED 2 -42788049
-  RANDOM_SEED 3 352151071
+  RANDOM_SEED 2 -1529432824
+  RANDOM_SEED 3 388710655
   RANDOM_SEED 4 857944668
   RANDOM_SEED 5 -361675186
   RANDOM_SEED 6 1283126848
-  RANDOM_SEED 7 1422128169
+  RANDOM_SEED 7 -537029159
   RANDOM_SEED 8 1751026996
   RANDOM_SEED 9 -722287904
-  RANDOM_SEED 10 -1330282290
+  RANDOM_SEED 10 845399096
   RANDOM_SEED 11 1243301773
   RANDOM_SEED 12 911650
   RANDOM_SEED 13 2004086437
   RANDOM_SEED 14 378023
-  RANDOM_SEED 15 -653969844
+  RANDOM_SEED 15 -1628555588
   RANDOM_SEED 16 907772
   RANDOM_SEED 17 1931189875
   RANDOM_SEED 18 353399119
   RANDOM_SEED 19 -423323973
   RANDOM_SEED 20 758098213
-  RANDOM_SEED 21 -426388060
+  RANDOM_SEED 21 623552660
   RANDOM_SEED 22 2016646415
   WIND_TIME 811490 811553 811576
   WIND_STRENGTH 36.7606167791381 52.0 53.3803083895691
@@ -3370,7 +3370,7 @@ NEW_UNITS
         COLOR_CODE 1BMYO
         FACE 0
         SPEAKER E
-        VOICE 15
+        VOICE 11
         RANDOM_SEED -1802328903
     END_OF_DEFINITION
     GAME_STATE
@@ -3802,7 +3802,7 @@ NEW_UNITS
       FROM_TO_XY 0 0 0 0
       LAST_ACTION 0
       BUILDING
-        TURRET_WEAPON 6
+        TURRET_WEAPON 5
         USER_INTERFACE 1 1 1 1
     END_OF_GAME_STATE
   UNIT 104 BUILDING
@@ -4102,7 +4102,7 @@ NEW_UNITS
       FROM_TO_XY 0 0 0 0
       LAST_ACTION 0
       BUILDING
-        TURRET_WEAPON 11
+        TURRET_WEAPON 6
         USER_INTERFACE 1 1 1 1
     END_OF_GAME_STATE
   UNIT 140 BUILDING
@@ -4260,7 +4260,7 @@ NEW_UNITS
         COLOR_CODE 1BM
         FACE 10
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED 0
     END_OF_DEFINITION
     GAME_STATE
@@ -5247,7 +5247,7 @@ LASER_EFECTS
 END_OF_LASER_EFECTS
 
 USER_INTERFACE
-  VIEW -56 -96 1540 852 1
+  VIEW 852 3544 1542 854 1
   MASHA_FLAG 2 F F
 END_OF_USER_INTERFACE
 
@@ -5276,8 +5276,8 @@ SIDE 8 10
 END_OF_DEBRIEFING
 
 AREAS
-  ACTIVE 18
-  LAST 71
+  ACTIVE 19
+  LAST 72
   AREA 1
     NAME EnterArea
     COLOR FF93A2
@@ -6023,6 +6023,25 @@ AREAS
     ------------+++++++++++++++++++++---------+++++--------------------------------------
     --------------+++++++++++++++--------------------------------------------------------
     ------------------++-++--+++---------------------------------------------------------
+  AREA 19
+    NAME ExitArea
+    COLOR FF3179
+    VISIBLE
+    SHORTCUT 1
+    LINES 92 24 10 13
+    ++++------
+    +++++-----
+    -++++-----
+    -+++++----
+    --++++----
+    ---++++---
+    ---++++---
+    ---+++++--
+    ----++++--
+    ----+++++-
+    -----++++-
+    -----+++++
+    -----+++++
 END_OF_AREAS
 
 SEXTRA

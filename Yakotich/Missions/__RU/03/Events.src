@@ -18,8 +18,22 @@ end;
 
 end;
 
-//On BuildingComplete(b) do
-//begin
+On BuildingComplete(building) do
+begin
+
+If GetBType(building) = b_armoury and GetSide(building) = 3 and crane_triggered = False then
+begin
+
+crane_triggered = True;
+
+DialogueOn;
+Say(Boris,'3Boris-Crane-01');
+Say(Vasilij,'3Vas-Crane-01');
+ChangeMissionObjectives('crane');
+SetTech(3,85,1);
+DialogueOff;
+end;
+End;
 
 On VehicleConstructed(vehicle, factory) do
 begin
@@ -38,7 +52,28 @@ if GetControl(vehicle) = control_remote and GetSide(vehicle) = 1 then
       attackers := attackers union newAttackers;
       newAttackers := [];
       end;
+
+  If See(3,vehicle) then
+  begin
+
+  DialogueOn;
+  CenterNowOnUnits(vehicle);
+  Say(Yakotich,'3Yak-Remote-Control');
+  Say(Vasilij,'3Vas-Remote-Control');
+  DialogueOff;
+  end;
+
 end;
+
+end;
+
+Every 0$1 Trigger Researched (3,85) do
+begin
+
+crane_researched = True;
+
+Say(Vasilij,'3Vas-Crane-02');
+ChangeMissionObjectives('crane2');
 
 end;
 
@@ -62,6 +97,8 @@ end;
 Every 0$1 Trigger See(3,AmLab2) and lab_seen = false do
 begin
 
+lab_seen = True;
+
 CenterNowOnUnits(AmLab2);
 
 DialogueOn;
@@ -81,7 +118,10 @@ ChangeMissionObjectives('labik2');
 
 lab_captured = True;
 
+SaveVariable(AmLab1,'03_AmLab');
+
 end;
+
 
 
 Every 0$1 Trigger Researched(3,86) do
@@ -153,15 +193,6 @@ AddComBuild([Boris,Anton],b_depot,140,204,3);
 
 end;
 
-{Every 0$1 Trigger sikorski_dead = True do
-begin
-
-Wait(0$30);
-
-Create_ColdMeat(SikorskiMeat,101,116,True);
-
-end;}
-
 Every 0$1 Trigger start_ended = True and GetSide(Ovsyenko) = 3 do
 begin
 
@@ -174,4 +205,37 @@ begin
 
 everything_researched = True;
 
+ChangeMissionObjectives('o4a');
+
+end;
+
+Every 0$1 Trigger Siblo(3) >= [100,150,200][Difficulty] do
+begin
+
+siberit_excavated  = True;
+ChangeMissionObjectives('sib2');
+
+end;
+
+every 0$1 Trigger end_of_the_mission = True do // Units destroying in ExitArea
+var un;
+begin
+
+  for un in FilterUnitsInArea(ExitArea, [[f_side, 6],[f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
+  begin
+   if IsInArea(un, ExitArea) then
+   begin
+    if GetType(un)=unit_vehicle then
+    begin
+      RemoveUnit(IsDrivenBy(un));
+      RemoveUnit(un);
+    end
+    else
+    begin
+      RemoveUnit(un);
+    end;
+   end;
+  end;
+
+  enable;
 end;

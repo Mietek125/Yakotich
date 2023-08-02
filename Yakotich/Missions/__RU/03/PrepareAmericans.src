@@ -71,9 +71,10 @@ Begin
      Hc_Face_Number := 58;
      McCreery := CreateHuman;
 
-     SikorskiTeam := SikorskiTeam ^ Sikorski ^ Gary ^ Bobby ^ Cyrus ^ Walker ^ Lynch ^ Turner ^ Jilian ^ McCreery;
+     SikorskiTeam := SikorskiTeam ^ Sikorski ^ Truman ^ Gary ^ Bobby ^ Cyrus ^ Walker ^ Lynch ^ Turner ^ Jilian ^ McCreery;
 
      PlaceUnitArea(Sikorski,SikorskiArea,False);
+     PlaceUnitArea(Truman,SikorskiArea,False);
      PlaceUnitArea(Cyrus,SikorskiArea,False);
      PlaceUnitArea(Bobby,SikorskiArea,False);
      PlaceUnitArea(Gary,SikorskiArea,False);
@@ -90,7 +91,7 @@ end;
 Every 0$1 Trigger start_ended = True Do
 Begin
 
-    AddResourceType(GetBase(Ovsyenko), mat_cans, 70);
+    AddResourceType(GetBase(Ovsyenko), mat_cans, 100);
 
     ComUpgrade(Ovsyenko);
 

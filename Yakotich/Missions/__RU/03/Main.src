@@ -44,8 +44,8 @@ export debug; //tests only!
 
 Export mission_prefix;
 Export cutscene_ended,ovsyenko_captured, start_ended, lab_seen, lab_captured,
-rocket_researched, prediction_researched, buldozer_researched, flametank_saved,
-sikorski_dead,everything_researched;
+rocket_researched, prediction_researched, buldozer_researched, flametank_saved, siberit_excavated,
+sikorski_dead,everything_researched,crane_triggered,crane_researched,end_of_the_mission;
 
 
 Function Init;
@@ -61,9 +61,12 @@ rocket_researched = False;
 buldozer_researched = False;
 prediction_researched = False;
 flametank_saved = False;
+crane_triggered = False;
+crane_researched = False;
 lab_seen = False;
 lab_captured = False;
 everything_researched = False;
+end_of_the_mission = False;
 
 
 BurlakTime := [10$0,12$30,15$0][Difficulty];

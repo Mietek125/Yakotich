@@ -272,7 +272,7 @@ GAMEINIT
         SEL_XY 0 -30
         DEFEND 40
         PROTECTION 50
-        SPEED 13
+        SPEED 14
         MOVEMENT_TYPE Wheeled
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 1 2 2 2 10 10 10 10 10
@@ -295,7 +295,7 @@ GAMEINIT
         SEL_XY 0 -30
         DEFEND 45
         PROTECTION 75
-        SPEED 10
+        SPEED 12
         MOVEMENT_TYPE Tracked
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 1 2 2 2 10 10 10 10 10
@@ -313,13 +313,13 @@ GAMEINIT
         OIL 0
         SIBERIUM 0
         CANS 35
-        TIME 40
+        TIME 50
         SOUND_NAME heavy
         SOUND_TYPE 1
         SEL_XY 0 -30
         DEFEND 60
         PROTECTION 75
-        SPEED 9
+        SPEED 10
         MOVEMENT_TYPE Wheeled
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 1 2 2 2 10 10 10 10 10
@@ -335,14 +335,14 @@ GAMEINIT
         SYMBOL r-heavyt
         OIL 0
         SIBERIUM 0
-        CANS 40
-        TIME 40
+        CANS 45
+        TIME 70
         SOUND_NAME heavyTrack
         SOUND_TYPE 1
         SEL_XY 0 -30
         DEFEND 65
         PROTECTION 100
-        SPEED 7
+        SPEED 9
         MOVEMENT_TYPE Tracked
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 1 2 2 2 10 10 10 10 10
@@ -358,15 +358,15 @@ GAMEINIT
         WEIGHT 4
         SYMBOL r-behemoth
         OIL 0
-        SIBERIUM 75
+        SIBERIUM 100
         CANS 500
-        TIME 100
+        TIME 200
         SOUND_NAME Behemot
         SOUND_TYPE 1
         SEL_XY 0 -30
         DEFEND 250
         PROTECTION 160
-        SPEED 6
+        SPEED 7
         MOVEMENT_TYPE Behemoth
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 1 2 2 2 10 10 10 10 10
@@ -978,7 +978,7 @@ GAMEINIT
         WEIGHT  2  3 
         ATTACK
           MINMAX_RANGE  1  9 
-          FREQUENCY  40  25 
+          FREQUENCY  40  30 
           DAMAGE 25 15 10
           EFF 25 15 10
           ANIM  2  1  2 
@@ -1000,7 +1000,7 @@ GAMEINIT
         WEIGHT  2  3 
         ATTACK
           MINMAX_RANGE  1  10 
-          FREQUENCY  50  25 
+          FREQUENCY  50  40 
           DAMAGE 32 16 12
           EFF 40 20 15
           ANIM  2  1  2 
@@ -1023,7 +1023,7 @@ GAMEINIT
         WEIGHT  2  3 
         ATTACK
           MINMAX_RANGE  3  11 
-          FREQUENCY  2  55 
+          FREQUENCY  2  70 
           DAMAGE 250 222 150
           EFF 15 50 35
           ANIM  2  2  3 
@@ -1072,7 +1072,7 @@ GAMEINIT
         WEIGHT  3  3 
         ATTACK
           MINMAX_RANGE  5  15 
-          FREQUENCY  2  90 
+          FREQUENCY  2  100 
           DAMAGE 400 489 320
           EFF 20 60 40
           ANIM  2  2  3 
@@ -1095,9 +1095,9 @@ GAMEINIT
         WEIGHT  3  3 
         ATTACK
           MINMAX_RANGE  10  25 
-          FREQUENCY  2  235
+          FREQUENCY  2  220
           DAMAGE 189 60 76
-          EFF 15 10 20
+          EFF 25 15 30
           ANIM  0  7  4 
         END_OF_ATTACK
         PRODUCED_IN 18 

@@ -1,5 +1,5 @@
 VARIABLES 0
-CHARACTERS 29
+CHARACTERS 36
   Kurin 1
     DEFINE
       NAME Kurin
@@ -268,9 +268,9 @@ CHARACTERS 29
     DEFINE
       NAME Dimitri
       HUMAN 1 1 3
-      ATTR 11 11
+      ATTR 10 11
       SKILLS 4 202680 0 29580 3 37020 1 131010
-      LAST_MISSION 0
+      LAST_MISSION 3
       CHAR @ 0 0
       RANDSEED 0
       VOICE 1 GALLERY YakotichMod 19
@@ -290,9 +290,9 @@ CHARACTERS 29
     DEFINE
       NAME Grigori
       HUMAN 1 4 3
-      ATTR 11 12
+      ATTR 8 12
       SKILLS 1 12960 2 137400 0 16290 5 56010
-      LAST_MISSION 0
+      LAST_MISSION 3
       CHAR @ 0 0
       RANDSEED 0
       VOICE 1 GALLERY YakotichMod 20
@@ -312,11 +312,88 @@ CHARACTERS 29
     DEFINE
       NAME Jegor
       HUMAN 1 1 3
-      ATTR 10 10
+      ATTR 11 10
       SKILLS 2 22770 1 56220 4 161580 1 29250
       LAST_MISSION 3
       CHAR @ 0 0
       RANDSEED 0
       VOICE 1 GALLERY YakotichMod 8
+    END_OF_DEFINE
+  Titov 1
+    DEFINE
+      NAME Titov
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 4 119010 2 16290 3 69870 1 26250
+      LAST_MISSION 4
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 31
+    END_OF_DEFINE
+  Petrovova 1
+    DEFINE
+      NAME Petrovova
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 4 89550 3 58950 4 149280 1 3690
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 22
+    END_OF_DEFINE
+  Karamazov 1
+    DEFINE
+      NAME Karamazov
+      HUMAN 1 2 3
+      ATTR 11 10
+      SKILLS 1 49620 4 149010 0 59250 0 40620
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 30
+    END_OF_DEFINE
+  Lipshchin 1
+    DEFINE
+      NAME Lipshchin
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 4 79410 1 46290 1 38910 1 19620
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 36
+    END_OF_DEFINE
+  Gleb 1
+    DEFINE
+      NAME Gleb
+      HUMAN 1 1 3
+      ATTR 11 10
+      SKILLS 4 104580 1 37080 1 55680 2 50220
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 19
+    END_OF_DEFINE
+  Petrosyan 1
+    DEFINE
+      NAME Petrosyan
+      HUMAN 1 4 3
+      ATTR 11 10
+      SKILLS 0 52620 1 58890 1 71250 4 145950
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 29
+    END_OF_DEFINE
+  Dolgov 1
+    DEFINE
+      NAME Dolgov
+      HUMAN 1 4 3
+      ATTR 11 10
+      SKILLS 1 57690 2 52620 1 70380 4 149550
+      LAST_MISSION 3
+      CHAR @ 0 0
+      RANDSEED 0
+      VOICE 1 GALLERY ru 28
     END_OF_DEFINE
 END

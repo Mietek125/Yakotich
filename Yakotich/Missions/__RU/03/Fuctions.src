@@ -1,3 +1,18 @@
+// Licznik siblo
+Export Function siblo(side);
+var i, tmp;
+begin
+result := 0;
+tmp := FilterAllUnits([[f_side, side], [f_or, [f_btype, b_depot], [f_btype, b_warehouse]]]);
+
+if not tmp then
+   exit;
+
+for i in tmp do
+    result := result + GetResourceType(GetBase(i), mat_siberit);
+
+End;
+
 Export Function PrepareSolBun(skill, b);
 var un, dir;
 begin
