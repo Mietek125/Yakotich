@@ -27,7 +27,7 @@ HEXES
   LINE 6 3 142
     t4v4 t2v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r7v4sH r6v6sH r6v8sH r6vA r6vAsG r6vAsJ r6vBsB r6v7sj r6v5sb r7v4sL r7v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r4v4 r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r5h2 r5sXh2 v4 r6v4 r6v4sn r6vA r6vAsO r6vAsO r6vB r6vAsP r6vAsP r6vAsn r6vAsr r6vAsr r6vAsr r6vAsr r6vAsb r6vAsW r6vAsW r6vAsm r6vBse r6vAsm r6vA r6vA r6vAsQ r6vAsQ r6vAsP r6vB r6vAsD r6vA r6vA r6v4sq r6v4 r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 7 4 143
-    t4v4 t2v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r7v4s9 r6v5sH r6v7sH r6v9s9 r6v9sP r6vC r6vBsC r6v7sb r7v5sLf2 r7v4sDf2 r7v4f2 v4f2 v4f2 v4f2 v4f2 v4 v4f2 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r4v4 r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r5sXh2 v4sA r6v4s9 r6v4sn r6vA r6vA r6vAs9 r6vBsH r6vD r6vAsP r6vAsPS r6vAsT r6vA r6vA r6vA r6vA r6vA r6vA r6vAs9 r6vB r6vAsA r6vAsQ r6vAsQ r6vD r6vD r6vAsT r6vAsD r6vA r6v5sj r6v5sj r6v4sC r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
+    t4v4 t2v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r7v4s9 r6v5sH r6v7sH r6v9s9 r6v9sP r6vC r6vBsC r6v7sb r7v5sLf2 r7v4sDf2 r7v4f2 v4f2 v4f2 v4f2 v4f2 v4 v4f2 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r4v4 r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r5sXh2 v4sA r6v4s9 r6v4sn r6vA r6vA r6vAs9 r6vBsH r6vD r6vAsP r6vAsP r6vAsT r6vA r6vA r6vA r6vA r6vA r6vA r6vAs9 r6vB r6vAsA r6vAsQ r6vAsQ r6vD r6vD r6vAsT r6vAsD r6vA r6v5sj r6v5sj r6v4sC r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 8 4 143
     t4v4 t2v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r7v4s9 r6v5sP r6v8sH r6v9s9 r6v9sT r6v9sT r6v6sjf2 r7v4sTf2 r7v4sDf2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sah1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 v4s9 v5 r6v4s9 r6v4sn r6vA r6vA r6vAsP r6vD r6vD r6vD r6vD r6vAsS r6vA r6vA r6vAsQ r6vAsQ r6vAsQ r6vAsP r6vAs9 r6vAsD r6vAsQ r6vD r6vD r6vAsT r6vAsT r6vA r6vA r6v5sj r6v5 r6v5 r6v3sK r4sSh1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 9 5 144
@@ -133,7 +133,7 @@ HEXES
   LINE 59 30 169
     t4v4 t2v4 v4 v4 r7v4 r7v4 r7v4s8 r6v4sG r7v4sL r7v4sD v4sD v4 v4 v4 v4 v4 v4 r4sbh1f2 r4sbh1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4sWh1f2 r4sWh1f2 r4sbh1f2 r4sLh1f2 r4sLh1f2 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h3 r5sHh3 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4sA v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 60 30 169
-    t4v4 t2v4 v4 v4 v4 v4 v4 r7v4 r7v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sbh1 r4h1 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1 r4h1 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h4 r5h3 r5sHh3 rAv2 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4sA v4sA v5 v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
+    t4v4 t2v4 v4 v4 v4 v4 v4 r7v4 r7v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sbh1 r4h1 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1 r4h1 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h4 r5h3 r5sHh3 rAv2 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4S rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4sA v4sA v5 v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 61 31 170
     t4v4 t2v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sbh1 r4sbh1 r4h1 r4h1 r4h1 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1 r4h1 r4h1 r4h1 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h3 r5h3 r5sHh3 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4s9 rAv5 rAv5 rAv4sC rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 62 31 170
@@ -199,7 +199,7 @@ HEXES
   LINE 92 46 185
     t4v3 t2v3 v3 v3 v3 v3 v3 v3 v3 v3s9fI v4 v4 v4 v4 v4 v4 v3sC v3fI v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3s8 v4s8 v4s8 v4sB v3sJ v3 v3 v3 v3 r4sSh1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 r4v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4s9 r6v5sn r6vBsn r6vHsn r6vNsn r6vTsn r6vZ r6vZ r6vZs9 r6va r6vZsC r6vTsq r6vNsq r6vHsq r6vBsq r6v5sq v4sC v4 v4 v4 v4 v4 v4 v4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 93 47 186
-    t4v3 t2v3 v3 v3 v3 v3 v3 v3 v3s9 v4 v4 v4 v4 v4 v4 v3sC v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3s8 v4 v4s9 v5 v3sJ v3 v3 v3 v3 r4sSh1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 r4v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4s9 r6v5sn r6vBsn r6vHsn r6vNsn r6vTsn r6vZ r6vZ r6vZs9 r6vZsC r6vZ r6vTsq r6vNsq r6vHsq r6vBsq r6v5sq v4sC v4 v4 v4 v4 v4 v4 v4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
+    t4v3 t2v3 v3 v3 v3 v3 v3 v3 v3s9 v4 v4 v4 v4 v4 v4 v3sC v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3s8 v4 v4s9 v5 v3sJ v3 v3 v3 v3 r4sSh1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 r4v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4sH r6v6sn r6vCsn r6vIsn r6vOsn r6vUsf vZ r6vZ r6vZs9 r6vZsC r6vZ r6vTsq r6vNsq r6vHsq r6vBsq r6v5sq v4sC v4 v4 v4 v4 v4 v4 v4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 94 47 186
     t4v3 t2v3 v3 v3 v3 v3 v3 v3 v3 v3s9 v4 v4 v4 v4 v4 v3sC v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3 v3fI v3 v3 v3 v3 v3 v3 v3 v3 v3s8 v4s9 v5 v5 v3sJ v3 v3 v3 r4sSh1 r4h1 r4h1 r4h1 r4h1 r4h1 r4h1 r4sXh1 r4v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4s9 r6v5sn r6vBsn r6vHsn r6vNsn r6vTsn r6vZ r6vZ r6vZs9 r6va r6vZsC r6vTsq r6vNsq r6vHsq r6vBsq r6v5sq v4sC v4 v4 v4 v4 v4 v4 v4 v4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 95 48 187
@@ -1027,26 +1027,26 @@ END_OF_BASES
 RANDOMS
   MICROLOGIC 2 0 1
   RANDOM_SEED 1 2144617242
-  RANDOM_SEED 2 1391669093
-  RANDOM_SEED 3 1889263448
+  RANDOM_SEED 2 2018771653
+  RANDOM_SEED 3 1213753656
   RANDOM_SEED 4 1784077557
   RANDOM_SEED 5 1968253133
   RANDOM_SEED 6 1578386952
-  RANDOM_SEED 7 -1203678202
+  RANDOM_SEED 7 -18657450
   RANDOM_SEED 8 1954382051
   RANDOM_SEED 9 604574836
-  RANDOM_SEED 10 -754466630
+  RANDOM_SEED 10 -208048264
   RANDOM_SEED 11 1045859
   RANDOM_SEED 12 32708849
   RANDOM_SEED 13 975979706
   RANDOM_SEED 14 1881244068
-  RANDOM_SEED 15 886764724
+  RANDOM_SEED 15 811765950
   RANDOM_SEED 16 2107945759
   RANDOM_SEED 17 2039742367
   RANDOM_SEED 18 817283106
   RANDOM_SEED 19 1203489966
   RANDOM_SEED 20 498171245
-  RANDOM_SEED 21 457276820
+  RANDOM_SEED 21 -788545448
   RANDOM_SEED 22 978891200
   WIND_TIME -1 -1 0
   WIND_STRENGTH 36.7606167791381 52.0 53.3803083895691
@@ -1975,7 +1975,7 @@ NEW_UNITS
         COLOR_CODE 1BMY
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED -572680213
     END_OF_DEFINITION
     GAME_STATE
@@ -2017,7 +2017,7 @@ NEW_UNITS
         COLOR_CODE 1BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED -430955008
     END_OF_DEFINITION
     GAME_STATE
@@ -2269,49 +2269,6 @@ NEW_UNITS
         WEAPON_DEST_DIR 0
         ANIM 0 T
         LEAN 0 0 0
-    END_OF_GAME_STATE
-  UNIT 137 HUMAN
-    DEFINITION
-      IDENT Serpent
-      POS 88 1 3
-      SIDE 0
-      NATION 1
-      HP 1000
-      HUMAN
-        NAME Siurek
-        SEX 1
-        ATTR 10 13
-        CLASS 1
-        IMPORTANCE 100
-        GALERY Serp 1 LAST_MISSION 2
-        BSKILLS 8 4 5 3
-        EXPERIENCES 12810 15540 12150 22830
-        COLORS 10727377 986895
-        COLOR_CODE 1
-        FACE 1
-        SPEAKER A
-        VOICE 5
-        RANDOM_SEED 0
-    END_OF_DEFINITION
-    GAME_STATE
-      ACTION 0 F 1 1
-      MOVE 88 1 3 6 F
-      UNITMODE T 88 1
-      STATE 4 24
-      WEAPON_LOADING 0 0
-      ATTACK 0 0 F 0
-      PLAN 0 T
-      ANIM_STATES 0 0 0 0
-      MASHA_FLAG 0 DYING 0
-      SELECTION 0 0 0 0
-      DRAW 2450 -2 0
-      FROM_TO_POS 88 1 3 88 1 3
-      FROM_TO_XY 2450 -2 2450 -2
-      LAST_ACTION 0
-      HUMAN
-        LIMITS 52500 52500 52500 52500
-        ANIM_LEGS T
-        ACTIVE_ATTACK 1
     END_OF_GAME_STATE
   UNIT 156 VEHICLE
     DEFINITION
@@ -3244,7 +3201,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED 2108452976
     END_OF_DEFINITION
     GAME_STATE
@@ -3324,7 +3281,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 343068892
     END_OF_DEFINITION
     GAME_STATE
@@ -3364,7 +3321,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 2098880554
     END_OF_DEFINITION
     GAME_STATE
@@ -3484,7 +3441,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED 315131808
     END_OF_DEFINITION
     GAME_STATE
@@ -3524,7 +3481,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED -470981682
     END_OF_DEFINITION
     GAME_STATE
@@ -3604,7 +3561,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED -268535078
     END_OF_DEFINITION
     GAME_STATE
@@ -3644,7 +3601,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED -117849928
     END_OF_DEFINITION
     GAME_STATE
@@ -3684,7 +3641,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 682182182
     END_OF_DEFINITION
     GAME_STATE
@@ -3724,7 +3681,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED 87063204
     END_OF_DEFINITION
     GAME_STATE
@@ -3764,7 +3721,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED -1563627086
     END_OF_DEFINITION
     GAME_STATE
@@ -3804,7 +3761,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED 319832784
     END_OF_DEFINITION
     GAME_STATE
@@ -3884,7 +3841,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED -1938283204
     END_OF_DEFINITION
     GAME_STATE
@@ -3924,7 +3881,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED 1339742602
     END_OF_DEFINITION
     GAME_STATE
@@ -3964,7 +3921,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED 645623272
     END_OF_DEFINITION
     GAME_STATE
@@ -4004,7 +3961,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED 881241558
     END_OF_DEFINITION
     GAME_STATE
@@ -4044,7 +4001,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED 1217243348
     END_OF_DEFINITION
     GAME_STATE
@@ -4084,7 +4041,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 1602654818
     END_OF_DEFINITION
     GAME_STATE
@@ -4124,7 +4081,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED -571563520
     END_OF_DEFINITION
     GAME_STATE
@@ -4164,7 +4121,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED 1774514990
     END_OF_DEFINITION
     GAME_STATE
@@ -4187,45 +4144,52 @@ NEW_UNITS
         ANIM_LEGS T
         ACTIVE_ATTACK 1
     END_OF_GAME_STATE
-  UNIT -1 CRATE
+  UNIT 215 HUMAN
     DEFINITION
-      POS 90 50 4
+      IDENT Serpent
+      POS 135 93 3
       SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 3 -1 CRATE_TYPE 1
+      NATION 1
+      HP 1000
+      HUMAN
+        NAME Siurek
+        SEX 1
+        ATTR 10 13
+        CLASS 1
+        IMPORTANCE 100
+        GALERY Serp 1 LAST_MISSION 2
+        BSKILLS 8 4 5 3
+        EXPERIENCES 12810 15540 12150 22830
+        COLORS 10727377 986895
+        COLOR_CODE 1
+        FACE 1
+        SPEAKER A
+        VOICE 5
+        RANDOM_SEED 0
     END_OF_DEFINITION
     GAME_STATE
-    CRATERS 2 -9 -4
+      ACTION 0 F 1 1
+      MOVE 135 93 3 6 F
+      UNITMODE T 135 93
+      STATE 4 24
+      WEAPON_LOADING 0 0
+      ATTACK 0 0 F 0
+      PLAN 0 T
+      ANIM_STATES 0 0 0 0
+      MASHA_FLAG 0 DYING 0
+      SELECTION 0 0 0 0
+      DRAW 2478 1604 0
+      FROM_TO_POS 135 93 3 135 93 3
+      FROM_TO_XY 2478 1604 2478 1604
+      LAST_ACTION 0
+      HUMAN
+        LIMITS 52500 52500 52500 52500
+        ANIM_LEGS T
+        ACTIVE_ATTACK 1
     END_OF_GAME_STATE
   UNIT -1 CRATE
     DEFINITION
-      POS 84 47 1
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 4 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -6 -8
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 90 47 1
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 4 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -6 -1
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 97 44 3
+      POS 143 52 5
       SIDE 0
       NATION 8
       HP 200
@@ -4233,91 +4197,7 @@ NEW_UNITS
         SIZE 5 -1 CRATE_TYPE 1
     END_OF_DEFINITION
     GAME_STATE
-    CRATERS 2 -2 -10
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 81 40 0
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -3 -9
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 94 52 5
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -2 -6
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 92 44 2
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 5 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -6 -3
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 130 32 0
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 4 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -8 -5
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 128 40 0
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 3 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -5 0
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 134 54 0
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 2 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -6 -7
-    END_OF_GAME_STATE
-  UNIT -1 CRATE
-    DEFINITION
-      POS 147 57 1
-      SIDE 0
-      NATION 8
-      HP 200
-      CRATE
-        SIZE 4 -1 CRATE_TYPE 1
-    END_OF_DEFINITION
-    GAME_STATE
-    CRATERS 2 -4 -4
+    CRATERS 2 -2 -1
     END_OF_GAME_STATE
   UNIT -1 CRATE
     DEFINITION
@@ -4333,7 +4213,55 @@ NEW_UNITS
     END_OF_GAME_STATE
   UNIT -1 CRATE
     DEFINITION
-      POS 143 52 5
+      POS 147 57 1
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 4 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -4 -4
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 134 54 0
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 2 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -6 -7
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 128 40 0
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 3 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -5 0
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 130 32 0
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 4 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -8 -5
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 92 44 2
       SIDE 0
       NATION 8
       HP 200
@@ -4341,7 +4269,79 @@ NEW_UNITS
         SIZE 5 -1 CRATE_TYPE 1
     END_OF_DEFINITION
     GAME_STATE
-    CRATERS 2 -2 -1
+    CRATERS 2 -6 -3
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 94 52 5
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -2 -6
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 81 40 0
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -3 -9
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 97 44 3
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 5 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -2 -10
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 90 47 1
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 4 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -6 -1
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 84 47 1
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 4 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -6 -8
+    END_OF_GAME_STATE
+  UNIT -1 CRATE
+    DEFINITION
+      POS 90 50 4
+      SIDE 0
+      NATION 8
+      HP 200
+      CRATE
+        SIZE 3 -1 CRATE_TYPE 1
+    END_OF_DEFINITION
+    GAME_STATE
+    CRATERS 2 -9 -4
     END_OF_GAME_STATE
 END_OF_NEW_UNITS
 
@@ -4367,7 +4367,7 @@ LASER_EFECTS
 END_OF_LASER_EFECTS
 
 USER_INTERFACE
-  VIEW 1582 -76 1540 852 1
+  VIEW 1786 804 1540 852 1
   MASHA_FLAG 2 F F
 END_OF_USER_INTERFACE
 
@@ -5545,21 +5545,6 @@ SEXTRA
 
   255
   1
-    137
-    2
-      20
-      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-    3
-      F
-    4
-      F
-    5
-      0 0
-    6
-      0
-
-  255
-  1
     156
     2
       20
@@ -6266,6 +6251,21 @@ SEXTRA
   255
   1
     210
+    2
+      20
+      0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    3
+      F
+    4
+      F
+    5
+      0 0
+    6
+      0
+
+  255
+  1
+    215
     2
       20
       0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
