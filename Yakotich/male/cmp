@@ -3314,6 +3314,12 @@ COMPONENTS
       REF 2   -149 -66
       REF 3   -42 -105
     END_OF_COMP
+    COMP Ahunter
+      SOURCE "R:\Original War\XICHTED\comp\"
+      CETNOST 100
+      PICFILE 2 Asnip_s02
+      REF 2   -117 -23
+    END_OF_COMP
   END_OF_TYP
   TYP BRYLE
     PATH bry
