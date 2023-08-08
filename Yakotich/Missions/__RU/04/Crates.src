@@ -1,0 +1,37 @@
+Every 4$0 do
+Begin
+
+CreateCratesArea(Rand(3,5),YakotichCrates,True);
+enable;
+
+end;
+
+Every 7$0 do
+var i;
+Begin
+
+For i = 1 to 3 do
+begin
+CreateCratesArea(rand(4,5),CratesArea,true);
+
+end;
+
+enable;
+
+end;
+
+Every 5$0 Trigger ivan_came = True do
+var i;
+begin
+
+for i = 1 to 2 do
+begin
+
+CreateCratesArea(rand(1,5),BierezovCrates,True);
+
+enable;
+
+end;
+
+end;
+

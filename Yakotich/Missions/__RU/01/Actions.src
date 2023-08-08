@@ -351,3 +351,15 @@ if IsOk(Aleksandr) and GetSide(Aleksandr) = 3 then
 YouWin;
 
 end;
+
+Every 0$1 Trigger end_of_the_mission = True and yakotich_in_base = True And IsDead(AmCommander) do
+begin
+
+If FilterAllUnits([[f_side,3],[f_type, unit_vehicle]]) >= 1 then
+begin
+
+SaveVariable(1, '01_Vehicle');
+
+end;
+
+end;

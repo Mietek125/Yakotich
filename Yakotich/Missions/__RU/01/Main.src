@@ -28,6 +28,8 @@ Export AmS,AmSc,AMSS;
 Export AmCommander;
 Export Americans;
 
+export pojazdy;
+
 export debug; //tests only!
 
 Export mission_prefix;

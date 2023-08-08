@@ -56,14 +56,14 @@ GAMEINIT
         SYMBOL u-mediumw
         OIL 0
         SIBERIUM 0
-        CANS 15
+        CANS 20
         TIME 25
         SOUND_NAME Med
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 40
+        DEFEND 50
         PROTECTION 90
-        SPEED 13
+        SPEED 14
         MOVEMENT_TYPE Wheeled
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 36 2 2 2 1 1 10 10 10
@@ -79,14 +79,14 @@ GAMEINIT
         SYMBOL u-mediumt
         OIL 0
         SIBERIUM 0
-        CANS 20
-        TIME 25
+        CANS 30
+        TIME 35
         SOUND_NAME MedTrack
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 45
+        DEFEND 65
         PROTECTION 100
-        SPEED 11
+        SPEED 12
         MOVEMENT_TYPE Tracked
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 36 2 2 2 1 1 10 10 10
@@ -102,14 +102,14 @@ GAMEINIT
         SYMBOL u-heavyt
         OIL 0
         SIBERIUM 0
-        CANS 35
-        TIME 30
+        CANS 50
+        TIME 70
         SOUND_NAME Heavy
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 55
+        DEFEND 80
         PROTECTION 110
-        SPEED 9
+        SPEED 10
         MOVEMENT_TYPE Tracked
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 36 2 2 2 1 1 10 10 10
@@ -126,14 +126,14 @@ GAMEINIT
         SYMBOL u-morphling
         OIL 0
         SIBERIUM 0
-        CANS 60
-        TIME 90
+        CANS 100
+        TIME 200
         SOUND_NAME Morph
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 65
+        DEFEND 100
         PROTECTION 125
-        SPEED 15
+        SPEED 16
         MOVEMENT_TYPE Special_tracks
         ANIM_ENGINE 1 1 3 10 10 10
         ANIM_CONTROL 1 36 2 2 2 1 1 10 10 10
@@ -150,14 +150,14 @@ GAMEINIT
         SYMBOL a-hovercraft
         OIL 0
         SIBERIUM 0
-        CANS 10
-        TIME 25
+        CANS 15
+        TIME 30
         SOUND_NAME Hover
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 25
+        DEFEND 30
         PROTECTION 65
-        SPEED 20
+        SPEED 22
         MOVEMENT_TYPE Hover
         ANIM_ENGINE 1 1 1 10 10 10
         ANIM_CONTROL 1 36 1 1 1 10 1 10 10 10
@@ -175,13 +175,13 @@ GAMEINIT
         OIL 0
         SIBERIUM 0
         CANS 5
-        TIME 5
+        TIME 10
         SOUND_NAME LightTrike
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 30
+        DEFEND 20
         PROTECTION 75
-        SPEED 18
+        SPEED 20
         MOVEMENT_TYPE Wheeled
         ANIM_ENGINE 1 1 1 10 10 10
         ANIM_CONTROL 1 36 1 1 1 10 1 10 10 10
@@ -197,14 +197,14 @@ GAMEINIT
         SYMBOL a-mw
         OIL 0
         SIBERIUM 0
-        CANS 15
-        TIME 20
+        CANS 30
+        TIME 40
         SOUND_NAME MedTrike
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 35
+        DEFEND 50
         PROTECTION 90
-        SPEED 14
+        SPEED 15
         MOVEMENT_TYPE Wheeled
         ANIM_ENGINE 1 1 3 10 10 7
         ANIM_CONTROL 1 36 1 1 1 10 1 10 10 10
@@ -220,14 +220,14 @@ GAMEINIT
         SYMBOL a-ht
         OIL 0
         SIBERIUM 0
-        CANS 20
-        TIME 20
+        CANS 50
+        TIME 65
         SOUND_NAME Heavy
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 45
+        DEFEND 60
         PROTECTION 100
-        SPEED 12
+        SPEED 13
         MOVEMENT_TYPE Tracked
         ANIM_ENGINE 1 1 3 10 10 7
         ANIM_CONTROL 1 36 1 1 1 10 1 10 10 10
@@ -249,9 +249,9 @@ GAMEINIT
         SOUND_NAME rider
         SOUND_TYPE 1
         SEL_XY 0 -30
-        DEFEND 30
+        DEFEND 50
         PROTECTION 50
-        SPEED 7
+        SPEED 8
         MOVEMENT_TYPE Foot
         ANIM_ENGINE 1 1 1 10 10 10
         ANIM_CONTROL 1 36 1 1 1 10 1 10 10 10
@@ -357,10 +357,10 @@ GAMEINIT
         NATION Russian
         WEIGHT 4
         SYMBOL r-behemoth
-        OIL 0
-        SIBERIUM 100
-        CANS 500
-        TIME 200
+        OIL 25
+        SIBERIUM 125
+        CANS 350
+        TIME 250
         SOUND_NAME Behemot
         SOUND_TYPE 1
         SEL_XY 0 -30
@@ -476,8 +476,8 @@ GAMEINIT
         SYMBOL comp
         OIL 0
         SIBERIUM 0
-        CANS 5
-        TIME 20
+        CANS 15
+        TIME 35
         WEIGHT  1  3 
         PRODUCED_IN 24 
         TECHNOLOGY 27 
@@ -486,8 +486,8 @@ GAMEINIT
         SYMBOL rem
         OIL 0
         SIBERIUM 0
-        CANS 10
-        TIME 15
+        CANS 20
+        TIME 40
         WEIGHT  1  3 
         PRODUCED_IN 22 
         TECHNOLOGY 15 
@@ -535,9 +535,9 @@ GAMEINIT
         WEIGHT  1  3 
         ATTACK
           MINMAX_RANGE  1  8 
-          FREQUENCY  20  30 
+          FREQUENCY  20  25 
           DAMAGE 25 10 6
-          EFF 25 10 6
+          EFF 30 15 10
           ANIM  1  1  1 
         END_OF_ATTACK
         PRODUCED_IN 2 
@@ -547,8 +547,8 @@ GAMEINIT
         SYMBOL w-u-lightgun
         OIL 0
         SIBERIUM 0
-        CANS 25
-        TIME 15
+        CANS 15
+        TIME 20
         SOUND_NAME LightGun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -556,10 +556,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  1  3 
         ATTACK
-          MINMAX_RANGE  1  8 
+          MINMAX_RANGE  3  10 
           FREQUENCY  1  29 
           DAMAGE 96 103 62
-          EFF 15 33 20
+          EFF 20 40 25
           ANIM  1  2  3 
         END_OF_ATTACK
         PRODUCED_IN 17 
@@ -570,8 +570,8 @@ GAMEINIT
         SYMBOL w-u-gg
         OIL 0
         SIBERIUM 0
-        CANS 20
-        TIME 40
+        CANS 30
+        TIME 50
         SOUND_NAME GatlingGun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -580,10 +580,10 @@ GAMEINIT
         DISCHARGE R2
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  1  10 
-          FREQUENCY  20  30 
+          MINMAX_RANGE  1  11 
+          FREQUENCY  20  20 
           DAMAGE 40 20 15
-          EFF 40 20 15
+          EFF 60 15 10
           ANIM  1  1  2 
         END_OF_ATTACK
         PRODUCED_IN 3 
@@ -594,8 +594,8 @@ GAMEINIT
         SYMBOL w-u-double
         OIL 0
         SIBERIUM 0
-        CANS 40
-        TIME 30
+        CANS 50
+        TIME 60
         SOUND_NAME DoubleGun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -603,10 +603,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  3  11 
-          FREQUENCY  1  51 
+          MINMAX_RANGE  4  12 
+          FREQUENCY  2  80 
           DAMAGE 250 222 150
-          EFF 20 40 30
+          EFF 10 50 35
           ANIM  2  2  3 
         END_OF_ATTACK
         PRODUCED_IN 17 
@@ -617,8 +617,8 @@ GAMEINIT
         SYMBOL w-u-heavy
         OIL 0
         SIBERIUM 0
-        CANS 45
-        TIME 30
+        CANS 70
+        TIME 80
         SOUND_NAME HeavyGun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -627,9 +627,9 @@ GAMEINIT
         WEIGHT  3  3 
         ATTACK
           MINMAX_RANGE  4  14 
-          FREQUENCY  1  79 
+          FREQUENCY  1  100 
           DAMAGE 400 489 320
-          EFF 20 55 40
+          EFF 15 70 45
           ANIM  1  2  3 
         END_OF_ATTACK
         PRODUCED_IN 17 
@@ -649,10 +649,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  5  16 
-          FREQUENCY  2  110
+          MINMAX_RANGE  6  16 
+          FREQUENCY  2  120
           DAMAGE 675 202 324
-          EFF 25 20 40
+          EFF 30 25 50
           ANIM  2  4  3 
         END_OF_ATTACK
         PRODUCED_IN 18 
@@ -686,8 +686,8 @@ GAMEINIT
         SYMBOL w-u-las
         OIL 0
         SIBERIUM 0
-        CANS 25
-        TIME 90
+        CANS 40
+        TIME 100
         SOUND_NAME Laser
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -695,8 +695,9 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  1  11 
-          FREQUENCY  1  45 
+          MINMAX_RANGE  3  13 
+          FREQUENCY  3  120 
+	  FREQDELAY  10
           DAMAGE 115 273 115
           EFF 25 55 25
           ANIM  1  8  0 
@@ -709,8 +710,8 @@ GAMEINIT
         SYMBOL w-u-dlas
         OIL 0
         SIBERIUM 30
-        CANS 80
-        TIME 150
+        CANS 60
+        TIME 120
         SOUND_NAME DoubleLaser
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -721,7 +722,7 @@ GAMEINIT
           MINMAX_RANGE  1  15 
           FREQUENCY  1  60 
           DAMAGE 323 460 210
-          EFF 160 210 120
+          EFF 300 500 200
           ANIM  1  17  0 
         END_OF_ATTACK
         PRODUCED_IN 25 
@@ -783,7 +784,7 @@ GAMEINIT
         OIL 0
         SIBERIUM 0
         CANS 5
-        TIME 10
+        TIME 5
         SOUND_NAME multiBallista
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -791,7 +792,7 @@ GAMEINIT
         SIGHT 9
         WEIGHT  1  3 
         ATTACK
-          MINMAX_RANGE  4  7 
+          MINMAX_RANGE  3  9 
           FREQUENCY  1  60 
           DAMAGE 261 44 4
           EFF 30 10 2
@@ -804,8 +805,8 @@ GAMEINIT
         SYMBOL w-a-lg
         OIL 0
         SIBERIUM 0
-        CANS 25
-        TIME 15
+        CANS 15
+        TIME 30
         SOUND_NAME LightGun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -813,10 +814,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  1  3 
         ATTACK
-          MINMAX_RANGE  1  10 
+          MINMAX_RANGE  3  13 
           FREQUENCY  1  30 
           DAMAGE 116 103 62
-          EFF 15 30 20
+          EFF 10 35 25
           ANIM  1  2  3 
         END_OF_ATTACK
         PRODUCED_IN 17 
@@ -836,10 +837,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  1  3 
         ATTACK
-          MINMAX_RANGE  1  9 
-          FREQUENCY  20  30 
+          MINMAX_RANGE  1  10 
+          FREQUENCY  40  45 
           DAMAGE 30 15 10
-          EFF 30 15 10
+          EFF 50 15 10
           ANIM  2  1  1 
         END_OF_ATTACK
         PRODUCED_IN 3 
@@ -849,8 +850,8 @@ GAMEINIT
         SYMBOL w-a-gg
         OIL 0
         SIBERIUM 0
-        CANS 20
-        TIME 40
+        CANS 30
+        TIME 50
         SOUND_NAME GatlingGun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -859,10 +860,10 @@ GAMEINIT
         DISCHARGE K6
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  1  10 
+          MINMAX_RANGE  1  11 
           FREQUENCY  20  30 
           DAMAGE 40 20 15
-          EFF 40 20 15
+          EFF 75 20 15
           ANIM  1  1  2 
         END_OF_ATTACK
         PRODUCED_IN 3 
@@ -871,10 +872,10 @@ GAMEINIT
         NAME "E(Flame-thrower)C(Flame-thrower)"
         NATION Arabian
         SYMBOL w-a-flame
-        OIL 40
+        OIL 75
         SIBERIUM 0
-        CANS 15
-        TIME 30
+        CANS 30
+        TIME 100
         SOUND_NAME Flame
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -882,10 +883,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  2  9 
+          MINMAX_RANGE  3  11 
           FREQUENCY  40  60 
           DAMAGE 129 30 78
-          EFF 85 20 40
+          EFF 90 25 50
           ANIM  1  10  3
           ATTACKGROUND 
         END_OF_ATTACK
@@ -898,8 +899,8 @@ GAMEINIT
         SYMBOL w-a-gun
         OIL 0
         SIBERIUM 0
-        CANS 40
-        TIME 30
+        CANS 60
+        TIME 80
         SOUND_NAME Gun
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -907,10 +908,10 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  3  11 
+          MINMAX_RANGE  4  10 
           FREQUENCY  1  35 
           DAMAGE 175 192 123
-          EFF 35 50 32
+          EFF 25 75 40
           ANIM  1  2  3 
         END_OF_ATTACK
         PRODUCED_IN 17 
@@ -921,8 +922,8 @@ GAMEINIT
         SYMBOL w-a-rocket
         OIL 0
         SIBERIUM 0
-        CANS 40
-        TIME 60
+        CANS 50
+        TIME 80
         SOUND_NAME rocketLauncher
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -930,10 +931,11 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  5  16 
-          FREQUENCY  1  55 
+          MINMAX_RANGE  6  16 
+          FREQUENCY  3  90
+	  FREQDELAY 10
           DAMAGE 633 190 304
-          EFF 25 20 41
+          EFF 30 25 50
           ANIM  1  4  3 
         END_OF_ATTACK
         PRODUCED_IN 18 
@@ -977,7 +979,7 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  1  9 
+          MINMAX_RANGE  1  10 
           FREQUENCY  40  30 
           DAMAGE 25 15 10
           EFF 25 15 10
@@ -999,7 +1001,7 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  1  10 
+          MINMAX_RANGE  1  11 
           FREQUENCY  50  40 
           DAMAGE 32 16 12
           EFF 40 20 15
@@ -1022,7 +1024,7 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  3  11 
+          MINMAX_RANGE  4  12 
           FREQUENCY  2  70 
           DAMAGE 250 222 150
           EFF 15 50 35
@@ -1045,7 +1047,7 @@ GAMEINIT
         SIGHT 9
         WEIGHT  2  3 
         ATTACK
-          MINMAX_RANGE  7  18 
+          MINMAX_RANGE  8  18 
           FREQUENCY  6  200
 	  FREQDELAY  20
           DAMAGE 383 115 184
@@ -1085,7 +1087,7 @@ GAMEINIT
         SYMBOL w-r-rocket
         OIL 0
         SIBERIUM 0
-        CANS 110
+        CANS 120
         TIME 180
         SOUND_NAME Rocket
         SOUND_TYPE 0
@@ -1097,7 +1099,7 @@ GAMEINIT
           MINMAX_RANGE  10  25 
           FREQUENCY  2  220
           DAMAGE 189 60 76
-          EFF 25 15 30
+          EFF 30 20 40
           ANIM  0  7  4 
         END_OF_ATTACK
         PRODUCED_IN 18 
@@ -1130,8 +1132,8 @@ GAMEINIT
         NATION Russian
         SYMBOL w-r-lapser
         OIL 0
-        SIBERIUM 25
-        CANS 20
+        SIBERIUM 40
+        CANS 30
         TIME 110
         SOUND_NAME timeLapser
         SOUND_TYPE 1

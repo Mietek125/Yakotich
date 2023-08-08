@@ -123,9 +123,9 @@ HEXES
   LINE 54 27 166
     t4v4 t2v4 v4 r7v4 r6v4sH r6v6s9 r6v7sH r6v9sH r6vB r6v8sR r6v7sK r6v5sK r7v4sC r7v4 v4 v4 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v2sLf2 rAv2sLf2 rAv2sL rAv2 r5sLh3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5sIh3 v2 v2sH v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4sP r6v7 r6v7 r6v6sC r6v6 r6v6 r6v6 r6v6 r6v6 r6v6 r6v6s8 r6v6sD r6v4sK r6v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 55 28 167
-    t4v4 t2v4 v4 r7v4s9 r6v5s9 r6v6s9 r6v7sX r6vB r6v8sT r6v8 r6v5sS r6v5 r7v4sC v4 v4 v4 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v2sLf2 v2f2 rAv2 r5sLh3 r5sLh3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5sHh3 v2 v2sH v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4sO r6v7 r6v7 r6v6sC r6v6 r7v6 r7v6 r7v6 r6v6 r6v6 r6v6 r6v6 r6v4sK v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
+    t4v4 t2v4 v4 r7v4s9 r6v5s9 r6v6s9 r6v7sX r6vB r6v8sT r6v8 r6v5sS r6v5 r7v4sC v4 v4 v4 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v2sLf2 v2f2 rAv2 r5sLh3 r5sLh3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5sHh3 v2 v2sH v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4sO r6v7 r6v7 r6v6sC r6v6 r7v6 r7v6 r7v6 r6v6 r6v6 r6v6 r6v6 r6v4sK v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4S v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 56 28 167
-    t4v4 t2v4 v4 r7v4 r7v4sH r6v6 r6v6sH r6v8sO r6v7sb r6v7sD r6v6sL r7v5sC r7v4sC v4 v4 v4 v4 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v2sLf2 v2sLf2 v2f2 r5sLh3f2 r5sLh3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5sHh4 v2 v2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4sO r6v4sO r6v7 r6v6sC v4sL v4sG r7v6 r7v6 r7v6 r7v6 r6v5sD v4sK v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
+    t4v4 t2v4 v4 r7v4 r7v4sH r6v6 r6v6sH r6v8sO r6v7sb r6v7sD r6v6sL r7v5sC r7v4sC v4 v4 v4 v4 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v2sLf2 v2sLf2 v2f2 r5sLh3f2 r5sLh3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5sHh4 v2 v2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 r6v4sO r6v4sO r6v7 r6v6sC v4sL v4sG r7v6 r7v6 r7v6 r7v6 r6v5sD v4sK v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4S v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 57 29 168
     t4v4 t2v4 v4 r7v4 r6v4sG r6v5sO r6v8 r6v7sD r6v7 r6v5sL r7v5sD r7v4sC v4 v4 v4 v4 v4 v4f2 v4f2 v4f2 r4sbh1f2 r4sWh1f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v4f2 v2sLf2 v2f2 v2f2 r5sLh3f2 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5sHh3 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 r6v4 r6v4sO r6v4sT r6v4sL v4 v4sG v4sG r7v6 r7v6 v5sD v5 v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 58 29 168
@@ -133,7 +133,7 @@ HEXES
   LINE 59 30 169
     t4v4 t2v4 v4 v4 r7v4 r7v4 r7v4s8 r6v4sG r7v4sL r7v4sD v4sD v4 v4 v4 v4 v4 v4 r4sbh1f2 r4sbh1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4sWh1f2 r4sWh1f2 r4sbh1f2 r4sLh1f2 r4sLh1f2 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h3 r5sHh3 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4sA v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 60 30 169
-    t4v4 t2v4 v4 v4 v4 v4 v4 r7v4 r7v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sbh1 r4h1 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1 r4h1 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h4 r5h3 r5sHh3 rAv2 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4S rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4sA v4sA v5 v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
+    t4v4 t2v4 v4 v4 v4 v4 v4 r7v4 r7v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sbh1 r4h1 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1 r4h1 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h4 r5h3 r5sHh3 rAv2 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4sA v4sA v5 v4sC v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 61 31 170
     t4v4 t2v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 r4sbh1 r4sbh1 r4h1 r4h1 r4h1 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1f2 r4h1 r4h1 r4h1 r4h1 r5h3 r5h3 r5h3 r5h3 r5h3 r5h3 r5h4 r5h4 r5h4 r5h3 r5h3 r5sHh3 rAv2 rAv2sH rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4s9 rAv5 rAv5 rAv4sC rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 rAv4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 v4 t2v4 t4v4
   LINE 62 31 170
@@ -1027,26 +1027,26 @@ END_OF_BASES
 RANDOMS
   MICROLOGIC 2 0 1
   RANDOM_SEED 1 2144617242
-  RANDOM_SEED 2 2018771653
-  RANDOM_SEED 3 1213753656
+  RANDOM_SEED 2 -382098982
+  RANDOM_SEED 3 1761796424
   RANDOM_SEED 4 1784077557
   RANDOM_SEED 5 1968253133
   RANDOM_SEED 6 1578386952
-  RANDOM_SEED 7 -18657450
+  RANDOM_SEED 7 -1696339974
   RANDOM_SEED 8 1954382051
   RANDOM_SEED 9 604574836
-  RANDOM_SEED 10 -208048264
+  RANDOM_SEED 10 -562827126
   RANDOM_SEED 11 1045859
   RANDOM_SEED 12 32708849
   RANDOM_SEED 13 975979706
   RANDOM_SEED 14 1881244068
-  RANDOM_SEED 15 811765950
+  RANDOM_SEED 15 -1209549622
   RANDOM_SEED 16 2107945759
   RANDOM_SEED 17 2039742367
   RANDOM_SEED 18 817283106
   RANDOM_SEED 19 1203489966
   RANDOM_SEED 20 498171245
-  RANDOM_SEED 21 -788545448
+  RANDOM_SEED 21 1802038348
   RANDOM_SEED 22 978891200
   WIND_TIME -1 -1 0
   WIND_STRENGTH 36.7606167791381 52.0 53.3803083895691
@@ -1933,7 +1933,7 @@ NEW_UNITS
         COLOR_CODE 1BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED 975979706
     END_OF_DEFINITION
     GAME_STATE
@@ -1975,7 +1975,7 @@ NEW_UNITS
         COLOR_CODE 1BMY
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED -572680213
     END_OF_DEFINITION
     GAME_STATE
@@ -3281,7 +3281,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED 343068892
     END_OF_DEFINITION
     GAME_STATE
@@ -3361,7 +3361,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED -794369418
     END_OF_DEFINITION
     GAME_STATE
@@ -3401,7 +3401,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED -462088958
     END_OF_DEFINITION
     GAME_STATE
@@ -3441,7 +3441,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED 315131808
     END_OF_DEFINITION
     GAME_STATE
@@ -3481,7 +3481,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED -470981682
     END_OF_DEFINITION
     GAME_STATE
@@ -3521,7 +3521,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED -959100660
     END_OF_DEFINITION
     GAME_STATE
@@ -3641,7 +3641,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED 682182182
     END_OF_DEFINITION
     GAME_STATE
@@ -3681,7 +3681,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 87063204
     END_OF_DEFINITION
     GAME_STATE
@@ -3761,7 +3761,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 319832784
     END_OF_DEFINITION
     GAME_STATE
@@ -3801,7 +3801,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED -164435586
     END_OF_DEFINITION
     GAME_STATE
@@ -3841,7 +3841,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 1
         RANDOM_SEED -1938283204
     END_OF_DEFINITION
     GAME_STATE
@@ -3881,7 +3881,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 5
+        VOICE 1
         RANDOM_SEED 1339742602
     END_OF_DEFINITION
     GAME_STATE
@@ -4041,7 +4041,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 3
+        VOICE 5
         RANDOM_SEED 1602654818
     END_OF_DEFINITION
     GAME_STATE
@@ -4081,7 +4081,7 @@ NEW_UNITS
         COLOR_CODE 8BM
         FACE 0
         SPEAKER A
-        VOICE 1
+        VOICE 3
         RANDOM_SEED -571563520
     END_OF_DEFINITION
     GAME_STATE
@@ -4157,14 +4157,13 @@ NEW_UNITS
         ATTR 10 13
         CLASS 1
         IMPORTANCE 100
-        GALERY Serp 1 LAST_MISSION 2
-        BSKILLS 8 4 5 3
+        GALERY Serp 1 BSKILLS 8 4 5 3
         EXPERIENCES 12810 15540 12150 22830
         COLORS 10727377 986895
         COLOR_CODE 1
         FACE 1
         SPEAKER A
-        VOICE 5
+        VOICE 3
         RANDOM_SEED 0
     END_OF_DEFINITION
     GAME_STATE
@@ -4367,7 +4366,7 @@ LASER_EFECTS
 END_OF_LASER_EFECTS
 
 USER_INTERFACE
-  VIEW 1786 804 1540 852 1
+  VIEW 2422 364 1540 852 1
   MASHA_FLAG 2 F F
 END_OF_USER_INTERFACE
 
@@ -4396,8 +4395,8 @@ SIDE 8 10
 END_OF_DEBRIEFING
 
 AREAS
-  ACTIVE 10
-  LAST 20
+  ACTIVE 19
+  LAST 21
   AREA 1
     NAME AmSoldSpawn
     COLOR 7931FF
@@ -4896,6 +4895,15 @@ AREAS
     ---++-++++++-
     ----------++-
     ------------+
+  AREA 19
+    NAME VehSpawn
+    COLOR 8C31FF
+    VISIBLE
+    SHORTCUT 1
+    LINES 160 45 2 3
+    +-
+    ++
+    -+
 END_OF_AREAS
 
 SEXTRA

@@ -13,21 +13,21 @@
 // InitRussian ;
   23: CALL 97 0 0
 // Action ;
-  27: CALL 867 0 0
+  27: CALL 968 0 0
 // DebugMode ;
   31: CALL 60 0 0
 // end ;
   35: END
-// export Yakotich , Mietek , Boris , Vasilij , Michail , Constantin ; export Maksim , Fiodor , Pavel , Zakhar , Aleksiej , Aleksandr ; export Morozov ; export MietekCrew ; export YakotichCrew ; export SelectedPeople ; export debug ; export mission_prefix ; export exit_ready ; export MyPeople ; function Init ; begin
+// export Yakotich , Mietek , Boris , Vasilij , Michail , Constantin ; export Maksim , Fiodor , Pavel , Zakhar , Aleksiej , Aleksandr ; export Morozov ; export MietekCrew ; export YakotichCrew ; export Tank , Pojazd ; export SelectedPeople ; export debug ; export mission_prefix ; export exit_ready ; export MyPeople ; function Init ; begin
   36: LD_INT 0
   38: PPUSH
 // mission_prefix := 02_ ;
-  39: LD_ADDR_EXP 18
+  39: LD_ADDR_EXP 20
   43: PUSH
   44: LD_STRING 02_
   46: ST_TO_ADDR
 // debug := false ;
-  47: LD_ADDR_EXP 17
+  47: LD_ADDR_EXP 19
   51: PUSH
   52: LD_INT 0
   54: ST_TO_ADDR
@@ -39,7 +39,7 @@
   62: PPUSH
   63: PPUSH
 // if not debug then
-  64: LD_EXP 17
+  64: LD_EXP 19
   68: NOT
   69: IFFALSE 73
 // exit ;
@@ -467,243 +467,312 @@
  853: LD_VAR 0 2
  857: PPUSH
  858: CALL_OW 52
-// end ; end_of_file
+// end ;
  862: LD_VAR 0 3
  866: RET
-// export function Action ; var i ; begin
+// export function Czolg ; begin
  867: LD_INT 0
  869: PPUSH
- 870: PPUSH
-// InGameOn ;
- 871: CALL_OW 8
-// Wait ( 0 0$03 ) ;
- 875: LD_INT 105
- 877: PPUSH
- 878: CALL_OW 67
-// Say ( Yakotich , 2Yak-01 ) ;
- 882: LD_EXP 1
- 886: PPUSH
- 887: LD_STRING 2Yak-01
- 889: PPUSH
- 890: CALL_OW 88
-// Say ( Maksim , 2Mak-01 ) ;
- 894: LD_EXP 7
- 898: PPUSH
- 899: LD_STRING 2Mak-01
- 901: PPUSH
- 902: CALL_OW 88
-// Say ( Maksim , 2Mak-02 ) ;
- 906: LD_EXP 7
- 910: PPUSH
- 911: LD_STRING 2Mak-02
- 913: PPUSH
- 914: CALL_OW 88
-// Say ( Maksim , 2Mak-03 ) ;
- 918: LD_EXP 7
- 922: PPUSH
- 923: LD_STRING 2Mak-03
- 925: PPUSH
- 926: CALL_OW 88
-// Say ( Maksim , 2Mak-04 ) ;
- 930: LD_EXP 7
- 934: PPUSH
- 935: LD_STRING 2Mak-04
- 937: PPUSH
- 938: CALL_OW 88
-// Say ( Maksim , 2Mak-05 ) ;
- 942: LD_EXP 7
- 946: PPUSH
- 947: LD_STRING 2Mak-05
- 949: PPUSH
- 950: CALL_OW 88
-// Say ( Mietek , 2Ryn-01 ) ;
- 954: LD_EXP 2
+// if LoadVariable ( 01_Vehicle , 0 ) then
+ 870: LD_STRING 01_Vehicle
+ 872: PPUSH
+ 873: LD_INT 0
+ 875: PPUSH
+ 876: CALL_OW 30
+ 880: IFFALSE 963
+// begin Uc_Side = 3 ;
+ 882: LD_ADDR_OWVAR 20
+ 886: PUSH
+ 887: LD_INT 3
+ 889: ST_TO_ADDR
+// Uc_Nation = 3 ;
+ 890: LD_ADDR_OWVAR 21
+ 894: PUSH
+ 895: LD_INT 3
+ 897: ST_TO_ADDR
+// Uc_Direction = 2 ;
+ 898: LD_ADDR_OWVAR 24
+ 902: PUSH
+ 903: LD_INT 2
+ 905: ST_TO_ADDR
+// Vc_Chassis = 21 ;
+ 906: LD_ADDR_OWVAR 37
+ 910: PUSH
+ 911: LD_INT 21
+ 913: ST_TO_ADDR
+// Vc_Control = 1 ;
+ 914: LD_ADDR_OWVAR 38
+ 918: PUSH
+ 919: LD_INT 1
+ 921: ST_TO_ADDR
+// Vc_Engine = 1 ;
+ 922: LD_ADDR_OWVAR 39
+ 926: PUSH
+ 927: LD_INT 1
+ 929: ST_TO_ADDR
+// Vc_Weapon = 42 ;
+ 930: LD_ADDR_OWVAR 40
+ 934: PUSH
+ 935: LD_INT 42
+ 937: ST_TO_ADDR
+// Tank := CreateVehicle ;
+ 938: LD_ADDR_EXP 16
+ 942: PUSH
+ 943: CALL_OW 45
+ 947: ST_TO_ADDR
+// PlaceUnitArea ( Tank , VehSpawn , false ) ;
+ 948: LD_EXP 16
+ 952: PPUSH
+ 953: LD_INT 4
+ 955: PPUSH
+ 956: LD_INT 0
  958: PPUSH
- 959: LD_STRING 2Ryn-01
- 961: PPUSH
- 962: CALL_OW 88
-// Say ( Mietek , 2Ryn-02 ) ;
- 966: LD_EXP 2
+ 959: CALL_OW 49
+// end ; end ; end_of_file
+ 963: LD_VAR 0 1
+ 967: RET
+// export function Action ; var i ; begin
+ 968: LD_INT 0
  970: PPUSH
- 971: LD_STRING 2Ryn-02
- 973: PPUSH
- 974: CALL_OW 88
-// Say ( Yakotich , 2Yak-02 ) ;
- 978: LD_EXP 1
+ 971: PPUSH
+// Czolg ;
+ 972: CALL 867 0 0
+// InGameOn ;
+ 976: CALL_OW 8
+// Wait ( 0 0$03 ) ;
+ 980: LD_INT 105
  982: PPUSH
- 983: LD_STRING 2Yak-02
- 985: PPUSH
- 986: CALL_OW 88
-// Say ( Yakotich , 2Yak-03 ) ;
- 990: LD_EXP 1
+ 983: CALL_OW 67
+// Say ( Yakotich , 2Yak-01 ) ;
+ 987: LD_EXP 1
+ 991: PPUSH
+ 992: LD_STRING 2Yak-01
  994: PPUSH
- 995: LD_STRING 2Yak-03
- 997: PPUSH
- 998: CALL_OW 88
+ 995: CALL_OW 88
+// Say ( Maksim , 2Mak-01 ) ;
+ 999: LD_EXP 7
+1003: PPUSH
+1004: LD_STRING 2Mak-01
+1006: PPUSH
+1007: CALL_OW 88
+// Say ( Maksim , 2Mak-02 ) ;
+1011: LD_EXP 7
+1015: PPUSH
+1016: LD_STRING 2Mak-02
+1018: PPUSH
+1019: CALL_OW 88
+// Say ( Maksim , 2Mak-03 ) ;
+1023: LD_EXP 7
+1027: PPUSH
+1028: LD_STRING 2Mak-03
+1030: PPUSH
+1031: CALL_OW 88
+// Say ( Maksim , 2Mak-04 ) ;
+1035: LD_EXP 7
+1039: PPUSH
+1040: LD_STRING 2Mak-04
+1042: PPUSH
+1043: CALL_OW 88
+// Say ( Maksim , 2Mak-05 ) ;
+1047: LD_EXP 7
+1051: PPUSH
+1052: LD_STRING 2Mak-05
+1054: PPUSH
+1055: CALL_OW 88
+// Say ( Mietek , 2Ryn-01 ) ;
+1059: LD_EXP 2
+1063: PPUSH
+1064: LD_STRING 2Ryn-01
+1066: PPUSH
+1067: CALL_OW 88
+// Say ( Mietek , 2Ryn-02 ) ;
+1071: LD_EXP 2
+1075: PPUSH
+1076: LD_STRING 2Ryn-02
+1078: PPUSH
+1079: CALL_OW 88
+// Say ( Yakotich , 2Yak-02 ) ;
+1083: LD_EXP 1
+1087: PPUSH
+1088: LD_STRING 2Yak-02
+1090: PPUSH
+1091: CALL_OW 88
+// Say ( Yakotich , 2Yak-03 ) ;
+1095: LD_EXP 1
+1099: PPUSH
+1100: LD_STRING 2Yak-03
+1102: PPUSH
+1103: CALL_OW 88
 // Wait ( 0 0$03 ) ;
-1002: LD_INT 105
-1004: PPUSH
-1005: CALL_OW 67
-// SayRadio ( Yakotich , 2Yak-04 ) ;
-1009: LD_EXP 1
-1013: PPUSH
-1014: LD_STRING 2Yak-04
-1016: PPUSH
-1017: CALL_OW 94
-// SayRadio ( Morozov , 2Moro-01 ) ;
-1021: LD_EXP 13
-1025: PPUSH
-1026: LD_STRING 2Moro-01
-1028: PPUSH
-1029: CALL_OW 94
-// SayRadio ( Yakotich , 2Yak-05 ) ;
-1033: LD_EXP 1
-1037: PPUSH
-1038: LD_STRING 2Yak-05
-1040: PPUSH
-1041: CALL_OW 94
-// SayRadio ( Yakotich , 2Yak-06 ) ;
-1045: LD_EXP 1
-1049: PPUSH
-1050: LD_STRING 2Yak-06
-1052: PPUSH
-1053: CALL_OW 94
-// SayRadio ( Morozov , 2Moro-02 ) ;
-1057: LD_EXP 13
-1061: PPUSH
-1062: LD_STRING 2Moro-02
-1064: PPUSH
-1065: CALL_OW 94
-// SayRadio ( Morozov , 2Moro-03 ) ;
-1069: LD_EXP 13
-1073: PPUSH
-1074: LD_STRING 2Moro-03
-1076: PPUSH
-1077: CALL_OW 94
-// SayRadio ( Yakotich , 2Yak-07 ) ;
-1081: LD_EXP 1
-1085: PPUSH
-1086: LD_STRING 2Yak-07
-1088: PPUSH
-1089: CALL_OW 94
-// SayRadio ( Morozov , 2Moro-04 ) ;
-1093: LD_EXP 13
-1097: PPUSH
-1098: LD_STRING 2Moro-04
-1100: PPUSH
-1101: CALL_OW 94
-// SayRadio ( Yakotich , 1Yak-08 ) ;
-1105: LD_EXP 1
+1107: LD_INT 105
 1109: PPUSH
-1110: LD_STRING 1Yak-08
-1112: PPUSH
-1113: CALL_OW 94
-// Say ( Yakotich , 2Yak-09 ) ;
-1117: LD_EXP 1
+1110: CALL_OW 67
+// SayRadio ( Yakotich , 2Yak-04 ) ;
+1114: LD_EXP 1
+1118: PPUSH
+1119: LD_STRING 2Yak-04
 1121: PPUSH
-1122: LD_STRING 2Yak-09
-1124: PPUSH
-1125: CALL_OW 88
-// Say ( Mietek , 2Ryn-03 ) ;
-1129: LD_EXP 2
+1122: CALL_OW 94
+// SayRadio ( Morozov , 2Moro-01 ) ;
+1126: LD_EXP 13
+1130: PPUSH
+1131: LD_STRING 2Moro-01
 1133: PPUSH
-1134: LD_STRING 2Ryn-03
-1136: PPUSH
-1137: CALL_OW 88
-// Say ( Yakotich , 2Yak-10 ) ;
-1141: LD_EXP 1
+1134: CALL_OW 94
+// SayRadio ( Yakotich , 2Yak-05 ) ;
+1138: LD_EXP 1
+1142: PPUSH
+1143: LD_STRING 2Yak-05
 1145: PPUSH
-1146: LD_STRING 2Yak-10
-1148: PPUSH
-1149: CALL_OW 88
-// Say ( Yakotich , 2Yak-11 ) ;
-1153: LD_EXP 1
+1146: CALL_OW 94
+// SayRadio ( Yakotich , 2Yak-06 ) ;
+1150: LD_EXP 1
+1154: PPUSH
+1155: LD_STRING 2Yak-06
 1157: PPUSH
-1158: LD_STRING 2Yak-11
-1160: PPUSH
-1161: CALL_OW 88
-// ComExitBuilding ( [ Michail , Vasilij , Fiodor , Constantin , Boris ] ) ;
-1165: LD_EXP 5
-1169: PUSH
-1170: LD_EXP 4
-1174: PUSH
-1175: LD_EXP 8
-1179: PUSH
-1180: LD_EXP 6
-1184: PUSH
-1185: LD_EXP 3
-1189: PUSH
-1190: EMPTY
-1191: LIST
-1192: LIST
-1193: LIST
-1194: LIST
-1195: LIST
-1196: PPUSH
-1197: CALL_OW 122
-// AddComMoveXY ( [ Michail , Vasilij , Constantin , Fiodor , Boris ] , 34 , 16 ) ;
-1201: LD_EXP 5
-1205: PUSH
-1206: LD_EXP 4
-1210: PUSH
-1211: LD_EXP 6
-1215: PUSH
-1216: LD_EXP 8
-1220: PUSH
-1221: LD_EXP 3
-1225: PUSH
-1226: EMPTY
-1227: LIST
-1228: LIST
-1229: LIST
-1230: LIST
-1231: LIST
-1232: PPUSH
-1233: LD_INT 34
-1235: PPUSH
-1236: LD_INT 16
+1158: CALL_OW 94
+// SayRadio ( Morozov , 2Moro-02 ) ;
+1162: LD_EXP 13
+1166: PPUSH
+1167: LD_STRING 2Moro-02
+1169: PPUSH
+1170: CALL_OW 94
+// SayRadio ( Morozov , 2Moro-03 ) ;
+1174: LD_EXP 13
+1178: PPUSH
+1179: LD_STRING 2Moro-03
+1181: PPUSH
+1182: CALL_OW 94
+// SayRadio ( Yakotich , 2Yak-07 ) ;
+1186: LD_EXP 1
+1190: PPUSH
+1191: LD_STRING 2Yak-07
+1193: PPUSH
+1194: CALL_OW 94
+// SayRadio ( Morozov , 2Moro-04 ) ;
+1198: LD_EXP 13
+1202: PPUSH
+1203: LD_STRING 2Moro-04
+1205: PPUSH
+1206: CALL_OW 94
+// SayRadio ( Yakotich , 1Yak-08 ) ;
+1210: LD_EXP 1
+1214: PPUSH
+1215: LD_STRING 1Yak-08
+1217: PPUSH
+1218: CALL_OW 94
+// Say ( Yakotich , 2Yak-09 ) ;
+1222: LD_EXP 1
+1226: PPUSH
+1227: LD_STRING 2Yak-09
+1229: PPUSH
+1230: CALL_OW 88
+// Say ( Mietek , 2Ryn-03 ) ;
+1234: LD_EXP 2
 1238: PPUSH
-1239: CALL_OW 171
+1239: LD_STRING 2Ryn-03
+1241: PPUSH
+1242: CALL_OW 88
+// Say ( Yakotich , 2Yak-10 ) ;
+1246: LD_EXP 1
+1250: PPUSH
+1251: LD_STRING 2Yak-10
+1253: PPUSH
+1254: CALL_OW 88
+// Say ( Yakotich , 2Yak-11 ) ;
+1258: LD_EXP 1
+1262: PPUSH
+1263: LD_STRING 2Yak-11
+1265: PPUSH
+1266: CALL_OW 88
+// ComExitBuilding ( [ Michail , Vasilij , Fiodor , Constantin , Boris ] ) ;
+1270: LD_EXP 5
+1274: PUSH
+1275: LD_EXP 4
+1279: PUSH
+1280: LD_EXP 8
+1284: PUSH
+1285: LD_EXP 6
+1289: PUSH
+1290: LD_EXP 3
+1294: PUSH
+1295: EMPTY
+1296: LIST
+1297: LIST
+1298: LIST
+1299: LIST
+1300: LIST
+1301: PPUSH
+1302: CALL_OW 122
+// AddComMoveXY ( [ Michail , Vasilij , Constantin , Fiodor , Boris ] , 34 , 16 ) ;
+1306: LD_EXP 5
+1310: PUSH
+1311: LD_EXP 4
+1315: PUSH
+1316: LD_EXP 6
+1320: PUSH
+1321: LD_EXP 8
+1325: PUSH
+1326: LD_EXP 3
+1330: PUSH
+1331: EMPTY
+1332: LIST
+1333: LIST
+1334: LIST
+1335: LIST
+1336: LIST
+1337: PPUSH
+1338: LD_INT 34
+1340: PPUSH
+1341: LD_INT 16
+1343: PPUSH
+1344: CALL_OW 171
 // Wait ( 0 0$03 ) ;
-1243: LD_INT 105
-1245: PPUSH
-1246: CALL_OW 67
+1348: LD_INT 105
+1350: PPUSH
+1351: CALL_OW 67
 // Say ( Michail , 2Mich-01 ) ;
-1250: LD_EXP 5
-1254: PPUSH
-1255: LD_STRING 2Mich-01
-1257: PPUSH
-1258: CALL_OW 88
+1355: LD_EXP 5
+1359: PPUSH
+1360: LD_STRING 2Mich-01
+1362: PPUSH
+1363: CALL_OW 88
 // Say ( Yakotich , 2Yak-12 ) ;
-1262: LD_EXP 1
-1266: PPUSH
-1267: LD_STRING 2Yak-12
-1269: PPUSH
-1270: CALL_OW 88
+1367: LD_EXP 1
+1371: PPUSH
+1372: LD_STRING 2Yak-12
+1374: PPUSH
+1375: CALL_OW 88
+// AddComEnterUnit ( Yakotich , Tank ) ;
+1379: LD_EXP 1
+1383: PPUSH
+1384: LD_EXP 16
+1388: PPUSH
+1389: CALL_OW 180
 // AddComMoveXY ( YakotichCrew , 65 , 75 ) ;
-1274: LD_EXP 15
-1278: PPUSH
-1279: LD_INT 65
-1281: PPUSH
-1282: LD_INT 75
-1284: PPUSH
-1285: CALL_OW 171
+1393: LD_EXP 15
+1397: PPUSH
+1398: LD_INT 65
+1400: PPUSH
+1401: LD_INT 75
+1403: PPUSH
+1404: CALL_OW 171
 // ComEnterUnit ( Mietek , RuA1 ) ;
-1289: LD_EXP 2
-1293: PPUSH
-1294: LD_INT 77
-1296: PPUSH
-1297: CALL_OW 120
+1408: LD_EXP 2
+1412: PPUSH
+1413: LD_INT 77
+1415: PPUSH
+1416: CALL_OW 120
 // Wait ( 0 0$5 ) ;
-1301: LD_INT 175
-1303: PPUSH
-1304: CALL_OW 67
+1420: LD_INT 175
+1422: PPUSH
+1423: CALL_OW 67
 // ChangeMap ( 1 , %_cont ) ;
-1308: LD_INT 1
-1310: PPUSH
-1311: LD_STRING %_cont
-1313: PPUSH
-1314: CALL_OW 340
+1427: LD_INT 1
+1429: PPUSH
+1430: LD_STRING %_cont
+1432: PPUSH
+1433: CALL_OW 340
 // end ;
-1318: LD_VAR 0 1
-1322: RET
+1437: LD_VAR 0 1
+1441: RET

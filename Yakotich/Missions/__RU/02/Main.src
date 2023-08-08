@@ -15,6 +15,7 @@ RandomizeAll;
 InitRussian;
 Action;
 
+
 DebugMode;
 
 end;
@@ -24,6 +25,8 @@ Export Maksim, Fiodor, Pavel, Zakhar, Aleksiej, Aleksandr;
 Export Morozov;
 Export MietekCrew;
 Export YakotichCrew;
+
+Export Tank,Pojazd;
 
 Export SelectedPeople;
 

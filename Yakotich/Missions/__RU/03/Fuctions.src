@@ -50,7 +50,7 @@ Say(Kvantovy,'3Kvantovy-Sikret');
 TeleportUnit(Kvantovy,120,237,300,True);
 Wait(0$05);
 RemoveUnit(Kvantovy);
-SaveVariable(Kvantovy,'KvantovySaved');
+SaveVariable(1,'KvantovySaved');
 SaveCharacters(Kvantovy,'Kvantovy');
 End;
 

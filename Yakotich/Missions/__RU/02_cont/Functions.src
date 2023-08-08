@@ -79,7 +79,7 @@ Say(Serpent,'2Langu-Sikret');
 TeleportUnit(Serpent,5,4,100,True);
 Wait(0$05);
 RemoveUnit(Serpent);
-SaveVariable(Serpent,'SerpentSaved');
+SaveVariable(1,'SerpentSaved');
 SaveCharacters(Serpent,'Langu');
 End;
 

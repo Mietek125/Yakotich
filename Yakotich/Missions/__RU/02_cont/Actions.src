@@ -3,7 +3,11 @@ Export Function Action;
 var i;
 begin
 
+if LoadVariable('01_Vehicle', 1) then
+PlaceHumanInUnit(Yakotich,Tank)
+else
 PlaceUnitArea(Yakotich,RussianSpawn,False);
+
 PlaceUnitArea(Maksim,RussianSpawn,False);
 PlaceUnitArea(Vasilij,RussianSpawn,False);
 PlaceUnitArea(Michail,RussianSpawn,False);

@@ -7,7 +7,7 @@ COLORS
       END_OF_COLOR
   END_OF_COLOR_TYPE
   COLOR_TYPE 2 kùže
-    COUNT 8 4 5
+    COUNT 8 1 5
       COLOR 5A70AD
         KONT 90
         CETN 15
@@ -42,7 +42,7 @@ COLORS
       END_OF_COLOR
   END_OF_COLOR_TYPE
   COLOR_TYPE 3 hair
-    COUNT 36 1 7
+    COUNT 36 33 7
       COLOR 000000
         KONT 150
         CETN 40
@@ -189,7 +189,7 @@ COLORS
       END_OF_COLOR
   END_OF_COLOR_TYPE
   COLOR_TYPE 4 eye
-    COUNT 12 10 2
+    COUNT 12 9 2
       COLOR 906060
         KONT 85
         CETN 20
@@ -264,7 +264,7 @@ COLORS
       END_OF_COLOR
   END_OF_COLOR_TYPE
   COLOR_TYPE 6 odìv-dopl1
-    COUNT 3 1 1
+    COUNT 3 3 1
       COLOR 36434E
         KONT 85
         CETN 20
@@ -304,7 +304,7 @@ COLORS
       END_OF_COLOR
   END_OF_COLOR_TYPE
   COLOR_TYPE 8 "hair band"
-    COUNT 6 6 1
+    COUNT 6 1 1
       COLOR 25255A
         KONT 85
         CETN 20
@@ -338,7 +338,7 @@ COLORS
       END_OF_COLOR
   END_OF_COLOR_TYPE
   COLOR_TYPE 10 strana
-    COUNT 3 1 1
+    COUNT 3 2 1
       COLOR 5F4338
         KONT 85
         CETN 20

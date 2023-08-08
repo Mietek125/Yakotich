@@ -60,22 +60,6 @@ COMPONENTS
       BODY 1
           88  181     0   0   0   0     0   0   0   0
     END_OF_COMP
-    COMP pozadi4
-      SOURCE "D:\Stim\SteamApps\common\Original War\mods\GM\Gallery\"
-      CETNOST 0
-      PICFILE 1 pozadi4_s01
-      REF 1   0 0
-      BODY 1
-          88  181     0   0   0   0     0   0   0   0
-    END_OF_COMP
-    COMP pozadi7
-      SOURCE "D:\Stim\SteamApps\common\Original War\mods\GM\Gallery\"
-      CETNOST 0
-      PICFILE 1 pozadi7_s01
-      REF 1   0 0
-      BODY 1
-          88  181     0   0   0   0     0   0   0   0
-    END_OF_COMP
   END_OF_TYP
   TYP KRKY
     PATH krk
@@ -1938,6 +1922,14 @@ COMPONENTS
       REF 1   -142 -153
       REF 2   -126 -62
       REF 3   -39 -102
+    END_OF_COMP
+    COMP Ahunter
+      SOURCE "R:\Original War\XICHTED\comp\"
+      CETNOST 100
+      PICFILE 1 Asnip_s01
+      PICFILE 2 Asnip_s02
+      REF 1   -48 -31
+      REF 2   -126 -31
     END_OF_COMP
   END_OF_TYP
   TYP BRYLE

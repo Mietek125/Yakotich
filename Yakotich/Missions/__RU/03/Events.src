@@ -118,7 +118,7 @@ ChangeMissionObjectives('labik2');
 
 lab_captured = True;
 
-SaveVariable(AmLab1,'03_AmLab');
+SaveVariable(1,'03_AmLab');
 
 end;
 
@@ -189,7 +189,7 @@ end;
 Every 0$1 Trigger IsInArea(Boris,SouthOfBase) and start_ended = True do
 begin
 
-AddComBuild([Boris,Anton],b_depot,140,204,3);
+AddComBuild([Boris,Anton],b_depot,144,207,3);
 
 end;
 

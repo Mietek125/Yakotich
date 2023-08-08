@@ -1,0 +1,167 @@
+Export Function InitRussian;
+Begin
+
+     Uc_Nation:= 3;
+     Uc_Side := 3;
+     Uc_Direction := 2;
+
+     Yakotich := PrepareUnit('Yakotich', True, '03_');
+     Mietek := PrepareUnit('Mietek', True, '03_');
+     Boris := PrepareUnit('Boris', True, '03_');
+     Michail := PrepareUnit('Michail', True, '03_');
+     Vasilij := PrepareUnit('Vasilij', True, '03_');
+     Constantin := PrepareUnit('Constantin', True, '03_');
+     Maksim := PrepareUnit('Maksim', True, '03_');
+     Fiodor := PrepareUnit('Fiodor', True, '03_');
+     Aleksiej := PrepareUnit('Aleksiej', True, '03_');
+     Pavel := PrepareUnit('Pavel', True, '03_');
+     Zakhar := PrepareUnit('Zakhar', True, '03_');
+     Aleksandr := PrepareUnit('Aleksandr', True, '03_');
+     Stanislav := PrepareUnit('Stanislav', True, '03_');
+     Josif := PrepareUnit('Josif', True, '03_');
+     Jegor := PrepareUnit('Jegor', True, '03_');
+     Grigori := PrepareUnit('Grigori', True, '03_');
+     Anton := PrepareUnit('Anton', True, '03_');
+
+     YakotichCrew = YakotichCrew ^ Boris ^ Michail ^ Vasilij ^ Constantin ^ Maksim ^ Fiodor ^ Aleksiej ^ Pavel ^ Zakhar ^ Aleksandr ^ Stanislav ^ Josif ^ Jegor ^ Grigori ^ Anton;
+
+     SetClass([Yakotich,Mietek,Constantin,Maksim,Fiodor,Aleksiej,Zakhar,Aleksandr,Josif],1);
+     SetClass([Boris,Anton],2);
+     SetClass([Michail,Pavel,Jegor],3);
+     SetClass([Stanislav,Vasilij,Grigori],4);
+
+     PlaceUnitArea(Yakotich,EnterArea,False);
+     PlaceUnitArea(Mietek,EnterArea,False);
+     PlaceUnitArea(Boris,EnterArea,False);
+     PlaceUnitArea(Vasilij,EnterArea,False);
+     PlaceUnitArea(Constantin,EnterArea,False);
+     PlaceUnitArea(Maksim,EnterArea,False);           
+     PlaceUnitArea(Fiodor,EnterArea,False);
+     PlaceUnitArea(Zakhar,EnterArea,False);
+     PlaceUnitArea(Aleksandr,EnterArea,False);
+     PlaceUnitArea(Stanislav,EnterArea,False);
+     PlaceUnitArea(Josif,EnterArea,False);
+     PlaceUnitArea(Grigori,EnterArea,False);
+     PlaceUnitArea(Anton,EnterArea,False);
+
+     PlaceUnitArea(Pavel,EnterArea,False);
+     PlaceUnitArea(Jegor,EnterArea,False);
+
+     Natasza := PrepareUnit('Natasza',False,'');
+     Belkov2 := PrepareUnit('Belkov2',False,'');
+     Oblukov := PrepareUnit('Oblukov',False,'');
+     Kovalyuk := PrepareUnit('Kovalyuk',False,'');
+     Kozlov := PrepareUnit('Kozlov',False,'');
+
+     PlaceUnitArea(Natasza,NataszaSpawn,False);
+     ComTurnUnit(Natasza,Yakotich);
+
+     PlaceHumanInUnit(Belkov2,b1);
+     PlaceHumanInUnit(Oblukov,b2);
+     PlaceHumanInUnit(Kovalyuk,w1);
+     PlaceHumanInUnit(Kozlov,l1);
+
+     Uc_Side := 6;
+     Uc_Nation := 3;
+
+     Morozov := PrepareUnit('Morozov', false, '');
+     Platonov := PrepareUnit('Platonov', false, '');
+     Popov := PrepareUnit('Popov',false, '');
+     Bukov := PrepareUnit('Bukov', false, '');
+     Gaydar := PrepareUnit('Gaydar',false, '');
+
+     PlaceUnitArea(Morozov,CommanderSpawn,False);
+     PlaceUnitArea(Platonov,CommanderSpawn,False);
+     PlaceUnitArea(Popov,CommanderSpawn,False);
+
+     ComTurnXY([Morozov,Platonov,Popov],73,100);
+
+     PlaceUnitArea(Gaydar,GaydarSpawn,False);
+     ComTurnXY(Gaydar,214,160);
+
+     PlaceUnitArea(Bukov,BukovSpawn,False);
+     ComTurnXY(Bukov,312,218);
+
+end;
+
+
+Export Function InitBierezov;
+Begin
+
+     Bierezov := PrepareUnit('Bierezov', False, '');
+     Sharonov := PrepareUnit('Sharonov', False, '');
+     Lesov := PrepareUnit('Lesov', False, '');
+     Aleinik := PrepareUnit('Aleinik', False, '');
+     Korotajev := PrepareUnit('Korotajev', False, '');
+     Bautin := PrepareUnit('Bautin', False, '');
+
+     PlaceUnitArea(Bierezov,EnterArea,False);
+     PlaceUnitArea(Sharonov,EnterArea,False);
+     PlaceUnitArea(Lesov,EnterArea,False);
+     PlaceUnitArea(Aleinik,EnterArea,False);
+     PlaceUnitArea(Korotajev,EnterArea,False);
+     PlaceUnitArea(Bautin,EnterArea,False);
+
+end;
+
+Export Function Miotacz;
+begin
+if LoadVariable('03_FlameSaved', 0) then
+begin
+
+    Uc_Side = 3;
+    Uc_Nation = 2;
+    Uc_Direction = 2;
+    Vc_Chassis = 14;
+    Vc_Control = 1;
+    Vc_Engine = 1;
+    Vc_Weapon = 26;
+    Tank := CreateVehicle;
+    PlaceUnitArea(Tank,EnterArea,False);
+
+    end;
+
+end;
+
+
+//Export Function InitLeninPersonelAndOtherBases;
+//Begin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//end;
+
+
+
+
+
+
+
+
+

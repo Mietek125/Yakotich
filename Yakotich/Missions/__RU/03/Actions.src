@@ -359,6 +359,9 @@ AddMedal('Secondary',-1);
 
 GiveMedals('Medals');
 
+If IsOk(BurlakVeh) then
+SaveVariable(1,'03_FlameSaved');
+
 RewardPeople(FilterAllUnits([[f_side, 3], [f_nation, 3], [f_type, unit_human]]) and FilterAllUnits([[f_side,6],[f_nation,3],[f_type, unit_human]]));
 
 SaveCharacters(Yakotich, '03_Yakotich');

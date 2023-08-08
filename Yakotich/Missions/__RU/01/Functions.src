@@ -49,7 +49,7 @@ Say(Artur,'1Pezet-Sikret');
 TeleportUnit(Artur,139,74,120,True);
 Wait(0$05);
 RemoveUnit(Artur);
-SaveVariable(Artur,'PezetSaved');
+SaveVariable(1,'PezetSaved');
 SaveCharacters(Artur,'Pezet');
 End;
 

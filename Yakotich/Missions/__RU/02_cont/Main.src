@@ -13,6 +13,7 @@ Randomize;
 RandomizeAll;                                                                
 
 InitRussian;
+Czolg;
 Action;
 InitAmerican;
 
@@ -32,6 +33,8 @@ Export AmSoldNorth,AmSciNorth,AmMechNorth,AmEngNorth,
 AmSoldSouth, AmSciSouth, AmMechSouth, AmEngSouth;
 Export AmSoldConvoy, AmSciConvoy, AmMechConvoy, AmEngConvoy,
 AmVehicleConvoy;
+
+Export Tank;
 
 export debug; //tests only!
 

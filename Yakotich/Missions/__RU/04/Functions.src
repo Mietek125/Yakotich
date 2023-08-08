@@ -1,0 +1,108 @@
+Export Function PrepareSolBun(skill, b);
+var un, dir;
+begin
+uc_side := GetSide(b);
+uc_nation := GetNation(b);
+
+dir := GetDir(b) - 3;
+
+if dir < 0 then
+   dir := 6 + dir;
+
+un := CreateHuman;
+SetDir(un, dir);
+PlaceHumanInUnit(un, b);
+End;
+
+{Every 1 trigger IsSelected(Kvantovy) do
+begin
+KvantovyExp([1,2,3,4]);
+Wait(0$05);
+Say(Kvantovy,'3Kvantovy-Sikret');
+TeleportUnit(Kvantovy,120,237,300,True);
+Wait(0$05);
+RemoveUnit(Kvantovy);
+SaveVariable(1,'KvantovySaved');
+SaveCharacters(Kvantovy,'Kvantovy');
+End;
+
+Export Function KvantovyExp(q);
+var dec, q1;
+begin
+  dec = SelectiveQuery('KvantovyQuery', q);
+  case dec of
+   1:begin
+     AddExperience_NoLimit(Yakotich,1,2000);
+     end;
+   2:begin
+     AddExperience_NoLimit(Yakotich,2,2000);
+     end;
+   3:begin
+     AddExperience_NoLimit(Yakotich,3,2000);
+     end;
+    4:begin
+     AddExperience_NoLimit(Yakotich,4,2000);
+     end;
+
+  end;
+end;}
+
+Every 1 Trigger start_ended = False Do
+Begin
+
+CenterOnUnits(Yakotich);
+
+enable;
+
+end;
+
+// Blokuje pójœcie w pizdu
+every 1 trigger FilterUnitsInArea(DontEnterArea, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) > 0 do
+var unit;
+begin
+    enable;
+
+    for unit in FilterUnitsInArea(DontEnterArea, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
+    begin
+        //InGameOn;
+
+    ComMoveXY(unit,163,235);
+
+end;
+
+end;
+
+Every 0$1 Trigger IsDead(Yakotich) do
+begin
+
+YouLost('YakotichDead');
+
+end;
+
+Every 0$1 Trigger IsDead(Mietek) do
+begin
+
+YouLost('MietekDead');
+
+end;
+
+On UnitDestroyed(un) do
+begin
+if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
+   YouLost('PeopleDead');
+End;
+
+Every 0$1 Trigger IsDead(YakotichBase) or IsDead(NorthLenin) or IsDead(SouthLenin) do
+begin
+
+YouLost('DepotDead');
+
+end;  
+
+On Contact(s1, s2) do
+begin
+  if (s1 = 3 and s2 = 6) or (s2 = 6 and s1 = 3) then
+  begin
+  YouLost('AllyAttacked');
+  end;
+end;

@@ -18,76 +18,76 @@
   31: CALL 156 0 0
 // end ;
   35: END
-// export Yakotich , Mietek , Boris , Vasilij , Michail , Constantin ; export Maksim , Fiodor , Pavel , Zakhar , Aleksiej , Aleksandr , Josif ; export MaksimCrew ; export OtherSurvivors ; export AmS , AmSc , AMSS ; export AmCommander ; export Americans ; export debug ; export mission_prefix ; export hill_north_trigger , hill_south_trigger , yakotich_in_base , quests_finished , aleksandr_found , attacks_are_finished , american_attack , oil_power_researched , oil_engine_researched , technology1_researched , end_of_the_mission , losses , vehicle_constructed , josif_landed , josif_saved ; function Init ; begin
+// export Yakotich , Mietek , Boris , Vasilij , Michail , Constantin ; export Maksim , Fiodor , Pavel , Zakhar , Aleksiej , Aleksandr , Josif ; export MaksimCrew ; export OtherSurvivors ; export AmS , AmSc , AMSS ; export AmCommander ; export Americans ; export pojazdy ; export debug ; export mission_prefix ; export hill_north_trigger , hill_south_trigger , yakotich_in_base , quests_finished , aleksandr_found , attacks_are_finished , american_attack , oil_power_researched , oil_engine_researched , technology1_researched , end_of_the_mission , losses , vehicle_constructed , josif_landed , josif_saved ; function Init ; begin
   36: LD_INT 0
   38: PPUSH
 // mission_prefix := 01_ ;
-  39: LD_ADDR_EXP 22
+  39: LD_ADDR_EXP 23
   43: PUSH
   44: LD_STRING 01_
   46: ST_TO_ADDR
 // yakotich_in_base := false ;
-  47: LD_ADDR_EXP 25
+  47: LD_ADDR_EXP 26
   51: PUSH
   52: LD_INT 0
   54: ST_TO_ADDR
 // quests_finished := false ;
-  55: LD_ADDR_EXP 26
+  55: LD_ADDR_EXP 27
   59: PUSH
   60: LD_INT 0
   62: ST_TO_ADDR
 // aleksandr_found := false ;
-  63: LD_ADDR_EXP 27
+  63: LD_ADDR_EXP 28
   67: PUSH
   68: LD_INT 0
   70: ST_TO_ADDR
 // attacks_are_finished := false ;
-  71: LD_ADDR_EXP 28
+  71: LD_ADDR_EXP 29
   75: PUSH
   76: LD_INT 0
   78: ST_TO_ADDR
 // oil_power_researched := false ;
-  79: LD_ADDR_EXP 30
+  79: LD_ADDR_EXP 31
   83: PUSH
   84: LD_INT 0
   86: ST_TO_ADDR
 // oil_engine_researched := false ;
-  87: LD_ADDR_EXP 31
+  87: LD_ADDR_EXP 32
   91: PUSH
   92: LD_INT 0
   94: ST_TO_ADDR
 // technology1_researched := false ;
-  95: LD_ADDR_EXP 32
+  95: LD_ADDR_EXP 33
   99: PUSH
  100: LD_INT 0
  102: ST_TO_ADDR
 // american_attack := false ;
- 103: LD_ADDR_EXP 29
+ 103: LD_ADDR_EXP 30
  107: PUSH
  108: LD_INT 0
  110: ST_TO_ADDR
 // end_of_the_mission := false ;
- 111: LD_ADDR_EXP 33
+ 111: LD_ADDR_EXP 34
  115: PUSH
  116: LD_INT 0
  118: ST_TO_ADDR
 // losses := false ;
- 119: LD_ADDR_EXP 34
+ 119: LD_ADDR_EXP 35
  123: PUSH
  124: LD_INT 0
  126: ST_TO_ADDR
 // vehicle_constructed := false ;
- 127: LD_ADDR_EXP 35
+ 127: LD_ADDR_EXP 36
  131: PUSH
  132: LD_INT 0
  134: ST_TO_ADDR
 // josif_landed := false ;
- 135: LD_ADDR_EXP 36
+ 135: LD_ADDR_EXP 37
  139: PUSH
  140: LD_INT 0
  142: ST_TO_ADDR
 // josif_saved := false ;
- 143: LD_ADDR_EXP 37
+ 143: LD_ADDR_EXP 38
  147: PUSH
  148: LD_INT 0
  150: ST_TO_ADDR
@@ -99,7 +99,7 @@
  158: PPUSH
  159: PPUSH
 // if not debug then
- 160: LD_EXP 21
+ 160: LD_EXP 22
  164: NOT
  165: IFFALSE 169
 // exit ;
@@ -329,8 +329,8 @@
  558: LD_INT 74
  560: PPUSH
  561: CALL_OW 64
-// SaveVariable ( Artur , PezetSaved ) ;
- 565: LD_INT 74
+// SaveVariable ( 1 , PezetSaved ) ;
+ 565: LD_INT 1
  567: PPUSH
  568: LD_STRING PezetSaved
  570: PPUSH
@@ -952,7 +952,7 @@
 1603: LD_VAR 0 1
 1607: RET
 // every 2 2$30 trigger yakotich_in_base = true do
-1608: LD_EXP 25
+1608: LD_EXP 26
 1612: PUSH
 1613: LD_INT 1
 1615: EQUAL
@@ -1340,7 +1340,7 @@
 // InGameOff ;
 2306: CALL_OW 9
 // yakotich_in_base = true ;
-2310: LD_ADDR_EXP 25
+2310: LD_ADDR_EXP 26
 2314: PUSH
 2315: LD_INT 1
 2317: ST_TO_ADDR
@@ -1410,7 +1410,7 @@
 // end ;
 2428: END
 // every 0 0$1 trigger yakotich_in_base = true do
-2429: LD_EXP 25
+2429: LD_EXP 26
 2433: PUSH
 2434: LD_INT 1
 2436: EQUAL
@@ -1604,14 +1604,14 @@
 2794: PPUSH
 2795: CALL_OW 174
 // american_attack = true ;
-2799: LD_ADDR_EXP 29
+2799: LD_ADDR_EXP 30
 2803: PUSH
 2804: LD_INT 1
 2806: ST_TO_ADDR
 // end ;
 2807: END
 // every 0 0$1 trigger american_attack = true and IsDead ( AmCommander ) do
-2808: LD_EXP 29
+2808: LD_EXP 30
 2812: PUSH
 2813: LD_INT 1
 2815: EQUAL
@@ -1638,7 +1638,7 @@
 2855: PPUSH
 2856: CALL_OW 88
 // end_of_the_mission = true ;
-2860: LD_ADDR_EXP 33
+2860: LD_ADDR_EXP 34
 2864: PUSH
 2865: LD_INT 1
 2867: ST_TO_ADDR
@@ -1717,7 +1717,7 @@
 // DialogueOff ;
 3002: CALL_OW 7
 // oil_power_researched := true ;
-3006: LD_ADDR_EXP 30
+3006: LD_ADDR_EXP 31
 3010: PUSH
 3011: LD_INT 1
 3013: ST_TO_ADDR
@@ -1743,7 +1743,7 @@
 // DialogueOff ;
 3046: CALL_OW 7
 // oil_engine_researched := true ;
-3050: LD_ADDR_EXP 31
+3050: LD_ADDR_EXP 32
 3054: PUSH
 3055: LD_INT 1
 3057: ST_TO_ADDR
@@ -1781,7 +1781,7 @@
 // DialogueOff ;
 3114: CALL_OW 7
 // technology1_researched := true ;
-3118: LD_ADDR_EXP 32
+3118: LD_ADDR_EXP 33
 3122: PUSH
 3123: LD_INT 1
 3125: ST_TO_ADDR
@@ -1907,31 +1907,31 @@
 // InGameOff ;
 3331: CALL_OW 9
 // vehicle_constructed = true ;
-3335: LD_ADDR_EXP 35
+3335: LD_ADDR_EXP 36
 3339: PUSH
 3340: LD_INT 1
 3342: ST_TO_ADDR
 // end ;
 3343: END
 // every 0 0$1 trigger technology1_researched = true and oil_engine_researched = true and oil_power_researched = true and vehicle_constructed = true do
-3344: LD_EXP 32
+3344: LD_EXP 33
 3348: PUSH
 3349: LD_INT 1
 3351: EQUAL
 3352: PUSH
-3353: LD_EXP 31
+3353: LD_EXP 32
 3357: PUSH
 3358: LD_INT 1
 3360: EQUAL
 3361: AND
 3362: PUSH
-3363: LD_EXP 30
+3363: LD_EXP 31
 3367: PUSH
 3368: LD_INT 1
 3370: EQUAL
 3371: AND
 3372: PUSH
-3373: LD_EXP 35
+3373: LD_EXP 36
 3377: PUSH
 3378: LD_INT 1
 3380: EQUAL
@@ -1963,12 +1963,12 @@
 // end ;
 3424: END
 // every 0 0$1 trigger end_of_the_mission = true and yakotich_in_base = true and IsDead ( AmCommander ) do
-3425: LD_EXP 33
+3425: LD_EXP 34
 3429: PUSH
 3430: LD_INT 1
 3432: EQUAL
 3433: PUSH
-3434: LD_EXP 25
+3434: LD_EXP 26
 3438: PUSH
 3439: LD_INT 1
 3441: EQUAL
@@ -2027,7 +2027,7 @@
 3532: CALL_OW 325
 3536: AND
 3537: PUSH
-3538: LD_EXP 35
+3538: LD_EXP 36
 3542: PUSH
 3543: LD_INT 1
 3545: EQUAL
@@ -2211,22 +2211,75 @@
 3877: CALL_OW 38
 // YouWin ;
 3881: CALL_OW 103
-// end ; end_of_file
-3885: END
-// every 2 2$0 do
-3886: GO 3888
-3888: DISABLE
-// begin CreateCratesArea ( rand ( 2 , 5 ) , BaseArea , true ) ;
-3889: LD_INT 2
-3891: PPUSH
-3892: LD_INT 5
-3894: PPUSH
-3895: CALL_OW 12
-3899: PPUSH
-3900: LD_INT 9
-3902: PPUSH
-3903: LD_INT 1
-3905: PPUSH
-3906: CALL_OW 55
 // end ;
-3910: END
+3885: END
+// every 0 0$1 trigger end_of_the_mission = true and yakotich_in_base = true and IsDead ( AmCommander ) do
+3886: LD_EXP 34
+3890: PUSH
+3891: LD_INT 1
+3893: EQUAL
+3894: PUSH
+3895: LD_EXP 26
+3899: PUSH
+3900: LD_INT 1
+3902: EQUAL
+3903: AND
+3904: PUSH
+3905: LD_EXP 19
+3909: PPUSH
+3910: CALL_OW 301
+3914: AND
+3915: IFFALSE 3964
+3917: GO 3919
+3919: DISABLE
+// begin if FilterAllUnits ( [ [ f_side , 3 ] , [ f_type , unit_vehicle ] ] ) >= 1 then
+3920: LD_INT 22
+3922: PUSH
+3923: LD_INT 3
+3925: PUSH
+3926: EMPTY
+3927: LIST
+3928: LIST
+3929: PUSH
+3930: LD_INT 21
+3932: PUSH
+3933: LD_INT 2
+3935: PUSH
+3936: EMPTY
+3937: LIST
+3938: LIST
+3939: PUSH
+3940: EMPTY
+3941: LIST
+3942: LIST
+3943: PPUSH
+3944: CALL_OW 69
+3948: PUSH
+3949: LD_INT 1
+3951: GREATEREQUAL
+3952: IFFALSE 3964
+// begin SaveVariable ( 1 , 01_Vehicle ) ;
+3954: LD_INT 1
+3956: PPUSH
+3957: LD_STRING 01_Vehicle
+3959: PPUSH
+3960: CALL_OW 39
+// end ; end ; end_of_file
+3964: END
+// every 2 2$0 do
+3965: GO 3967
+3967: DISABLE
+// begin CreateCratesArea ( rand ( 2 , 5 ) , BaseArea , true ) ;
+3968: LD_INT 2
+3970: PPUSH
+3971: LD_INT 5
+3973: PPUSH
+3974: CALL_OW 12
+3978: PPUSH
+3979: LD_INT 9
+3981: PPUSH
+3982: LD_INT 1
+3984: PPUSH
+3985: CALL_OW 55
+// end ;
+3989: END

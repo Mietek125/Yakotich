@@ -24,6 +24,8 @@ Josif := PrepareUnit('Josif', False, '');
 SetClass(Boris,2);
 SetClass(Vasilij,4);
 
+
+
 Uc_Side := 6;
 
 Morozov := PrepareUnit('Morozov', false, '');
@@ -38,6 +40,23 @@ AmSold := PrepareUnit('AmSold', false, '');
 
 end;
 
+Export Function Czolg;
+begin
+if LoadVariable('01_Vehicle', 1) then
+    begin
+
+Uc_Side = 3;
+Uc_Nation = 3;
+Uc_Direction = 2;
+Vc_Chassis = 21;
+Vc_Control = 1;
+Vc_Engine = 1;
+Vc_Weapon = 42;
+Tank := CreateVehicle;
+PlaceUnitArea(Tank,VehSpawn,False);
+end;
+
+end;
 
 
 

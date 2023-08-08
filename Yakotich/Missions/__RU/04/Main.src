@@ -1,0 +1,88 @@
+// Misja 04 / 07.08.2023
+// Skoñczy³em stawiaæ budyneczki bo¿e, czas na kod niebo¿y :)
+
+Starting
+var b,n;
+begin
+
+ResetFog;
+Init;
+
+SetBname(NorthLenin,'lenin');
+SetBname(SouthLenin,'lenin');
+SetBname(MorozovBase,'OC');
+SetBname(YakotichBase,'kamenev');
+SetBname(BukovBase,'Kuybyshev');
+
+
+AnimateTrees(true);
+
+Randomize;
+RandomizeAll;
+
+for b in FilterUnitsInArea(SouthLeninArea,[[f_type, unit_building]]) do
+    ComLinkToBase(SouthLenin, b);
+
+for n in FilterUnitsInArea(NorthLeninArea,[[f_type, unit_building]]) do
+    ComLinkToBase(NorthLenin, n);
+
+InitGlobalVariables;
+InitRussian;
+Miotacz;
+Action;
+
+DebugMode;
+
+game_speed = 6;
+
+end;
+
+Export YakotichCrew, BierezovTeam;
+Export Yakotich,Mietek,Boris,Vasilij,Michail,Constantin,Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav,Jegor,Grigori,Anton;
+Export Tank,Cargo1,Cargo2;
+Export Natasza,Belkov2,Oblukov,Kovalyuk,Kozlov;
+Export Bierezov,Sharonov,Lesov,Aleinik,Korotajev,Bautin;
+Export Morozov,Platonov,Popov,Gaydar,Bukov,Yashin;
+
+Export PrepareTime;
+
+export debug; //tests only!
+
+Export mission_prefix;
+Export start_ended,ivan_came;
+
+
+Function Init;
+begin
+
+mission_prefix := '04_';
+//debug := True;
+start_ended = False;
+ivan_came = False;
+
+
+
+PrepareTime := [40$0,35$0,30$0][Difficulty];
+
+end;
+
+Export Function DebugMode;
+Begin
+
+If Debug = True then
+Begin
+Difficulty := 3;
+TurnFogOff();
+FogOff(3);
+end;
+end;
+
+
+
+
+
+
+
+
+
+

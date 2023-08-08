@@ -3,6 +3,8 @@ Export Function Action;
 var i;
 begin
 
+Czolg;
+
 InGameOn;
 
 Wait(0$03);
@@ -44,6 +46,7 @@ Wait(0$03);
 Say(Michail,'2Mich-01');
 Say(Yakotich,'2Yak-12');
 
+AddComEnterUnit(Yakotich,Tank);
 AddComMoveXY(YakotichCrew,65,75);
 
 ComEnterUnit(Mietek,RuA1);

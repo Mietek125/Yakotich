@@ -26,6 +26,26 @@ SetDir(un, dir);
 PlaceHumanInUnit(un, b);
 End;
 
+Export Function Czolg;
+begin
+if LoadVariable('01_Vehicle', 0) then
+    begin
+
+Uc_Side = 3;
+Uc_Nation = 3;
+Uc_Direction = 2;
+Vc_Chassis = 21;
+Vc_Control = 1;
+Vc_Engine = 1;
+Vc_Weapon = 42;
+Tank := CreateVehicle;
+PlaceUnitArea(Tank,VehSpawn,False);
+end;
+
+end;
+
+
+
 {Export function SelectYakotichCharacters;
 var i, YourPeople;
 begin
