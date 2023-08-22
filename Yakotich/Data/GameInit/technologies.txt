@@ -31,10 +31,10 @@ GAMEINIT
 
       TECHNOLOGY  70 
       NAME "Incendiary"
-      NATIONS 0 1 0
+      NATIONS 0 1 1
       REQUIRES 2  46 83
       LAB  10 
-      TIME 50 
+      TIME 75 
 
       TECHNOLOGY  1 
       NAME "Apeman language"

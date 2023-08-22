@@ -1,3 +1,4 @@
+Export RuCargo1,RuCargo2;
 Export Function InitRussian;
 Begin
 
@@ -30,6 +31,22 @@ Begin
      SetClass([Michail,Pavel,Jegor],3);
      SetClass([Stanislav,Vasilij,Grigori],4);
 
+     vc_chassis = 24;
+     vc_control = 1;
+     vc_engine = 1;
+     vc_weapon = 89;
+     RuCargo1 = CreateVehicle;
+    PlaceUnitArea(RuCargo1,TanksEnterArea,False);
+     SetCargo(RuCargo1,mat_siberit,200);
+     PlaceHumanInUnit(Jegor,RuCargo1);
+
+     vc_chassis = 22;
+     vc_weapon = 51;
+     RuCargo2 = CreateVehicle;
+    PlaceUnitArea(RuCargo2,TanksEnterArea,False);
+     SetCargo(RuCargo2,mat_cans,100);
+     PlaceHumanInUnit(Anton,RuCargo2);
+
      PlaceUnitArea(Yakotich,EnterArea,False);
      PlaceUnitArea(Mietek,EnterArea,False);
      PlaceUnitArea(Boris,EnterArea,False);
@@ -38,14 +55,12 @@ Begin
      PlaceUnitArea(Maksim,EnterArea,False);           
      PlaceUnitArea(Fiodor,EnterArea,False);
      PlaceUnitArea(Zakhar,EnterArea,False);
+     PlaceUnitArea(Aleksiej,EnterArea,False);
      PlaceUnitArea(Aleksandr,EnterArea,False);
      PlaceUnitArea(Stanislav,EnterArea,False);
      PlaceUnitArea(Josif,EnterArea,False);
      PlaceUnitArea(Grigori,EnterArea,False);
-     PlaceUnitArea(Anton,EnterArea,False);
-
      PlaceUnitArea(Pavel,EnterArea,False);
-     PlaceUnitArea(Jegor,EnterArea,False);
 
      Natasza := PrepareUnit('Natasza',False,'');
      Belkov2 := PrepareUnit('Belkov2',False,'');
@@ -60,27 +75,6 @@ Begin
      PlaceHumanInUnit(Oblukov,b2);
      PlaceHumanInUnit(Kovalyuk,w1);
      PlaceHumanInUnit(Kozlov,l1);
-
-     Uc_Side := 6;
-     Uc_Nation := 3;
-
-     Morozov := PrepareUnit('Morozov', false, '');
-     Platonov := PrepareUnit('Platonov', false, '');
-     Popov := PrepareUnit('Popov',false, '');
-     Bukov := PrepareUnit('Bukov', false, '');
-     Gaydar := PrepareUnit('Gaydar',false, '');
-
-     PlaceUnitArea(Morozov,CommanderSpawn,False);
-     PlaceUnitArea(Platonov,CommanderSpawn,False);
-     PlaceUnitArea(Popov,CommanderSpawn,False);
-
-     ComTurnXY([Morozov,Platonov,Popov],73,100);
-
-     PlaceUnitArea(Gaydar,GaydarSpawn,False);
-     ComTurnXY(Gaydar,214,160);
-
-     PlaceUnitArea(Bukov,BukovSpawn,False);
-     ComTurnXY(Bukov,312,218);
 
 end;
 
@@ -102,11 +96,13 @@ Begin
      PlaceUnitArea(Korotajev,EnterArea,False);
      PlaceUnitArea(Bautin,EnterArea,False);
 
+     BierezovCrew := BierezovCrew ^ Sharonov ^ Lesov ^ Aleinik ^ Korotajev ^ Bautin;
+
 end;
 
-Export Function Miotacz;
+Export Function InitMiotacz;
 begin
-if LoadVariable('03_FlameSaved', 0) then
+if LoadVariable('03_FlameSaved', 1) then
 begin
 
     Uc_Side = 3;
@@ -117,45 +113,50 @@ begin
     Vc_Engine = 1;
     Vc_Weapon = 26;
     Tank := CreateVehicle;
-    PlaceUnitArea(Tank,EnterArea,False);
+    PlaceUnitArea(Tank,TanksEnterArea,False);
+    PlaceHumanInUnit(Michail,Tank);
 
     end;
 
 end;
 
+{Export Function InitBierezovPersonel;
+Begin
 
-//Export Function InitLeninPersonelAndOtherBases;
-//Begin
+ Hc_Gallery := '';
+ Hc_Name := '';
+
+ BierezovCrew := [];
+
+ uc_side := 6;
+ uc_nation := 3;
+
+ For i = 1 to 6 do
+  Begin
+   PrepareSoldier(rand(0,1),[4,3,2][Difficulty]);
+   BierezovCrew := BierezovCrew ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin
+   PrepareEngineer(rand(0,1),[4,3,2][Difficulty]);
+   BierezovCrew := BierezovCrew ^ CreateHuman;
+  End;
+ For i = 1 to 2 do
+  Begin
+   PrepareMechanic(rand(0,1),[4,3,2][Difficulty]);
+   BierezovCrew := BierezovCrew ^ CreateHuman;
+  End;
+ For i = 1 to 1 do
+  Begin
+   PrepareScientist(rand(0,1),[4,3,2][Difficulty]);
+   BierezovCrew := BierezovCrew ^ CreateHuman;
+  End;
+
+  end;
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//end;
 
 
 

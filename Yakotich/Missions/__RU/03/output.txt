@@ -529,12 +529,12 @@
  866: IFTRUE 870
  868: GO 888
  870: POP
-// begin AddExperience_NoLimit ( Yakotich , 1 , 2000 ) ;
+// begin AddExperience_NoLimit ( Yakotich , 1 , 1500 ) ;
  871: LD_EXP 9
  875: PPUSH
  876: LD_INT 1
  878: PPUSH
- 879: LD_INT 2000
+ 879: LD_INT 1500
  881: PPUSH
  882: CALL_OW 591
 // end ; 2 :
@@ -545,12 +545,12 @@
  892: IFTRUE 896
  894: GO 914
  896: POP
-// begin AddExperience_NoLimit ( Yakotich , 2 , 2000 ) ;
+// begin AddExperience_NoLimit ( Yakotich , 2 , 1500 ) ;
  897: LD_EXP 9
  901: PPUSH
  902: LD_INT 2
  904: PPUSH
- 905: LD_INT 2000
+ 905: LD_INT 1500
  907: PPUSH
  908: CALL_OW 591
 // end ; 3 :
@@ -561,12 +561,12 @@
  918: IFTRUE 922
  920: GO 940
  922: POP
-// begin AddExperience_NoLimit ( Yakotich , 3 , 2000 ) ;
+// begin AddExperience_NoLimit ( Yakotich , 3 , 1500 ) ;
  923: LD_EXP 9
  927: PPUSH
  928: LD_INT 3
  930: PPUSH
- 931: LD_INT 2000
+ 931: LD_INT 1500
  933: PPUSH
  934: CALL_OW 591
 // end ; 4 :
@@ -577,12 +577,12 @@
  944: IFTRUE 948
  946: GO 966
  948: POP
-// begin AddExperience_NoLimit ( Yakotich , 4 , 2000 ) ;
+// begin AddExperience_NoLimit ( Yakotich , 4 , 1500 ) ;
  949: LD_EXP 9
  953: PPUSH
  954: LD_INT 4
  956: PPUSH
- 957: LD_INT 2000
+ 957: LD_INT 1500
  959: PPUSH
  960: CALL_OW 591
 // end ; end ;

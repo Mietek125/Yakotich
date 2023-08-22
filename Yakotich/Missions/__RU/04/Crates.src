@@ -1,4 +1,4 @@
-Every 4$0 do
+Every 3$0 do
 Begin
 
 CreateCratesArea(Rand(3,5),YakotichCrates,True);
@@ -10,7 +10,7 @@ Every 7$0 do
 var i;
 Begin
 
-For i = 1 to 3 do
+For i = 1 to 5 do
 begin
 CreateCratesArea(rand(4,5),CratesArea,true);
 

@@ -15,11 +15,11 @@ GAMEINIT
      ITEM  116  Powell
      ITEM  120  Yakotich
      ITEM  121  Mietek
-     ITEM  122  Stanislav
+     ITEM  122  Stan
      ITEM  123  Maksim
-     ITEM  124  Vasilij
-     ITEM  125  Michail
-     ITEM  126  Dimitri
+     ITEM  124  Vas
+     ITEM  125  Mich
+     ITEM  126  Dim
      ITEM  127  Boris
      ITEM  128  Omar
      ITEM  129  Olaf

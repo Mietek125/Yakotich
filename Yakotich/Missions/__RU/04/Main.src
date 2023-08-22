@@ -27,8 +27,10 @@ for n in FilterUnitsInArea(NorthLeninArea,[[f_type, unit_building]]) do
     ComLinkToBase(NorthLenin, n);
 
 InitGlobalVariables;
+InitMiotacz;
 InitRussian;
-Miotacz;
+InitCommanders;
+InitRussianAI;
 Action;
 
 DebugMode;
@@ -37,7 +39,7 @@ game_speed = 6;
 
 end;
 
-Export YakotichCrew, BierezovTeam;
+Export YakotichCrew, BierezovCrew, BukovCrew, GaydarCrew, NorthLeninCrew, SouthLeninCrew, CheckpointsCrew, SouthCheckpointCrew,SteyerCrew, OmarCrew;
 Export Yakotich,Mietek,Boris,Vasilij,Michail,Constantin,Maksim,Fiodor,Pavel,Zakhar,Aleksiej,Aleksandr,Josif,Stanislav,Jegor,Grigori,Anton;
 Export Tank,Cargo1,Cargo2;
 Export Natasza,Belkov2,Oblukov,Kovalyuk,Kozlov;
@@ -49,7 +51,8 @@ Export PrepareTime;
 export debug; //tests only!
 
 Export mission_prefix;
-Export start_ended,ivan_came;
+Export start_ended,control_taken_over,ivan_came,apeman_tamed,flame_researched,
+heavy_gun_researched,weaponry_researched, fall_back;
 
 
 Function Init;
@@ -59,10 +62,15 @@ mission_prefix := '04_';
 //debug := True;
 start_ended = False;
 ivan_came = False;
+control_taken_over = False;
+apeman_tamed = False;
+flame_researched = False;
+heavy_gun_researched = False;
+weaponry_researched = False;
+fall_back = False;
 
 
-
-PrepareTime := [40$0,35$0,30$0][Difficulty];
+PrepareTime := [45$0,40$0,35$0][Difficulty];
 
 end;
 

@@ -19,6 +19,9 @@ InitAmerican;
 
 DebugMode;
 
+SetBName(AmDep1,'mi');
+SetBName(AmDep2,'ni');
+
 end;
 
 Export YakotichCrew, MietekCrew;

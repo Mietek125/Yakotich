@@ -874,8 +874,8 @@ GAMEINIT
         SYMBOL w-a-flame
         OIL 75
         SIBERIUM 0
-        CANS 30
-        TIME 100
+        CANS 80
+        TIME 120
         SOUND_NAME Flame
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -886,7 +886,7 @@ GAMEINIT
           MINMAX_RANGE  3  11 
           FREQUENCY  40  60 
           DAMAGE 129 30 78
-          EFF 90 25 50
+          EFF 80 1 35
           ANIM  1  10  3
           ATTACKGROUND 
         END_OF_ATTACK
@@ -1582,10 +1582,10 @@ GAMEINIT
         NAME "E(Flame-thrower)C(Flame-thrower)"
         NATION Russian
         SYMBOL w-r-flame
-        OIL 60
+        OIL 75
         SIBERIUM 0
-        CANS 90
-        TIME 140
+        CANS 120
+        TIME 175
         SOUND_NAME Flame
         SOUND_TYPE 0
         SEL_XY 0 0
@@ -1594,13 +1594,16 @@ GAMEINIT
         WEIGHT  2  3 
         BARRELUSEED 1
         ATTACK
-          MINMAX_RANGE  2  9 
+          MINMAX_RANGE  3  10 
           FREQUENCY  80  140 
           DAMAGE 129 30 78
-          EFF 50 10 25
+          EFF 75 1 30
           ANIM  2  10  3
           ATTACKGROUND 
         END_OF_ATTACK
+        PRODUCED_IN 17 
+        TECHNOLOGY 70 
+	CANDESTROYENV 1
        WEAPON_TYPE  97 
         NAME "E(Arti)C(Arti)"
         NATION American

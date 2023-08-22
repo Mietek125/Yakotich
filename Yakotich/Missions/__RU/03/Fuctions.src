@@ -60,16 +60,16 @@ begin
   dec = SelectiveQuery('KvantovyQuery', q);
   case dec of
    1:begin
-     AddExperience_NoLimit(Yakotich,1,2000);
+     AddExperience_NoLimit(Yakotich,1,1500);
      end;
    2:begin
-     AddExperience_NoLimit(Yakotich,2,2000);
+     AddExperience_NoLimit(Yakotich,2,1500);
      end;
    3:begin
-     AddExperience_NoLimit(Yakotich,3,2000);
+     AddExperience_NoLimit(Yakotich,3,1500);
      end;
     4:begin
-     AddExperience_NoLimit(Yakotich,4,2000);
+     AddExperience_NoLimit(Yakotich,4,1500);
      end;
 
   end;

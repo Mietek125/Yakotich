@@ -1,0 +1,215 @@
+Every 0$1 Trigger IsDead(YakotichBase) or IsDead(NorthLenin) or IsDead(SouthLenin) do
+begin
+
+YouLost('DepotDead');
+
+end;
+
+On Contact(s1, s2) do
+begin
+  if (s1 = 3 and s2 = 6) or (s2 = 6 and s1 = 3) then
+  begin
+  YouLost('AllyAttacked');
+  end;
+end;
+
+On BuildingCaptured(cb,bfs,cu) do
+begin
+
+     If GetSide(cb) = 6 and GetSide(cu) = 3 then
+     begin
+
+     YouLost('AllyAttacked');
+     end;
+end;
+
+Export ru_bul,ru2_bul;
+On UnitDestroyed(un) do
+begin
+
+     if un = Yakotich then
+        YouLost('YakotichDead');
+
+     if un = Mietek then
+        YouLost('MietekDead');
+
+     if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
+        YouLost('PeopleDead');
+
+     if GetSide(un) = 6 and un in FilterAllUnits([f_type, unit_building]) and IsInArea(un,NorthLeninArea) then
+        begin
+        if GetBType(un) = b_factory then
+           ru_bul := ru_bul ^ b_workshop;
+        if GetBType(un) = b_lab_full or GetBType(un) = b_lab_half then
+           ru_bul := ru_bul ^ b_lab;
+        if GetBType(un) = b_barracks then
+           ru_bul := ru_bul ^ b_armoury;
+
+        if not GetBType(un) in [b_factory, b_lab_full, b_lab_half, b_barracks] then
+           ru_bul := ru_bul ^ GetBType(un);
+
+        ru_bul := ru_bul ^ GetX(un);
+        ru_bul := ru_bul ^ GetY(un);
+        ru_bul := ru_bul ^ GetDir(un);
+        end;
+end;
+
+Export RuDep;
+On BuildingStarted(building,builder) do
+begin
+
+end;
+
+//end;
+
+On BuildingComplete(b) do
+var i;
+begin
+
+     If GetBType(b) = b_bunker and GetSide(b) = 6 and IsInArea(b,NorthLeninArea) then
+     begin
+
+     AddComPlaceWeapon(b,rand(43,46));
+
+end;
+
+    If GetBType(b) = b_bunker and GetSide(b) = 6 and IsInArea(b,SouthLeninArea) and control_taken_over = False then
+    begin
+
+    AddComPlaceWeapon(b,rand(43,46));
+
+end;
+
+     if b in FilterAllUnits([f_side, 6]) then
+        for i = 1 to 4 do
+        ru_bul := Delete(ru_bul, 1);
+
+     if b in FilterAllUnits([f_side, 3]) then
+        for i = 1 to 4 do
+        ru2_bul := Delete(ru2_bul, 1);
+
+End;
+
+On ApemanTamed(ape,scientist) do
+begin
+
+If GetSide(ape) = 3 and apeman_tamed = False then
+begin
+
+DialogueOn;
+
+Say(Grigori,'4Grig-Ape-02');
+Say(Yakotich,'4Yak-Ape-02');
+Say(Grigori,'4Grig-Ape-03');
+
+DialogueOff;
+
+apeman_tamed = True;
+
+end;
+end;
+
+On VehicleRecycled(BuildingID, VehicleID, Side, Nation, X,Y, Direction, Chassis, Controller, Engine, Weapon) do
+begin
+if Side = 3 and Nation = 2 and Weapon = 26  then
+begin
+
+SetTech(70,3,1);
+
+end;
+
+end;
+
+
+On VehicleConstructed(vehicle, factory) do
+begin
+
+     If GetWeapon(vehicle) = 89 and GetSide(vehicle) = 6 then
+     Begin
+
+     Wait(0$5);
+
+     DialogueOn;
+
+     CenterNowOnUnits(vehicle);
+
+     SayRadio(Bukov,'4Bukov-Transport-01');
+     SayRadio(Platonov,'4Plat-Transport-01');
+
+     TransportQuery(1);
+
+     SetAreaMapShow(LeninCargo,2);
+
+     CenterNowOnXY(102,165);
+
+     DialogueOff;
+
+//     AddComTransport(vehicle,BukovBase,mat_cans);
+//     AddComGive(vehicle,SouthLenin);
+//     AddComRefuel(vehicle,SouthLenin);
+
+     Repeat
+
+     AddComTransport(vehicle,BukovBase,mat_cans);
+     AddComGive(vehicle,SouthLenin);
+     SetFuel(vehicle,85);
+
+     wait(0$1);
+     Until fall_back = True;
+
+     If fall_back = True then
+     ComMoveXY(vehicle,110,168);
+
+end;
+
+{if GetControl(vehicle) = control_remote and GetSide(vehicle) = 2 then
+   begin
+
+   Wait(0$3);
+
+   Connect(vehicle);
+
+   newAttackers := Replace(newAttackers, newAttackers + 1, vehicle);
+
+   if newAttackers >= [4,5,6][Difficulty] then
+      begin
+      attackers := attackers union newAttackers;
+      newAttackers := [];
+      end;
+ end;}
+
+end;  
+
+
+Every 0$1 Trigger Researched(6,84) do
+begin
+     AddComConstruct(BukovF,24,1,1,89);
+end;
+
+Every 0$1 Trigger Researched(3,34) do
+begin
+    DialogueOn;
+    Say(Vasilij,'4Vas-HG-01');
+    DialogueOff;
+    ChangeMissionObjectives('hg2');
+    heavy_gun_researched = True;
+end;
+
+Every 0$1 Trigger Researched(3,1) do
+begin
+     DialogueOn;
+     Say(Grigori,'4Grig-Ape-01');
+     Say(Yakotich,'4Yak-Ape-01');
+     DialogueOff;
+end;
+
+Every 0$1 Trigger Researched(3,70) do
+begin
+     DialogueOn;
+     Say(Stanislav,'4Stan-Flame-01');
+     Say(Stanislav,'4Stan-Flame-02');
+     Say(Stanislav,'4Stan-Flame-03');
+     ChangeMissionObjectives('flame');
+     flame_researched = True;
+     DialogueOff;
+end;
