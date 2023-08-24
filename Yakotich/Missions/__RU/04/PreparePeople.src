@@ -82,6 +82,8 @@ end;
 Export Function InitBierezov;
 Begin
 
+     Uc_Side = 4;
+
      Bierezov := PrepareUnit('Bierezov', False, '');
      Sharonov := PrepareUnit('Sharonov', False, '');
      Lesov := PrepareUnit('Lesov', False, '');
@@ -120,49 +122,69 @@ begin
 
 end;
 
-{Export Function InitBierezovPersonel;
+Export BierezovEngineers;
+Export Function InitBierezovPersonel;
+var i;
 Begin
 
  Hc_Gallery := '';
  Hc_Name := '';
+ Uc_Side := 4;
 
- BierezovCrew := [];
-
- uc_side := 6;
- uc_nation := 3;
+ BierezovNewCrew := [];
 
  For i = 1 to 6 do
   Begin
-   PrepareSoldier(rand(0,1),[4,3,2][Difficulty]);
-   BierezovCrew := BierezovCrew ^ CreateHuman;
-  End;
- For i = 1 to 1 do
-  Begin
-   PrepareEngineer(rand(0,1),[4,3,2][Difficulty]);
-   BierezovCrew := BierezovCrew ^ CreateHuman;
+   PrepareSoldier(rand(0,1),[5,4,3][Difficulty]);
+   BierezovNewCrew := BierezovNewCrew ^ CreateHuman;
   End;
  For i = 1 to 2 do
   Begin
-   PrepareMechanic(rand(0,1),[4,3,2][Difficulty]);
-   BierezovCrew := BierezovCrew ^ CreateHuman;
+   PrepareEngineer(rand(0,1),[5,4,3][Difficulty]);
+   BierezovNewCrew := BierezovNewCrew ^ CreateHuman;
+  End;
+ BierezovNewCrew := BierezovNewCrew ^ BierezovEngineers;
+ For i = 1 to 2 do
+  Begin
+   PrepareMechanic(rand(0,1), [5,4,3][Difficulty]);
+   BierezovNewCrew := BierezovNewCrew ^ CreateHuman;
   End;
  For i = 1 to 1 do
   Begin
-   PrepareScientist(rand(0,1),[4,3,2][Difficulty]);
-   BierezovCrew := BierezovCrew ^ CreateHuman;
+   PrepareScientist(rand(0,1), [5,4,3][Difficulty]);
+   BierezovNewCrew := BierezovNewCrew ^ CreateHuman;
   End;
 
+
+  For i in BierezovNewCrew do
+  Begin
+   Case GetClass(i) of
+   1:PlaceHumanInUnit(i,LArmor1);
+   2:PlaceHumanInUnit(i,LArmor2);
+   3:PlaceHumanInUnit(i,LArmor2);
+   4:PlaceHumanInUnit(i,LArmor2);
+
   end;
+ end;
+End;
 
+Export Function InitPompa;
+Begin
 
+     Uc_Side = 6;
 
+     Pompa := PrepareUnit('Pompa', False, '');
+     Petrov := PrepareUnit('Petrov', False, '');
+     Konajev := PrepareUnit('Konajev', False, '');
+     Smirnov := PrepareUnit('Smirnov', False, '');
+     Radenko := PrepareUnit('Radenko', False, '');
 
+     PompaCrew := PompaCrew ^ Pompa ^ Petrov ^ Konajev ^ Smirnov ^ Radenko;
 
+     PlaceUnitArea(Pompa,EnterArea,False);
+     PlaceUnitArea(Petrov,EnterArea,False);
+     PlaceUnitArea(Konajev,EnterArea,False);
+     PlaceUnitArea(Smirnov,EnterArea,False);
+     PlaceUnitArea(Radenko,EnterArea,False);
 
-
-
-
-
-
-
-
+end;

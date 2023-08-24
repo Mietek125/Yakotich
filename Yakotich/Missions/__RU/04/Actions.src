@@ -142,15 +142,6 @@ end;
 
      InGameOff;
 
-if PrepareTime < 0$1 then
-begin
-
-Wait(0$24);
-
-//SayRadio(
-
-end;
-
 if LoadVariable('03_FlameSaved', 1) then
    begin
 
@@ -163,8 +154,80 @@ if LoadVariable('03_FlameSaved', 1) then
      ChangeMissionObjectives('o2');
 
      DialogueOff;
-   end;
+
+end;
+
+     Wait(5$0);
+
+     InitBierezov;
+
+
+     ComMoveXY(BierezovCrew,77,50);
+     AddComMoveXY(Bierezov,77,50);
+     AddComMoveXY(BierezovCrew,132,106);
+     AddComMoveXY(Bierezov,132,106);
+     AddComMoveXY(BierezovCrew,79,104);
+     AddComEnterUnit(Bierezov,MorozovBase);
 
 
 
 End;
+
+Every 0$1 Trigger IsInArea(Bierezov,NorthLeninArea) do
+begin
+
+     SetSide(Bierezov,6);
+
+     Wait(1$30);
+
+     ComExitBuilding(Bierezov);
+     ComExitBuilding(BierezovNewCrew);
+
+     SetSide(Bierezov,4);
+
+     BierezovCrew := BierezovCrew ^ BierezovNewCrew;
+     BierezovEngineers := BierezovEngineers ^ FilterAllUnits([[f_side, 4],[f_class,2]]);
+
+     Wait(0$01);
+
+     AddComMoveXY(BierezovCrew,82,54);  
+     AddComMoveXY([Sharonov,Korotajev],87,34);
+     AddComMoveXY(Bierezov,85,52);
+     AddComTurnXY(Bierezov,84,54);
+
+     BierezovAI;
+
+End;
+
+Every 0$1 Trigger not PrepareTime do
+begin
+
+     Wait(0$24);
+
+     InGameOn;
+     DialogueOn;
+
+     SayRadio(Pompa,'4Pompa-01');
+     SayRadio(Platonov,'4Plat-05');
+     SayRadio(Pompa,'4Pompa-02');
+     SayRadio(Platonov,'4Plat-06');
+     SayRadio(Platonov,'4Plat-07');
+     SayRadio(Bukov,'4Bukov-01');
+     SayRadio(Platonov,'4Plat-08');
+
+     ChangeMissionObjectives('o4');
+
+     InGameOff;
+     DialogueOff;
+
+     Wait(0$36);
+
+     InitPompa;
+     ComMoveXY(PompaCrew,76,100);
+     NorthLeninCrew := NorthLeninCrew union PompaCrew;
+
+end;
+
+
+
+   

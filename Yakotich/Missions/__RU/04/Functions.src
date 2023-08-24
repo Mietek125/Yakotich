@@ -99,6 +99,28 @@ else
    end;
 End;
 
+Export Function BierezovAI;
+Begin
+
+AddComBuild(BierezovEngineers,b_depot,80,47,3);
+AddComBuild(BierezovEngineers,b_lab,78,34,0);
+AddComBuild(BierezovEngineers,b_oil_mine,79,26,0);
+AddComBuild(BierezovEngineers,b_oil_power,84,28,5);
+AddComBuild(BierezovEngineers,b_workshop,92,41,3);
+AddComBuild(BierezovEngineers,b_ext_gun,95,41,4);
+AddComBuild(BierezovEngineers,b_ext_rocket,96,45,5);
+AddComBuild(BierezovEngineers,b_ext_noncombat,92,37,3);
+//AddComBuild(BierezovEngineers,b_ext_track,88,41,4);
+AddComBuild(BierezovEngineers,b_oil_power,74,25,2);
+AddComBuild(BierezovEngineers,b_oil_power,75,21,1);
+AddComBuild(BierezovEngineers,b_armoury,80,59,0);
+AddComBuild(BierezovEngineers,b_bunker,89,56,0);
+AddComBuild(BierezovEngineers,b_bunker,99,57,0);
+AddComBuild(BierezovEngineers,b_bunker,94,58,0);
+AddComBuild(BierezovEngineers,b_bunker,56,25,2);
+AddComBuild(BierezovEngineers,b_breastwork,52,30,2);
+
+end;
 
 
 

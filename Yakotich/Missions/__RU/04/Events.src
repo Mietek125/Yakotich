@@ -7,7 +7,7 @@ end;
 
 On Contact(s1, s2) do
 begin
-  if (s1 = 3 and s2 = 6) or (s2 = 6 and s1 = 3) then
+  if (s1 = 3 and s2 = 6) or (s2 = 6 and s1 = 3) or (s2 = 4 and s1 = 3) or (s2 = 3 and s1 = 4) then
   begin
   YouLost('AllyAttacked');
   end;
@@ -36,7 +36,7 @@ begin
      if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
         YouLost('PeopleDead');
 
-     if GetSide(un) = 6 and un in FilterAllUnits([f_type, unit_building]) and IsInArea(un,NorthLeninArea) then
+     {if GetSide(un) = 6 and un in FilterAllUnits([f_type, unit_building]) and IsInArea(un,NorthLeninArea) then
         begin
         if GetBType(un) = b_factory then
            ru_bul := ru_bul ^ b_workshop;
@@ -51,17 +51,46 @@ begin
         ru_bul := ru_bul ^ GetX(un);
         ru_bul := ru_bul ^ GetY(un);
         ru_bul := ru_bul ^ GetDir(un);
-        end;
+        end;     }
 end;
 
-Export RuDep;
-On BuildingStarted(building,builder) do
+On BuildingStarted(b,builder) do
+Var x, y;
 begin
 
+     If GetBType(b) = b_bunker or GetBType(b) = b_breastwork and GetSide(b) = 4 then
+     begin
+
+     x = GetX(b);
+     y = GetY(b);
+
+     AddComMoveXY(FilterAllUnits([[f_side,4],[f_class,1],[f_not, [f_inside]]]),x,y);
+
 end;
 
-//end;
+     If GetBType(b) = b_lab and GetSide(b) = 4 then
+     begin
 
+     x = GetX(b);
+     y = GetY(b);
+
+     AddComMoveXY(FilterAllUnits([[f_side,4],[f_class,4],[f_not, [f_inside]]]),x,y);
+
+end;
+
+     If GetBType(b) = b_workshop and GetSide(b) = 4 then
+     begin
+
+     x = GetX(b);
+     y = GetY(b);
+
+     AddComMoveXY(FilterAllUnits([[f_side,4],[f_class,3],[f_not, [f_inside]]]),x,y);
+
+end;
+
+end; 
+
+Export BierezovDepot, BierezovArmoury;
 On BuildingComplete(b) do
 var i;
 begin
@@ -73,6 +102,53 @@ begin
 
 end;
 
+     If GetBType(b) = b_bunker and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+     begin
+
+     AddComPlaceWeapon(b,rand(43,46));
+
+end;
+
+     If GetBType(b) = b_bunker or GetBType(b) = b_breastwork and GetSide(b) = 4 then
+     begin
+
+     AddComEnterUnit(FilterAllUnits([[f_side,4],[f_class,1],[f_not, [f_inside]]]) diff Bierezov,b);
+
+end;
+
+    If GetBType(b) = b_depot and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+    Begin
+
+    SetBName(b,'zinoviev');
+
+    DialogueOn;
+
+    CenterNowOnUnits(Bierezov);
+    SayRadio(Bierezov,'4Bierezov-01');
+
+    DialogueOff;
+
+    ComUpgrade(b);
+    SetResourceType(GetBase(b), mat_cans, 2500);
+    SetResourceType(GetBase(b), mat_oil, 500);
+
+end;
+
+    If GetBType(b) = b_lab and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+    Begin
+
+    ComUpgradeLab(b,10);
+
+end;
+
+    If GetBType(b) = b_workshop and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+    Begin
+
+    ComUpgrade(b);
+
+end;
+
+
     If GetBType(b) = b_bunker and GetSide(b) = 6 and IsInArea(b,SouthLeninArea) and control_taken_over = False then
     begin
 
@@ -80,15 +156,63 @@ end;
 
 end;
 
-     if b in FilterAllUnits([f_side, 6]) then
-        for i = 1 to 4 do
-        ru_bul := Delete(ru_bul, 1);
+    If GetBType(b) = b_armoury and GetSide(b) = 4 then
+    begin
 
-     if b in FilterAllUnits([f_side, 3]) then
-        for i = 1 to 4 do
-        ru2_bul := Delete(ru2_bul, 1);
+    BierezovArmoury = b;
+
+end;
 
 End;
+
+On UpgradeComplete(b) do
+begin
+
+    If GetBType(b) = b_warehouse and GetSide(b) = 4 then
+    Begin
+
+    BierezovDepot = b;
+
+    Wait(0$3);
+
+    ComEnterUnit(Bierezov,BierezovDepot);
+    ComEnterUnit(Aleinik,BierezovDepot);
+
+end;
+
+    If GetBType(b) = b_lab_half and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+    Begin
+
+    AddComUpgradeLab(b,12);
+
+end;
+
+    If GetBType(b) = b_lab_full and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+    Begin
+
+    AddComEnterUnit(FilterAllUnits([[f_side, 4],[f_class, 4]]), b);
+
+
+
+    AddComResearch(b,83);
+    AddComResearch(b,84);
+    AddComResearch(b,85);
+    AddComResearch(b,48);
+    AddComResearch(b,49);
+    AddComResearch(b,51);
+    AddComResearch(b,57);
+
+end;
+
+    if GetBType(b) = b_factory and GetSide(b) = 4 and IsInArea(b,BierezovBaseArea) then
+    Begin
+
+    AddComEnterUnit(FilterAllUnits([[f_side, 4],[f_class, 3]]), b);
+
+end;
+
+End;
+
 
 On ApemanTamed(ape,scientist) do
 begin
@@ -213,3 +337,41 @@ begin
      flame_researched = True;
      DialogueOff;
 end;
+
+Every 0$5 Trigger FilterUnitsInArea(BierezovBaseArea,([[f_side,4],[f_constructed],[f_btype, b_breastwork]])) >= 1 do
+begin
+
+Wait(0$10);
+
+ComEnterUnit(FilterAllUnits([[f_side,4],[f_outside],[f_class,1]]),BierezovArmoury);
+ComEnterUnit(FilterAllUnits([[f_side,4],[f_outside],[f_class,2]]),BierezovDepot);
+
+AddComConstruct(FilterAllUnits([[f_side,4],[f_btype,b_factory]]),23,1,1,rand(44,46));
+AddComConstruct(FilterAllUnits([[f_side,4],[f_btype,b_factory]]),23,1,1,rand(45,46));
+
+end;
+
+{Every 0$1 Trigger IsInArea(FilterUnitsInArea(NorthLeninArea,[[f_side,6],[f_empty],[f_constructed],[f_btype, b_bunker]]),NorthLeninArea) do
+Begin
+
+     ComEnterUnit(FilterUnitsInArea(NorthLeninArea[[f_side,6],[f_class,1],[f_outside]]),FilterUnitsInArea(NorthLeninArea,[[f_side,6],[f_empty],[f_constructed],[f_btype, b_bunker]]));
+
+     If FilterUnitsInArea(NorthLeninArea[[f_side,6],[f_class,1],[f_outside]])) =< 0 then
+     begin
+
+     ComExitBuilding(NorthLeninArea[[f_side,6],[f_class,1],[f_inside],[f_btype, b_barracks]]));
+
+end;
+
+    If FilterUnitsInArea(NorthLeninArea,[[f_side,6],[f_empty],[f_constructed],[f_btype, b_bunker]]) =< 0 then
+    Begin
+
+    ComEnterUnit(FilterUnitsInArea(NorthLeninArea[[f_side,6],[f_class,1],[f_outside]]),NorthLeninArea[[f_side,6],[f_class,1],[f_inside],[f_btype, b_barracks]]));
+
+end;
+
+End;
+
+
+
+

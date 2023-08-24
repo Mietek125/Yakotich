@@ -273,5 +273,75 @@ GaydarCrew := [];
  end;
 End;
 
+{Every 0$1 trigger IsOk(NorthLenin) do
+var i, tmp, b, eng, crane, tag, sci, lab;
+begin
+enable;
+
+b := FilterUnitsInArea(NorthLeninArea, [[f_not, [f_lives, 1000]], [f_type, unit_building]]);
+eng := FilterAllUnits([[f_side, 6], [f_class, 2]]);
+crane := FilterAllUnits([[f_side, 6], [f_weapon, ru_crane]]);
+sci := FilterAllUnits([[f_side, 6], [f_class, 4]]);
+lab := HexInfo(61, 97);
+
+if sci and UnitFilter(eng, [f_tag, 2]) then
+   ComExitAll(sci)
+else if sci then
+   if UnitFilter(sci, [f_not, [f_inside]]) and IsOk(lab) then
+      ComEnterUnit(UnitFilter(sci, [f_not, [f_inside]]), lab);
+
+if UnitFilter(crane, [f_ok]) and b then
+   ComRepairBuilding(UnitFilter(crane, [f_ok]), b[1]);
+
+if eng then
+   begin
+   for i in eng do
+       begin
+       tag := GetTag(i);
+
+       if not b and not ruBuildList and tag = 1 then
+          begin
+          SetTag(i, 0);
+          ComEnterUnit(i, ruDep);
+          end;
+
+       if (b or ruBuildList) and tag = 0 then
+          SetTag(i, 1);
+
+       if IsInUnit(i) and tag = 1 then
+          ComExit(i);
+
+       if GetLives(i) < 500 and tag = 1 then
+          SetTag(i, 2); // need heal
+
+       if GetLives(i) = 1000 and tag = 2 then
+          SetTag(i, 1); // ok
+
+       if tag = 2 then
+          begin
+          if GetDistUnitXY(i, 65, 97) > 6 then
+             begin
+             ComMoveXY(i, 65, 97);
+             AddComHold(i);
+             end;
+          end;
+
+       if IsInArea(i, ruDefendArea) then
+          ComMoveToArea(i, NorthLeninArea);
+
+       if tag = 1 then // can work
+          begin
+          if b then
+             ComRepairBuilding(i, NearestUnitToUnit(b, i))
+          else if ruBuildList and FilterUnitsInArea(ruDefendArea, [f_enemy, 3]) = 0 and CanBeBuilt(ruDep, ruBuildList[1][1], ruBuildList[1][2], ruBuildList[1][3], ruBuildList[1][4]) then
+             ComBuild(i, ruBuildList[1][1], ruBuildList[1][2], ruBuildList[1][3], ruBuildList[1][4]);
+          end;
+       end;
+   end;
+End;
+
+
+
+
 
 
