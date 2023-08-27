@@ -28,6 +28,8 @@ Export AmS,AmSc,AMSS;
 Export AmCommander;
 Export Americans;
 
+Export KillCounter, MaksimTime;
+
 export pojazdy;
 
 export debug; //tests only!
@@ -36,7 +38,8 @@ Export mission_prefix;
 Export hill_north_trigger,hill_south_trigger,yakotich_in_base,
 quests_finished,aleksandr_found,attacks_are_finished,american_attack,
 oil_power_researched,oil_engine_researched,technology1_researched,
-end_of_the_mission,losses,vehicle_constructed,josif_landed,josif_saved;
+end_of_the_mission,losses,vehicle_constructed,josif_landed,josif_saved,
+breastwork_builded,armoury_builded,maksim_coming;
 
 Function Init;
 begin
@@ -56,7 +59,12 @@ losses := False;
 vehicle_constructed := False;
 josif_landed := False;
 josif_saved := False;
+breastwork_builded := False;
+armoury_builded := False;
+maksim_coming := False;
 
+KillCounter := 0;
+MaksimTime := 2$0;
 
 end;
 

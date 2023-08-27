@@ -341,13 +341,14 @@ end;
 Every 0$5 Trigger FilterUnitsInArea(BierezovBaseArea,([[f_side,4],[f_constructed],[f_btype, b_breastwork]])) >= 1 do
 begin
 
-Wait(0$10);
+Wait(0$15);
 
-ComEnterUnit(FilterAllUnits([[f_side,4],[f_outside],[f_class,1]]),BierezovArmoury);
-ComEnterUnit(FilterAllUnits([[f_side,4],[f_outside],[f_class,2]]),BierezovDepot);
+AddComEnterUnit(FilterAllUnits([[f_side,4],[f_outside],[f_class,1]]),BierezovArmoury);
+AddComEnterUnit(FilterAllUnits([[f_side,4],[f_outside],[f_class,2]]),BierezovDepot);
 
 AddComConstruct(FilterAllUnits([[f_side,4],[f_btype,b_factory]]),23,1,1,rand(44,46));
 AddComConstruct(FilterAllUnits([[f_side,4],[f_btype,b_factory]]),23,1,1,rand(45,46));
+AddComConstruct(FilterAllUnits([[f_side,4],[f_btype,b_factory]]),23,1,1,rand(43,46));
 
 end;
 

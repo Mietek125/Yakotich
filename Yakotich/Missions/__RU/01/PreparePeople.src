@@ -37,7 +37,7 @@ PlaceUnitArea(Vasilij,Civilians,false);
 PlaceUnitArea(Michail,Civilians,false);
 PlaceUnitArea(Mietek,RyniakovSpawn,false);
 
-ComTurnUnit([MIchail,Vasilij],Mietek);
+ComTurnUnit([Michail,Vasilij],Mietek);
 ComTurnUnit(Mietek,Vasilij);
 
 end;

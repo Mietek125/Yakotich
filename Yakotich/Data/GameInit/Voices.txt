@@ -16,7 +16,7 @@ GAMEINIT
      ITEM  120  Yakotich
      ITEM  121  Mietek
      ITEM  122  Stan
-     ITEM  123  Maksim
+     ITEM  123  Maks
      ITEM  124  Vas
      ITEM  125  Mich
      ITEM  126  Dim

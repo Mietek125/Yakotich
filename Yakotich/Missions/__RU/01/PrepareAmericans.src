@@ -31,10 +31,10 @@ end;
 Every 2$30 Trigger yakotich_in_base = True do
 begin
 
-Uc_Side = 4;
+Uc_Side = 1;
 Uc_Nation = 1;
 
-PrepareSoldier(rand(0,1),[0,1,2][Difficulty]);
+PrepareSoldier(rand(0,1),[2,3,5][Difficulty]);
 AMSS = CreateHuman;
 Americans := Americans ^ AMSS;
 PlaceUnitArea(AMSS,AmSpawners,True);

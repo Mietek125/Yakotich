@@ -1,5 +1,5 @@
 function FROMOW_MAP_START(MAPPATH)
-    registryAchievs({'ACH_KVANTOVY', 'ACH_NEW_WEAPONS','ACH_OVSYENKO', 'ACH_FLAME'});
+    registryAchievs({'ACH_NEW_WEAPONS','ACH_OVSYENKO', 'ACH_FLAME'});
 end;
 
 function FROMOW_MAP_END()

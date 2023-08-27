@@ -12,6 +12,19 @@ end;
 
 end;
 
+On VehicleConstructed(v,f) do
+begin
+
+     If GetSide(v) = 3 and GetType(v) = unit_vehicle and GetWeapon(v) = ru_gun then
+     begin
+
+     GunCounter := GunCounter +1;
+
+end;
+
+End;
+
+
 On BuildingComplete(b) do
 begin
 
@@ -130,6 +143,42 @@ ChangeMissionObjectives('gun-2');
 
 end;
 
+Every 0$1 Trigger IsInArea(FilterAllUnits([[f_side,4]]),DontEnterAchivArea) do
+begin
+
+riverside_touched = True;
+
+end;
+
+Every 0$1 Trigger IsInArea(FilterAllUnits([[f_side,3]]),NorthPassage) or IsInArea(FilterAllUnits([[f_side,3]]),WestPassage) do
+begin
+
+passages_touched = True;
+
+end;
+
+Every 0$1 Trigger riverside_touched = False and end_of_the_mission = True do
+begin
+
+SetAchievement('ACH_RIVER');
+
+end;
+
+Every 0$1 Trigger passages_touched = False and end_of_the_mission = True do
+begin
+
+SetAchievement('ACH_SNAKE');
+
+end;
+
+Every 0$1 Do
+begin
+
+SetAchievementEX('ACH_GUN',GunCounter);
+
+enable;
+
+end;
 
 
 

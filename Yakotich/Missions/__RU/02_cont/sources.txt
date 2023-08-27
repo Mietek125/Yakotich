@@ -1,6 +1,5 @@
 SOURCE_CODES
   ENABLED Main
-  ENABLED GlobalVars
   ENABLED Functions
   ENABLED Events
   ENABLED Crates

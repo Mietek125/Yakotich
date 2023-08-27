@@ -14,18 +14,6 @@ SetDir(un, dir);
 PlaceHumanInUnit(un, b);
 End;
 
-Export Function PrepareUnit(ident, exist_mode, prefix);
-var unit;
-begin
-
-if exist_mode then
-   unit := CreateCharacter(prefix&ident)
-else
-   unit := NewCharacter(ident);
-
-result := unit;
-End;
-
 Export Function GetCountOfBuildingsInBase(base, btype);
 var i, tmp;
 begin
@@ -41,16 +29,17 @@ for i in tmp do
 
 End;
 
-Every 1 trigger IsSelected(Artur) do
+Every 1 trigger IsSelected(Pezet) do
 begin
 PezetExp([1,2,3,4]);
 Wait(0$05);
-Say(Artur,'1Pezet-Sikret');
-TeleportUnit(Artur,139,74,120,True);
+Say(Pezet,'1Pezet-Sikret');
+TeleportUnit(Pezet,139,74,120,True);
 Wait(0$05);
-RemoveUnit(Artur);
+RemoveUnit(Pezet);
 SaveVariable(1,'PezetSaved');
-SaveCharacters(Artur,'Pezet');
+SaveCharacters(Pezet,'Pezet');
+SetAchievement('ACH_PEZET');
 End;
 
 Export Function PezetExp(q);
@@ -88,8 +77,20 @@ YouLost('MietekDead');
 
 end;
 
-On UnitDestroyed(un) do
+// Czas do przybycia maksima
+Every 0$1 Trigger maksim_coming = True do
 begin
-if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
-   YouLost('PeopleDead');
+enable;
+
+if MaksimTime then
+   begin
+   MaksimTime := MaksimTime - 0$1;
+   display_strings := ['#MaksimTime', MaksimTime];
+   end
+else
+   begin
+   display_strings := '';
+   disable;
+   end;
 End;
+

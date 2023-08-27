@@ -39,7 +39,7 @@ end;
 
 
 
-Every 0$1 Trigger See(3,RuA1) Or See(3,RuB1) Or See(3,RuB2) Or See(3,RuB3) do
+Every 0$1 Trigger See(3,RuB1) Or See(3,RuB2) Or See(3,RuB3) do
 begin
 
 CenterOnXY(24,17);
@@ -94,7 +94,7 @@ yakotich_in_base = True;
 
 ChangeMissionObjectives('o4');
 
-SetSide([Mietek,Vasilij,Constantin,Michail,Boris,RuDep,RuB1,RuB2,RuB3,RuA1,RuOil],3);
+SetSide([Mietek,Vasilij,Constantin,Michail,Boris,RuDep,RuB1,RuB2,RuB3,RuOil],3);
 
 SaveForQuickRestart;
 
@@ -138,6 +138,8 @@ Say(Mietek,'1Ryn-Attack-02');
 
 ChangeMissionObjectives('o10');
 
+maksim_coming = True;
+
 InGameOff;
 DialogueOff;
 
@@ -180,122 +182,7 @@ InGameOff;
 
 end;
 
-Every 0$1 Trigger See(3,Aleksandr) do
-begin
 
-DialogueOn;
-
-Say(Aleksandr,'1Alek-Alek3');
-Say(Yakotich,'1Yak-Alek2');
-Say(Aleksandr,'1Alek-Alek4');
-Say(Mietek,'1Ryn-Alek3');
-
-SetSide(Aleksandr,3);
-
-DialogueOff;
-
-end;
-
-Every 0$1 Trigger Researched(3, 46) do
-begin
-
-DialogueOn;
-
-Say(Vasilij,'1Vas-Power-1');
-Say(Yakotich,'1Yak-Power-1');
-
-DialogueOff;
-
-oil_power_researched := True;
-
-end;
-
-Every 0$1 Trigger Researched(3, 47) do
-begin
-
-DialogueOn;
-
-Say(Vasilij,'1Vas-Engine-1');
-
-DialogueOff;
-
-oil_engine_researched := True;
-
-end;
-
-Every 0$1 Trigger Researched(3, 48) do
-begin
-
-DialogueOn;
-
-Say(Vasilij,'1Vas-Research-1');
-Say(Yakotich,'1Yak-Research-1');
-Say(Vasilij,'1Vas-Research-2');
-
-DialogueOff;
-
-technology1_researched := True;
-
-end;
-
-On BuildingComplete(building) do
-var i;
-begin
-if GetBType(building) = b_workshop and GetSide(building) = 3 then
-begin
-
-Say(Michail,'1Mich-Workshop');
-
-end;
-
-if GetBType(building) = b_lab and GetSide(building) = 3 then
-begin
-
-Say(Vasilij,'1Vas-06');
-
-end;
-
-end;
-
-Every 0$1 trigger FilterAllUnits([[f_type, unit_vehicle], [f_side, 3]]) do
-begin
-
-InGameOn;
-
-CenterOnUnits(RuDep);
-
-Wait(0$3);
-
-DialogueOn;
-
-Say(Michail,'1Mich-Tank-1');
-Say(Yakotich,'1Yak-Tank-1');
-Say(Michail,'1Mich-Tank-2');
-Say(Yakotich,'1Yak-Tank-2');
-
-ChangeMissionObjectives('o6');
-
-DialogueOff;
-
-InGameOff;
-
-vehicle_constructed = True;
-
-end;
-
-Every 0$1 Trigger technology1_researched = True and oil_engine_researched = True and oil_power_researched = True And vehicle_constructed = True do
-begin
-
-ChangeMissionObjectives('o5');
-
-end;
-
-Every 0$1 Trigger IsInArea(Maksim,BaseArea) do
-begin
-
-SetSide(MaksimCrew,3);
-
-end;
 
 Every 0$1 Trigger end_of_the_mission = True and yakotich_in_base = True And IsDead(AmCommander) do
 begin
@@ -320,30 +207,14 @@ RewardPeople(FilterAllUnits([[f_side, 3], [f_nation, 3], [f_type, unit_human]]))
 SaveCharacters(Yakotich, '01_Yakotich');
 SaveCharacters(Mietek, '01_Mietek');
 SaveCharacters(Maksim, '01_Maksim');
-
-if IsOk(Vasilij) then
-   SaveCharacters(Vasilij, '01_Vasilij');
-
-if IsOk(Michail) then
-   SaveCharacters(Michail, '01_Michail');
-
-if IsOk(Boris) then
-   SaveCharacters(Boris, '01_Boris');
-
-if IsOk(Constantin) then
-   SaveCharacters(Constantin, '01_Constantin');
-
-if IsOk(Fiodor) then
-   SaveCharacters(Fiodor, '01_Fiodor');
-
-if IsOk(Aleksiej) then
-   SaveCharacters(Aleksiej, '01_Aleksiej');
-
-if IsOk(Pavel) then
-   SaveCharacters(Pavel, '01_Pavel');
-
-if IsOk(Zakhar) then
-   SaveCharacters(Zakhar, '01_Zakhar');
+SaveCharacters(Michail, '01_Michail');
+SaveCharacters(Vasilij, '01_Vasilij');
+SaveCharacters(Boris, '01_Boris');
+SaveCharacters(Constantin, '01_Constantin');
+SaveCharacters(Fiodor, '01_Fiodor');
+SaveCharacters(Aleksiej, '01_Aleksiej');
+SaveCharacters(Pavel, '01_Pavel');
+SaveCharacters(Zakhar, '01_Zakhar');
 
 if IsOk(Aleksandr) and GetSide(Aleksandr) = 3 then
    SaveCharacters(Aleksandr, '01_Aleksandr');

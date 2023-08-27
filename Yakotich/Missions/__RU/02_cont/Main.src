@@ -39,13 +39,15 @@ AmVehicleConvoy;
 
 Export Tank;
 
+Export GunCounter;
+
 export debug; //tests only!
 
 Export mission_prefix;
 Export maksim_scout_ended, maksim_back, turrets_researched,
 gattling_researched, gun_researched, gun_recycled, second_wave_clear, transport_builded,
 first_attack_spawned, first_attack_clear, reiforcements_called, kurin_attack_started,
-end_of_the_mission;
+end_of_the_mission,passages_touched,riverside_touched;
 
 Export livid;
 
@@ -66,9 +68,13 @@ first_attack_clear := False;
 reiforcements_called := False;
 kurin_attack_started := False;
 end_of_the_mission := False;
+passages_touched := False;
+riverside_touched := False;
 
 MietekTime := 5$0;
 KurinTime := 30$0;
+
+GunCounter := 0;
 
 end;
 

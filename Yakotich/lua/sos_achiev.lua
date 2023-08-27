@@ -29,29 +29,31 @@ TID_ACH_FLAME = 6322;
 TID_ACH_FLAME_DESC = 6323;
 TID_ACH_JANUSZ = 6324;
 TID_ACH_JANUSZ_DESC = 6325;
-TID_ACH_BERGKAMP = 6326;
-TID_ACH_BERGKAMP_DESC = 6327;
-TID_ACH_DESTROYER = 6328;
-TID_ACH_DESTROYER_DESC = 6329;
-TID_ACH_TURRETS = 6330;
-TID_ACH_TURRETS_DESC = 6331;
-TID_ACH_SECRETS_1 = 6332;
-TID_ACH_SECRETS_1_DESC = 6333;
+TID_ACH_NO_BUILDING = 6326;
+TID_ACH_NO_BUILDING_DESC = 6327;
+TID_ACH_BERGKAMP = 6328;
+TID_ACH_BERGKAMP_DESC = 6329;
+TID_ACH_DESTROYER = 6330;
+TID_ACH_DESTROYER_DESC = 6331;
+TID_ACH_TURRETS = 6332;
+TID_ACH_TURRETS_DESC = 6333;
+TID_ACH_SECRETS_1 = 6334;
+TID_ACH_SECRETS_1_DESC = 6335;
 
 
 achievements = {
     ['ACH_PEZET'] = {
     	loc(TID_ACH_PEZET), 
     	loc(TID_ACH_PEZET_DESC),
-    	false,
+    	true,
     	0,
     	0
     },
     ['ACH_HUNT'] = {
         loc(TID_ACH_HUNT), 
         loc(TID_ACH_HUNT_DESC),
-        true,
-        1,
+        false,
+        3,
         0
     },
     ['ACH_ALEKSANDR'] = {
@@ -78,7 +80,7 @@ achievements = {
     ['ACH_SNAKE'] = {
         loc(TID_ACH_SNAKE), 
         loc(TID_ACH_SNAKE_DESC),
-        true,
+        false,
         0,
         0
     },
@@ -93,15 +95,15 @@ achievements = {
         loc(TID_ACH_GUNS), 
         loc(TID_ACH_GUNS_DESC),
         true,
-        1,
+        5,
         0
     },
     ['ACH_KVANTOVY'] = {
         loc(TID_ACH_KVANTOVY),
         loc(TID_ACH_KVANTOVY_DESC),
         true,
-        19,
-        2
+        0,
+        0
     },
     ['ACH_NEW_WEAPONS'] = {
         loc(TID_ACH_NEW_WEAPONS), 
@@ -120,35 +122,68 @@ achievements = {
     ['ACH_FLAME'] = {
         loc(TID_ACH_FLAME), 
         loc(TID_ACH_FLAME_DESC),
+        false,
+        5,
+        0
+    },
+    ['ACH_JANUSZ'] = {
+        loc(TID_ACH_JANUSZ), 
+        loc(TID_ACH_JANUSZ_DESC),
         true,
-        1,
+        0,
+        0
+    },
+    ['ACH_NO_BUILDING'] = {
+        loc(TID_ACH_NO_BUILDING), 
+        loc(TID_ACH_NO_BUILDING_DESC),
+        true,
+        0,
+        0
+    },
+    ['ACH_BERGKAMP'] = {
+        loc(TID_ACH_BERGKAMP), 
+        loc(TID_ACH_BERGKAMP_DESC),
+        false,
+        0,
+        0
+    },
+    ['ACH_DESTROYER'] = {
+        loc(TID_ACH_DESTROYER), 
+        loc(TID_ACH_DESTROYER_DESC),
+        true,
+        50,
+        0
+    },
+    ['ACH_TURRETS'] = {
+        loc(TID_ACH_TURRETS), 
+        loc(TID_ACH_TURRETS_DESC),
+        true,
+        15,
         0
     },
     ['ACH_SECRETS_1'] = {
         loc(TID_ACH_SECRETS_1), 
         loc(TID_ACH_SECRETS_1_DESC),
         true,
-        1,
+        0,
         0
-    },
+    }
 };
 
 ACHIV_FILTER_MISSION_LIST = {
     {},
     {},
     {
-        {'ACH_PEZET', 'ACH_HUNT', 'ACH_ALEKSANDR', 'ACH_FORT'},
-        {'ACH_SERPENT', 'ACH_SNAKE', 'ACH_RIVER','ACH_GUNS'},
-        {'ACH_KVANTOVY', 'ACH_NEW_WEAPONS','ACH_OVSYENKO', 'ACH_FLAME'}
+        {'ACH_HUNT', 'ACH_ALEKSANDR', 'ACH_FORT'},
+        {'ACH_SNAKE', 'ACH_RIVER','ACH_GUNS'},
+        {'ACH_NEW_WEAPONS','ACH_OVSYENKO', 'ACH_FLAME'},
+        {'ACH_NO_BUILDING','ACH_BERGKAMP', 'ACH_DESTROYER', 'ACH_TURRETS'}
     },
     {}
 };
 
 achievsCategory = {
-    [1] = {},
-    [2] = {},
     [3] = {
-        'ACH_PEZET',
         'ACH_HUNT',
         'ACH_ALEKSANDR',
         'ACH_FORT',
@@ -159,28 +194,35 @@ achievsCategory = {
         'ACH_KVANTOVY',
         'ACH_NEW_WEAPONS',
         'ACH_OVSYENKO',
-        'ACH_FLAME'
+        'ACH_FLAME',
+        'ACH_JANUSZ',
+        'ACH_NO_BUILDING',
+        'ACH_BERGKAMP',
+        'ACH_DESTROYER',
+        'ACH_TURRETS'
     },
-    [4] = {},
-    [10] = {
+    [8] = {
+        'ACH_SECRETS_1',
+        'ACH_PEZET',
+        'ACH_SERPENT',
+        'ACH_KVANTOVY',
+        'ACH_JANUSZ'
+    },
+    [9] = {
+        'ACH_NO_BUILDING',
         'ACH_SECRETS_1'
     }
 };
 
 achievsCategoryName = { 
 	--[1] = loc(TID_Achievements_US), 
-        --[2] = loc(TID_Achievements_Ares),
-        [3] = loc(TID_Achievements_RU),
-        --[4] = loc(TID_Achievements_Skir)
 	--[2] = loc(TID_Achievements_AR), 
-	--[3] = loc(TID_Achievements_RU), 
-	--[4] = loc(TID_Achievements_Ally), 
-	--[5] = loc(TID_Achievements_Leg), 
-	--[6] = loc(TID_Achievements_ACamp), 
-	--[7] = loc(TID_Achievements_MP), 
-	--[8] = loc(TID_Achievements_Skir),
-	--[9] = loc(TID_Achievements_Any),
-	[10] = loc(TID_Achievements_master)
+	[3] = loc(TID_Achievements_RU), 
+	--[4] = loc(TID_Achievements_MP), 
+	--[5] = loc(TID_Achievements_Skir),
+	--[6] = loc(TID_Achievements_Any),
+	[7] = loc(TID_Achievements_Secrets),
+	[8] = loc(TID_Achievements_Master)
 };  
 
 

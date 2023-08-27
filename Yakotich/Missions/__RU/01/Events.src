@@ -1,0 +1,167 @@
+On UnitDestroyed(un) do
+begin
+     If GetSide(un) = 1 then
+     begin
+
+     KillCounter := KillCounter +1;
+
+     end;
+
+     if un in FilterAllUnits([[f_side, 3], [f_not, [f_nation, 0]], [f_type, unit_human]]) then
+     Begin
+     YouLost('PeopleDead');
+
+     end;
+
+end;
+
+
+
+On BuildingComplete(b) do
+begin
+
+     If GetBType(b) = b_breastwork and breastwork_builded = False then
+     begin
+
+     breastwork_builded = True;
+
+end;
+
+     If GetBType(b) = b_armoury and armoury_builded = False then
+     begin
+
+     armoury_builded = True;
+
+end;
+
+if GetBType(b) = b_workshop and GetSide(b) = 3 then
+begin
+
+Say(Michail,'1Mich-Workshop');
+
+end;
+
+if GetBType(b) = b_lab and GetSide(b) = 3 then
+begin
+
+Say(Vasilij,'1Vas-06');
+
+end;
+
+End;
+
+Every 0$1 Trigger breastwork_builded = True and armoury_builded = True do
+begin
+
+SetAchievement('ACH_FORT');
+
+end;
+
+Every 0$1 Trigger See(3,Aleksandr) do
+begin
+
+DialogueOn;
+
+Say(Aleksandr,'1Alek-Alek3');
+Say(Yakotich,'1Yak-Alek2');
+Say(Aleksandr,'1Alek-Alek4');
+Say(Mietek,'1Ryn-Alek3');
+
+SetSide(Aleksandr,3);
+
+DialogueOff;
+
+SetAchievement('ACH_ALEKSANDR');
+
+end;
+
+Every 0$1 Trigger Researched(3, 46) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'1Vas-Power-1');
+Say(Yakotich,'1Yak-Power-1');
+
+DialogueOff;
+
+oil_power_researched := True;
+
+end;
+
+Every 0$1 Trigger Researched(3, 47) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'1Vas-Engine-1');
+
+DialogueOff;
+
+oil_engine_researched := True;
+
+end;
+
+Every 0$1 Trigger Researched(3, 48) do
+begin
+
+DialogueOn;
+
+Say(Vasilij,'1Vas-Research-1');
+Say(Yakotich,'1Yak-Research-1');
+Say(Vasilij,'1Vas-Research-2');
+
+DialogueOff;
+
+technology1_researched := True;
+
+end;
+
+Every 0$1 trigger FilterAllUnits([[f_type, unit_vehicle], [f_side, 3]]) do
+begin
+
+InGameOn;
+
+CenterOnUnits(RuDep);
+
+Wait(0$3);
+
+DialogueOn;
+
+Say(Michail,'1Mich-Tank-1');
+Say(Yakotich,'1Yak-Tank-1');
+Say(Michail,'1Mich-Tank-2');
+Say(Yakotich,'1Yak-Tank-2');
+
+ChangeMissionObjectives('o6');
+
+DialogueOff;
+
+InGameOff;
+
+vehicle_constructed = True;
+
+end;
+
+Every 0$1 Trigger technology1_researched = True and oil_engine_researched = True and oil_power_researched = True And vehicle_constructed = True do
+begin
+
+ChangeMissionObjectives('o5');
+
+end;
+
+Every 0$1 Trigger IsInArea(Maksim,BaseArea) do
+begin
+
+SetSide(MaksimCrew,3);
+
+end;
+
+Every 0$1 do
+begin
+
+SetAchievementEX('ID_HUNT', KillCounter);
+
+enable;
+
+end;
