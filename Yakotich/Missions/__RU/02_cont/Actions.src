@@ -47,6 +47,7 @@ begin
 CenterNowOnUnits(Maksim);
 
 DialogueOn;
+InGameOn;
 
 RevealFogArea(3,ScoutedTerrains);
 
@@ -86,6 +87,7 @@ SayRadio(Yakotich,'2Yak-22');
 ChangeMissionObjectives('o2');
 
 DialogueOff;
+InGameOff;
 
 maksim_back = True;
 

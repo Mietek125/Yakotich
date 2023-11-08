@@ -6,23 +6,23 @@ Begin
      Uc_Side := 3;
      Uc_Direction := 2;
 
-     Yakotich := PrepareUnit('Yakotich', True, '03_');
-     Mietek := PrepareUnit('Mietek', True, '03_');
-     Boris := PrepareUnit('Boris', True, '03_');
-     Michail := PrepareUnit('Michail', True, '03_');
-     Vasilij := PrepareUnit('Vasilij', True, '03_');
-     Constantin := PrepareUnit('Constantin', True, '03_');
-     Maksim := PrepareUnit('Maksim', True, '03_');
-     Fiodor := PrepareUnit('Fiodor', True, '03_');
-     Aleksiej := PrepareUnit('Aleksiej', True, '03_');
-     Pavel := PrepareUnit('Pavel', True, '03_');
-     Zakhar := PrepareUnit('Zakhar', True, '03_');
-     Aleksandr := PrepareUnit('Aleksandr', True, '03_');
-     Stanislav := PrepareUnit('Stanislav', True, '03_');
-     Josif := PrepareUnit('Josif', True, '03_');
-     Jegor := PrepareUnit('Jegor', True, '03_');
-     Grigori := PrepareUnit('Grigori', True, '03_');
-     Anton := PrepareUnit('Anton', True, '03_');
+     Yakotich := PrepareUnit('Yakotich', False, '03_');
+     Mietek := PrepareUnit('Mietek', False, '03_');
+     Boris := PrepareUnit('Boris', False, '03_');
+     Michail := PrepareUnit('Michail', False, '03_');
+     Vasilij := PrepareUnit('Vasilij', False, '03_');
+     Constantin := PrepareUnit('Constantin', False, '03_');
+     Maksim := PrepareUnit('Maksim', False, '03_');
+     Fiodor := PrepareUnit('Fiodor', False, '03_');
+     Aleksiej := PrepareUnit('Aleksiej', False, '03_');
+     Pavel := PrepareUnit('Pavel', False, '03_');
+     Zakhar := PrepareUnit('Zakhar', False, '03_');
+     Aleksandr := PrepareUnit('Aleksandr', False, '03_');
+     Stanislav := PrepareUnit('Stanislav', False, '03_');
+     Josif := PrepareUnit('Josif', False, '03_');
+     Jegor := PrepareUnit('Jegor', False, '03_');
+     Grigori := PrepareUnit('Grigori', False, '03_');
+     Anton := PrepareUnit('Anton', False, '03_');
 
      YakotichCrew = YakotichCrew ^ Boris ^ Michail ^ Vasilij ^ Constantin ^ Maksim ^ Fiodor ^ Aleksiej ^ Pavel ^ Zakhar ^ Aleksandr ^ Stanislav ^ Josif ^ Jegor ^ Grigori ^ Anton;
 

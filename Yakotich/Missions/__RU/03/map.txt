@@ -3118,157 +3118,159 @@ END_OF_ENVIROMENT
 
 EXTERNAL_SECTORS sectors.bin
 ATTITUDES
-  PARAMS 8
-  1 0 0 0 0 0 0 0 0
-  0 1 2 2 1 2 2 2 2
-  0 2 1 2 2 2 2 2 2
-  0 2 2 1 2 2 1 2 2
-  0 1 2 2 1 2 2 2 2
-  0 2 2 2 2 1 2 2 2
-  0 2 2 1 2 2 1 2 2
-  0 2 2 2 2 2 2 1 2
-  0 2 2 2 2 2 2 2 1
-  FLAG 8
-  T T T T T T T T T
+  PARAMS 9
+  1 0 0 0 0 0 0 0 0 0
+  0 1 2 2 1 2 2 2 2 2
+  0 2 1 2 2 2 2 2 2 2
+  0 2 2 1 2 2 1 2 2 2
+  0 1 2 2 1 2 2 2 2 2
+  0 2 2 2 2 1 2 2 2 2
+  0 2 2 1 2 2 1 2 2 2
+  0 2 2 2 2 2 2 1 2 2
+  0 2 2 2 2 2 2 2 1 2
+  0 2 2 2 2 2 2 2 2 1
+  FLAG 9
+  T T T T T T T T T T
 END_OF_ATTITUDES
 
 TECHS
-  PARAMS 90 8
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F T T F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F F T T T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F F T T T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F T T F T T T T F T T F T T F T T F
-  F T F F T T T T F F T T F T T T T F T T F T T F T T F
-  F T F F T T T T F T T F F T T T T F T T F T T F T T F
-  F T F F T T T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F F T T T T F T T F F T T T T F T T F T T F T T F
-  F T F F T T T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F F T T T T F F T T F T T T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F F T T T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F F F F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F T T F T T F T T F T T F T T F
-  F T F T T F T T F T T F F T T T T F T T F T T F T T F
+  PARAMS 91 9
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F T T F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F F T T T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F T T F T T T T F T T F T T F T T F T T F
+  F T F F T T T T F F T T F T T T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F F T T T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F F T T T T F F T T F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F F T T T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F F F F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F F T T T T F T T F T T F T T F T T F
+  F T F T T F T T F T T F T T F T T F T T F T T F T T F T T F
 END_OF_TECHS
 
 RESTRICTS
-  PARAMS 0 40 8
-  F F F F T F F F F
-  F F F T T F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T T F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F T F F F F F
-  F F F T T F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F T F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F T F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
-  F F F F F F F F F
+  PARAMS 0 40 9
+  F F F F T F F F F T
+  F F F T T F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T T F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F T F F F F F T
+  F F F T T F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F T F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F T F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
+  F F F F F F F F F T
 END_OF_RESTRICTS
 
 MISSION_OBJECTIVES_FULL 0
@@ -3325,25 +3327,25 @@ RANDOMS
   MICROLOGIC 2 0 1
   RANDOM_SEED 1 300895564
   RANDOM_SEED 2 -1529432824
-  RANDOM_SEED 3 1902939247
+  RANDOM_SEED 3 -1104422489
   RANDOM_SEED 4 857944668
   RANDOM_SEED 5 -361675186
   RANDOM_SEED 6 1283126848
-  RANDOM_SEED 7 344616497
+  RANDOM_SEED 7 -1282658755
   RANDOM_SEED 8 1751026996
   RANDOM_SEED 9 -722287904
-  RANDOM_SEED 10 -1123025906
+  RANDOM_SEED 10 1959608556
   RANDOM_SEED 11 1243301773
   RANDOM_SEED 12 911650
   RANDOM_SEED 13 2004086437
   RANDOM_SEED 14 378023
-  RANDOM_SEED 15 -1293105036
+  RANDOM_SEED 15 1125257136
   RANDOM_SEED 16 907772
   RANDOM_SEED 17 1931189875
   RANDOM_SEED 18 353399119
   RANDOM_SEED 19 -423323973
   RANDOM_SEED 20 758098213
-  RANDOM_SEED 21 619953036
+  RANDOM_SEED 21 114751848
   RANDOM_SEED 22 2016646415
   WIND_TIME 811490 811553 811576
   WIND_STRENGTH 36.7606167791381 52.0 53.3803083895691
@@ -4260,7 +4262,7 @@ NEW_UNITS
         COLOR_CODE 1BM
         FACE 10
         SPEAKER A
-        VOICE 1
+        VOICE 5
         RANDOM_SEED 0
     END_OF_DEFINITION
     GAME_STATE
@@ -5272,6 +5274,8 @@ SIDE 6 10
 SIDE 7 10
   LINES
 SIDE 8 10
+  LINES
+SIDE 9 10
   LINES
 END_OF_DEBRIEFING
 
@@ -7005,5 +7009,7 @@ SEXTRA
       1
 
   255
+  30
+  0 254
 END_OF_SEXTRA
 

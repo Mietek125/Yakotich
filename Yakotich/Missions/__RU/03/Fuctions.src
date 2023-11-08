@@ -52,6 +52,7 @@ Wait(0$05);
 RemoveUnit(Kvantovy);
 SaveVariable(1,'KvantovySaved');
 SaveCharacters(Kvantovy,'Kvantovy');
+SetAchievement('ACH_KVANTOVY');
 End;
 
 Export Function KvantovyExp(q);

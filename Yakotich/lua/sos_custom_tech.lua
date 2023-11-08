@@ -9,6 +9,7 @@ IT_LR_Bulldozer = 86;
 IT_LR_Hovercraft = 87;
 IT_LR_MultiBarrels = 88;
 IT_LR_ManualTurrets = 90;
+IT_LR_StaticCrane = 91;
 
 -- buttons.txt
 SOS_TECH = {
@@ -51,6 +52,14 @@ SOS_TECH = {
     {
         TECH = IT_LR_ManualTurrets,
         BUTTON = 84
+    },
+    {
+        TECH = IT_LR_ManualTurrets,
+        BUTTON = 55
+    },
+    {
+        TECH = IT_LR_StaticCrane,
+        BUTTON = 175
     }
 }
 

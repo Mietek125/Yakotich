@@ -63,9 +63,41 @@ if GetControl(vehicle) = control_remote and GetSide(vehicle) = 1 then
   DialogueOff;
   end;
 
+   if GetWeapon(vehicle) = 45 or GetWeapon(vehicle) = 52 or GetWeapon(vehicle) = 53 and GetSide(vehicle) = 3 then
+   begin
+
+   weapon_builded = True;
+
 end;
 
 end;
+
+End;
+
+On WeaponPlaced(b,f) do
+begin
+
+     If GetBWeapon(b) =  45 then
+     begin
+
+     weapon_builded = True;
+
+end;
+
+End;
+
+On UnitDestroyed_Extra(un, ks, ku) do
+begin
+
+     If GetWeapon(ku) = ar_flame_thrower and GetSide(un) = 1 and GetType(un) = unit_building then
+     begin
+
+     FlameCounter := FlameCounter +1;
+     SetAchievementEX('ACH_FLAME',FlameCounter);
+
+end;
+
+End;
 
 Every 0$1 Trigger Researched (3,85) do
 begin
@@ -238,4 +270,19 @@ begin
   end;
 
   enable;
+end;
+
+Every 0$1 Trigger start_ended = True and DepotCaptureTime do
+begin
+
+DepotCaptureTime := DepotCaptureTime - 0$1;
+enable;
+
+end;
+
+Every 0$1 Trigger DepotCaptureTime >= 0$1 and GetSide(Ovsyenko) = 3 and start_ended = True do
+begin
+
+SetAchievement('ACH_OVSYENKO');
+
 end;

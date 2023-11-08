@@ -25,7 +25,7 @@ InitTerminal;
 
 DebugMode;
 
-game_speed = 7;
+game_speed = 6;
 
 end;
 
@@ -38,14 +38,16 @@ Export BurlakVeh,KaramazovVeh,BurlakCrewVeh1,BurlakCrewVeh2,BurlakCrewVeh3,Burla
 Export Sikorski, SikorskiMeat, Truman, Bobby, Cyrus, Gary, Lynch, McCreery, Walker, Jilian, Turner, Houten, NorthSold;
 Export Morozov,Platonov;
 
-Export BurlakTime;
+Export FlameCounter;
+
+Export BurlakTime,DepotCaptureTime;
 
 export debug; //tests only!
 
 Export mission_prefix;
 Export cutscene_ended,ovsyenko_captured, start_ended, lab_seen, lab_captured,
 rocket_researched, prediction_researched, buldozer_researched, flametank_saved, siberit_excavated,
-sikorski_dead,everything_researched,crane_triggered,crane_researched,end_of_the_mission;
+sikorski_dead,everything_researched,crane_triggered,crane_researched,end_of_the_mission,weapon_builded;
 
 
 Function Init;
@@ -67,9 +69,13 @@ lab_seen = False;
 lab_captured = False;
 everything_researched = False;
 end_of_the_mission = False;
+weapon_builded = False;
 
 
-BurlakTime := [10$0,12$30,15$0][Difficulty];
+BurlakTime := [15$0,17$30,20$0][Difficulty];
+DepotCaptureTime := 10$0;
+
+FlameCounter := 0;
 
 end;
 

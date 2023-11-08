@@ -343,6 +343,9 @@ Say(Dimitri,'3Dim-08');
 
 InGameOff;
 
+If weapon_builded = False then
+SetAchievement('ACH_NEW_WEAPONS');
+
 AddMedal('SibExcavated',1);
 
 If IsOk(BurlakVeh) then

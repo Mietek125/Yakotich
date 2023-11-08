@@ -15,10 +15,11 @@ end;
 On VehicleConstructed(v,f) do
 begin
 
-     If GetSide(v) = 3 and GetType(v) = unit_vehicle and GetWeapon(v) = ru_gun then
+     If GetSide(v) = 3 and GetWeapon(v) = ru_gun then
      begin
 
      GunCounter := GunCounter +1;
+     SetAchievementEX('ACH_GUN', GunCounter);
 
 end;
 
@@ -61,7 +62,7 @@ End;
 
 On VehicleRecycled(BuildingID, VehicleID, Side, Nation, X,Y, Direction, Chassis, Controller, Engine, Weapon) do
 begin
-if Side = 3 and Nation = 1 and Weapon in [3,5] and gun_recycled = False then
+if Side = 3 and Nation = 1 and Weapon in [3,5,6] and gun_recycled = False then
 begin
 
 gun_recycled = True;
@@ -143,24 +144,24 @@ ChangeMissionObjectives('gun-2');
 
 end;
 
-Every 0$1 Trigger IsInArea(FilterAllUnits([[f_side,4]]),DontEnterAchivArea) do
+Every 0$1 Trigger IsInArea([f_side,4],DontEnterAchivArea) do
 begin
 
 riverside_touched = True;
 
 end;
 
-Every 0$1 Trigger IsInArea(FilterAllUnits([[f_side,3]]),NorthPassage) or IsInArea(FilterAllUnits([[f_side,3]]),WestPassage) do
-begin
-
-passages_touched = True;
-
-end;
-
-Every 0$1 Trigger riverside_touched = False and end_of_the_mission = True do
+Every 0$1 Trigger riverside_touched = False and kurin_attack_started = True do
 begin
 
 SetAchievement('ACH_RIVER');
+
+end;
+
+Every 0$1 Trigger FilterUnitsInArea(NorthPassage,[[f_side,3]]) or FilterUnitsInArea(WestPassage,[[f_side,3]]) do
+begin
+
+passages_touched = True;
 
 end;
 
@@ -168,15 +169,6 @@ Every 0$1 Trigger passages_touched = False and end_of_the_mission = True do
 begin
 
 SetAchievement('ACH_SNAKE');
-
-end;
-
-Every 0$1 Do
-begin
-
-SetAchievementEX('ACH_GUN',GunCounter);
-
-enable;
 
 end;
 

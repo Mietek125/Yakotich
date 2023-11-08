@@ -1048,14 +1048,21 @@ GAMEINIT
         WEIGHT  2  3 
         ATTACK
           MINMAX_RANGE  8  18 
-          FREQUENCY  6  200
-	  FREQDELAY  20
+          FREQUENCY  6  175
+	  FREQDELAY  15
           DAMAGE 383 115 184
           EFF 30 5 60
           ANIM  1  4  3 
           ACCURACY  6 3 4
-          ATTACKGROUND
         END_OF_ATTACK
+        ATTACK
+          MINMAX_RANGE  5  16 
+          FREQUENCY  1  35
+          DAMAGE 383 115 184
+          EFF 30 5 60
+          ANIM  1  4  3 
+        END_OF_ATTACK
+	COMMBUTTONPAGE 78
         PRODUCED_IN 18 
         TECHNOLOGY 40 
       WEAPON_TYPE  46 
@@ -1659,7 +1666,56 @@ GAMEINIT
         SIGHT 9
         WEIGHT  3  3 
         COMMBUTTONPAGE 74
-      END_OF_WEAPONS
-
+      WEAPON_TYPE  110 
+        NAME "E(Static-Crane)C(Static-Crane)"
+        NATION Russian
+        SYMBOL n-r-crane
+        OIL 0
+        SIBERIUM 0
+        CANS 80
+        TIME 150
+        SOUND_NAME Crane
+        SOUND_TYPE 1
+        SEL_XY 0 0
+        ROTATE_TYPE Free_gyro
+        MODIFY_CHASSIS 0
+        SIGHT 9
+        WEIGHT  3  4 
+        ATTACK
+          MINMAX_RANGE  1  5 
+          FREQUENCY  35  1 
+          DAMAGE 202 354 303
+          EFF 0 17 8
+          ANIM  1  32  0 
+          LUA_ID 99
+          LUA_WEAPONRANGETYPE 1
+        END_OF_ATTACK
+	TECHNOLOGY 91
+        PRODUCED_IN 19
+      WEAPON_TYPE  111 
+        NAME "E(Calliope-Rocketry)C(Calliope-Rocketry)"
+        NATION American
+        SYMBOL am-calliope
+        OIL 0
+        SIBERIUM 0
+        CANS 100
+        TIME 120
+        SOUND_NAME Rocket
+        SOUND_TYPE 0
+        SEL_XY 0 0
+        ROTATE_TYPE Free_gyro
+        SIGHT 13
+        WEIGHT  2  3 
+        ATTACK
+          MINMAX_RANGE  6  16 
+          FREQUENCY  4  160
+          FREQDELAY  20
+          DAMAGE 675 202 324
+          EFF 50 25 80
+          ANIM  2  4  3 
+        END_OF_ATTACK
+        PRODUCED_IN 18 
+        TECHNOLOGY 40 
+	END_OF_WEAPONS
   END_OF_VEHICLES
 END_OF_GAMEINIT

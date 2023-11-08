@@ -1582,8 +1582,8 @@ GAMEINIT
       KIND  32 
       OIL  0 
       SIBERIUM  0 
-      CANS  20 
-      TIME  65 
+      CANS  25 
+      TIME  80 
       POWER  15 
       ATTACK  0 
       DEFENSE  85 
@@ -1599,11 +1599,11 @@ GAMEINIT
       KIND  33 
       OIL  0 
       SIBERIUM  0 
-      CANS  20 
-      TIME  130 
-      POWER  20 
+      CANS  35 
+      TIME  150 
+      POWER  25 
       ATTACK  0 
-      DEFENSE  80 
+      DEFENSE  90 
       HUMANS  0 
       OBSTACLE  1 
       SHAPE 7   -1 -1  0 -1  -1 0  0 0  1 0  0 1  1 1

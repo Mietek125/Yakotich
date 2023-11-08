@@ -569,5 +569,13 @@ GAMEINIT
       LAB  9 
       TIME 75
 
+      TECHNOLOGY  91
+      NAME "Static Crane"
+      NATIONS 1 1 1
+      REQUIRES 1 85
+      LAB  9 
+      TIME 100
+
+
   END_OF_TECHNOLOGIES
 END_OF_GAMEINIT

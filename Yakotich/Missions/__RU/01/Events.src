@@ -4,6 +4,7 @@ begin
      begin
 
      KillCounter := KillCounter +1;
+     SetAchievementEX('ACH_HUNT', KillCounter);
 
      end;
 
@@ -157,11 +158,3 @@ SetSide(MaksimCrew,3);
 
 end;
 
-Every 0$1 do
-begin
-
-SetAchievementEX('ID_HUNT', KillCounter);
-
-enable;
-
-end;

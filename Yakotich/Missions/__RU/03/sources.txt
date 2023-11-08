@@ -1,6 +1,5 @@
 SOURCE_CODES
   ENABLED Main
-  ENABLED GlobalVars
   ENABLED Fuctions
   ENABLED PreparePeople
   ENABLED PrepareAmericans

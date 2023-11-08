@@ -38,7 +38,7 @@ begin
     for unit in FilterUnitsInArea(DontEnterMiddle, [[f_side, 3], [f_or, [f_type, unit_human], [f_type, unit_vehicle]]]) do
     begin
         //InGameOn;
-    ComMoveXY(unit, GetX(unit) + 5, GetY(unit) + 5);
+    ComMoveXY(unit,95,59);
 end;
 
 end;
@@ -53,7 +53,7 @@ begin
     begin
         //InGameOn;
 
-    ComMoveXY(unit, GetX(unit) + 5, GetY(unit) + 5);
+    ComMoveXY(unit,95,59);
 end;
 
 end;
@@ -64,7 +64,7 @@ begin
 SerpentExp([1,2,3,4]);
 Wait(0$05);
 Say(Serpent,'2Langu-Sikret');
-TeleportUnit(Serpent,5,4,100,True);
+TeleportUnit(Serpent,13,4,100,True);
 Wait(0$05);
 RemoveUnit(Serpent);
 SaveVariable(1,'SerpentSaved');

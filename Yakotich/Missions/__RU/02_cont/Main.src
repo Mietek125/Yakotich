@@ -49,8 +49,6 @@ gattling_researched, gun_researched, gun_recycled, second_wave_clear, transport_
 first_attack_spawned, first_attack_clear, reiforcements_called, kurin_attack_started,
 end_of_the_mission,passages_touched,riverside_touched;
 
-Export livid;
-
 Function Init;
 begin
 

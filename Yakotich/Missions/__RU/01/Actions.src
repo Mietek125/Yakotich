@@ -98,6 +98,8 @@ SetSide([Mietek,Vasilij,Constantin,Michail,Boris,RuDep,RuB1,RuB2,RuB3,RuOil],3);
 
 SaveForQuickRestart;
 
+Hint('Balance');
+
 Say(Michail,'1Mich-01');
 Say(Michail,'1Mich-02');
 Say(Yakotich,'1Yak-10');
