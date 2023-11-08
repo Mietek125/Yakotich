@@ -183,7 +183,7 @@ ACHIV_FILTER_MISSION_LIST = {
 };
 
 achievsCategory = {
-    [3] = {
+    [1] = {
         'ACH_HUNT',
         'ACH_ALEKSANDR',
         'ACH_FORT',
@@ -198,28 +198,30 @@ achievsCategory = {
         'ACH_DESTROYER',
         'ACH_TURRETS'
     },
-    [8] = {
-        'ACH_SECRETS_1',
+    [2] = {
         'ACH_PEZET',
         'ACH_SERPENT',
         'ACH_KVANTOVY',
         'ACH_JANUSZ'
     },
-    [9] = {
+    [3] = {
         'ACH_NO_BUILDING',
         'ACH_SECRETS_1'
     }
 };
 
 achievsCategoryName = { 
+	[1] = loc(TID_Achievements_RU), 
+	[2] = loc(TID_Achievements_Secrets),
+	[3] = loc(TID_Achievements_Master),
 	--[1] = loc(TID_Achievements_US), 
 	--[2] = loc(TID_Achievements_AR), 
-	[3] = loc(TID_Achievements_RU), 
+	--[3] = loc(TID_Achievements_RU), 
 	--[4] = loc(TID_Achievements_MP), 
 	--[5] = loc(TID_Achievements_Skir),
 	--[6] = loc(TID_Achievements_Any),
-	[7] = loc(TID_Achievements_Secrets),
-	[8] = loc(TID_Achievements_Master)
+	--[7] = loc(TID_Achievements_Secrets),
+	--[8] = loc(TID_Achievements_Master)
 };  
 
 
