@@ -31,6 +31,7 @@ InitMiotacz;
 InitRussian;
 InitCommanders;
 InitBierezovPersonel;
+InitBierezov;
 InitRussianAI;
 InitArabianAI;
 Action;
@@ -78,7 +79,7 @@ weaponry_researched = False;
 fall_back = False;
 
 
-PrepareTime := [35$0,30$0,25$0][Difficulty];
+PrepareTime := [35$0,30$0,25$0][20$0][Difficulty];
 
 end;
 

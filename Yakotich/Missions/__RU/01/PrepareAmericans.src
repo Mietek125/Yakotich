@@ -9,17 +9,17 @@ AmCommander := PrepareUnit('AmCommander', false, '');
 Americans := Americans ^ AmCommander;
 PlaceUnitArea(AmCommander,AmAttacks,False);
 
-for i = 1 to [4,7,11][Difficulty] do
+for i = 1 to [4,7,11,13][Difficulty] do
 begin
-PrepareSoldier(rand(1,2),[0,2,4][Difficulty]);
+PrepareSoldier(rand(1,2),[0,2,4,5][Difficulty]);
 AmS = CreateHuman;
 Americans := Americans ^ AmS;
 PlaceUnitArea(AmS,AmAttacks,False);
 end;
 
-for j = 1 to [0,1,3][Difficulty] do
+for j = 1 to [0,1,3,4][Difficulty] do
 begin
-PrepareScientist(rand(1,2),[0,2,4][Difficulty]);
+PrepareScientist(rand(1,2),[0,2,4,5][Difficulty]);
 AmSc = CreateHuman;
 Americans := Americans ^ AmSc;
 PlaceUnitArea(AmSc,AmAttacks,False);
@@ -34,7 +34,7 @@ begin
 Uc_Side = 1;
 Uc_Nation = 1;
 
-PrepareSoldier(rand(0,1),[2,3,5][Difficulty]);
+PrepareSoldier(rand(0,1),[2,3,5,6][Difficulty]);
 AMSS = CreateHuman;
 Americans := Americans ^ AMSS;
 PlaceUnitArea(AMSS,AmSpawners,True);

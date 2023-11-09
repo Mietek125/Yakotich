@@ -114,17 +114,17 @@ Begin
 
  For i = 1 to [8,9,10][Difficulty] do
   Begin
-   PrepareSoldier(rand(0,1),[2,3,6][Difficulty]);
+   PrepareSoldier(rand(0,1),[2,3,6,7][Difficulty]);
    MainTerminalCrew := MainTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 1 do
   Begin
-   PrepareEngineer(rand(0,1),[2,3,6][Difficulty]);
+   PrepareEngineer(rand(0,1),[2,3,6,7][Difficulty]);
    MainTerminalCrew := MainTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 2 do
   Begin
-   PrepareScientist(rand(0,1),[2,3,6][Difficulty]);
+   PrepareScientist(rand(0,1),[2,3,6,7][Difficulty]);
    MainTerminalCrew := MainTerminalCrew ^ CreateHuman;
   End;
 
@@ -164,22 +164,22 @@ Begin
 
  For i = 1 to [10,11,12][Difficulty] do
   Begin
-   PrepareSoldier(rand(0,1),[2,3,6][Difficulty]);
+   PrepareSoldier(rand(0,1),[2,3,6,7][Difficulty]);
    WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 2 do
   Begin
-   PrepareEngineer(rand(0,1),[2,3,6][Difficulty]);
+   PrepareEngineer(rand(0,1),[2,3,6,7][Difficulty]);
    WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 6 do
   Begin
-   PrepareMechanic(rand(0,1), [2,3,6][Difficulty]);
+   PrepareMechanic(rand(0,1), [2,3,6,7][Difficulty]);
    WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
   End;
  For i = 1 to 2 do
   Begin
-   PrepareScientist(rand(0,1),[2,3,6][Difficulty]);
+   PrepareScientist(rand(0,1),[2,3,6,7][Difficulty]);
    WestTerminalCrew := WestTerminalCrew ^ CreateHuman;
   End;
 
@@ -233,7 +233,7 @@ enable;
 
 end;
 
-Every 0$1 trigger attackers >= [4,5,6][Difficulty] do
+Every 0$1 trigger attackers >= [4,5,6,8][Difficulty] do
 var enemy, attacker;
 begin
 enable;

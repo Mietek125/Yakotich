@@ -47,7 +47,7 @@ if GetControl(vehicle) = control_remote and GetSide(vehicle) = 1 then
 
    newAttackers := Replace(newAttackers, newAttackers + 1, vehicle);
 
-   if newAttackers >= [4,5,6][Difficulty] then
+   if newAttackers >= [4,5,6,8][Difficulty] then
       begin
       attackers := attackers union newAttackers;
       newAttackers := [];
